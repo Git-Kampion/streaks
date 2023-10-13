@@ -12,7 +12,7 @@ options = webdriver.FirefoxOptions()
 browser = webdriver.Firefox(options=options)
 
 # Load web page
-browser.get("https://www.betway.co.za/sport/soccer#")
+browser.get("https://www.betway.co.za/sport/soccer/eng/premier_league#")
 # Network transport takes time. Wait until the page is fully loaded
 def is_ready(browser):
     return browser.execute_script(r"""
@@ -35,19 +35,25 @@ findCookie = browser.find_element(By.ID, "cookiePopupClose")
 findCookie.click()
 time.sleep(5)
 
-#findCookie = browser.find_element(By.ID, "leagueGroup")
+findCookie = browser.execute_script("document.getElementsByClassName('btn btn-bettingmatch-more')")
+findCookie[0].click()
+time.sleep(5)
+
+"""
+findCookie = browser.find_element(By.ID, "leagueGroup")
 
 browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';")
 time.sleep(5)
-#loadFullFix = browser.find_elements(By.CLASS_NAME, "dropdown-submenu") 
+loadFullFix = browser.find_elements(By.CLASS_NAME, "dropdown-submenu") 
 browser.execute_script("document.getElementsByClassName('dropdown-submenu')[0].setAttribute('class', 'dropdown-submenu open')")
-#browser.execute_script(loadFullFix[0]+".setAttribute('class', 'dropdown-submenu open')")
+browser.execute_script(loadFullFix[0]+".setAttribute('class', 'dropdown-submenu open')")
 browser.execute_script("document.getElementsByClassName('state-icon glyphicon glyphicon-unchecked')[0].setAttribute('class', 'state-icon glyphicon glyphicon-check')")
-#loadFullFix2 = browser.execute_script("document.getElementsByClassName('state-icon glyphicon glyphicon-unchecked')")
-#browser.execute_script(loadFullFix2[0]+".setAttribute('class', 'state-icon glyphicon glyphicon-check')")
+loadFullFix2 = browser.execute_script("document.getElementsByClassName('state-icon glyphicon glyphicon-unchecked')")
+browser.execute_script(loadFullFix2[0]+".setAttribute('class', 'state-icon glyphicon glyphicon-check')")
 findCooki = browser.find_element(By.ID, "continueBtn")
 findCooki.click()
 time.sleep(5)
+"""
 """
 for elem in loadFullFix:
     browser.execute_script(elem+".setAttribute('class', 'dropdown-submenu open')")
