@@ -39,13 +39,32 @@ time.sleep(15)
 
 
 findCookie = browser.find_elements(By.CLASS_NAME, "PaddingScreen")
-findCookies = findCookie[0].find_elements(By.TAG_NAME, "a")
+findCookies = findCookie[0].find_element(By.TAG_NAME, "a")
 #print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
 
-#href = findCookie[0].get_attribute('href')
-print(len(findCookie))
-print(len(findCookies))
-#findCookie[0].click()
+href = findCookies.get_attribute('href')
+browser.get(href)
+time.sleep(10)
+
+try:
+ almb = browser.find_element(By.ID,"AllMarketsButton").click()
+except(NoSuchElementException):
+    while _flag:
+        try:
+           lmb = browser.find_element(By.ID,"loadMoreButton").click()
+           _flag = True
+           time.sleep(5)
+        except(NoSuchElementException):
+                _flag = False
+                time.sleep(10)	  
+
+
+
+eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
+
+#WebDriverWait(browser,30).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"#btnSearch"))).click()
+
+#findCookies[0].click()
 time.sleep(5)
 
 """
