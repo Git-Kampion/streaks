@@ -33,10 +33,19 @@ time.sleep(5)
 findCookie = browser.find_element(By.ID, "cookiePopupClose")
 
 findCookie.click()
-time.sleep(5)
+time.sleep(15)
 
-findCookie = browser.execute_script("document.getElementsByClassName('btn btn-bettingmatch-more')")
-findCookie[0].click()
+#findCookie = browser.execute_script("document.getElementsByClassName('PaddingScreen')")
+
+
+findCookie = browser.find_elements(By.CLASS_NAME, "PaddingScreen")
+findCookies = findCookie[0].find_elements(By.TAG_NAME, "a")
+#print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
+
+#href = findCookie[0].get_attribute('href')
+print(len(findCookie))
+print(len(findCookies))
+#findCookie[0].click()
 time.sleep(5)
 
 """
