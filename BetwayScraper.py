@@ -20,6 +20,7 @@ def is_ready(browser):
     """)
 WebDriverWait(browser, 30).until(is_ready)
 
+browser.get
 # Scroll to bottom of the page to trigger JavaScript action
 #browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 #time.sleep(1)
@@ -38,14 +39,19 @@ time.sleep(15)
 #findCookie = browser.execute_script("document.getElementsByClassName('PaddingScreen')")
 
 
-findCookie = browser.find_elements(By.CLASS_NAME, "PaddingScreen")
+findCookie = browser.find_elements(By.XPATH, "//div[contains(@id, 'leagueGroup-ENGPremierLeague')]//a[contains(@class, 'PaddingScreen')]")
+print(findCookie[0].get_attribute('href'))
+time.sleep(5)
+""""
 findCookies = findCookie[0].find_element(By.TAG_NAME, "a")
-#print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
+
+print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
 
 href = findCookies.get_attribute('href')
 browser.get(href)
 time.sleep(10)
-
+"""
+"""
 try:
  almb = browser.find_element(By.ID,"AllMarketsButton").click()
 except(NoSuchElementException):
@@ -58,14 +64,14 @@ except(NoSuchElementException):
                 _flag = False
                 time.sleep(10)	  
 
+"""
 
-
-eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
+#eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
 
 #WebDriverWait(browser,30).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"#btnSearch"))).click()
 
 #findCookies[0].click()
-time.sleep(5)
+#time.sleep(5)
 
 """
 findCookie = browser.find_element(By.ID, "leagueGroup")
