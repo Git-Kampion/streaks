@@ -34,16 +34,58 @@ time.sleep(5)
 findCookie = browser.find_element(By.ID, "cookiePopupClose")
 
 findCookie.click()
-time.sleep(15)
+time.sleep(5)
 
 #findCookie = browser.execute_script("document.getElementsByClassName('PaddingScreen')")
 
 
 findCookie = browser.find_elements(By.XPATH, "//div[contains(@id, 'leagueGroup-ENGPremierLeague')]//a[contains(@class, 'PaddingScreen')]")
-print(findCookie[0].get_attribute('href'))
+href = findCookie[0].get_attribute('href')
+browser.get(href)
 time.sleep(5)
+
+_flag = True;
+_flag1 = True;
+while _flag1:
+    try:
+     almb = browser.find_element(By.ID,"AllMarketsButton").click() 
+     time.sleep(5)
+    except(ElementNotInteractableException):
+        _flag1 = False
+        while _flag:
+            try:
+                lmb = browser.find_element(By.ID,"loadMoreButton").click()
+                _flag = True
+                time.sleep(5)
+            except(ElementNotInteractableException):
+             _flag = False
+#eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
+eventName = browser.find_element(By.XPATH, "//span[contains(@class, 'ellipsMultiMarket theFont')]//span").text
+dateTime = browser.find_element(By.XPATH, "//div[contains(@class, 'date-heading theFont')]").text   
+panels =  browser.find_elements(By.XPATH, "//div[contains(@id, 'accordion')]")
+panelsBodies =  browser.find_elements(By.XPATH, "//div[contains(@class, 'acc-header123 panel-collapse collapse')]")
+
+lopI = 1;
+for kekk in panelsBodies:
+  elemID =  kekk.get_attribute("id"); 
+  browser.execute_script("document.getElementById('" + elemID +"').style.display = 'block';")
+  panelBody = browser.find_element(By.XPATH, "//div[contains(@id,'" + elemID+ "')]//div[contains(@class, 'panel-body')]").text
+  panelText = panels[lopI].text
+  lopI = lopI + 1  
+
+time.sleep(5)
+
 """"
-findCookies = findCookie[0].find_element(By.TAG_NAME, "a")
+for elem in panelsBodies:
+     
+
+  
+browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';")
+
+
+panelBody = browser.find_elements(By.XPATH, "//div[contains(@id,'" + pandelID+ "')]//div[contains(@class, 'panel-body')]")
+findCookies = findCookie[0].find_element(By.TAG_NAME, "a")    
+
 
 print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
 
@@ -76,7 +118,7 @@ except(NoSuchElementException):
 """
 findCookie = browser.find_element(By.ID, "leagueGroup")
 
-browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';")
+browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';"
 time.sleep(5)
 loadFullFix = browser.find_elements(By.CLASS_NAME, "dropdown-submenu") 
 browser.execute_script("document.getElementsByClassName('dropdown-submenu')[0].setAttribute('class', 'dropdown-submenu open')")
