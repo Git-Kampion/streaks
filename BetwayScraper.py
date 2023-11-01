@@ -41,9 +41,11 @@ time.sleep(5)
 
 
 findCookie = browser.find_elements(By.XPATH, "//div[contains(@id, 'leagueGroup-ENGPremierLeague')]//a[contains(@class, 'PaddingScreen')]")
-href = findCookie[0].get_attribute('href')
-browser.get(href)
-time.sleep(5)
+TeamQ = [[]]
+for bite in findCookie:
+    href = findCookie[0].get_attribute('href')
+    browser.get(href)
+    time.sleep(5)
 
 _flag = True;
 _flag1 = True;
@@ -72,52 +74,20 @@ for kekk in panelsBodies:
   elemID =  kekk.get_attribute("id"); 
   browser.execute_script("document.getElementById('" + elemID +"').style.display = 'block';")
   panelBody = browser.find_element(By.XPATH, "//div[contains(@id,'" + elemID+ "')]//div[contains(@class, 'panel-body')]").text
-  
   panelText = panels[lopI].text
-  
-  #refinedRes = BtOr.MatchRes(panelText,panelBody) 
 
   match panelText:
     case "Match Result (1X2)":
        refinedRes = BtOr.MatchRes(panelText,panelBody) 
-    case "Both Teams To Score":
-         refinedBTS = BtOr.Bts(panelText,panelBody) 
-    case "Double Chance":
-         refinedDC = BtOr.Dc(panelText,panelBody)
-    case "Draw No Bet":
-         refinedDnB = BtOr.DrawNoBet(panelText,panelBody)
-    case "Overs/Under":
-         refinedDnB = BtOr.OverUnder(panelText,panelBody)
-    case "Handicap":
-         refinedDnB = BtOr.Handicap(panelText,panelBody)
-    case "1st Goal":
-         refinedDnB = BtOr.FirstGoal(panelText,panelBody)
-    case "10 Minutes - 1X2 From 1 To 10":
-         refinedDnB = BtOr.TenMin(panelText,panelBody) 
-    case "Both Halves Over 1.5":
-         refinedDnB = BtOr.BothHalfsOever(panelText,panelBody) 
-    case "Both Halves Under 1.5":
-         refinedDnB = BtOr.BothHalfsUnder(panelText,panelBody)
-    case "Multigoals":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody)  
-    case "Sending Off":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
-    case "1st Half - 1X2":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody)
-    case "1st Half - Both Teams To Score":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody)   
-    case "1st Half - Double Chance":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
-    case "1st Half - Overs/Unders":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
-    case "1st Half - Handicap":
-         refinedDnB = BtOr.MultiGoals(panelText,panelBody)  
-   
-  lopI = lopI + 1  
-
+       lopI = lopI + 1  
+TeamQ[0] = eventName.split("-")[0]
+TeamQ[1] = eventName.split("-")[1]
+TeamQ[1][0] = refinedRes[1]
+TeamQ[0][0] = refinedRes[0]
 time.sleep(5)
 
-""""
+
+""""EplBetOdds
 for elem in panelsBodies:
      
 

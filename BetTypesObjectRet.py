@@ -1,15 +1,18 @@
 #BetTypesObjectRet.py
 class BtOr:
     def MatchRes(Title,body):
-        HomeAttributes = []
-        AwayAttributes = []
+        arr = []
         cl1 =  body.split("\n")
-        HomeName = cl1[0]
+       # HomeName = cl1[0]
         HomeWinOdd = cl1[1]
-        DrawName = cl1[2]
-        DrawOdd = cl1[3]
-        AwayName = cl1[4]
+       # DrawName = cl1[2]
+       # DrawOdd = cl1[3]
+       # AwayName = cl1[4]
         AwayWinOdd = cl1[5] 
+        arr[0] = HomeWinOdd
+        arr[0] = AwayWinOdd
+        return   arr
+
       
     def Bts(title,body):
          cl1 =  body.split("\n")
