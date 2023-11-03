@@ -13,7 +13,7 @@ options = webdriver.FirefoxOptions()
 browser = webdriver.Firefox(options=options)
 
 # Load web page
-browser.get("https://www.flashscore.com/football/england/championship/results/")
+browser.get("https://www.flashscore.com/football/scotland/premiership-2022-2023/results/")
 # Network transport takes time. Wait until the page is fully loaded
 def is_ready(browser):
     return browser.execute_script(r"""
@@ -59,7 +59,7 @@ for elem in rounds:
  skipLeagueNAme = False
  flag = False;
  soccerList = []
- if "ENGLAND" in elem:
+ if "SCOTLAND" in elem:
     skipLeagueNAme = 0
  else:
    
@@ -87,7 +87,7 @@ for elem in rounds:
        soccerList.append(matchRound + " " + soccerMAtch.strip())   
  
  if len(soccerList) > 0:
-   conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\Database1.accdb;')
+   conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\Database1.accdb;')
    cursor = conn.cursor()
          #cursor.execute("Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ('38','2023-04-01','Arsenal','Watford','4','3')")
    countdown = len(soccerList)
@@ -99,10 +99,10 @@ for elem in rounds:
        #  home = 
       
       if "Pen" in polstriped[2]:
-          insert_stmt = "INSERT INTO EplChampionShip23(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO Scotland(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7],polstriped[8])
       else:
-          insert_stmt = "INSERT INTO EplChampionShip23(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO Scotland(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[2],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7])
       cursor.execute(insert_stmt, data)
       cursor.commit()
