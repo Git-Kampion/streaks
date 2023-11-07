@@ -1,16 +1,31 @@
 #BetTypesObjectRet.py
 class BtOr:
-    def MatchRes(Title,body):
-        HomeAttributes = []
-        AwayAttributes = []
+    def MatchRes(Title,body,cursor):
+       
         cl1 =  body.split("\n")
+        """
+         HomeAttributes = []
+        AwayAttributes = []
         HomeAttributes[0] = cl1[0]
         HomeAttributes[1] = cl1[1]
         DrawName = cl1[2]
         DrawOdd = cl1[3]
         HomeAttributes[2] = cl1[4]
         HomeAttributes[3] = cl1[5] 
-        return HomeAttributes
+        """
+        insert_stmt = "INSERT INTO EplBetOdds(team,Match) VALUES (?,?)"
+        
+
+        dx = 0
+        for lk in cl1: 
+          if dx < 5:
+            team =   cl1[dx] 
+            odd = cl1[dx+1]
+            data = ( team,odd)
+            cursor.execute(insert_stmt,data)
+            cursor.commit()
+            dx = dx+5
+        #return HomeAttributes
        
       
     def Bts(title,body):
@@ -124,6 +139,10 @@ class BtOr:
          BHUNoLabel =   cl1[2]
          BHUNoOdd =   cl1[3]  
 
+""""
     def insertIntoAccess(refined ,panelText):
-          match panelText:
-               case "Match":
+        match panelText:
+         case "Match":
+         """
+                
+                    

@@ -80,13 +80,11 @@ for kekk in panelsBodies:
   panelText = panels[lopI].text.split(" ")[0]
   
   #refinedRes = BtOr.MatchRes(panelText,panelBody) 
-
+  refined =[]
+  dx = 0
   match panelText:
     case "Match":
-       refined = BtOr.MatchRes(panelText,panelBody) 
-       insert_stmt = "INSERT INTO EplBetOdds(team,Match Result) VALUES (?,?)"
-       cursor.execute(insert_stmt, data)
-       cursor.commit()
+      BtOr.MatchRes(panelText,panelBody,cursor)     
     case "Both":
          refined = BtOr.Bts(panelText,panelBody) 
     case "Double Chance":
