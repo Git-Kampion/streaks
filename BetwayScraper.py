@@ -1,5 +1,6 @@
 import time
 import pyodbc
+from BetTypesObjectRet import BtOr
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
@@ -20,7 +21,6 @@ def is_ready(browser):
     """)
 WebDriverWait(browser, 30).until(is_ready)
 
-browser.get
 # Scroll to bottom of the page to trigger JavaScript action
 #browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 #time.sleep(1)
@@ -34,7 +34,7 @@ time.sleep(5)
 findCookie = browser.find_element(By.ID, "cookiePopupClose")
 
 findCookie.click()
-time.sleep(5)
+time.sleep(15)
 
 #findCookie = browser.execute_script("document.getElementsByClassName('PaddingScreen')")
 
@@ -44,6 +44,7 @@ href = findCookie[0].get_attribute('href')
 browser.get(href)
 time.sleep(5)
 
+""""
 _flag = True;
 _flag1 = True;
 while _flag1:
@@ -59,20 +60,67 @@ while _flag1:
                 time.sleep(5)
             except(ElementNotInteractableException):
              _flag = False
+"""
 #eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
 eventName = browser.find_element(By.XPATH, "//span[contains(@class, 'ellipsMultiMarket theFont')]//span").text
 dateTime = browser.find_element(By.XPATH, "//div[contains(@class, 'date-heading theFont')]").text   
 panels =  browser.find_elements(By.XPATH, "//div[contains(@id, 'accordion')]")
 panelsBodies =  browser.find_elements(By.XPATH, "//div[contains(@class, 'acc-header123 panel-collapse collapse')]")
 
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\Database1.accdb')
+
+cursor = conn.cursor()
+ 
 lopI = 1;
 for kekk in panelsBodies:
   elemID =  kekk.get_attribute("id"); 
   browser.execute_script("document.getElementById('" + elemID +"').style.display = 'block';")
   panelBody = browser.find_element(By.XPATH, "//div[contains(@id,'" + elemID+ "')]//div[contains(@class, 'panel-body')]").text
-  panelText = panels[lopI].text
+  
+  panelText = panels[lopI].text.split(" ")[0]
+  
+  #refinedRes = BtOr.MatchRes(panelText,panelBody) 
+  refined =[]
+  dx = 0
+  match panelText:
+    case "Match":
+      BtOr.MatchRes(panelText,panelBody,cursor)     
+    case "Both":
+         refined = BtOr.Bts(panelText,panelBody) 
+    case "Double Chance":
+         refined = BtOr.Dc(panelText,panelBody)
+    case "Draw No Bet":
+         refined = BtOr.DrawNoBet(panelText,panelBody)
+    case "Overs/Under":
+         refined = BtOr.OverUnder(panelText,panelBody)
+    case "Handicap":
+         refined = BtOr.Handicap(panelText,panelBody)
+    case "1st Goal":
+         refined = BtOr.FirstGoal(panelText,panelBody)
+    case "10 Minutes - 1X2 From 1 To 10":
+         refined = BtOr.TenMin(panelText,panelBody) 
+    case "Both Halves Over 1.5":
+         refined = BtOr.BothHalfsOever(panelText,panelBody) 
+    case "Both Halves Under 1.5":
+         refined = BtOr.BothHalfsUnder(panelText,panelBody)
+    case "Multigoals":
+         refined = BtOr.MultiGoals(panelText,panelBody)  
+    case "Sending Off":
+         refined = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - 1X2":
+         refined = BtOr.MultiGoals(panelText,panelBody)
+    case "1st Half - Both Teams To Score":
+         refined = BtOr.MultiGoals(panelText,panelBody)   
+    case "1st Half - Double Chance":
+         refined = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - Overs/Unders":
+         refined = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - Handicap":
+         refined = BtOr.MultiGoals(panelText,panelBody)  
+   
   lopI = lopI + 1  
 
+   
 time.sleep(5)
 
 """"
@@ -118,7 +166,7 @@ except(NoSuchElementException):
 """
 findCookie = browser.find_element(By.ID, "leagueGroup")
 
-browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';"
+browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';")
 time.sleep(5)
 loadFullFix = browser.find_elements(By.CLASS_NAME, "dropdown-submenu") 
 browser.execute_script("document.getElementsByClassName('dropdown-submenu')[0].setAttribute('class', 'dropdown-submenu open')")
