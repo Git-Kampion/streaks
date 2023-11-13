@@ -1,5 +1,42 @@
 #BetTypesObjectRet.py
 class BtOr:
+
+    def findConcurrentMAtche(t,data,betype):
+        count = 0
+        highestMatch = 0
+        refindedData = []
+        for o in data[0]:           
+            if t == o[3]:
+                refindedData.append(o)
+        for r in refindedData:
+            if r[3] == t and r[5] == 0:
+                count = count + 1
+            else:
+                if count > 1:
+                 highestMatch = count
+                 count = 0
+                else:
+                    count = 0            
+        return highestMatch
+    
+    def ScoredWholeSeaon(t,data,betype):
+        count = 0
+        highestMatch = 0
+        refindedData = []
+        for o in data[0]:           
+            if t == o[3]:
+                refindedData.append(o)
+        for r in refindedData:
+            if r[3] == t:
+                count = count + 1
+            else:
+                if count > 1:
+                 highestMatch = count
+                 count = 0
+                else:
+                    count = 0            
+        return highestMatch
+
     def MatchRes(Title,body,cursor):
        
         cl1 =  body.split("\n")
