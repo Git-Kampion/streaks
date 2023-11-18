@@ -1,15 +1,12 @@
 #BetTypesObjectRet.py
 class BtOr:
-
-    def findConcurrentMAtche(t,data,betype):
+   
+    def findConcurrentMAtche(t,data,betype,ht):
         count = 0
         highestMatch = 0
-        refindedData = []
-        for o in data[0]:           
-            if t == o[3]:
-                refindedData.append(o)
-        for r in refindedData:
-            if r[3] == t and r[5] == 0:
+       
+        for r in data:
+            if r[ht] == t and r[7] == 3:
                 count = count + 1
             else:
                 if count > 1:
@@ -19,23 +16,96 @@ class BtOr:
                     count = 0            
         return highestMatch
     
-    def ScoredWholeSeaon(t,data,betype):
+    def refindedDatam(t,data,ht):
+         refindedData = []
+         for o in data[0]:           
+            if t == o[ht]:
+              refindedData.append(o)
+         return refindedData
+
+    def ScoredWholeSeaon(t,data,betype,ht):
         count = 0
         highestMatch = 0
-        refindedData = []
-        for o in data[0]:           
-            if t == o[3]:
-                refindedData.append(o)
-        for r in refindedData:
-            if r[3] == t:
-                count = count + 1
-            else:
-                if count > 1:
-                 highestMatch = count
-                 count = 0
-                else:
-                    count = 0            
-        return highestMatch
+               
+        for r in data:
+            if r[ht] >= 1:
+                count = count + 1          
+        return count
+    
+    def ScoredBothHalvesSeaon(t,data,betype,ht):
+        count = 0
+        highestMatch = 0
+               
+        for r in data:
+            if r[ht] > r[ht+2] and r[ht+2] >= 1:
+                count = count + 1          
+        return count
+    
+    def ConceededBothHalvesSeaon(t,data,betype,ht):
+        count = 0
+        highestMatch = 0
+               
+        for r in data:
+            if r[ht] > r[ht+2] and r[ht+2] >= 1:
+                count = count + 1          
+        return count
+    def HomeOverSeaon(t,data,betype,ht):
+        count = 0
+        highestMatch = 0
+        over0 = 1
+        over1 = 0
+        over2 = 0
+        over3 = 0
+        over4 = 0
+        over5 = 0
+        over6 = 0     
+        countOv1 = 0
+        countOv2 = 0
+        countOv3 = 0
+        countOv4 = 0
+        countOv5 = 0
+        countOv6 = 0
+         
+        for r in data:   
+            match r:
+                case 1:
+                    count = count + 1
+                case 2:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                case 3:                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                case 4:                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                case 5:                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                case 6:                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    countOv5 = countOv5 + 1
+             
+        return count
+    
+    def ConcededWholeSeaon(t,data,betype,ht):
+        count = 0
+        highestMatch = 0
+               
+        for r in data:
+            if r[ht] >= 1:
+                count = count + 1          
+        return count
 
     def MatchRes(Title,body,cursor):
        
