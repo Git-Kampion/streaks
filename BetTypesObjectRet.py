@@ -1,23 +1,6 @@
 #BetTypesObjectRet.py
 class BtOr:
-    """"
-    def mergeData(arrayOFData):
-     mergedDAta = []
-     
-     return mergedDAta
 
-     
-insert_stmt = "select * from LaLiga"
-data = ("Chelsea")
-cursor.execute(insert_stmt)
-sql_data2 = pd.DataFrame(cursor.fetchall())
-teamCount2 = 0
-halftomeGap2 = 2
-
-arr = ([sql_data,sql_data2])  
-
-mergedFrame = BtOr.mergeData(arr)
-    """
     def findConcurrentMAtche(t,data,betype,ht):
         count = 0
         highestMatch = 0
@@ -99,7 +82,6 @@ mergedFrame = BtOr.mergeData(arr)
         return count
     def OverUnderSeaon(t,data,betype,ht):
         count = 0
-        highestMatch = 0
         under0 = 0
         under1 = 0
         under2 = 0
@@ -113,102 +95,87 @@ mergedFrame = BtOr.mergeData(arr)
         countOv4 = 0
         countOv5 = 0
         countOv6 = 0
+
         overs = []
         unders = []
-        #,countOv1,countOv2,countOv3,countOv4,countOv5,countOv6
+       
+        
         for r in data:   
             con = int(r[ht])
             match con:
-                case 0:
+                case 0:                 
                     under0 = under0 + 1
-                    under1 = under1 + 1
+                case 1:                 
+                    count = count + 1
                     under2 = under2 + 1
                     under3 = under3 + 1
                     under4 = under4 + 1
                     under5 = under5 + 1
-                    under6 = under6 + 1 
-                case 1:
+                    under6 = under6 + 1
+
+                case 2:                 
                     count = count + 1
-                  
-                    under2 = under2 + 1
+                    countOv1 = countOv1 +1
+                    
                     under3 = under3 + 1
                     under4 = under4 + 1
                     under5 = under5 + 1
-                    under6 = under6 + 1 
-                case 2:
+                    under6 = under6 + 1
+
+                case 3:                 
                     count = count + 1
-                    countOv1 = countOv1 + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+
+                    
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+
+                case 4:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+
+                    
+                    
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                  
+                case 5:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+                    countOv4 = countOv4 +1
+                case 6:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+                    countOv4 = countOv4 +1
+                    countOv5 = countOv5 +1
+                    
+                    
                     
                   
-                    under3 = under3 + 1
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1 
-                 
-                case 3:                                      
-                    count = count + 1
-                    countOv1 = countOv1 + 1
-                    countOv2 = countOv2 + 1
-                    
-                   
-                   
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1 
-                case 4:                                      
-                    count = count + 1
-                    countOv1 = countOv1 + 1
-                    countOv2 = countOv2 + 1
-                    countOv3 = countOv3 + 1
-                   
-                   
-                    under5 = under5 + 1
-                    under6 = under6 + 1 
-                case 5:                                      
-                    count = count + 1
-                    countOv1 = countOv1 + 1
-                    countOv2 = countOv2 + 1
-                    countOv3 = countOv3 + 1
-                    countOv4 = countOv4 + 1
-                    
-                    
-                   
-                    under6 = under6 + 1 
-                case 6:                                      
-                    count = count + 1
-                    countOv1 = countOv1 + 1
-                    countOv2 = countOv2 + 1
-                    countOv3 = countOv3 + 1
-                    countOv4 = countOv4 + 1
-                    countOv5 = countOv5 + 1
-                    
-                   
-                   
-                   
-                case 7:                                      
-                    count = count + 1
-                    countOv1 = countOv1 + 1
-                    countOv2 = countOv2 + 1
-                    countOv3 = countOv3 + 1
-                    countOv4 = countOv4 + 1
-                    countOv5 = countOv5 + 1
-                    countOv6 = countOv6 + 1
-        overs.append(count)
-        overs.append(countOv1)    
+        overs.append(count)        
+        overs.append(countOv1)        
         overs.append(countOv2)    
-        overs.append(countOv3)    
-        overs.append(countOv4)    
-        overs.append(countOv5)    
-        overs.append(countOv6) 
-        unders.append(under0)  
-        unders.append(under1)  
+        overs.append(countOv3)
+        overs.append(countOv4)
+        overs.append(countOv5)
+        overs.append(countOv6)
+
+        unders.append(under0)
+        unders.append(under1)
         unders.append(under2)
-        unders.append(under3)  
+        unders.append(under3)
         unders.append(under4)
         unders.append(under5)
-        unders.append(under6)  
 
-        arr = ([overs,unders])  
+        arr = ([overs,unders,t])  
         return arr
     
     
