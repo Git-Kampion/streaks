@@ -42,22 +42,52 @@ mergedFrame = BtOr.mergeData(arr)
 
     def ScoredWholeSeaon(t,data,betype,ht):
         count = 0
+        notCount = 0
+        arr = ([],[])
         highestMatch = 0
                
         for r in data:
+
             con = int(r[ht])
             if con >= 1:
-                count = count + 1          
-        return count
+                count = count + 1
+            else:
+                 notCount = notCount + 1    
+        arr = ([count,notCount])       
+        return arr
+    
+    def ndScoredWholeSeaon(t,data,betype,ht):
+        count = 0
+        notCount = 0
+        arr = ([],[])
+        highestMatch = 0
+               
+        for r in data:
+         con = int(r[ht])
+         ad =  int(r[ht+2])
+         if con > ad:
+                count = count + 1
+         else:
+                 notCount = notCount + 1    
+        arr = ([count,notCount])       
+        return arr
     
     def ScoredBothHalvesSeaon(t,data,betype,ht):
         count = 0
+        notCount = 0
+        arr = ([],[])
         highestMatch = 0
-               
+          
         for r in data:
-            if r[ht] > r[ht+2] and r[ht+2] >= 1:
-                count = count + 1          
-        return count
+                con = int(r[ht])
+                ad =  r[ht+2]
+                con2 = int(ad)
+                if con > con2 and con2 >= 1:
+                    count = count + 1 
+                else:
+                    notCount = notCount + 1  
+        arr = ([count,notCount])      
+        return arr
     
     def ConceededBothHalvesSeaon(t,data,betype,ht):
         count = 0
@@ -87,7 +117,8 @@ mergedFrame = BtOr.mergeData(arr)
         unders = []
         #,countOv1,countOv2,countOv3,countOv4,countOv5,countOv6
         for r in data:   
-            match r[ht]:
+            con = int(r[ht])
+            match con:
                 case 0:
                     under0 = under0 + 1
                     under1 = under1 + 1
@@ -98,7 +129,7 @@ mergedFrame = BtOr.mergeData(arr)
                     under6 = under6 + 1 
                 case 1:
                     count = count + 1
-                    under1 = under1 + 1
+                  
                     under2 = under2 + 1
                     under3 = under3 + 1
                     under4 = under4 + 1
@@ -108,7 +139,7 @@ mergedFrame = BtOr.mergeData(arr)
                     count = count + 1
                     countOv1 = countOv1 + 1
                     
-                    under2 = under2 + 1
+                  
                     under3 = under3 + 1
                     under4 = under4 + 1
                     under5 = under5 + 1
@@ -120,7 +151,7 @@ mergedFrame = BtOr.mergeData(arr)
                     countOv2 = countOv2 + 1
                     
                    
-                    under3 = under3 + 1
+                   
                     under4 = under4 + 1
                     under5 = under5 + 1
                     under6 = under6 + 1 
@@ -130,7 +161,7 @@ mergedFrame = BtOr.mergeData(arr)
                     countOv2 = countOv2 + 1
                     countOv3 = countOv3 + 1
                    
-                    under4 = under4 + 1
+                   
                     under5 = under5 + 1
                     under6 = under6 + 1 
                 case 5:                                      
@@ -141,7 +172,7 @@ mergedFrame = BtOr.mergeData(arr)
                     countOv4 = countOv4 + 1
                     
                     
-                    under5 = under5 + 1
+                   
                     under6 = under6 + 1 
                 case 6:                                      
                     count = count + 1
@@ -152,7 +183,7 @@ mergedFrame = BtOr.mergeData(arr)
                     countOv5 = countOv5 + 1
                     
                    
-                    under6 = under6 + 1 
+                   
                    
                 case 7:                                      
                     count = count + 1
@@ -241,28 +272,7 @@ mergedFrame = BtOr.mergeData(arr)
          AwayLabel =   cl1[2]
          AwayOdd =   cl1[3]
 
-    def OverUnder(Title,body):
-        cl1 =  body.split("\n")
-        OverSingleGoalLabel = cl1[0]
-        OverSingleGoal = cl1[1]
-        UnderSingleGoalLabel = cl1[2]
-        UnderSingleGoal = cl1[3]
-        OvertwoGoalLabel = cl1[4]
-        OvertwoeGoal = cl1[5]           
-        UnderTwoGoalLabel = cl1[6]
-        UnderTwoGoal = cl1[7]
-        OverThreeGoalLabel = cl1[8]
-        OverThreeGoal = cl1[9]  
-        UnderThreeGoalLabel = cl1[10]
-        UnderThreeGoal = cl1[11]
-        OverFourGoalLabel = cl1[12]
-        OverFourGoal = cl1[13]
-        UnderFourGoalLabel = cl1[14]
-        UnderFourGoal = cl1[15]
-        OverFiveGoalLabel = cl1[16]
-        OverFiveGoal = cl1[17]  
-        UnderFiveGoalLabel = cl1[18]
-        UnderFiveGoal = cl1[19] 
+  
 
     def Handicap(Title,body):
         cl1 =  body.split("\n")
