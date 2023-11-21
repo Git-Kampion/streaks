@@ -105,56 +105,21 @@ for w in teams:
     else:
      # if t == "Brighton":
         rfd = BtOr.refindedDatam(t,sql_data,3)
-        #hmeScorsBt = BtOr.ScoredBothHalvesSeaon(t,rfd,"k",5)
-        #HomeScrd1st = BtOr.ScoredWholeSeaon(t,rfd,"k",7)
-        #HomeScrd2nd = BtOr.ndScoredWholeSeaon(t,rfd,"k",5)
-        #Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
-        HomeScrd1st = BtOr.OverUnderSeaon(t,rfd,"k",7) 
-        HomeScrd2nd = BtOr.OverUnderSeaon(t,rfd,"L",5) 
-       
-
-
+     
+        Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
       
-        if len(rfd) - HomeScrd2nd[1][0] <=1:
-          Home2ndNG[0].append(HomeScrd2nd[1])
-          Home2ndNG[1].append(len(rfd))
-          Home2ndNG[2].append(t)
-
-        if len(rfd) - HomeScrd2nd[0][0] <=1:
-          Home2ndG[0].append(HomeScrd2nd[0])
-          Home2ndG[1].append(len(rfd))
-          Home2ndG[2].append(t)
-       
+        if len(rfd) == Overs[0][0]:
+          HomeOver0[0].append(Overs[0][0])
+          HomeOver0[1].append(len(rfd))
+          HomeOver0[2].append(t)
                 
 
-df19 = pd.DataFrame(list(zip(Home1st3G[1],Home1st3G[0])),Home1st3G[2],columns =['HomeGamesPlayed','Home1stHalf3Goal'])
-df20 = pd.DataFrame(list(zip(Home1stb3G[1],Home1stb3G[0])),Home1stb3G[2],columns =['HomeGamesPlayed','Home1stHalfBelow3Goal'])
+df1 = pd.DataFrame(list(zip(HomeOver0[1],HomeOver0[0])),HomeOver0[2],columns =['HomeGamesPlayed','HomeOver0'])
+#df2 = pd.DataFrame(list(zip(Overs[1],Overs[0])),Overs[2],columns =['HomeGamesPlayed','HomeOver1'])
 
-
-
-
-#df = pd.DataFrame(list(zip(numOfGames,round,Conceededround,BothHalvesround,HomeConBothHalvesround,HomeOver0,HHOver0,UnderOver0,HomeOver1,UnderOver1,HomeOver2,UnderOver2,HomeOver3,UnderOver3,HomeOver4,UnderOver4,HomeOver5,UnderOver5,HomeOver6,UnderOver6,AwayUnder6)),team,columns =['HomeGamesPlayed','HomeGoalsScored','HomeConceeded','HomeScoredBothHalves','HomeConceededBothHalves','HomeOver:0.5','HomeUnder:0.5','HomeScored1stH:0.5','HomeOver:1.5','HomeUnder:1.5','HomeOver:2.5','HomeUnder:2.5','HomeOver:3.5','HomeUnder:3.5','HomeOver:4.5','HomeUnder:4.5','HomeOver:5.5','HomeUnder:5.5','HomeOver:6.5,'HomeUnder:6.5','AwayUnder:6.5''])
-#df = pd.DataFrame([round],index=[team], columns=['HomeGoalsScored'])    ,'HomeUnder:1.5','HomeUnder:2.5','HomeUnder:3.5','HomeUnder:4.5','HomeUnder:5.5','HomeUnder:6.5'   ,UnderOver1,UnderOver2,UnderOver3,UnderOver4,UnderOver5,UnderOver6
 
 with pd.ExcelWriter('streaks\streaks.xlsx') as writer:
-
   
- 
+  df1.to_excel(writer, sheet_name='HomeOver0')
+  #df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
   
-  df19.to_excel(writer, sheet_name='Home1stHalf3Goal')
-  df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
-  
- # df.to_excel("streaks\streaks.xlsx","HomeOver1,5",)
-#plt.plot( team,round) 
-
-  
-# naming the x axis  k[3] == t and t == "Arsenal" or  }} or k[3] == t and t == "Arsenal"  or k[3] == t and t == "Liverpool" or k[4] == t and t == "Liverpool":
-#plt.xlabel('x - axis') 
-# naming the y axis   hgoal = 0 and
-#plt.ylabel('y - axis') 
-  
-# giving a title to my graph 
-#plt.title('Away Conceeded Whole Season ') 
-  
-# function to show the plot 
-#plt.show()
