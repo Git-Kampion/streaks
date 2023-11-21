@@ -120,22 +120,43 @@ mergedFrame = BtOr.mergeData(arr)
             con = int(r[ht])
             match con:
                 case 0:
+                 
                     under0 = under0 + 1
                     under1 = under1 + 1
                     under2 = under2 + 1
                     under3 = under3 + 1
                     under4 = under4 + 1
                     under5 = under5 + 1
-                    under6 = under6 + 1 
+                    under6 = under6 + 1
+             
                 case 1:
+                  if betype == "L":
+                   if con > int(r[ht + 2]):
                     count = count + 1
                   
                     under2 = under2 + 1
                     under3 = under3 + 1
                     under4 = under4 + 1
                     under5 = under5 + 1
-                    under6 = under6 + 1 
+                    under6 = under6 + 1
+                   else:
+                    under1 = under1 + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                      
+                  else:    
+                    count = count + 1                                  
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
                 case 2:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):
                     count = count + 1
                     countOv1 = countOv1 + 1
                     
@@ -144,8 +165,24 @@ mergedFrame = BtOr.mergeData(arr)
                     under4 = under4 + 1
                     under5 = under5 + 1
                     under6 = under6 + 1 
-                 
-                case 3:                                      
+                   else:
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    
+                  
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                case 3:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                      
                     count = count + 1
                     countOv1 = countOv1 + 1
                     countOv2 = countOv2 + 1
@@ -155,7 +192,19 @@ mergedFrame = BtOr.mergeData(arr)
                     under4 = under4 + 1
                     under5 = under5 + 1
                     under6 = under6 + 1 
-                case 4:                                      
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    
+                   
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                case 4:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                       
                     count = count + 1
                     countOv1 = countOv1 + 1
                     countOv2 = countOv2 + 1
@@ -164,7 +213,18 @@ mergedFrame = BtOr.mergeData(arr)
                    
                     under5 = under5 + 1
                     under6 = under6 + 1 
-                case 5:                                      
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                   
+                   
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                case 5: 
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                         
                     count = count + 1
                     countOv1 = countOv1 + 1
                     countOv2 = countOv2 + 1
@@ -174,7 +234,19 @@ mergedFrame = BtOr.mergeData(arr)
                     
                    
                     under6 = under6 + 1 
-                case 6:                                      
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    
+                    
+                   
+                    under6 = under6 + 1 
+                case 6: 
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                       
                     count = count + 1
                     countOv1 = countOv1 + 1
                     countOv2 = countOv2 + 1
