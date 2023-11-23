@@ -27,7 +27,7 @@ round = []
 Conceededround = []
 BothHalvesround = []
 HomeConBothHalvesround = []
-HHOver0 = []
+HHOver0 = ([],[],[])
 HHOver1 = []
 HHOver2 = []
 HHOver3 = []
@@ -60,19 +60,31 @@ Home1st3G = ([],[],[])
 Home1stb3G = ([],[],[])
 HomeOver1 = ([],[],[])
 HomeOver2 = ([],[],[])
+HomeOver3 = ([],[],[])
+HomeOver4 = ([],[],[])
+HomeOver5 = ([],[],[])
+
+HomeCon0 = ([],[],[])
 HomeCon1 = ([],[],[])
 HomeCon2 = ([],[],[])
 HomeCon3 = ([],[],[])
 HomeCon4 = ([],[],[])
 HomeCon5 = ([],[],[])
 
-UnderOver0 = ([],[],[])
-UnderOver1 = ([],[],[])
-UnderOver2 = ([],[],[])
-UnderOver3 = ([],[],[])
-UnderOver4 = ([],[],[])
-UnderOver5 = ([],[],[])
-UnderOver6 = []
+HomeConB0 = ([],[],[])
+HomeConB1 = ([],[],[])
+HomeConB2 = ([],[],[])
+HomeConB3 = ([],[],[])
+HomeConB4 = ([],[],[])
+HomeConB5 = ([],[],[])
+
+Under0 = ([],[],[])
+Under1 = ([],[],[])
+Under2 = ([],[],[])
+Under3 = ([],[],[])
+Under4 = ([],[],[])
+Under5 = ([],[],[])
+
 
 AwayOver0 = []
 AwayOver1 = []
@@ -108,18 +120,22 @@ for w in teams:
      
         Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
       
-        if len(rfd) == Overs[0][0]:
-          HomeOver0[0].append(Overs[0][0])
-          HomeOver0[1].append(len(rfd))
-          HomeOver0[2].append(t)
+
+        if len(rfd) == Overs[3][3]:
+          HomeConB3[0].append(Overs[3][3])
+          HomeConB3[1].append(len(rfd))
+          HomeConB3[2].append(t)
+
+df17 = pd.DataFrame(list(zip(HomeConB3[1],HomeConB3[0])),HomeConB3[2],columns =['HomeGamesPlayed','HomeConceedBelow3'])
+       
                 
 
-df1 = pd.DataFrame(list(zip(HomeOver0[1],HomeOver0[0])),HomeOver0[2],columns =['HomeGamesPlayed','HomeOver0'])
-#df2 = pd.DataFrame(list(zip(Overs[1],Overs[0])),Overs[2],columns =['HomeGamesPlayed','HomeOver1'])
+
+#df14 = pd.DataFrame(list(zip(HomeConB1[1],HomeConB1[0])),HomeConB1[2],columns =['HomeGamesPlayed','HomeConceeded1'])
 
 
 with pd.ExcelWriter('streaks\streaks.xlsx') as writer:
   
-  df1.to_excel(writer, sheet_name='HomeOver0')
+  df17.to_excel(writer, sheet_name='HomeConceedBelow3')
   #df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
   

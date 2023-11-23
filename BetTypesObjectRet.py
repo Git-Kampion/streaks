@@ -72,7 +72,7 @@ class BtOr:
         arr = ([count,notCount])      
         return arr
     
-    def ConceededBothHalvesSeaon(t,data,betype,ht):
+    def ConcededBothHalvesSeaon(t,data,betype,ht):
         count = 0
         highestMatch = 0
                
@@ -81,14 +81,7 @@ class BtOr:
                 count = count + 1          
         return count
     def OverUnderSeaon(t,data,betype,ht):
-        count = 0
-        under0 = 0
-        under1 = 0
-        under2 = 0
-        under3 = 0
-        under4 = 0
-        under5 = 0
-        under6 = 0     
+        count = 0     
         countOv1 = 0
         countOv2 = 0
         countOv3 = 0
@@ -96,15 +89,67 @@ class BtOr:
         countOv5 = 0
         countOv6 = 0
 
+        FrstHcount = 0     
+        FrstHcountOv1 = 0
+        FrstHcountOv2 = 0
+        FrstHcountOv3 = 0
+        FrstHcountOv4 = 0
+        FrstHcountOv5 = 0
+        FrstHcountOv6 = 0
+
+        under0 = 0
+        under1 = 0
+        under2 = 0
+        under3 = 0
+        under4 = 0
+        under5 = 0
+        under6 = 0
+
+        Frstunder0 = 0
+        Frstunder1 = 0
+        Frstunder2 = 0
+        Frstunder3 = 0
+        Frstunder4 = 0
+        Frstunder5 = 0
+        Frstunder6 = 0
+
+        Concedcount = 0     
+        ConcedcountOv1 = 0
+        ConcedcountOv2 = 0
+        ConcedcountOv3 = 0
+        ConcedcountOv4 = 0
+        ConcedcountOv5 = 0
+        ConcedcountOv6 = 0
+
+        Concedunder0 = 0
+        Concedunder1 = 0
+        Concedunder2 = 0
+        Concedunder3 = 0
+        Concedunder4 = 0
+        Concedunder5 = 0
+        Concedunder6 = 0
+
         overs = []
         unders = []
-       
+
+        Concedovers = []
+        Concedunders = []
+
+        FrstHalfovers = []
+        FrstHalfunders = []
         
         for r in data:   
             con = int(r[ht])
+            conced = int(r[ht+1])
+            HomFrstHlf = int(r[ht+2])
             match con:
                 case 0:                 
                     under0 = under0 + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
                 case 1:                 
                     count = count + 1
                     under2 = under2 + 1
@@ -156,9 +201,125 @@ class BtOr:
                     countOv3 = countOv3 +1
                     countOv4 = countOv4 +1
                     countOv5 = countOv5 +1
+            match conced:
+                case 0:                 
+                    Concedunder0 = Concedunder0 + 1
+                    Concedunder2 = Concedunder2 + 1
+                    Concedunder3 = Concedunder3 + 1
+                    Concedunder4 = Concedunder4 + 1
+                    Concedunder5 = Concedunder5 + 1
+                    Concedunder6 = Concedunder6 + 1
+                case 1:                 
+                    Concedcount = Concedcount + 1
+                    Concedunder2 = Concedunder2 + 1
+                    Concedunder3 = Concedunder3 + 1
+                    Concedunder4 = Concedunder4 + 1
+                    Concedunder5 = Concedunder5 + 1
+                    Concedunder6 = Concedunder6 + 1
+
+                case 2:                 
+                    Concedcount = Concedcount + 1
+                    ConcedcountOv1 = ConcedcountOv1 +1
+                    
+                    Concedunder3 = Concedunder3 + 1
+                    Concedunder4 = Concedunder4 + 1
+                    Concedunder5 = Concedunder5 + 1
+                    Concedunder6 = Concedunder6 + 1
+
+                case 3:                 
+                    Concedcount = Concedcount + 1
+                    ConcedcountOv1 = ConcedcountOv1 +1
+                    ConcedcountOv2 = ConcedcountOv2 +1
+
+                    
+                    Concedunder4 = Concedunder4 + 1
+                    Concedunder5 = Concedunder5 + 1
+                    Concedunder6 = Concedunder6 + 1
+
+                case 4:                 
+                    Concedcount = Concedcount + 1
+                    ConcedcountOv1 = ConcedcountOv1 +1
+                    ConcedcountOv2 = ConcedcountOv2 +1
+                    ConcedcountOv3 = ConcedcountOv3 +1
+
                     
                     
+                    Concedunder5 = Concedunder5 + 1
+                    Concedunder6 = Concedunder6 + 1
+                  
+                case 5:                 
+                    Concedcount = Concedcount + 1
+                    ConcedcountOv1 = ConcedcountOv1 +1
+                    ConcedcountOv2 = ConcedcountOv2 +1
+                    ConcedcountOv3 = ConcedcountOv3 +1
+                    ConcedcountOv4 = ConcedcountOv4 +1
+                case 6:                 
+                    Concedcount = Concedcount + 1
+                    ConcedcountOv1 = ConcedcountOv1 +1
+                    ConcedcountOv2 = ConcedcountOv2 +1
+                    ConcedcountOv3 = ConcedcountOv3 +1
+                    ConcedcountOv4 = ConcedcountOv4 +1
+                    ConcedcountOv5 = ConcedcountOv5 +1        
                     
+            match HomFrstHlf:
+                case 0:                 
+                    under0 = under0 + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                case 1:                 
+                    count = count + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+
+                case 2:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+
+                case 3:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+
+                    
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+
+                case 4:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+
+                    
+                    
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                  
+                case 5:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+                    countOv4 = countOv4 +1
+                case 6:                 
+                    count = count + 1
+                    countOv1 = countOv1 +1
+                    countOv2 = countOv2 +1
+                    countOv3 = countOv3 +1
+                    countOv4 = countOv4 +1
+                    countOv5 = countOv5 +1        
                   
         overs.append(count)        
         overs.append(countOv1)        
@@ -169,13 +330,28 @@ class BtOr:
         overs.append(countOv6)
 
         unders.append(under0)
-        unders.append(under1)
         unders.append(under2)
         unders.append(under3)
         unders.append(under4)
         unders.append(under5)
+        unders.append(under6)
 
-        arr = ([overs,unders,t])  
+        Concedovers.append(Concedcount)        
+        Concedovers.append(ConcedcountOv1)        
+        Concedovers.append(ConcedcountOv2)    
+        Concedovers.append(ConcedcountOv3)
+        Concedovers.append(ConcedcountOv4)
+        Concedovers.append(ConcedcountOv5)
+        Concedovers.append(ConcedcountOv6)
+
+        Concedunders.append(Concedunder0)
+        Concedunders.append(Concedunder2)
+        Concedunders.append(Concedunder3)
+        Concedunders.append(Concedunder4)
+        Concedunders.append(Concedunder5)
+        Concedunders.append(Concedunder6)
+
+        arr = ([overs,unders,Concedovers,Concedunders,t])  
         return arr
     
     
