@@ -26,6 +26,8 @@ numOfGames = []
 round = []
 Conceededround = []
 BothHalvesround = []
+BTSovers= ([],[],[])
+FullTimeOvers= ([],[],[])
 HomeConBothHalvesround = []
 HHOver0 = ([],[],[])
 HHOver1 = ([],[],[])
@@ -84,6 +86,13 @@ HomeCon3 = ([],[],[])
 HomeCon4 = ([],[],[])
 HomeCon5 = ([],[],[])
 
+HomeFirstHCon0 = ([],[],[])
+HomeFirstHCon1 = ([],[],[])
+HomeFirstHCon2 = ([],[],[])
+HomeFirstHCon3 = ([],[],[])
+HomeFirstHCon4 = ([],[],[])
+HomeFirstHCon5 = ([],[],[])
+
 HomeConB0 = ([],[],[])
 HomeConB1 = ([],[],[])
 HomeConB2 = ([],[],[])
@@ -131,15 +140,17 @@ for w in teams:
      # if t == "Brighton":
         rfd = BtOr.refindedDatam(t,sql_data,3)
      
-        Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
+        #Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
+        #hBTS = BtOr.Bts(t,rfd,"k",5)
+        fullTimeOvers = BtOr.FixOverUnders(t,rfd,"k",5)
       
 
-        if len(rfd) - Overs[7][2] <= 1:
-          HSHunder2[0].append(Overs[7][2])
-          HSHunder2[1].append(len(rfd))
-          HSHunder2[2].append(t)
+        if len(rfd) - fullTimeOvers[0][3] <= 1:
+          FullTimeOvers[0].append(fullTimeOvers[0][3])
+          FullTimeOvers[1].append(len(rfd))
+          FullTimeOvers[2].append(t)
 
-df27 = pd.DataFrame(list(zip(HSHunder2[1],HSHunder2[0])),HSHunder2[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde3'])
+df27 = pd.DataFrame(list(zip(FullTimeOvers[1],FullTimeOvers[0])),FullTimeOvers[2],columns =['HomeGamesPlayed','HomeFullTimeOver'])
        
                 
 
@@ -149,6 +160,6 @@ df27 = pd.DataFrame(list(zip(HSHunder2[1],HSHunder2[0])),HSHunder2[2],columns =[
 
 with pd.ExcelWriter('streaks\streaks.xlsx') as writer:
   
-  df27.to_excel(writer, sheet_name='HomeSecondHalfUnde3')
+  df27.to_excel(writer, sheet_name='HomeFullTimeOver')
   #df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
   

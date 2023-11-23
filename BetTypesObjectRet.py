@@ -16,6 +16,124 @@ class BtOr:
                     count = 0            
         return highestMatch
     
+    def FixOverUnders(t,data,betype,ht):
+        countO = 0
+        countOv1 = 0
+        countOv2 = 0
+        countOv3 = 0
+        countOv4 = 0
+        countOv5 = 0
+        countOv6 = 0
+
+        under0 = 0
+        under1 = 0
+        under2 = 0
+        under3 = 0
+        under4 = 0
+        under5 = 0
+        under6 = 0
+        overs = []
+        unders = []
+        for r in data:
+            Hcon = int(r[ht])
+            Acon = int(r[ht + 1])
+            FullScore = Hcon + Acon
+            
+            if FullScore == 0:
+                under0 = under0 + 1
+                under1 = under1 + 1
+                under2 = under2 + 1
+                under3 = under3 + 1
+                under4 = under4 + 1
+                under5 = under5 + 1
+                under6 = under6 + 1
+            if FullScore == 1:
+                countOv1 = countOv1 + 1
+                
+                under2 = under2 + 1
+                under3 = under3 + 1
+                under4 = under4 + 1
+                under5 = under5 + 1
+                under6 = under6 + 1
+            if FullScore == 2:
+                countOv1 = countOv1 + 1
+                countOv2 = countOv2 + 1
+                
+                
+                under3 = under3 + 1
+                under4 = under4 + 1
+                under5 = under5 + 1
+                under6 = under6 + 1
+            if FullScore == 3:
+                countOv1 = countOv1 + 1
+                countOv2 = countOv2 + 1
+                countOv3 = countOv3 + 1
+                
+                under4 = under4 + 1
+                under5 = under5 + 1
+                under6 = under6 + 1
+            if FullScore == 4:
+                countOv1 = countOv1 + 1
+                countOv2 = countOv2 + 1
+                countOv3 = countOv3 + 1
+                countOv4 = countOv4 + 1
+                
+             
+                under5 = under5 + 1
+                under6 = under6 + 1
+            if FullScore == 5:
+                countOv1 = countOv1 + 1
+                countOv2 = countOv2 + 1
+                countOv3 = countOv3 + 1
+                countOv4 = countOv4 + 1
+                countOv5 = countOv5 + 1
+                
+
+                under6 = under6 + 1
+            
+            if FullScore >= 6:
+                countOv1 = countOv1 + 1
+                countOv2 = countOv2 + 1
+                countOv3 = countOv3 + 1
+                countOv4 = countOv4 + 1
+                countOv5 = countOv5 + 1
+                countOv6 = countOv6 + 1
+                            
+            
+        overs.append(countOv1)        
+        overs.append(countOv2)    
+        overs.append(countOv3)
+        overs.append(countOv4)
+        overs.append(countOv5)
+        overs.append(countOv6)
+
+        unders.append(under0)
+        unders.append(under2)
+        unders.append(under3)
+        unders.append(under4)
+        unders.append(under5)
+        unders.append(under6)
+
+        
+        arr = ([overs,unders])
+        return arr
+
+    def Bts(t,data,betype,ht):
+        
+       count = 0
+       notCount = 0
+       arr = ([],[])
+       for r in data:
+            Hcon = int(r[ht])
+            Acon = int(r[ht + 1])
+
+            if Hcon > 0 and Acon > 0:
+                count = count +1
+            else:
+                notCount = notCount+1
+       arr = ([count,notCount])
+       return arr
+    
     def refindedDatam(t,data,ht):
          refindedData = []
          for o in data[0]:           
@@ -145,6 +263,22 @@ class BtOr:
         Concedunder5 = 0
         Concedunder6 = 0
 
+        FrstHConcedcount = 0     
+        FrstHConcedcountOv1 = 0
+        FrstHConcedcountOv2 = 0
+        FrstHConcedcountOv3 = 0
+        FrstHConcedcountOv4 = 0
+        FrstHConcedcountOv5 = 0
+        FrstHConcedcountOv6 = 0
+
+        FrstHConcedunder0 = 0
+        FrstHConcedunder1 = 0
+        FrstHConcedunder2 = 0
+        FrstHConcedunder3 = 0
+        FrstHConcedunder4 = 0
+        FrstHConcedunder5 = 0
+        FrstHConcedunder6 = 0
+
         overs = []
         unders = []
 
@@ -165,6 +299,7 @@ class BtOr:
             conced = int(r[ht+1])
             HomFrstHlf = int(r[ht+2])
             HomSecHlf = int(r[ht])
+            FirstHconced = int(r[ht+3])
             match con:
                 case 0:                 
                     under0 = under0 + 1
@@ -406,7 +541,66 @@ class BtOr:
                     Secunder4 = Secunder4 + 1
                     Secunder5 = Secunder5 + 1
                     Secunder6 = Secunder6 + 1
-                
+            
+            match FirstHconced:
+                case 0:                 
+                    FrstHConcedunder0 = FrstHConcedunder0 + 1
+                    FrstHConcedunder2 = FrstHConcedunder2 + 1
+                    FrstHConcedunder3 = FrstHConcedunder3 + 1
+                    FrstHConcedunder4 = FrstHConcedunder4 + 1
+                    FrstHConcedunder5 = FrstHConcedunder5 + 1
+                    FrstHConcedunder6 = FrstHConcedunder6 + 1
+                case 1:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedunder2 = FrstHConcedunder2 + 1
+                    FrstHConcedunder3 = FrstHConcedunder3 + 1
+                    FrstHConcedunder4 = FrstHConcedunder4 + 1
+                    FrstHConcedunder5 = FrstHConcedunder5 + 1
+                    FrstHConcedunder6 = FrstHConcedunder6 + 1
+
+                case 2:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedcountOv1 = FrstHConcedcountOv1 +1
+                    
+                    FrstHConcedunder3 = FrstHConcedunder3 + 1
+                    FrstHConcedunder4 = FrstHConcedunder4 + 1
+                    FrstHConcedunder5 = FrstHConcedunder5 + 1
+                    FrstHConcedunder6 = FrstHConcedunder6 + 1
+
+                case 3:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedcountOv1 = FrstHConcedcountOv1 +1
+                    FrstHConcedcountOv2 = FrstHConcedcountOv2 +1
+
+                    
+                    FrstHConcedunder4 = FrstHConcedunder4 + 1
+                    FrstHConcedunder5 = FrstHConcedunder5 + 1
+                    FrstHConcedunder6 = FrstHConcedunder6 + 1
+
+                case 4:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedcountOv1 = FrstHConcedcountOv1 +1
+                    FrstHConcedcountOv2 = FrstHConcedcountOv2 +1
+                    FrstHConcedcountOv3 = FrstHConcedcountOv3 +1
+
+                    
+                    
+                    FrstHConcedunder5 = FrstHConcedunder5 + 1
+                    FrstHConcedunder6 = FrstHConcedunder6 + 1
+                  
+                case 5:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedcountOv1 = FrstHConcedcountOv1 +1
+                    FrstHConcedcountOv2 = FrstHConcedcountOv2 +1
+                    FrstHConcedcountOv3 = FrstHConcedcountOv3 +1
+                    FrstHConcedcountOv4 = FrstHConcedcountOv4 +1
+                case 6:                 
+                    FrstHConcedcount = FrstHConcedcount + 1
+                    FrstHConcedcountOv1 = FrstHConcedcountOv1 +1
+                    FrstHConcedcountOv2 = FrstHConcedcountOv2 +1
+                    FrstHConcedcountOv3 = FrstHConcedcountOv3 +1
+                    FrstHConcedcountOv4 = FrstHConcedcountOv4 +1
+                    FrstHConcedcountOv5 = FrstHConcedcountOv5 +1  
                     
         overs.append(count)        
         overs.append(countOv1)        
@@ -467,6 +661,21 @@ class BtOr:
         Concedunders.append(Concedunder5)
         Concedunders.append(Concedunder6)
 
+        FrstHalfConcedovers.append(FrstHConcedcount)        
+        FrstHalfConcedovers.append(FrstHConcedcountOv1)        
+        FrstHalfConcedovers.append(FrstHConcedcountOv2)    
+        FrstHalfConcedovers.append(FrstHConcedcountOv3)
+        FrstHalfConcedovers.append(FrstHConcedcountOv4)
+        FrstHalfConcedovers.append(FrstHConcedcountOv5)
+        FrstHalfConcedovers.append(FrstHConcedcountOv6)
+
+        FrstHalfConcedunders.append(FrstHConcedunder0)
+        FrstHalfConcedunders.append(FrstHConcedunder2)
+        FrstHalfConcedunders.append(FrstHConcedunder3)
+        FrstHalfConcedunders.append(FrstHConcedunder4)
+        FrstHalfConcedunders.append(FrstHConcedunder5)
+        FrstHalfConcedunders.append(FrstHConcedunder6)
+
         arr = ([overs,unders,Concedovers,Concedunders ,FrstHalfovers,FrstHalfunders,SecondHalfovers,SecondHalfunders,FrstHalfConcedovers,FrstHalfConcedunders,t])  
         return arr
     
@@ -508,12 +717,7 @@ class BtOr:
         #return HomeAttributes
        
       
-    def Bts(title,body):
-         cl1 =  body.split("\n")
-         YesLabel =   cl1[0]
-         YesOdd =   cl1[1]
-         NoLabel =   cl1[2]
-         NoOdd =   cl1[3]
+    
     
     def Dc(Title,body):
         cl1 =  body.split("\n")

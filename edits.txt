@@ -255,7 +255,46 @@ df28 = pd.DataFrame(list(zip(HSHunder1[1],HSHunder1[0])),HSHunder1[2],columns =[
 
 df29 = pd.DataFrame(list(zip(HSHunder2[1],HSHunder2[0])),HSHunder2[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde3'])
     
-          
-       
-    
+#----------Home Conceed 1st Half Over /Unders----------# 
+ if len(rfd) - Overs[8][0] <= 1:
+          HomeFirstHCon1[0].append(Overs[8][0])
+          HomeFirstHCon1[1].append(len(rfd))
+          HomeFirstHCon1[2].append(t)
 
+df27 = pd.DataFrame(list(zip(HomeFirstHCon1[1],HomeFirstHCon1[0])),HomeFirstHCon1[2],columns =['HomeGamesPlayed','HomeFirstHalfConceed1'])
+   
+
+
+  if len(rfd) - Overs[8][1] <= 1:
+          HomeFirstHCon2[0].append(Overs[8][1])
+          HomeFirstHCon2[1].append(len(rfd))
+          HomeFirstHCon2[2].append(t)
+
+df30 = pd.DataFrame(list(zip(HomeFirstHCon2[1],HomeFirstHCon2[0])),HomeFirstHCon2[2],columns =['HomeGamesPlayed','HomeFirstHalfConceed2'])
+            
+ #----------Home Conceed Second Half Over /Unders----------# 
+ if len(rfd) - Overs[8][0] <= 1:
+          HomeFirstHCon1[0].append(Overs[8][0])
+          HomeFirstHCon1[1].append(len(rfd))
+          HomeFirstHCon1[2].append(t)
+
+df27 = pd.DataFrame(list(zip(HomeFirstHCon1[1],HomeFirstHCon1[0])),HomeFirstHCon1[2],columns =['HomeGamesPlayed','HomeFirstHalfConceed1'])
+   
+
+
+  if len(rfd) - Overs[8][1] <= 1:
+          HomeFirstHCon2[0].append(Overs[8][1])
+          HomeFirstHCon2[1].append(len(rfd))
+          HomeFirstHCon2[2].append(t)
+
+df30 = pd.DataFrame(list(zip(HomeFirstHCon2[1],HomeFirstHCon2[0])),HomeFirstHCon2[2],columns =['HomeGamesPlayed','HomeFirstHalfConceed2'])
+    #----------FullTime Over /Unders----------#         
+        
+    
+ if len(rfd) - fullTimeOvers[0][3] <= 1:
+          FullTimeOvers[0].append(fullTimeOvers[0][3])
+          FullTimeOvers[1].append(len(rfd))
+          FullTimeOvers[2].append(t)
+
+df27 = pd.DataFrame(list(zip(FullTimeOvers[1],FullTimeOvers[0])),FullTimeOvers[2],columns =['HomeGamesPlayed','HomeFullTimeOver'])
+       
