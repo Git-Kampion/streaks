@@ -28,20 +28,33 @@ Conceededround = []
 BothHalvesround = []
 HomeConBothHalvesround = []
 HHOver0 = ([],[],[])
-HHOver1 = []
-HHOver2 = []
-HHOver3 = []
-HHOver4 = []
-HHOver5 = []
-HHOver6 = []
+HHOver1 = ([],[],[])
+HHOver2 = ([],[],[])
+HHOver3 = ([],[],[])
+HHOver4 = ([],[],[])
+HHOver5 = ([],[],[])
+HHOver6 = ([],[],[])
+
+HSHOver0 = ([],[],[])
+HSHOver1 = ([],[],[])
+HSHOver2 = ([],[],[])
+HSHOver3 = ([],[],[])
+HSHOver4 = ([],[],[])
+HSHOver5 = ([],[],[])
+HSHOver6 = ([],[],[])
 
 
 HHunder0 = ([],[],[])
 HHunder1 = ([],[],[])
-HHunder2 = []
-HHunder3 = []
-HHunder4 = []
-HHunder5 = []
+HHunder2 = ([],[],[])
+
+HSHunder0 = ([],[],[])
+HSHunder1 = ([],[],[])
+HSHunder2 = ([],[],[])
+HSHunder3 = ([],[],[])
+HSHunder4 = ([],[],[])
+HSHunder5 = ([],[],[])
+HSHunder3 = ([],[],[])
 HHunder6 = []
 
 
@@ -121,12 +134,12 @@ for w in teams:
         Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
       
 
-        if len(rfd) == Overs[3][3]:
-          HomeConB3[0].append(Overs[3][3])
-          HomeConB3[1].append(len(rfd))
-          HomeConB3[2].append(t)
+        if len(rfd) - Overs[7][2] <= 1:
+          HSHunder2[0].append(Overs[7][2])
+          HSHunder2[1].append(len(rfd))
+          HSHunder2[2].append(t)
 
-df17 = pd.DataFrame(list(zip(HomeConB3[1],HomeConB3[0])),HomeConB3[2],columns =['HomeGamesPlayed','HomeConceedBelow3'])
+df27 = pd.DataFrame(list(zip(HSHunder2[1],HSHunder2[0])),HSHunder2[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde3'])
        
                 
 
@@ -136,6 +149,6 @@ df17 = pd.DataFrame(list(zip(HomeConB3[1],HomeConB3[0])),HomeConB3[2],columns =[
 
 with pd.ExcelWriter('streaks\streaks.xlsx') as writer:
   
-  df17.to_excel(writer, sheet_name='HomeConceedBelow3')
+  df27.to_excel(writer, sheet_name='HomeSecondHalfUnde3')
   #df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
   

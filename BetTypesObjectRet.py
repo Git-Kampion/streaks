@@ -97,6 +97,22 @@ class BtOr:
         FrstHcountOv5 = 0
         FrstHcountOv6 = 0
 
+        SecHcount = 0     
+        SecHcountOv1 = 0
+        SecHcountOv2 = 0
+        SecHcountOv3 = 0
+        SecHcountOv4 = 0
+        SecHcountOv5 = 0
+        SecHcountOv6 = 0
+
+        Secunder0 = 0
+        Secunder1 = 0
+        Secunder2 = 0
+        Secunder3 = 0
+        Secunder4 = 0
+        Secunder5 = 0
+        Secunder6 = 0
+
         under0 = 0
         under1 = 0
         under2 = 0
@@ -137,11 +153,18 @@ class BtOr:
 
         FrstHalfovers = []
         FrstHalfunders = []
+
+        SecondHalfovers = []
+        SecondHalfunders = []
+
+        FrstHalfConcedovers = []
+        FrstHalfConcedunders = []
         
         for r in data:   
             con = int(r[ht])
             conced = int(r[ht+1])
             HomFrstHlf = int(r[ht+2])
+            HomSecHlf = int(r[ht])
             match con:
                 case 0:                 
                     under0 = under0 + 1
@@ -263,64 +286,128 @@ class BtOr:
                     
             match HomFrstHlf:
                 case 0:                 
-                    under0 = under0 + 1
-                    under2 = under2 + 1
-                    under3 = under3 + 1
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1
+                    Frstunder0 = Frstunder0 + 1
+                    Frstunder2 = Frstunder2 + 1
+                    Frstunder3 = Frstunder3 + 1
+                    Frstunder4 = Frstunder4 + 1
+                    Frstunder5 = Frstunder5 + 1
+                    Frstunder6 = Frstunder6 + 1
                 case 1:                 
-                    count = count + 1
-                    under2 = under2 + 1
-                    under3 = under3 + 1
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1
+                    FrstHcount = FrstHcount + 1
+                    Frstunder2 = Frstunder2 + 1
+                    Frstunder3 = Frstunder3 + 1
+                    Frstunder4 = Frstunder4 + 1
+                    Frstunder5 = Frstunder5 + 1
+                    Frstunder6 = Frstunder6 + 1
 
                 case 2:                 
-                    count = count + 1
-                    countOv1 = countOv1 +1
+                    FrstHcount = FrstHcount + 1
+                    FrstHcountOv1 = FrstHcountOv1 +1
                     
-                    under3 = under3 + 1
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1
+                    Frstunder3 = Frstunder3 + 1
+                    Frstunder4 = Frstunder4 + 1
+                    Frstunder5 = Frstunder5 + 1
+                    Frstunder6 = Frstunder6 + 1
 
                 case 3:                 
-                    count = count + 1
-                    countOv1 = countOv1 +1
-                    countOv2 = countOv2 +1
+                    FrstHcount = FrstHcount + 1
+                    FrstHcountOv1 = FrstHcountOv1 +1
+                    FrstHcountOv2 = FrstHcountOv2 +1
 
                     
-                    under4 = under4 + 1
-                    under5 = under5 + 1
-                    under6 = under6 + 1
-
+                    Frstunder4 = Frstunder4 + 1
+                    Frstunder5 = Frstunder5 + 1
+                    Frstunder6 = Frstunder6 + 1
                 case 4:                 
-                    count = count + 1
-                    countOv1 = countOv1 +1
-                    countOv2 = countOv2 +1
-                    countOv3 = countOv3 +1
+                    FrstHcount = FrstHcount + 1
+                    FrstHcountOv1 = FrstHcountOv1 +1
+                    FrstHcountOv2 = FrstHcountOv2 +1
+                    FrstHcountOv3 = FrstHcountOv3 +1
 
                     
                     
-                    under5 = under5 + 1
-                    under6 = under6 + 1
+                    Frstunder5 = Frstunder5 + 1
+                    Frstunder6 = Frstunder6 + 1
                   
                 case 5:                 
-                    count = count + 1
-                    countOv1 = countOv1 +1
-                    countOv2 = countOv2 +1
-                    countOv3 = countOv3 +1
-                    countOv4 = countOv4 +1
+                    FrstHcount =  FrstHcount + 1
+                    FrstHcountOv1 =  FrstHcountOv1 +1
+                    FrstHcountOv2 = FrstHcountOv2 +1
+                    FrstHcountOv3 = FrstHcountOv3 +1
+                    FrstHcountOv4 = FrstHcountOv4 +1
+                    Frstunder6 = Frstunder6 + 1
                 case 6:                 
-                    count = count + 1
-                    countOv1 = countOv1 +1
-                    countOv2 = countOv2 +1
-                    countOv3 = countOv3 +1
-                    countOv4 = countOv4 +1
-                    countOv5 = countOv5 +1        
+                    FrstHcount = FrstHcount + 1
+                    FrstHcountOv1 = FrstHcountOv1 +1
+                    FrstHcountOv2 = FrstHcountOv2 +1
+                    FrstHcountOv3 = FrstHcountOv3 +1
+                    FrstHcountOv4 = FrstHcountOv4 +1
+                    FrstHcountOv5 = FrstHcountOv5 +1     
+            HomSecHlf = HomSecHlf - HomFrstHlf
+            if HomSecHlf > 0:
+             match HomSecHlf:
+                case 0:                 
+                   Secunder0 = Secunder0 + 1
+                case 1:                 
+                    SecHcount = SecHcount + 1
+                    Secunder2 = Secunder2 + 1
+                    Secunder3 = Secunder3 + 1
+                    Secunder4 = Secunder4 + 1
+                    Secunder5 = Secunder5 + 1
+                    Secunder6 = Secunder6 + 1
+
+                case 2:                 
+                    SecHcount = SecHcount + 1
+                    SecHcountOv1 = SecHcountOv1 +1
+                    
+                    Secunder3 = Secunder3 + 1
+                    Secunder4 = Secunder4 + 1
+                    Secunder5 = Secunder5 + 1
+                    Secunder6 = Secunder6 + 1
+
+                case 3:                 
+                    SecHcount = SecHcount + 1
+                    SecHcountOv1 = SecHcountOv1 +1
+                    SecHcountOv2 = SecHcountOv2 +1
+
+                    
+                    Secunder4 = Secunder4 + 1
+                    Secunder5 = Secunder5 + 1
+                    Secunder6 = Secunder6 + 1
+                case 4:                 
+                    SecHcount = SecHcount + 1
+                    SecHcountOv1 = SecHcountOv1 +1
+                    SecHcountOv2 = SecHcountOv2 +1
+                    SecHcountOv3 = SecHcountOv3 +1
+
+                    
+                    
+                    Secunder5 = Secunder5 + 1
+                    Secunder6 = Secunder6 + 1
                   
+                case 5:                 
+                    SecHcount =  SecHcount + 1
+                    SecHcountOv1 =  SecHcountOv1 +1
+                    SecHcountOv2 = SecHcountOv2 +1
+                    SecHcountOv3 = SecHcountOv3 +1
+                    SecHcountOv4 = SecHcountOv4 +1
+                    Secunder6 = Secunder6 + 1
+                case 6:                 
+                    SecHcount = SecHcount + 1
+                    SecHcountOv1 = SecHcountOv1 +1
+                    SecHcountOv2 = SecHcountOv2 +1
+                    SecHcountOv3 = SecHcountOv3 +1
+                    SecHcountOv4 = SecHcountOv4 +1
+                    SecHcountOv5 = SecHcountOv5 +1        
+            else:
+                    Secunder0 = Secunder0 + 1
+                    Secunder2 = Secunder2 + 1
+                    Secunder3 = Secunder3 + 1
+                    Secunder4 = Secunder4 + 1
+                    Secunder5 = Secunder5 + 1
+                    Secunder6 = Secunder6 + 1
+                
+                    
         overs.append(count)        
         overs.append(countOv1)        
         overs.append(countOv2)    
@@ -329,12 +416,41 @@ class BtOr:
         overs.append(countOv5)
         overs.append(countOv6)
 
+        FrstHalfovers.append(FrstHcount)        
+        FrstHalfovers.append(FrstHcountOv1)        
+        FrstHalfovers.append(FrstHcountOv2)    
+        FrstHalfovers.append(FrstHcountOv3)
+        FrstHalfovers.append(FrstHcountOv4)
+        FrstHalfovers.append(FrstHcountOv5)
+
+        SecondHalfovers.append(SecHcount)        
+        SecondHalfovers.append(SecHcountOv1)        
+        SecondHalfovers.append(SecHcountOv2)    
+        SecondHalfovers.append(SecHcountOv3)
+        SecondHalfovers.append(SecHcountOv4)
+        SecondHalfovers.append(SecHcountOv5)
+        
+
         unders.append(under0)
         unders.append(under2)
         unders.append(under3)
         unders.append(under4)
         unders.append(under5)
         unders.append(under6)
+
+        FrstHalfunders.append(Frstunder0)
+        FrstHalfunders.append(Frstunder2)
+        FrstHalfunders.append(Frstunder3)
+        FrstHalfunders.append(Frstunder4)
+        FrstHalfunders.append(Frstunder5)
+        FrstHalfunders.append(Frstunder6)
+
+        SecondHalfunders.append(Secunder0)
+        SecondHalfunders.append(Secunder2)
+        SecondHalfunders.append(Secunder3)
+        SecondHalfunders.append(Secunder4)
+        SecondHalfunders.append(Secunder5)
+        SecondHalfunders.append(Secunder6)
 
         Concedovers.append(Concedcount)        
         Concedovers.append(ConcedcountOv1)        
@@ -351,7 +467,7 @@ class BtOr:
         Concedunders.append(Concedunder5)
         Concedunders.append(Concedunder6)
 
-        arr = ([overs,unders,Concedovers,Concedunders,t])  
+        arr = ([overs,unders,Concedovers,Concedunders ,FrstHalfovers,FrstHalfunders,SecondHalfovers,SecondHalfunders,FrstHalfConcedovers,FrstHalfConcedunders,t])  
         return arr
     
     

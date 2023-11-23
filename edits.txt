@@ -1,0 +1,261 @@
+  if len(rfd) == Overs[0][0]:
+          HomeOver0[0].append(Overs[0][0])
+          HomeOver0[1].append(len(rfd))
+          HomeOver0[2].append(t)
+
+df1 = pd.DataFrame(list(zip(HomeOver0[1],HomeOver0[0])),HomeOver0[2],columns =['HomeGamesPlayed','HomeOver0'])
+
+
+
+
+#-------------- Home Over 0 - 5------------------#   
+     if len(rfd) == Overs[0][1]:
+          HomeOver1[0].append(Overs[0][1])
+          HomeOver1[1].append(len(rfd))
+          HomeOver1[2].append(t)
+df2 = pd.DataFrame(list(zip(HomeOver1[1],HomeOver1[0])),HomeOver1[2],columns =['HomeGamesPlayed','HomeOver1'])
+
+
+
+
+
+
+ if len(rfd) == Overs[0][2]:
+          HomeOver2[0].append(Overs[0][2])
+          HomeOver2[1].append(len(rfd))
+          HomeOver2[2].append(t)
+                
+
+df3 = pd.DataFrame(list(zip(HomeOver2[1],HomeOver2[0])),HomeOver2[2],columns =['HomeGamesPlayed','HomeOver2'])
+
+
+
+   if len(rfd) == Overs[0][3]:
+          HomeOver3[0].append(Overs[0][3])
+          HomeOver3[1].append(len(rfd))
+          HomeOver3[2].append(t)
+                
+
+
+df4 = pd.DataFrame(list(zip(HomeOver3[1],HomeOver3[0])),HomeOver3[2],columns =['HomeGamesPlayed','HomeOver3'])
+
+if len(rfd) == Overs[0][4]:
+          HomeOver4[0].append(Overs[0][4])
+          HomeOver4[1].append(len(rfd))
+          HomeOver4[2].append(t)
+                
+
+
+df5 = pd.DataFrame(list(zip(HomeOver4[1],HomeOver4[0])),HomeOver4[2],columns =['HomeGamesPlayed','HomeOver4'])
+
+
+if len(rfd) == Overs[0][5]:
+          HomeOver5[0].append(Overs[0][5])
+          HomeOver5[1].append(len(rfd))
+          HomeOver5[2].append(t)
+                
+
+
+df6 = pd.DataFrame(list(zip(HomeOver5[1],HomeOver5[0])),HomeOver5[2],columns =['HomeGamesPlayed','HomeOver5'])
+#-------------- Home Under 1 - 5------------------#
+    if len(rfd) == Overs[1][1]:
+          Under1[0].append(Overs[1][1])
+          Under1[1].append(len(rfd))
+          Under1[2].append(t)
+                
+
+
+df7 = pd.DataFrame(list(zip(Under1[1],Under1[0])),Under1[2],columns =['HomeGamesPlayed','HomeUnder1'])
+
+
+if len(rfd) == Overs[1][2]:
+          Under2[0].append(Overs[1][2])
+          Under2[1].append(len(rfd))
+          Under2[2].append(t)
+                
+
+
+df8 = pd.DataFrame(list(zip(Under2[1],Under2[0])),Under2[2],columns =['HomeGamesPlayed','HomeUnder2'])
+
+   if len(rfd) == Overs[1][3]:
+          Under3[0].append(Overs[1][3])
+          Under3[1].append(len(rfd))
+          Under3[2].append(t)
+                
+
+
+df9 = pd.DataFrame(list(zip(Under3[1],Under3[0])),Under3[2],columns =['HomeGamesPlayed','HomeUnder3'])
+
+if len(rfd) == Overs[1][4]:
+          Under4[0].append(Overs[1][4])
+          Under4[1].append(len(rfd))
+          Under4[2].append(t)
+                
+
+
+df10 = pd.DataFrame(list(zip(Under4[1],Under4[0])),Under4[2],columns =['HomeGamesPlayed','HomeUnder4'])
+
+
+ if len(rfd) == Overs[1][5]:
+          Under5[0].append(Overs[1][5])
+          Under5[1].append(len(rfd))
+          Under5[2].append(t)
+                
+
+
+df11 = pd.DataFrame(list(zip(Under5[1],Under5[0])),Under5[2],columns =['HomeGamesPlayed','HomeUnder5'])
+#-------------- Home Conceed 1 - 5------------------#
+if len(rfd) == Overs[2][0]:
+          HomeCon1[0].append(Overs[2][0])
+          HomeCon1[1].append(len(rfd))
+          HomeCon1[2].append(t)
+                
+
+
+df12 = pd.DataFrame(list(zip(HomeCon1[1],HomeCon1[0])),HomeCon1[2],columns =['HomeGamesPlayed','Conceeded1'])
+
+if len(rfd) == Overs[2][2]:
+          HomeCon1[0].append(Overs[2][0])
+          HomeCon1[1].append(len(rfd))
+          HomeCon1[2].append(t)
+                
+
+
+df14 = pd.DataFrame(list(zip(HomeCon1[1],HomeCon1[0])),HomeCon1[2],columns =['HomeGamesPlayed','Conceeded1'])
+
+
+if len(rfd) == Overs[2][1]:
+          HomeCon2[0].append(Overs[2][1])
+          HomeCon2[1].append(len(rfd))
+          HomeCon2[2].append(t)
+                
+
+
+df13 = pd.DataFrame(list(zip(HomeCon2[1],HomeCon2[0])),HomeCon2[2],columns =['HomeGamesPlayed','Conceeded2'])
+
+#----------Home Conceeded below 1-5---------#
+
+         if len(rfd) == Overs[3][1]:
+          HomeConB1[0].append(Overs[3][1])
+          HomeConB1[1].append(len(rfd))
+          HomeConB1[2].append(t)
+
+df15 = pd.DataFrame(list(zip(HomeConB1[1],HomeConB1[0])),HomeConB1[2],columns =['HomeGamesPlayed','HomeConceedBelow1'])
+       
+   
+     if len(rfd) == Overs[3][2]:
+          HomeConB2[0].append(Overs[3][2])
+          HomeConB2[1].append(len(rfd))
+          HomeConB2[2].append(t)
+
+df16 = pd.DataFrame(list(zip(HomeConB2[1],HomeConB2[0])),HomeConB2[2],columns =['HomeGamesPlayed','HomeConceedBelow2'])
+   
+
+   if len(rfd) == Overs[3][3]:
+          HomeConB3[0].append(Overs[3][3])
+          HomeConB3[1].append(len(rfd))
+          HomeConB3[2].append(t)
+
+df17 = pd.DataFrame(list(zip(HomeConB3[1],HomeConB3[0])),HomeConB3[2],columns =['HomeGamesPlayed','HomeConceedBelow3'])
+
+#----------Home 1st Half Over---------#
+         if len(rfd) == Overs[4][0]:
+          HHOver0[0].append(Overs[4][0])
+          HHOver0[1].append(len(rfd))
+          HHOver0[2].append(t)
+
+df18 = pd.DataFrame(list(zip(HHOver0[1],HHOver0[0])),HHOver0[2],columns =['HomeGamesPlayed','HomeFirstHalfOver0'])
+
+ if len(rfd) == Overs[4][1]:
+          HHOver1[0].append(Overs[4][1])
+          HHOver1[1].append(len(rfd))
+          HHOver1[2].append(t)
+
+df19 = pd.DataFrame(list(zip(HHOver1[1],HHOver1[0])),HHOver1[2],columns =['HomeGamesPlayed','HomeFirstHalfOver1'])
+
+       if len(rfd) == Overs[4][2]:
+          HHOver2[0].append(Overs[4][2])
+          HHOver2[1].append(len(rfd))
+          HHOver2[2].append(t)
+
+df20 = pd.DataFrame(list(zip(HHOver0[1],HHOver0[0])),HHOver0[2],columns =['HomeGamesPlayed','HomeFirstHalfOver1'])
+ #----------Home 1st Half Under---------# 
+      if len(rfd) == Overs[5][0]:
+          HHunder0[0].append(Overs[5][0])
+          HHunder0[1].append(len(rfd))
+          HHunder0[2].append(t)
+
+df21 = pd.DataFrame(list(zip(HHunder0[1],HHunder0[0])),HHunder0[2],columns =['HomeGamesPlayed','HomeFirstHalfUnder1'])
+       
+ if len(rfd) == Overs[5][1]:
+          HHunder2[0].append(Overs[5][1])
+          HHunder2[1].append(len(rfd))
+          HHunder2[2].append(t)
+
+df22 = pd.DataFrame(list(zip(HHunder2[1],HHunder2[0])),HHunder2[2],columns =['HomeGamesPlayed','HomeFirstHalfUnder2'])
+
+
+        if len(rfd) == Overs[5][3]:
+          HHunder3[0].append(Overs[5][3])
+          HHunder3[1].append(len(rfd))
+          HHunder3[2].append(t)
+
+df22 = pd.DataFrame(list(zip(HHunder2[1],HHunder2[0])),HHunder2[2],columns =['HomeGamesPlayed','HomeFirstHalfUnder3'])
+  
+        if len(rfd) == Overs[5][2]:
+          HHunder1[0].append(Overs[5][2])
+          HHunder1[1].append(len(rfd))
+          HHunder1[2].append(t)
+
+df23 = pd.DataFrame(list(zip(HHunder2[1],HHunder2[0])),HHunder2[2],columns =['HomeGamesPlayed','HomeFirstHalfUnder2'])
+
+ #----------Home Second Half Over /Unders# 
+       
+  if len(rfd) == Overs[6][0]:
+          HSHOver0[0].append(Overs[6][0])
+          HSHOver0[1].append(len(rfd))
+          HSHOver0[2].append(t)
+
+df24 = pd.DataFrame(list(zip(HSHOver0[1],HSHOver0[0])),HSHOver0[2],columns =['HomeGamesPlayed','HomeSecondHalfOver0'])
+ 
+ if len(rfd) - Overs[6][1] <= 1:
+          HSHOver1[0].append(Overs[6][1])
+          HSHOver1[1].append(len(rfd))
+          HSHOver1[2].append(t)
+
+df25 = pd.DataFrame(list(zip(HSHOver1[1],HSHOver1[0])),HSHOver1[2],columns =['HomeGamesPlayed','HomeSecondHalfOver1'])
+       
+
+ if len(rfd) - Overs[6][2] <= 1:
+          HSHOver2[0].append(Overs[6][2])
+          HSHOver2[1].append(len(rfd))
+          HSHOver2[2].append(t)
+
+df26 = pd.DataFrame(list(zip(HSHOver2[1],HSHOver2[0])),HSHOver2[2],columns =['HomeGamesPlayed','HomeSecondHalfOver2'])
+       
+   if len(rfd) - Overs[7][0] <= 1:
+          HSHunder0[0].append(Overs[7][0])
+          HSHunder0[1].append(len(rfd))
+          HSHunder0[2].append(t)
+
+df27 = pd.DataFrame(list(zip(HSHunder0[1],HSHunder0[0])),HSHunder0[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde1'])
+       
+                
+ if len(rfd) - Overs[7][1] <= 1:
+          HSHunder1[0].append(Overs[7][1])
+          HSHunder1[1].append(len(rfd))
+          HSHunder1[2].append(t)
+
+df28 = pd.DataFrame(list(zip(HSHunder1[1],HSHunder1[0])),HSHunder1[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde2'])
+
+  if len(rfd) - Overs[7][2] <= 1:
+          HSHunder2[0].append(Overs[7][2])
+          HSHunder2[1].append(len(rfd))
+          HSHunder2[2].append(t)
+
+df29 = pd.DataFrame(list(zip(HSHunder2[1],HSHunder2[0])),HSHunder2[2],columns =['HomeGamesPlayed','HomeSecondHalfUnde3'])
+    
+          
+       
+    
+
