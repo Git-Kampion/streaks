@@ -21,13 +21,16 @@ halftomeGap = 2
 
 
 teams = []
+Ateams = []
 numOfGames = []
 
 round = []
 Conceededround = []
 BothHalvesround = []
 BTSovers= ([],[],[])
+ABTSovers= ([],[],[])
 FullTimeOvers= ([],[],[])
+aFullTimeOvers= ([],[],[])
 HomeConBothHalvesround = []
 HHOver0 = ([],[],[])
 HHOver1 = ([],[],[])
@@ -124,12 +127,46 @@ AwayUnder4 = []
 AwayUnder5 = []
 AwayUnder6 = []
 team = []
+Ateam = []
+
+
+for bb in sql_data[0]:
+   if bb[4] in Ateams:
+    t = bb[4]
+   else:
+    Ateams.append(bb[4])
+
 for ee in sql_data[0]:
    if ee[3] in teams:
     t = ee[3]
    else:
     teams.append(ee[3])
 
+for w in Ateams:
+    t = w
+    occurence = 0
+    if t in Ateam:
+      occurence = 0
+    else:
+     # if t == "Brighton":
+        
+        rfdA = BtOr.refindedDatam(t,sql_data,4)
+              
+        aBTS = BtOr.Bts(t,rfdA,"a",6)
+        afullTimeOver = BtOr.FixOverUnders(t,rfdA,"a",6)
+        #afullTimeOvers = BtOr.FixOverUnders(t,rfd,"k",5)
+        #Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
+      
+
+        if len(rfdA) - aBTS[0] <= 1:
+          ABTSovers[0].append(aBTS[0])
+          ABTSovers[1].append(len(rfdA))
+          ABTSovers[2].append(t)
+
+        if len(rfdA) - afullTimeOver[0][2] <= 1:
+          aFullTimeOvers[0].append(afullTimeOver[0][2])
+          aFullTimeOvers[1].append(len(rfdA))
+          aFullTimeOvers[2].append(t)
 
 for w in teams:
     t = w
@@ -139,18 +176,32 @@ for w in teams:
     else:
      # if t == "Brighton":
         rfd = BtOr.refindedDatam(t,sql_data,3)
-     
+       
+       
+        hBTS = BtOr.Bts(t,rfd,"k",5)
+        
+        fullTimeOver = BtOr.FixOverUnders(t,rfd,"k",5)
+        #afullTimeOvers = BtOr.FixOverUnders(t,rfd,"k",5)
         #Overs = BtOr.OverUnderSeaon(t,rfd,"k",5)
-        #hBTS = BtOr.Bts(t,rfd,"k",5)
-        fullTimeOvers = BtOr.FixOverUnders(t,rfd,"k",5)
       
 
-        if len(rfd) - fullTimeOvers[0][3] <= 1:
-          FullTimeOvers[0].append(fullTimeOvers[0][3])
+        if len(rfd) - hBTS[0] <= 1:
+          BTSovers[0].append(hBTS[0])
+          BTSovers[1].append(len(rfd))
+          BTSovers[2].append(t)
+
+        if len(rfd) - fullTimeOver[0][2] <= 1:
+          FullTimeOvers[0].append(fullTimeOver[0][2])
           FullTimeOvers[1].append(len(rfd))
           FullTimeOvers[2].append(t)
 
-df27 = pd.DataFrame(list(zip(FullTimeOvers[1],FullTimeOvers[0])),FullTimeOvers[2],columns =['HomeGamesPlayed','HomeFullTimeOver'])
+          
+
+df1 = pd.DataFrame(list(zip(BTSovers[1],BTSovers[0])),BTSovers[2],columns =['HomeGamesPlayed','HomeBTS'])
+df2 = pd.DataFrame(list(zip(ABTSovers[1],ABTSovers[0])),ABTSovers[2],columns =['HomeGamesPlayed','AwayBTS'])
+
+df3 = pd.DataFrame(list(zip(aFullTimeOvers[1],aFullTimeOvers[0])),aFullTimeOvers[2],columns =['HomeGamesPlayed','AwayFullTimeOver1'])
+df4 = pd.DataFrame(list(zip(FullTimeOvers[1],FullTimeOvers[0])),FullTimeOvers[2],columns =['HomeGamesPlayed','HomeFullTimeOver1'])
        
                 
 
@@ -160,6 +211,10 @@ df27 = pd.DataFrame(list(zip(FullTimeOvers[1],FullTimeOvers[0])),FullTimeOvers[2
 
 with pd.ExcelWriter('streaks\streaks.xlsx') as writer:
   
-  df27.to_excel(writer, sheet_name='HomeFullTimeOver')
+  df1.to_excel(writer, sheet_name='HomeBTS')
+  df2.to_excel(writer, sheet_name='AwayBTS')
+
+  df3.to_excel(writer, sheet_name='AwayFullTimeOver1')
+  df4.to_excel(writer, sheet_name='HomeFullTimeOver1')
   #df20.to_excel(writer, sheet_name='Home1stHalfBelow3Goal')
   

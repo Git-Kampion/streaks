@@ -35,8 +35,12 @@ class BtOr:
         overs = []
         unders = []
         for r in data:
-            Hcon = int(r[ht])
-            Acon = int(r[ht + 1])
+            if betype == "k":
+             Hcon = int(r[ht])
+             Acon = int(r[ht + 1])
+            else:
+             Hcon = int(r[ht - 1])
+             Acon = int(r[ht])
             FullScore = Hcon + Acon
             
             if FullScore == 0:
@@ -124,8 +128,12 @@ class BtOr:
        notCount = 0
        arr = ([],[])
        for r in data:
-            Hcon = int(r[ht])
-            Acon = int(r[ht + 1])
+            if betype == "k":
+             Hcon = int(r[ht])
+             Acon = int(r[ht + 1])
+            else:
+             Hcon = int(r[ht - 1])
+             Acon = int(r[ht])
 
             if Hcon > 0 and Acon > 0:
                 count = count +1
@@ -802,10 +810,6 @@ class BtOr:
          BHUNoLabel =   cl1[2]
          BHUNoOdd =   cl1[3]  
 
-""""
-    def insertIntoAccess(refined ,panelText):
-        match panelText:
-         case "Match":
-         """
+
                 
                     
