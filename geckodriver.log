@@ -30824,3 +30824,499 @@ WebDriver BiDi listening on ws://127.0.0.1:54969
 Read port: 54974
 1697209292507	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 DevTools listening on ws://127.0.0.1:54969/devtools/browser/14338b83-bdeb-4615-8080-3513b2fbaea7
+1703309385788	geckodriver	INFO	Listening on 127.0.0.1:51117
+1703309386321	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51118" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileevA5Oi"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703309386737	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703309386862	Marionette	INFO	Listening on port 51125
+WebDriver BiDi listening on ws://127.0.0.1:51118
+Read port: 51125
+1703309387084	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51118/devtools/browser/313318da-5621-4202-8923-8220d71128ee
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703309416775	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703309619305	Marionette	INFO	Stopped listening on port 51125
+Dynamically enable window occlusion 1
+ices.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703309559244	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703309559371	Marionette	INFO	Listening on port 51275
+WebDriver BiDi listening on ws://127.0.0.1:51265
+Read port: 51275
+1703309559575	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51265/devtools/browser/5e90957b-9684-4034-9fec-a8272f84f44b
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703309589291	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c, line 151: Script terminated by timeout at:
+B@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:151:72
+nq@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:376:242
+mq.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:380:263
+mq.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:378:207
+fq@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:375:789
+lG/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:556:178
+aa.Jk/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:507:126
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:506:420
+
+1703309618343	Marionette	INFO	Stopped listening on port 51275
+Dynamically enable window occlusion 1
+1703309655963	geckodriver	INFO	Listening on 127.0.0.1:51513
+1703309656471	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51514" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilen4ECA7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703309656871	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703309656995	Marionette	INFO	Listening on port 51522
+WebDriver BiDi listening on ws://127.0.0.1:51514
+Read port: 51522
+1703309657187	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51514/devtools/browser/3cca29a7-863e-4408-9c2e-03251e5e065f
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703309686894	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1703309688761	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c, line 338: Script terminated by timeout at:
+e@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:338:255
+Cn@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:338:437
+aa.Km@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:539:142
+aa.Jm/k/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:536:121
+Qj@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:286:342
+dk@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:289:350
+k@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:536:107
+c@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:336:169
+yn@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:337:269
+aa.Jm@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:536:144
+c@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:555:678
+nq@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:377:298
+mq.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:380:263
+mq.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:378:207
+fq@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:375:789
+lG/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:556:178
+aa.Jk/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:507:126
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:506:420
+
+1703309724060	Marionette	INFO	Stopped listening on port 51522
+Dynamically enable window occlusion 1
+1703309822241	geckodriver	INFO	Listening on 127.0.0.1:51702
+1703309822749	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51703" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileGMQncS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703309823134	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703309823255	Marionette	INFO	Listening on port 51711
+WebDriver BiDi listening on ws://127.0.0.1:51703
+Read port: 51711
+1703309823531	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51703/devtools/browser/739e4331-bb61-4495-b543-e4d7ee71a81e
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703309853164	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703310208682	Marionette	INFO	Stopped listening on port 51711
+Dynamically enable window occlusion 1
+1703310222745	geckodriver	INFO	Listening on 127.0.0.1:59943
+1703310223245	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59944" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilevx8WXa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703310223657	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703310223774	Marionette	INFO	Listening on port 59952
+WebDriver BiDi listening on ws://127.0.0.1:59944
+Read port: 59952
+1703310223966	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59944/devtools/browser/440b5d8f-9e4d-4b72-9b75-02ea54724911
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703310253687	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703310297597	Marionette	INFO	Stopped listening on port 59952
+Dynamically enable window occlusion 1
+1703310364415	geckodriver	INFO	Listening on 127.0.0.1:60094
+1703310364918	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60095" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileLnuAeU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703310365304	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703310365429	Marionette	INFO	Listening on port 60100
+WebDriver BiDi listening on ws://127.0.0.1:60095
+Read port: 60100
+1703310365628	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60095/devtools/browser/b8e7fa08-52c4-442c-9262-25cdae81dcc3
+1703310395403	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1703310469271	Marionette	INFO	Stopped listening on port 60100
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.sys.mjs:107:1
+NetworkError@resource://services-settings/RemoteSettingsClient.sys.mjs:111:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.sys.mjs:907:14
+maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:812:38
+
+console.warn: services.settings: main/websites-with-shared-credential-backends sync interrupted by shutdown
+console.warn: services.settings: main/addons-manager-settings sync interrupted by shutdown
+console.warn: services.settings: main/query-stripping sync interrupted by shutdown
+console.warn: services.settings: main/search-telemetry-v2 sync interrupted by shutdown
+console.error: (new AbortError("IndexedDB: main/translations-wasm getLastModified() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+1703311135003	geckodriver	INFO	Listening on 127.0.0.1:64559
+1703311135522	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64560" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileDsraKA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703311135989	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703311136133	Marionette	INFO	Listening on port 64565
+WebDriver BiDi listening on ws://127.0.0.1:64560
+Read port: 64565
+1703311136338	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64560/devtools/browser/e90e1395-3170-4fc6-8d12-7584f4c68b8e
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+1703311166413	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1703311180391	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.sys.mjs", 321))
+1703311190008	Marionette	INFO	Stopped listening on port 64565
+Dynamically enable window occlusion 1
+1703311225910	geckodriver	INFO	Listening on 127.0.0.1:64613
+1703311226440	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64614" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileG4OBTw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703311226798	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703311226914	Marionette	INFO	Listening on port 64621
+WebDriver BiDi listening on ws://127.0.0.1:64614
+Read port: 64621
+1703311227105	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64614/devtools/browser/a930fc65-ffac-491c-9302-126275b025f7
+1703311247018	Marionette	INFO	Stopped listening on port 64621
+Dynamically enable window occlusion 1
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+console.error: (new TypeError("NetworkError: Network request failed", "resource://services-settings/Utils.sys.mjs", 229))
+1703311459593	geckodriver	INFO	Listening on 127.0.0.1:64731
+1703311460112	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64732" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileR2IAEu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703311460552	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703311460680	Marionette	INFO	Listening on port 64757
+WebDriver BiDi listening on ws://127.0.0.1:64732
+Read port: 64757
+1703311460894	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64732/devtools/browser/5eff7679-5249-479b-a436-16978acc3778
+1703311490587	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+1703311659007	geckodriver	INFO	Listening on 127.0.0.1:64916
+1703311659518	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64917" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileGJB6Jb"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703311659953	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703311660070	Marionette	INFO	Listening on port 64924
+WebDriver BiDi listening on ws://127.0.0.1:64917
+Read port: 64924
+1703311660319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64917/devtools/browser/7e185536-2795-4a5c-ad87-42f2d8f2cb73
+1703311690066	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  main/search-config-v2 Signature failed  InvalidSignatureError: Invalid content signature (main/search-config-v2) using 'remote-settings.content-signature.mozilla.org-2024-01-19-16-42-21.chain'
+console.error: services.settings: 
+  main/search-config-v2 local data was corrupted
+console.warn: services.settings: main/search-config-v2 Signature verified failed. Retry from scratch
+1703312771580	geckodriver	INFO	Listening on 127.0.0.1:49727
+1703312772065	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49728" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileu8Id6b"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703312772555	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703312772693	Marionette	INFO	Listening on port 49736
+WebDriver BiDi listening on ws://127.0.0.1:49728
+Read port: 49736
+1703312772910	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49728/devtools/browser/fd432bb4-ca30-4554-9b96-04193f228168
+1703312802584	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703312814806	Marionette	INFO	Stopped listening on port 49736
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.sys.mjs:107:1
+NetworkError@resource://services-settings/RemoteSettingsClient.sys.mjs:111:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.sys.mjs:907:14
+maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:812:38
+
+console.warn: services.settings: main/normandy-recipes-capabilities sync interrupted by shutdown
+console.warn: services.settings: main/sites-classification sync interrupted by shutdown
+console.warn: services.settings: main/anti-tracking-url-decoration sync interrupted by shutdown
+console.error: (new AbortError("IndexedDB: main/cfr-srg getLastModified() IndexedDB:  execute() A request was aborted, for example through a call to IDBTransaction.abort.", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+1703529714235	geckodriver	INFO	Listening on 127.0.0.1:57163
+1703529714735	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57164" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileetHDxF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703529715277	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703529715443	Marionette	INFO	Listening on port 57171
+WebDriver BiDi listening on ws://127.0.0.1:57164
+Read port: 57171
+1703529715664	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57164/devtools/browser/8204758b-994d-4f36-9e91-9f9f60a19b75
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703529745300	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 2791 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 3651 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/Dtt_-LR3WxpzwV0Gscftq1A_D1owstvxoTnWWhwY4Ow.js line 2 > eval line 6096 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1703530388929	geckodriver	INFO	Listening on 127.0.0.1:55433
+1703530389457	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55434" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilejRk40I"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703530389849	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703530389958	Marionette	INFO	Listening on port 55439
+WebDriver BiDi listening on ws://127.0.0.1:55434
+Read port: 55439
+1703530390096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55434/devtools/browser/d2018e9b-4c9a-44d8-b02d-619712364ffd
+1703530420352	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703531059551	geckodriver	INFO	Listening on 127.0.0.1:55955
+1703531060063	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55956" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile50pNIx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703531060419	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703531060518	Marionette	INFO	Listening on port 55966
+WebDriver BiDi listening on ws://127.0.0.1:55956
+Read port: 55966
+1703531060662	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55956/devtools/browser/83e4f956-4068-4318-b63c-8a39e17eeac0
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703531090444	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1703531735392	geckodriver	INFO	Listening on 127.0.0.1:56233
+1703531735913	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56234" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile2keeaR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703531736680	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703531736782	Marionette	INFO	Listening on port 56243
+WebDriver BiDi listening on ws://127.0.0.1:56234
+Read port: 56243
+1703531736908	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56234/devtools/browser/d66d8253-e3b2-4ffd-a91c-6bfbdc8de364
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+JavaScript error: https://cdn.bannerflow.com/bf-placements/63109f894c51370178e1e509?targetwindow=_blank&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2112220%26trackerId%3D5399493&wm=5399493&zoneid=2112220, line 1: TypeError: window[n.ad.type.dependencies[0].func] is not a function
+JavaScript error: https://cdn.bannerflow.com/bf-placements/63109c384c51370178e1e407?targetwindow=_blank&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2090324%26trackerId%3D5274290&wm=5274290&zoneid=2090324, line 1: TypeError: window[n.ad.type.dependencies[0].func] is not a function
+1703531766843	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1703531818618	geckodriver	INFO	Listening on 127.0.0.1:56400
+1703531819146	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56401" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileQH4nGT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703531819478	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703531819577	Marionette	INFO	Listening on port 56406
+Read port: 56406
+WebDriver BiDi listening on ws://127.0.0.1:56401
+1703531819626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56401/devtools/browser/9e7b5cad-a616-4264-a98e-7f55d834a03d
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703531849564	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1703531928353	geckodriver	INFO	Listening on 127.0.0.1:56575
+1703531928876	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56576" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilengeWep"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703531929229	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703531929345	Marionette	INFO	Listening on port 56582
+WebDriver BiDi listening on ws://127.0.0.1:56576
+Read port: 56582
+1703531929493	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56576/devtools/browser/417832c0-e202-4293-ac6a-d1e237a1bfc3
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703531959248	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+1703532529101	geckodriver	INFO	Listening on 127.0.0.1:63107
+1703532529615	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63108" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNEUgjQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703532529954	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703532530066	Marionette	INFO	Listening on port 63113
+WebDriver BiDi listening on ws://127.0.0.1:63108
+Read port: 63113
+1703532530206	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63108/devtools/browser/dde086a2-e91c-4f52-aded-4782bead1970
+1703532559980	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703532600151	Marionette	INFO	Stopped listening on port 63113
+Dynamically enable window occlusion 1
+1703532718526	geckodriver	INFO	Listening on 127.0.0.1:61954
+1703532719028	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61955" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileDuWYHj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703532719521	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703532719642	Marionette	INFO	Listening on port 61961
+WebDriver BiDi listening on ws://127.0.0.1:61955
+Read port: 61961
+1703532719800	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61955/devtools/browser/e20332d7-caab-43ab-a853-d23825a96d08
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703532742882	Marionette	INFO	Stopped listening on port 61961
+Dynamically enable window occlusion 1
+1703532762244	geckodriver	INFO	Listening on 127.0.0.1:62122
+1703532762757	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62123" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofiletVJpes"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703532763518	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703532763628	Marionette	INFO	Listening on port 62133
+WebDriver BiDi listening on ws://127.0.0.1:62123
+Read port: 62133
+1703532763794	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62123/devtools/browser/30401226-0406-4153-8df6-7b9ead337d25
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703532786751	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1703532786752	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1703532786752	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1703532786752	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1703532793551	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703532865794	Marionette	INFO	Stopped listening on port 62133
+Dynamically enable window occlusion 1
+1703533104137	geckodriver	INFO	Listening on 127.0.0.1:62490
+1703533104646	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62491" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileS94f6p"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703533105204	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703533105360	Marionette	INFO	Listening on port 62505
+WebDriver BiDi listening on ws://127.0.0.1:62491
+Read port: 62505
+1703533105568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62491/devtools/browser/98aab81a-bf6e-4b1e-bc25-5b37f22c1746
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703533135259	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: services.settings: main/partitioning-exempt-urls sync already running
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703533418538	Marionette	INFO	Stopped listening on port 62505
+Dynamically enable window occlusion 1
+1703534048832	geckodriver	INFO	Listening on 127.0.0.1:63218
+1703534049333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63219" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileKZO1Oe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703534049875	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703534050037	Marionette	INFO	Listening on port 63233
+WebDriver BiDi listening on ws://127.0.0.1:63219
+Read port: 63233
+1703534050243	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63219/devtools/browser/536f965c-80c5-4765-85ba-6f26caa9fa2a
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703534079914	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://unpkg.com/web-vitals/dist/web-vitals.iife.js, line 1: Script terminated by timeout at:
+m/webVitals@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1497
+n@https://unpkg.com/web-vitals/dist/web-vitals.iife.js:1:1358
+
+1703534190695	Marionette	INFO	Stopped listening on port 63233
+Dynamically enable window occlusion 1
+1703535197977	geckodriver	INFO	Listening on 127.0.0.1:63223
+1703535198478	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63224" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileIEMhKC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1703535199169	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1703535199314	Marionette	INFO	Listening on port 63231
+WebDriver BiDi listening on ws://127.0.0.1:63224
+Read port: 63231
+1703535199497	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63224/devtools/browser/a6ece901-79e7-4116-a93e-751a38ffc536
+JavaScript warning: https://bg.search.etargetnet.com/generic/uni.php?g=ref:85905,area:120x240, line 171: unreachable code after return statement
+1703535229227	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.log: "RemoteSettingsWorker error: DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements."
+console.error: (new RemoteSettingsWorkerError("DataError: IndexedDB: records, timestamps execute() Data provided to an operation does not meet requirements.", "resource://services-settings/RemoteSettingsWorker.sys.mjs", 34))
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c, line 380: Script terminated by timeout at:
+mq.prototype.flush/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:380:255
+mq.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:380:256
+mq.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:378:207
+fq@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:375:789
+lG/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:556:178
+aa.Jk/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:507:126
+aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&cx=c:506:420
+
+1703535525317	Marionette	INFO	Stopped listening on port 63231
+Dynamically enable window occlusion 1

@@ -13,7 +13,7 @@ options = webdriver.FirefoxOptions()
 browser = webdriver.Firefox(options=options)
 
 # Load web page
-browser.get("https://www.flashscore.com/football/denmark/superliga/results/")
+browser.get("https://www.flashscore.com/football/italy/serie-b/results/")
 # Network transport takes time. Wait until the page is fully loaded
 def is_ready(browser):
     return browser.execute_script(r"""
@@ -59,31 +59,36 @@ for elem in rounds:
  skipLeagueNAme = False
  flag = False;
  soccerList = []
- if "DENMARK" in elem:
+ if "ITALY" in elem:
     skipLeagueNAme = 0
  else:
    
        sdsc = elem.splitlines()
        for matcd in sdsc:
-       
+        if matcd != "Abn":
          if matchRound == 0:
            matchRound = matcd.strip()
-         else:          
-             if firstIter != 8:
+         else:  
+           #try:   
+            if firstIter != 8:
                 convey = matcd.strip().split(" ")
                 if len(convey) > 1:
                  matcd = convey[0] + convey[1]
                 soccerMAtch = soccerMAtch + " " + matcd
                 firstIter = firstIter + 1  
-             else:
+            else:
               soccerList.append(matchRound  + soccerMAtch)
-            
+             
               soccerMAtch = "";
               matcd = matcd.strip().split(" ")
               if len(matcd) > 1:
                 matcd = matcd[0] + matcd[1]
               soccerMAtch = soccerMAtch + " " + matcd;
               firstIter = 2;
+        else:          
+           a = 0; 
+             
+           
        soccerList.append(matchRound + " " + soccerMAtch.strip())   
  
  if len(soccerList) > 0:
@@ -99,10 +104,10 @@ for elem in rounds:
        #  home = 
       
       if "Pen" in polstriped[2]:
-          insert_stmt = "INSERT INTO Denmark(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7],polstriped[8])
       else:
-          insert_stmt = "INSERT INTO Denmark(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[2],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7])
       cursor.execute(insert_stmt, data)
       cursor.commit()
