@@ -251,10 +251,17 @@ class BtOr:
         Frstunder0 = 0
         Frstunder1 = 0
         Frstunder2 = 0
-        Frstunder3 = 0
-        Frstunder4 = 0
-        Frstunder5 = 0
-        Frstunder6 = 0
+        FrstAOver = 0
+        FrstAOver1 = 0
+        FrstAOver2 = 0
+
+        ASecunder0 = 0
+        ASecunder1 = 0
+        ASecunder2 = 0
+        ASecOver0 = 0
+        ASecOver1 = 0
+        ASecOver2 = 0
+
 
         Concedcount = 0     
         ConcedcountOv1 = 0
@@ -263,6 +270,36 @@ class BtOr:
         ConcedcountOv4 = 0
         ConcedcountOv5 = 0
         ConcedcountOv6 = 0
+
+        AwayFrstConcedUnder0 = 0
+        AwayFrstConcedUnder1 = 0
+        AwayFrstConcedUnder2 = 0
+        AwayFrstConcedUnder3 = 0
+        AwayFrstConcedUnder4 = 0
+        AwayFrstConcedUnder5 = 0
+        AwayFrstConcedUnder6 = 0
+
+        AwayFrstConcedcount = 0
+        AwayFrstConcedcountOv2 = 0
+        AwayFrstConcedcountOv3 = 0
+        
+        AwayFrstConcedcountOv4 = 0
+
+        AwaySecConcedcount = 0     
+        AwaySecConcedcountOv1 = 0
+        AwaySecConcedcountOv2 = 0
+        AwaySecConcedcountOv3 = 0
+        AwaySecConcedcountOv4 = 0
+        AwaySecConcedcountOv5 = 0
+        AwaySecConcedcountOv6 = 0
+
+        AwaySecConcedUnder0 = 0     
+        AwaySecConcedUnder1 = 0
+        AwaySecConcedUnder2 = 0
+        AwaySecConcedUnder3 = 0
+        AwaySecConcedUnder4 = 0
+        AwaySecConcedUnder5 = 0
+        AwaySecConcedUnder6 = 0
 
         Concedunder0 = 0
         Concedunder1 = 0
@@ -290,8 +327,19 @@ class BtOr:
 
         overs = []
         unders = []
+        FrstHalfAovers = []       
+        FrstHalfAunders = []
+
+        SecHalfAovers = []
+        SecHalfAUnders = []
 
         Concedovers = []
+        Concedunders = []
+
+        AwayConcedFirstHovers = []
+        AwayConcedSecHovers = []
+        AwayConcedSecHunder = []
+        AwayConcedFirstHunder = []
         Concedunders = []
 
         FrstHalfovers = []
@@ -310,7 +358,7 @@ class BtOr:
              HomFrstHlf = int(r[ht + 2])
 
              if Hcon == HomFrstHlf:
-               HomSecHlf = Hcon
+               HomSecHlf = 0
              else:
               HomSecHlf = Hcon - HomFrstHlf
 
@@ -318,26 +366,111 @@ class BtOr:
              AFrstHlf = int(r[ht + 3])
 
              if Acon == AFrstHlf:
-              ASecHlf = AFrstHlf
+              ASecHlf = 0
              else:
-                 ASecHlf = Acon - AFrstHlf
-                
-        else:
+                 ASecHlf = Acon - AFrstHlf       
+         else:
              Hcon = int(r[ht - 1])
-             HomFrstHlf = Hcon + 2
+             HomFrstHlf = int(r[ht + 1]) 
              if Hcon == HomFrstHlf:
-               HomSecHlf = Hcon
+               HomSecHlf = 0
              else:
               HomSecHlf = Hcon - HomFrstHlf
 
              Acon = int(r[ht])
-             AFrstHlf = Acon+ 2
+             AFrstHlf = int(r[ht + 2])
 
              if Acon == AFrstHlf:
-              ASecHlf = AFrstHlf
+              ASecHlf = 0
              else:
                 ASecHlf = Acon - AFrstHlf
             
+             match HomFrstHlf:
+              case 0:  
+                AwayFrstConcedUnder0 = AwayFrstConcedUnder0 + 1     
+                AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
+                AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
+                AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
+                AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
+                AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+             
+              case 1:    
+                AwayFrstConcedcount = AwayFrstConcedcount + 1
+                AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
+                AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
+                AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
+                AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
+                AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
+                AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1   
+              case 2:    
+                AwayFrstConcedcount = AwayFrstConcedcount + 1
+                AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
+                AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
+                AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
+                AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+
+              case 3:  
+                AwayFrstConcedcount = AwayFrstConcedcount + 1
+                AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
+                AwayFrstConcedcountOv3 = AwayFrstConcedcountOv3 + 1
+                AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
+                AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+              case 4:                 
+                 AwayFrstConcedcount = AwayFrstConcedcount + 1
+                 AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
+                 AwayFrstConcedcountOv3 = AwayFrstConcedcountOv3 + 1
+                 AwayFrstConcedcountOv4 = AwayFrstConcedcountOv4 + 1
+                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
+                 AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+
+
+             match HomSecHlf:
+              case 0:  
+                AwaySecConcedUnder0 = AwaySecConcedUnder0 + 1     
+                AwaySecConcedUnder1 = AwaySecConcedUnder1 + 1
+                AwaySecConcedUnder2 = AwaySecConcedUnder2 + 1
+                AwaySecConcedUnder3 = AwaySecConcedUnder3 + 1
+                AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
+                AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1  
+             
+              case 1:    
+                AwaySecConcedcount = AwaySecConcedcount + 1
+                AwaySecConcedUnder1 = AwaySecConcedUnder1 + 1
+                AwaySecConcedUnder2 = AwaySecConcedUnder2 + 1
+                AwaySecConcedUnder3 = AwaySecConcedUnder3 + 1
+                AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
+                AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1  
+              case 2:  
+                AwaySecConcedcount = AwaySecConcedcount + 1  
+                AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
+                AwaySecConcedUnder2 = AwaySecConcedUnder2 + 1
+                AwaySecConcedUnder3 = AwaySecConcedUnder3 + 1
+                AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
+                AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
+
+              case 3:  
+                AwaySecConcedcount = AwaySecConcedcount + 1
+                AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
+                AwaySecConcedcountOv2 = AwaySecConcedcountOv2 + 1               
+                AwaySecConcedUnder3 = AwaySecConcedUnder3 + 1
+                AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
+                AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
+              case 4:  
+                AwaySecConcedcount = AwaySecConcedcount + 1               
+                AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
+                AwaySecConcedcountOv2 = AwaySecConcedcountOv2 + 1               
+                AwaySecConcedcountOv3 = AwaySecConcedcountOv3 + 1
+                AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
+                AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
 
              match Acon:
               case 0:                 
@@ -376,14 +509,92 @@ class BtOr:
                 countOv3 = countOv3 +1
                 under5 = under5 + 1
                 under6 = under6 + 1
+              case 5:                 
+                count = count + 1
+                countOv1 = countOv1 +1
+                countOv2 = countOv2 +1
+                countOv3 = countOv3 +1
+                countOv4 = countOv4 +1
+               
+                under6 = under6 + 1
+              case 6:                 
+                count = count + 1
+                countOv1 = countOv1 +1
+                countOv2 = countOv2 +1
+                countOv3 = countOv3 +1
+                countOv4 = countOv4 +1
+                countOv5 = countOv5 +1
+                under6 = under6 + 1
+
+             match AFrstHlf:
+              case 0:                 
+               Frstunder0 = Frstunder0 + 1
+               Frstunder1 = Frstunder1 + 1
+               Frstunder2 = Frstunder2 + 1
+             
+              case 1:    
+                FrstAOver = FrstAOver + 1
+                Frstunder1 = Frstunder1 + 1
+                Frstunder2 = Frstunder2 + 1
+              case 2:    
+               FrstAOver = FrstAOver + 1
+               FrstAOver1 = FrstAOver1 + 1
+               Frstunder2 = Frstunder2 + 1
+
+              case 3:                 
+               FrstAOver = FrstAOver + 1
+               FrstAOver1 = FrstAOver1 + 1
+               FrstAOver2 = FrstAOver2 + 1
+              case 4:                 
+               FrstAOver = FrstAOver + 1
+               FrstAOver1 = FrstAOver1 + 1
+               FrstAOver2 = FrstAOver2 + 1
+              case 5:                 
+               FrstAOver = FrstAOver + 1
+               FrstAOver1 = FrstAOver1 + 1
+               FrstAOver2 = FrstAOver2 + 1
+              case 6:                 
+               FrstAOver = FrstAOver + 1
+               FrstAOver1 = FrstAOver1 + 1
+               FrstAOver2 = FrstAOver2 + 1
+
+             match ASecHlf:
+              case 0:                 
+               ASecunder0 = ASecunder0 + 1
+               ASecunder1 = ASecunder1 + 1
+               ASecunder2 = ASecunder2 + 1
+             
+              case 1:    
+                ASecOver0 = ASecOver0 + 1
+                ASecunder1 = ASecunder1 + 1
+                ASecunder2 = ASecunder2 + 1
+              case 2:    
+               ASecOver0 = ASecOver0 + 1
+               ASecOver1 = ASecOver1 + 1
+               ASecunder2 = ASecunder2 + 1
+
+              case 3:                 
+               ASecOver0 = ASecOver0 + 1
+               ASecOver1 = ASecOver1 + 1
+               ASecOver2 = ASecOver2 + 1
+              case 4:                 
+               ASecOver0 = ASecOver0 + 1
+               ASecOver1 = ASecOver1 + 1
+               ASecOver2 = ASecOver2 + 1
+              case 5:                 
+               ASecOver0 = ASecOver0 + 1
+               ASecOver1 = ASecOver1 + 1
+               ASecOver2 = ASecOver2 + 1
+              case 6:                 
+               ASecOver0 = ASecOver0 + 1
+               ASecOver1 = ASecOver1 + 1
+               ASecOver2 = ASecOver2 + 1
+
         overs.append(count)        
         overs.append(countOv1)        
         overs.append(countOv2)    
         overs.append(countOv3)
         overs.append(countOv4)
-        overs.append(countOv5)
-        overs.append(countOv6)
-
         unders.append(under1)
         unders.append(under2)
         unders.append(under3)
@@ -391,7 +602,47 @@ class BtOr:
         unders.append(under5)
         unders.append(under6)
 
-        arr = ([overs,unders])
+        FrstHalfAovers.append(FrstAOver)        
+        FrstHalfAovers.append(FrstAOver1)        
+        FrstHalfAovers.append(FrstAOver2)    
+        FrstHalfAunders.append(Frstunder0)        
+        FrstHalfAunders.append(Frstunder1)        
+        FrstHalfAunders.append(Frstunder2)   
+     
+        SecHalfAovers.append(ASecOver0)        
+        SecHalfAovers.append(ASecOver1)        
+        SecHalfAovers.append(ASecOver2)    
+        SecHalfAUnders.append(ASecunder0)        
+        SecHalfAUnders.append(ASecunder1)        
+        SecHalfAUnders.append(ASecunder2)  
+
+        AwayConcedFirstHovers.append(AwayFrstConcedcount)        
+        
+        AwayConcedFirstHovers.append(AwayFrstConcedcountOv2)        
+        AwayConcedFirstHovers.append(AwayFrstConcedcountOv3)    
+        AwayConcedFirstHovers.append(AwayFrstConcedcountOv4) 
+
+        AwayConcedSecHovers.append(AwaySecConcedcount)        
+        AwayConcedSecHovers.append(AwaySecConcedcountOv1)        
+        AwayConcedSecHovers.append(AwaySecConcedcountOv2)        
+        AwayConcedSecHovers.append(AwaySecConcedcountOv3)    
+        AwayConcedSecHovers.append(AwaySecConcedcountOv4)   
+
+        AwayConcedSecHunder.append(AwaySecConcedUnder0)    
+        AwayConcedSecHunder.append(AwaySecConcedUnder1)        
+        AwayConcedSecHunder.append(AwaySecConcedUnder2)    
+        AwayConcedSecHunder.append(AwaySecConcedUnder3)      
+        AwayConcedSecHunder.append(AwaySecConcedUnder4)   
+
+        AwayConcedFirstHunder.append(AwayFrstConcedUnder0)        
+        AwayConcedFirstHunder.append(AwayFrstConcedUnder1)        
+        AwayConcedFirstHunder.append(AwayFrstConcedUnder2)    
+        AwayConcedFirstHunder.append(AwayFrstConcedUnder3)      
+        AwayConcedFirstHunder.append(AwayFrstConcedUnder4)         
+        
+       
+
+        arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder])
         return arr
     
     
@@ -404,23 +655,73 @@ class BtOr:
                 count = count + 1          
         return count
 
-    def MatchRes(body,cursor):
-        insert_stmt = "INSERT INTO EplBetOdds(HTeam,ATeam,HWinOd,AWinOd,BTSyes,BTSno) VALUES (?,?,?,?,?,?)"
-        for kk in body:
-       
-         cl1 =  kk.split("\n")
-         
-         Hteam =   cl1[0] 
-         Hwind = cl1[1]
-         Ateam =   cl1[4] 
-         Awind = cl1[5]
+    def MatchRes(t,data,betype,ht):
+      HomeWinCount = 0
+      AwayWinCount = 0
+      HomeFailToWin = 0
+      AwayFailTowin = 0
+
+      HomeFlvWinCount = 0
+      AwayFlvWinCount = 0
+      HomeFlvFailToWin = 0
+      AwayFlvFailTowin = 0
+
+      HomeSecFlvWinCount = 0
+      AwaySecFlvWinCount = 0
+      HomeSecFlvFailToWin = 0
+      AwaySecFlvFailTowin = 0
+
+      Hcon = 0
+      HomFrstHlf = 0
+      HomeSecHlf = 0
+
+      Acon = 0
+      AFrstHlf = 0
+      AwSecHlf = 0
+      for r in data:
+        if betype == "k":
+             Hcon = int(r[ht])
+             HomFrstHlf = int(r[ht + 2])
+             HomeSecHlf = Hcon - HomFrstHlf
+        else:
+             Acon = int(r[ht])
+             AFrstHlf = int(r[ht + 2])
+             AwSecHlf = Acon - AFrstHlf
+
+        if Hcon > Acon:
+           HomeWinCount = HomeWinCount + 1
+           AwayFailTowin = AwayFailTowin + 1
+        if Acon > Hcon:
+           AwayWinCount = AwayWinCount + 1
+           HomeFailToWin = HomeFailToWin + 1
+        if Hcon == Acon:
+           AwayFailTowin = AwayFailTowin + 1
+           HomeFailToWin = HomeFailToWin + 1
+      
+        if HomFrstHlf > AFrstHlf:
+           HomeFlvWinCount = HomeFlvWinCount + 1
+           AwayFlvFailTowin = AwayFlvFailTowin + 1
+        if AFrstHlf > HomFrstHlf:
+           AwayFlvWinCount = AwayFlvWinCount + 1
+           HomeFlvFailToWin = HomeFlvFailToWin + 1
+        if HomFrstHlf == AFrstHlf:
+           AwayFlvFailTowin = AwayFlvFailTowin + 1
+           HomeFlvFailToWin = HomeFlvFailToWin + 1  
+
+        if HomeSecHlf > AwSecHlf:
+           HomeSecFlvWinCount = HomeSecFlvWinCount + 1
+           AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
+        if AFrstHlf > HomFrstHlf:
+           AwaySecFlvWinCount = AwaySecFlvWinCount + 1
+           HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1
+        if HomFrstHlf == AFrstHlf:
+           AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
+           HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1  
 
 
-        data = ( Hteam,Ateam,Hwind,Awind)
-        cursor.execute(insert_stmt,data)
-        cursor.commit()
-        
-    
+
+      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvFailToWin,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin])  
+      return arr
     
     def Dc(Title,body):
         cl1 =  body.split("\n")
