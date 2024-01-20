@@ -279,11 +279,23 @@ class BtOr:
         AwayFrstConcedUnder5 = 0
         AwayFrstConcedUnder6 = 0
 
+        HomeFrstConcedUnder0 = 0
+        HomeFrstConcedUnder1 = 0
+        HomeFrstConcedUnder2 = 0
+        HomeFrstConcedUnder3 = 0
+        HomeFrstConcedUnder4 = 0
+        HomeFrstConcedUnder5 = 0
+        HomeFrstConcedUnder6 = 0
+
         AwayFrstConcedcount = 0
         AwayFrstConcedcountOv2 = 0
-        AwayFrstConcedcountOv3 = 0
-        
+        AwayFrstConcedcountOv3 = 0        
         AwayFrstConcedcountOv4 = 0
+
+        HomeFrstConcedcount = 0
+        HomeFrstConcedcountOv2 = 0
+        HomeFrstConcedcountOv3 = 0        
+        HomeFrstConcedcountOv4 = 0
 
         AwaySecConcedcount = 0     
         AwaySecConcedcountOv1 = 0
@@ -300,6 +312,22 @@ class BtOr:
         AwaySecConcedUnder4 = 0
         AwaySecConcedUnder5 = 0
         AwaySecConcedUnder6 = 0
+
+        HomeSecConcedUnder0 = 0     
+        HomeSecConcedUnder1 = 0
+        HomeSecConcedUnder2 = 0
+        HomeSecConcedUnder3 = 0
+        HomeSecConcedUnder4 = 0
+        HomeSecConcedUnder5 = 0
+        HomeSecConcedUnder6 = 0
+
+        HomeSecConcedcount = 0     
+        HomeSecConcedcountOv1 = 0
+        HomeSecConcedcountOv2 = 0
+        HomeSecConcedcountOv3 = 0
+        HomeSecConcedcountOv4 = 0
+        HomeSecConcedcountOv5 = 0
+        HomeSecConcedcountOv6 = 0
 
         Concedunder0 = 0
         Concedunder1 = 0
@@ -337,6 +365,9 @@ class BtOr:
         Concedunders = []
 
         AwayConcedFirstHovers = []
+        HomeConcedFirstHovers = []
+        HomeFailConcedFirstHovers = []
+        HomeFailConcedSecHovers = []
         AwayConcedSecHovers = []
         AwayConcedSecHunder = []
         AwayConcedFirstHunder = []
@@ -353,42 +384,42 @@ class BtOr:
         
 
         for r in data:
-         if betype == "k":
-             Hcon = int(r[ht])
-             HomFrstHlf = int(r[ht + 2])
+            if betype == "k":
+                Hcon = int(r[ht])
+                HomFrstHlf = int(r[ht + 2])
 
-             if Hcon == HomFrstHlf:
-               HomSecHlf = 0
-             else:
-              HomSecHlf = Hcon - HomFrstHlf
+                if Hcon == HomFrstHlf:
+                  HomSecHlf = 0
+                else:
+                  HomSecHlf = Hcon - HomFrstHlf
 
-             Acon = int(r[ht + 1])
-             AFrstHlf = int(r[ht + 3])
+                Acon = int(r[ht + 1])
+                AFrstHlf = int(r[ht + 3])
 
-             if Acon == AFrstHlf:
-              ASecHlf = 0
-             else:
-                 ASecHlf = Acon - AFrstHlf       
-         else:
-             Hcon = int(r[ht - 1])
-             HomFrstHlf = int(r[ht + 1]) 
-             if Hcon == HomFrstHlf:
-               HomSecHlf = 0
-             else:
-              HomSecHlf = Hcon - HomFrstHlf
+                if Acon == AFrstHlf:
+                  ASecHlf = 0
+                else:
+                    ASecHlf = Acon - AFrstHlf       
+            else:
+                Hcon = int(r[ht - 1])
+                HomFrstHlf = int(r[ht + 1]) 
+                if Hcon == HomFrstHlf:
+                  HomSecHlf = 0
+                else:
+                  HomSecHlf = Hcon - HomFrstHlf
 
-             Acon = int(r[ht])
-             AFrstHlf = int(r[ht + 2])
+                Acon = int(r[ht])
+                AFrstHlf = int(r[ht + 2])
 
-             if Acon == AFrstHlf:
-              ASecHlf = 0
-             else:
-                ASecHlf = Acon - AFrstHlf
+                if Acon == AFrstHlf:
+                  ASecHlf = 0
+                else:
+                    ASecHlf = Acon - AFrstHlf
             
-             match HomFrstHlf:
+            match HomFrstHlf:
               case 0:  
                 AwayFrstConcedUnder0 = AwayFrstConcedUnder0 + 1     
-                AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
+                #AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
                 AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
                 AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
@@ -397,8 +428,8 @@ class BtOr:
              
               case 1:    
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
-                AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
-                AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
+               # AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
+                #AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
                 AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
                 AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
@@ -406,7 +437,8 @@ class BtOr:
                 AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1   
               case 2:    
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
-                AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
+                AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
+                #AwayFrstConcedUnder2 = AwayFrstConcedUnder2 + 1
                 AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
@@ -416,6 +448,7 @@ class BtOr:
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
                 AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
                 AwayFrstConcedcountOv3 = AwayFrstConcedcountOv3 + 1
+                #AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
                 AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
@@ -428,7 +461,7 @@ class BtOr:
                  AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
 
 
-             match HomSecHlf:
+            match HomSecHlf:
               case 0:  
                 AwaySecConcedUnder0 = AwaySecConcedUnder0 + 1     
                 AwaySecConcedUnder1 = AwaySecConcedUnder1 + 1
@@ -472,7 +505,7 @@ class BtOr:
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
                 AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
 
-             match Acon:
+            match Acon:
               case 0:                 
                under1 = under1 + 1
                under2 = under2 + 1
@@ -525,30 +558,118 @@ class BtOr:
                 countOv4 = countOv4 +1
                 countOv5 = countOv5 +1
                 under6 = under6 + 1
-
-             match AFrstHlf:
+            match Hcon:
+              case 0:                 
+               under1 = under1 + 1
+               under2 = under2 + 1
+               under3 = under3 + 1
+               under4 = under4 + 1
+               under5 = under5 + 1
+               under6 = under6 + 1  
+              case 1:    
+                count = count + 1
+                under2 = under2 + 1
+                under3 = under3 + 1
+                under4 = under4 + 1
+                under5 = under5 + 1
+                under6 = under6 + 1
+              case 2:    
+               count = count + 1
+               countOv1 = countOv1 +1
+                    
+               under3 = under3 + 1
+               under4 = under4 + 1
+               under5 = under5 + 1
+               under6 = under6 + 1
+              case 3:                 
+               count = count + 1
+               countOv1 = countOv1 +1
+               countOv2 = countOv2 +1
+               under4 = under4 + 1
+               under5 = under5 + 1
+               under6 = under6 + 1
+              case 4:                 
+                count = count + 1
+                countOv1 = countOv1 +1
+                countOv2 = countOv2 +1
+                countOv3 = countOv3 +1
+                under5 = under5 + 1
+                under6 = under6 + 1
+              case 5:                 
+                count = count + 1
+                countOv1 = countOv1 +1
+                countOv2 = countOv2 +1
+                countOv3 = countOv3 +1
+                countOv4 = countOv4 +1
+               
+                under6 = under6 + 1
+              case 6:                 
+                count = count + 1
+                countOv1 = countOv1 +1
+                countOv2 = countOv2 +1
+                countOv3 = countOv3 +1
+                countOv4 = countOv4 +1
+                countOv5 = countOv5 +1
+                under6 = under6 + 1
+            match AFrstHlf:
               case 0:                 
                Frstunder0 = Frstunder0 + 1
                Frstunder1 = Frstunder1 + 1
                Frstunder2 = Frstunder2 + 1
+
+               HomeFrstConcedUnder0 = HomeFrstConcedUnder0 + 1     
+               #AwayFrstConcedUnder1 = AwayFrstConcedUnder1 + 1
+               HomeFrstConcedUnder2 = HomeFrstConcedUnder2 + 1
+               HomeFrstConcedUnder3 = HomeFrstConcedUnder3 + 1
+               HomeFrstConcedUnder4 = HomeFrstConcedUnder4 + 1
+               HomeFrstConcedUnder5 = HomeFrstConcedUnder5 + 1
+               HomeFrstConcedUnder6 = HomeFrstConcedUnder6 + 1  
              
               case 1:    
                 FrstAOver = FrstAOver + 1
                 Frstunder1 = Frstunder1 + 1
                 Frstunder2 = Frstunder2 + 1
+
+                HomeFrstConcedcount = HomeFrstConcedcount + 1
+                HomeFrstConcedUnder2 = HomeFrstConcedUnder2 + 1
+                HomeFrstConcedUnder3 = HomeFrstConcedUnder3 + 1
+                HomeFrstConcedUnder4 = HomeFrstConcedUnder4 + 1
+                HomeFrstConcedUnder5 = HomeFrstConcedUnder5 + 1
+                HomeFrstConcedUnder6 = HomeFrstConcedUnder6 + 1 
               case 2:    
                FrstAOver = FrstAOver + 1
                FrstAOver1 = FrstAOver1 + 1
                Frstunder2 = Frstunder2 + 1
 
+               HomeFrstConcedcount = HomeFrstConcedcount + 1
+               HomeFrstConcedcountOv2 = HomeFrstConcedcountOv2 + 1
+               HomeFrstConcedUnder3 = HomeFrstConcedUnder3 + 1
+               HomeFrstConcedUnder4 = HomeFrstConcedUnder4 + 1
+               HomeFrstConcedUnder5 = HomeFrstConcedUnder5 + 1
+               HomeFrstConcedUnder6 = HomeFrstConcedUnder6 + 1 
+
               case 3:                 
                FrstAOver = FrstAOver + 1
                FrstAOver1 = FrstAOver1 + 1
                FrstAOver2 = FrstAOver2 + 1
+
+               HomeFrstConcedcount = HomeFrstConcedcount + 1
+               HomeFrstConcedcountOv2 = HomeFrstConcedcountOv2 + 1
+               HomeFrstConcedcountOv3 = HomeFrstConcedcountOv3 + 1
+               HomeFrstConcedUnder4 = HomeFrstConcedUnder4 + 1
+               HomeFrstConcedUnder5 = HomeFrstConcedUnder5 + 1
+               HomeFrstConcedUnder6 = HomeFrstConcedUnder6 + 1
               case 4:                 
                FrstAOver = FrstAOver + 1
                FrstAOver1 = FrstAOver1 + 1
                FrstAOver2 = FrstAOver2 + 1
+
+               HomeFrstConcedcount = HomeFrstConcedcount + 1
+               HomeFrstConcedcountOv2 = HomeFrstConcedcountOv2 + 1
+               HomeFrstConcedcountOv3 = HomeFrstConcedcountOv3 + 1
+               HomeFrstConcedcountOv4 = HomeFrstConcedcountOv4 + 1
+               HomeFrstConcedUnder5 = HomeFrstConcedUnder5 + 1
+               HomeFrstConcedUnder6 = HomeFrstConcedUnder6 + 1
               case 5:                 
                FrstAOver = FrstAOver + 1
                FrstAOver1 = FrstAOver1 + 1
@@ -558,29 +679,69 @@ class BtOr:
                FrstAOver1 = FrstAOver1 + 1
                FrstAOver2 = FrstAOver2 + 1
 
-             match ASecHlf:
+            match ASecHlf:
               case 0:                 
                ASecunder0 = ASecunder0 + 1
                ASecunder1 = ASecunder1 + 1
                ASecunder2 = ASecunder2 + 1
              
+                    
+               #HomeSecConcedUnder1 = HomeSecConcedUnder1 + 1
+               HomeSecConcedUnder0 = HomeSecConcedUnder0 + 1
+               HomeSecConcedUnder2 = HomeSecConcedUnder2 + 1
+               HomeSecConcedUnder3 = HomeSecConcedUnder3 + 1
+               HomeSecConcedUnder4 = HomeSecConcedUnder4 + 1
+               HomeSecConcedUnder5 = HomeSecConcedUnder5 + 1
+               HomeSecConcedUnder6 = HomeSecConcedUnder6 + 1  
               case 1:    
                 ASecOver0 = ASecOver0 + 1
                 ASecunder1 = ASecunder1 + 1
                 ASecunder2 = ASecunder2 + 1
+
+
+                HomeSecConcedcount = HomeSecConcedcount + 1 
+                HomeSecConcedUnder2 = HomeSecConcedUnder2 + 1
+                HomeSecConcedUnder3 = HomeSecConcedUnder3 + 1
+                HomeSecConcedUnder4 = HomeSecConcedUnder4 + 1
+                HomeSecConcedUnder5 = HomeSecConcedUnder5 + 1
+                HomeSecConcedUnder6 = HomeSecConcedUnder6 + 1  
               case 2:    
                ASecOver0 = ASecOver0 + 1
                ASecOver1 = ASecOver1 + 1
                ASecunder2 = ASecunder2 + 1
 
+               HomeSecConcedcount = HomeSecConcedcount + 1               
+               HomeSecConcedcountOv2 = HomeSecConcedcountOv2 + 1
+               HomeSecConcedUnder3 = HomeSecConcedUnder3 + 1
+               HomeSecConcedUnder4 = HomeSecConcedUnder4 + 1
+               HomeSecConcedUnder5 = HomeSecConcedUnder5 + 1
+               HomeSecConcedUnder6 = HomeSecConcedUnder6 + 1 
+
               case 3:                 
                ASecOver0 = ASecOver0 + 1
                ASecOver1 = ASecOver1 + 1
                ASecOver2 = ASecOver2 + 1
+
+               HomeSecConcedcount = HomeSecConcedcount + 1               
+               
+               HomeSecConcedcountOv2 = HomeSecConcedcountOv2 + 1 
+               HomeSecConcedcountOv3 = HomeSecConcedcountOv3 + 1 
+
+               HomeSecConcedUnder4 = HomeSecConcedUnder4 + 1
+               HomeSecConcedUnder5 = HomeSecConcedUnder5 + 1
+               HomeSecConcedUnder6 = HomeSecConcedUnder6 + 1 
               case 4:                 
                ASecOver0 = ASecOver0 + 1
                ASecOver1 = ASecOver1 + 1
                ASecOver2 = ASecOver2 + 1
+
+               HomeSecConcedcount = HomeSecConcedcount + 1               
+               
+               HomeSecConcedcountOv2 = HomeSecConcedcountOv2 + 1               
+               HomeSecConcedcountOv3 = HomeSecConcedcountOv3 + 1
+               HomeSecConcedcountOv4 = HomeSecConcedcountOv4 + 1
+               HomeSecConcedUnder5 = HomeSecConcedUnder5 + 1
+               HomeSecConcedUnder6 = HomeSecConcedUnder6 + 1
               case 5:                 
                ASecOver0 = ASecOver0 + 1
                ASecOver1 = ASecOver1 + 1
@@ -589,12 +750,15 @@ class BtOr:
                ASecOver0 = ASecOver0 + 1
                ASecOver1 = ASecOver1 + 1
                ASecOver2 = ASecOver2 + 1
+
+               
 
         overs.append(count)        
         overs.append(countOv1)        
         overs.append(countOv2)    
         overs.append(countOv3)
         overs.append(countOv4)
+
         unders.append(under1)
         unders.append(under2)
         unders.append(under3)
@@ -608,6 +772,21 @@ class BtOr:
         FrstHalfAunders.append(Frstunder0)        
         FrstHalfAunders.append(Frstunder1)        
         FrstHalfAunders.append(Frstunder2)   
+
+        HomeConcedFirstHovers.append(HomeFrstConcedcount)
+        HomeConcedFirstHovers.append(HomeFrstConcedcountOv2)
+        HomeConcedFirstHovers.append(HomeFrstConcedcountOv3)
+        HomeConcedFirstHovers.append(HomeFrstConcedcountOv4)
+
+        HomeFailConcedFirstHovers.append(HomeFrstConcedUnder0)
+        HomeFailConcedFirstHovers.append(HomeFrstConcedUnder2)
+        HomeFailConcedFirstHovers.append(HomeFrstConcedUnder3)
+        HomeFailConcedFirstHovers.append(HomeFrstConcedUnder4)
+
+        HomeFailConcedSecHovers.append(HomeSecConcedUnder0)
+        HomeFailConcedSecHovers.append(HomeSecConcedUnder2)
+        HomeFailConcedSecHovers.append(HomeSecConcedUnder3)
+        HomeFailConcedSecHovers.append(HomeSecConcedUnder4)
      
         SecHalfAovers.append(ASecOver0)        
         SecHalfAovers.append(ASecOver1)        
@@ -642,7 +821,7 @@ class BtOr:
         
        
 
-        arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder])
+        arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder,HomeFailConcedFirstHovers,HomeConcedFirstHovers,HomeFailConcedSecHovers])
         return arr
     
     
@@ -683,7 +862,13 @@ class BtOr:
              Hcon = int(r[ht])
              HomFrstHlf = int(r[ht + 2])
              HomeSecHlf = Hcon - HomFrstHlf
+             Acon = int(r[ht + 1])
+             AFrstHlf = int(r[ht + 3])
+             AwSecHlf = Acon - AFrstHlf
         else:
+             Hcon = int(r[ht - 1])
+             HomFrstHlf = int(r[ht +1])
+             HomeSecHlf = Hcon - HomFrstHlf
              Acon = int(r[ht])
              AFrstHlf = int(r[ht + 2])
              AwSecHlf = Acon - AFrstHlf
@@ -711,10 +896,10 @@ class BtOr:
         if HomeSecHlf > AwSecHlf:
            HomeSecFlvWinCount = HomeSecFlvWinCount + 1
            AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
-        if AFrstHlf > HomFrstHlf:
+        if AwSecHlf > HomeSecHlf:
            AwaySecFlvWinCount = AwaySecFlvWinCount + 1
            HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1
-        if HomFrstHlf == AFrstHlf:
+        if HomeSecHlf == AwSecHlf:
            AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
            HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1  
 

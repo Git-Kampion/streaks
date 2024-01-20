@@ -24,7 +24,6 @@ halftomeGap = 2
 teams = []
 Ateams = []
 Ateam = []
-Hteam = []
 numOfGames = []
 
 AwyOvs= ([],[],[],[],[])
@@ -39,10 +38,6 @@ AwyFirstfailtToConceedOvs3= ([],[],[],[],[])
 AwySfailtToConceedOvs= ([],[],[],[],[])
 AwySfailtToConceedOvs2= ([],[],[],[],[])
 AwySfailtToConceedOvs3= ([],[],[],[],[])
-
-HomeSfailtToConceedOvs= ([],[],[],[],[])
-HomeSfailtToConceedOvs2= ([],[],[],[],[])
-HomeSfailtToConceedOvs3= ([],[],[],[],[])
 
 AwyFConceedOvs = ([],[],[],[],[])
 AwyFConceedOvs2 = ([],[],[],[],[])
@@ -82,20 +77,10 @@ AwyOvs2= ([],[],[],[],[])
 Bts= ([],[],[],[],[])
 aWins= ([],[],[],[],[])
 a2ndHWins= ([],[],[],[],[])
-H2ndHWins = ([],[],[],[],[])
-HWins = ([],[],[],[],[])
 a2ndHFailureWins= ([],[],[],[],[])
-H2ndHFailureWins = ([],[],[],[],[])
 aHalftimeWins= ([],[],[],[],[])
 aFuilureToWins= ([],[],[],[],[])
 aFuilureToHalfWins = ([],[],[],[],[])
-HFuilureToHalfWins = ([],[],[],[],[])
-HFuilureToWins = ([],[],[],[],[])
-HHalftimeWins = ([],[],[],[],[])
-
-HomeFirstfailtToConceedOvs = ([],[],[],[],[])
-HomeFirstfailtToConceedOvs2 = ([],[],[],[],[])
-HomeFirstfailtToConceedOvs3 = ([],[],[],[],[])
 
 FullTimeOvers= ([],[],[],[],[])
 FullTimeOvers2= ([],[],[],[],[])
@@ -137,7 +122,7 @@ def awayFilter(data):
      hBTS = BtOr.Bts(t,rfdA,"a",6)
      aWinLose = BtOr.MatchRes(t,rfdA,"a",6)
 
-   #Away 2ndHalf wins
+#Away 2ndHalf wins
      if len(rfdA) - aWinLose[10] <= 1:          
           a2ndHWins[0].append(aWinLose[10])
           a2ndHWins[1].append(len(rfdA))
@@ -149,7 +134,7 @@ def awayFilter(data):
           a2ndHFailureWins[0].append(aWinLose[9])
           a2ndHFailureWins[1].append(len(rfdA))
           a2ndHFailureWins[2].append(t)
-          a2ndHFailureWins[3].append("AwayHalftimeFailToWin")
+          a2ndHFailureWins[3].append("Away2ndHalfFailToWin")
           a2ndHFailureWins[4].append("AwayGamesPlayed")  
 
 #========================================================================#
@@ -482,10 +467,10 @@ def awayFilter(data):
           FullTimeOvers4[4].append("AwayGamesPlayed")
 
 #=====================================================================================================#
-#Info=(FullTimeOvers,FullTimeOvers2,FullTimeOvers3,FullTimeOvers4,Bts,AwyOvs,AwyOvs1,AwyOvs2,AwyUnder3,AwySUnder,AwySUnder1,AwySUnder2,AwyUnder4,AwyUnder5,AwyFUnder,AwyFUnder1,AwyFUnder2,AwyFOvs,AwyFOvs1,AwyFOvs2,AwySOvs2,AwySOvs1,AwySOvs,AwySConceedOvs,AwyFConceedOvs,AwyFConceedOvs3,AwyFConceedOvs2,a2ndHWins,a2ndHFailureWins,aHalftimeWins,aFuilureToHalfWins,aWins,aFuilureToWins,AwyFirstfailtToConceedOvs,AwyFirstfailtToConceedOvs2,AwyFirstfailtToConceedOvs3,AwySfailtToConceedOvs3)
+Info=(FullTimeOvers,FullTimeOvers2,FullTimeOvers3,FullTimeOvers4,Bts,AwyOvs,AwyOvs1,AwyOvs2,AwyUnder3,AwySUnder,AwySUnder1,AwySUnder2,AwyUnder4,AwyUnder5,AwyFUnder,AwyFUnder1,AwyFUnder2,AwyFOvs,AwyFOvs1,AwyFOvs2,AwySOvs2,AwySOvs1,AwySOvs,AwySConceedOvs,AwyFConceedOvs,AwyFConceedOvs3,AwyFConceedOvs2,a2ndHWins,a2ndHFailureWins,aHalftimeWins,aFuilureToHalfWins,aWins,aFuilureToWins,AwyFirstfailtToConceedOvs,AwyFirstfailtToConceedOvs2,AwyFirstfailtToConceedOvs3,AwySfailtToConceedOvs3)
   
   
-#createReport(Info,pd)
+createReport(Info,pd)
 
      
 
@@ -496,109 +481,6 @@ def homeFilter(data):
    else:
     teams.append(ee[3])
 
-  for w in teams:
-   t = w
-   occurence = 0
-   if t in Hteam:
-      occurence = 0
-   else:
-     rfdA = BtOr.refindedDatam(t,data,3)
-     HWinLose = BtOr.MatchRes(t,rfdA,"k",5)
-     AwOvers = BtOr.OverUnderSeaon(t,rfdA,"k",5)
-     #HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5)
-     #hBTS = BtOr.Bts(t,rfdA,"k",5)
-#Home 2ndHalf wins
-     if len(rfdA) - HWinLose[8] <= 1:          
-          H2ndHWins[0].append(HWinLose[8])
-          H2ndHWins[1].append(len(rfdA))
-          H2ndHWins[2].append(t)
-          H2ndHWins[3].append("Home2ndHalfWins")
-          H2ndHWins[4].append("HomeGamesPlayed")
-#Home 2ndHalf failuir to win
-     if len(rfdA) - HWinLose[11] <= 1:          
-          H2ndHFailureWins[0].append(HWinLose[11])
-          H2ndHFailureWins[1].append(len(rfdA))
-          H2ndHFailureWins[2].append(t)
-          H2ndHFailureWins[3].append("Home2ndHalfFailToWin")
-          H2ndHFailureWins[4].append("HomeGamesPlayed") 
-#========================================================================#
-#Home halftime wins
-     if len(rfdA) - HWinLose[4] <= 1:          
-          HHalftimeWins[0].append(HWinLose[4])
-          HHalftimeWins[1].append(len(rfdA))
-          HHalftimeWins[2].append(t)
-          HHalftimeWins[3].append("HomeHalfTimeWins")
-          HHalftimeWins[4].append("HomeGamesPlayed") 
-#Home halftime failuir to win
-     if len(rfdA) - HWinLose[7] <= 1:          
-          HFuilureToHalfWins[0].append(HWinLose[7])
-          HFuilureToHalfWins[1].append(len(rfdA))
-          HFuilureToHalfWins[2].append(t)
-          HFuilureToHalfWins[3].append("HomeHalftimeFailToWin")
-          HFuilureToHalfWins[4].append("HomeGamesPlayed")
-#=============================================================================#
-#Home wins
-     if len(rfdA) - HWinLose[0] <= 1:          
-          HWins[0].append(HWinLose[0])
-          HWins[1].append(len(rfdA))
-          HWins[2].append(t)
-          HWins[3].append("HomeWins")
-          HWins[4].append("HomeGamesPlayed")  
-#Home failuir to win
-     if len(rfdA) - HWinLose[3] <= 1:          
-          HFuilureToWins[0].append(HWinLose[3])
-          HFuilureToWins[1].append(len(rfdA))
-          HFuilureToWins[2].append(t)
-          HFuilureToWins[3].append("HomeFailToWin")
-          HFuilureToWins[4].append("HomeGamesPlayed")  
-#===============================================================================#
-
-#Home Failed to Conceed 1stHalf over 0.5
-     if len(rfdA) - AwOvers[10][0] <= 1:          
-          HomeFirstfailtToConceedOvs[0].append(AwOvers[10][0])
-          HomeFirstfailtToConceedOvs[1].append(len(rfdA))
-          HomeFirstfailtToConceedOvs[2].append(t)
-          HomeFirstfailtToConceedOvs[3].append("HomeFailConceed1stHlvGoal")
-          HomeFirstfailtToConceedOvs[4].append("HomeGamesPlayed")   
-#Home Failed to Conceed 1stHalf over 1.5
-     if len(rfdA) - AwOvers[10][1] <= 1:          
-          HomeFirstfailtToConceedOvs2[0].append(AwOvers[10][1])
-          HomeFirstfailtToConceedOvs2[1].append(len(rfdA))
-          HomeFirstfailtToConceedOvs2[2].append(t)
-          HomeFirstfailtToConceedOvs2[3].append("HomeFailConceed1stHlv2Goal")
-          HomeFirstfailtToConceedOvs2[4].append("HomeGamesPlayed") 
-#Home Failed to Conceed 1stHalf over 2.5
-     if len(rfdA) - AwOvers[10][2] <= 1:          
-          HomeFirstfailtToConceedOvs3[0].append(AwOvers[10][2])
-          HomeFirstfailtToConceedOvs3[1].append(len(rfdA))
-          HomeFirstfailtToConceedOvs3[2].append(t)
-          HomeFirstfailtToConceedOvs3[3].append("HomeFailConceed1stHlv3Goal")
-          HomeFirstfailtToConceedOvs3[4].append("HomeGamesPlayed")   
-#===============================================================================#
-#Home Failed to Conceed SecHalf over 0.5
-     if len(rfdA) - AwOvers[12][0] <= 1:          
-          HomeSfailtToConceedOvs[0].append(AwOvers[12][0])
-          HomeSfailtToConceedOvs[1].append(len(rfdA))
-          HomeSfailtToConceedOvs[2].append(t)
-          HomeSfailtToConceedOvs[3].append("HomeFailConceedSecHlvGoal")
-          HomeSfailtToConceedOvs[4].append("HomeGamesPlayed")
-#Home Failed to Conceed SecHalf over 1.5
-     if len(rfdA) - AwOvers[12][1] <= 1:          
-          HomeSfailtToConceedOvs2[0].append(AwOvers[12][1])
-          HomeSfailtToConceedOvs2[1].append(len(rfdA))
-          HomeSfailtToConceedOvs2[2].append(t)
-          HomeSfailtToConceedOvs2[3].append("HomeFailConceedSecHlv2Goal")
-          HomeSfailtToConceedOvs2[4].append("HomeGamesPlayed")
-#Home Failed to Conceed SecHalf over 2.5
-     if len(rfdA) - AwOvers[12][2] <= 1:          
-          HomeSfailtToConceedOvs3[0].append(AwOvers[12][2])
-          HomeSfailtToConceedOvs3[1].append(len(rfdA))
-          HomeSfailtToConceedOvs3[2].append(t)
-          HomeSfailtToConceedOvs3[3].append("HomeFailConceedSecHlv3Goal")
-          HomeSfailtToConceedOvs3[4].append("HomeGamesPlayed")
-
-  Info=(H2ndHWins,H2ndHFailureWins,HHalftimeWins,HFuilureToHalfWins,HWins,HFuilureToWins,HomeFirstfailtToConceedOvs,HomeFirstfailtToConceedOvs2,HomeFirstfailtToConceedOvs3,HomeSfailtToConceedOvs,HomeSfailtToConceedOvs2)
-  createReport(Info,pd)
+awayFilter(sql_data)
 homeFilter(sql_data)
-#awayFilter(sql_data)
 
