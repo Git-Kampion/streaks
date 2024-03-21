@@ -32,6 +32,10 @@ AwySConceedOvs= ([],[],[],[],[])
 AwySConceedOvs2= ([],[],[],[],[])
 AwySConceedOvs3= ([],[],[],[],[])
 
+HomeSConceedOvs = ([],[],[],[],[])
+HomeSConceedOvs2= ([],[],[],[],[])
+HomeSConceedOvs3= ([],[],[],[],[])
+
 AwyFirstfailtToConceedOvs= ([],[],[],[],[])
 AwyFirstfailtToConceedOvs2= ([],[],[],[],[])
 AwyFirstfailtToConceedOvs3= ([],[],[],[],[])
@@ -44,9 +48,18 @@ HomeSfailtToConceedOvs= ([],[],[],[],[])
 HomeSfailtToConceedOvs2= ([],[],[],[],[])
 HomeSfailtToConceedOvs3= ([],[],[],[],[])
 
+HomeFConceedOvs = ([],[],[],[],[])
+HomeFConceedOvs2 = ([],[],[],[],[])
+HomeFConceedOvs3 = ([],[],[],[],[])
+
 AwyFConceedOvs = ([],[],[],[],[])
 AwyFConceedOvs2 = ([],[],[],[],[])
 AwyFConceedOvs3 = ([],[],[],[],[])
+
+
+AwySConceedOvs = ([],[],[],[],[])
+AwySConceedOvs2 = ([],[],[],[],[])
+AwySConceedOvs3 = ([],[],[],[],[])
 
 AwyFfailtToConceedOvs = ([],[],[],[],[])
 AwyFfailtToConceedOvs2 = ([],[],[],[],[])
@@ -55,6 +68,42 @@ AwyFfailtToConceedOvs3 = ([],[],[],[],[])
 AwySOvs= ([],[],[],[],[])
 AwySOvs1= ([],[],[],[],[])
 AwySOvs2= ([],[],[],[],[])
+
+HomeSOvs= ([],[],[],[],[])
+HomeSOvs1= ([],[],[],[],[])
+HomeSOvs2= ([],[],[],[],[])
+
+HomeFrstunder = ([],[],[],[],[])
+HomeFrstunder1= ([],[],[],[],[])
+HomeFrstunder2= ([],[],[],[],[])
+
+HomefrstOver1 = ([],[],[],[],[])
+HomefrstOver2= ([],[],[],[],[])
+HomefrstOver3= ([],[],[],[],[])
+
+HomefullOver1 = ([],[],[],[],[])
+HomefullOver2= ([],[],[],[],[])
+HomefullOver3= ([],[],[],[],[])
+HomefullOver4= ([],[],[],[],[])
+
+HomefullUnder1 = ([],[],[],[],[])
+HomefullUnder2= ([],[],[],[],[])
+HomefullUnder3= ([],[],[],[],[])
+HomefullUnder4= ([],[],[],[],[])
+
+HomeFixUnder1 = ([],[],[],[],[])
+HomeFixUnder2= ([],[],[],[],[])
+HomeFixUnder3= ([],[],[],[],[])
+HomeFixUnder4= ([],[],[],[],[])
+
+HomeFixOver1 = ([],[],[],[],[])
+HomeFixOver2= ([],[],[],[],[])
+HomeFixOver3= ([],[],[],[],[])
+HomeFixOver4= ([],[],[],[],[])
+
+HomeSunder= ([],[],[],[],[])
+HomeSunder1= ([],[],[],[],[])
+HomeSunder2= ([],[],[],[],[])
 
 AwySUnder= ([],[],[],[],[])
 AwySUnder1= ([],[],[],[],[])
@@ -505,7 +554,7 @@ def homeFilter(data):
      rfdA = BtOr.refindedDatam(t,data,3)
      HWinLose = BtOr.MatchRes(t,rfdA,"k",5)
      AwOvers = BtOr.OverUnderSeaon(t,rfdA,"k",5)
-     #HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5)
+     HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5)
      #hBTS = BtOr.Bts(t,rfdA,"k",5)
 #Home 2ndHalf wins
      if len(rfdA) - HWinLose[8] <= 1:          
@@ -596,8 +645,246 @@ def homeFilter(data):
           HomeSfailtToConceedOvs3[2].append(t)
           HomeSfailtToConceedOvs3[3].append("HomeFailConceedSecHlv3Goal")
           HomeSfailtToConceedOvs3[4].append("HomeGamesPlayed")
+#===============================================================================#
+#Home Conceed SecHalf over 0.5
+     if len(rfdA) - AwOvers[13][0] <= 1:          
+          HomeSConceedOvs[0].append(AwOvers[13][0])
+          HomeSConceedOvs[1].append(len(rfdA))
+          HomeSConceedOvs[2].append(t)
+          HomeSConceedOvs[3].append("HomeConceedSecHlvGoal")
+          HomeSConceedOvs[4].append("HomeGamesPlayed")
+#Home Conceed SecHalf over 1.5
+     if len(rfdA) - AwOvers[13][1] <= 1:          
+          HomeSConceedOvs2[0].append(AwOvers[13][1])
+          HomeSConceedOvs2[1].append(len(rfdA))
+          HomeSConceedOvs2[2].append(t)
+          HomeSConceedOvs2[3].append("HomeConceedSecHlv2Goal")
+          HomeSConceedOvs2[4].append("HomeGamesPlayed")
+#Home Conceed SecHalf over 2.5
+     if len(rfdA) - AwOvers[13][2] <= 1:          
+          HomeSConceedOvs3[0].append(AwOvers[13][2])
+          HomeSConceedOvs3[1].append(len(rfdA))
+          HomeSConceedOvs3[2].append(t)
+          HomeSConceedOvs3[3].append("HomeConceedSecHlv3Goal")
+          HomeSConceedOvs3[4].append("HomeGamesPlayed")
+#=====================================================================================================#
+#Home Conceed 1stHalf over 0.5
+     if len(rfdA) - AwOvers[11][0] <= 1:          
+          HomeFConceedOvs[0].append(AwOvers[11][0])
+          HomeFConceedOvs[1].append(len(rfdA))
+          HomeFConceedOvs[2].append(t)
+          HomeFConceedOvs[3].append("HomeConceed1stHlvGoal")
+          HomeFConceedOvs[4].append("HomeGamesPlayed")
+#Home Conceed 1stHalf over 1.5
+     if len(rfdA) - AwOvers[11][1] <= 1:          
+          HomeFConceedOvs2[0].append(AwOvers[11][1])
+          HomeFConceedOvs2[1].append(len(rfdA))
+          HomeFConceedOvs2[2].append(t)
+          HomeFConceedOvs2[3].append("HomeConceed1stHlv2Goal")
+          HomeFConceedOvs2[4].append("HomeGamesPlayed")
+#Home Conceed 1stHalf over 2.5
+     if len(rfdA) - AwOvers[11][2] <= 1:          
+          HomeFConceedOvs3[0].append(AwOvers[11][2])
+          HomeFConceedOvs3[1].append(len(rfdA))
+          HomeFConceedOvs3[2].append(t)
+          HomeFConceedOvs3[3].append("HomeConceed1stHlv3Goal")
+          HomeFConceedOvs3[4].append("HomeGamesPlayed")
+#=====================================================================================================#
+#Home SecHalf over 0.5
+     if len(rfdA) - AwOvers[14][0] <= 1:          
+          HomeSOvs[0].append(AwOvers[14][0])
+          HomeSOvs[1].append(len(rfdA))
+          HomeSOvs[2].append(t)
+          HomeSOvs[3].append("HomeOverSecHlvGoal")
+          HomeSOvs[4].append("HomeGamesPlayed")
 
-  Info=(H2ndHWins,H2ndHFailureWins,HHalftimeWins,HFuilureToHalfWins,HWins,HFuilureToWins,HomeFirstfailtToConceedOvs,HomeFirstfailtToConceedOvs2,HomeFirstfailtToConceedOvs3,HomeSfailtToConceedOvs,HomeSfailtToConceedOvs2)
+#Home SecHalf over 1.5
+     if len(rfdA) - AwOvers[14][1] <= 1:          
+          HomeSOvs1[0].append(AwOvers[14][0])
+          HomeSOvs1[1].append(len(rfdA))
+          HomeSOvs1[2].append(t)
+          HomeSOvs1[3].append("HomeOverSecHlv1Goal")
+          HomeSOvs1[4].append("HomeGamesPlayed")
+
+#Home SecHalf over 2.5
+     if len(rfdA) - AwOvers[14][2] <= 1:          
+          HomeSOvs2[0].append(AwOvers[14][0])
+          HomeSOvs2[1].append(len(rfdA))
+          HomeSOvs2[2].append(t)
+          HomeSOvs2[3].append("HomeOverSecHlv2Goal")
+          HomeSOvs2[4].append("HomeGamesPlayed")
+
+#=====================================================================================================#
+#Home SecHalf under 0.5
+     if len(rfdA) - AwOvers[15][0] <= 1:          
+          HomeSunder[0].append(AwOvers[15][0])
+          HomeSunder[1].append(len(rfdA))
+          HomeSunder[2].append(t)
+          HomeSunder[3].append("HomeUnderSecHlvGoal")
+          HomeSunder[4].append("HomeGamesPlayed")
+
+#Home SecHalf under 1.5
+     if len(rfdA) - AwOvers[15][1] <= 1:          
+          HomeSunder1[0].append(AwOvers[15][1])
+          HomeSunder1[1].append(len(rfdA))
+          HomeSunder1[2].append(t)
+          HomeSunder1[3].append("HomeUnderSecHlv2Goal")
+          HomeSunder1[4].append("HomeGamesPlayed")
+
+#Home SecHalf under 2.5
+     if len(rfdA) - AwOvers[15][2] <= 1:          
+          HomeSunder2[0].append(AwOvers[15][1])
+          HomeSunder2[1].append(len(rfdA))
+          HomeSunder2[2].append(t)
+          HomeSunder2[3].append("HomeUnderSecHlv3Goal")
+          HomeSunder2[4].append("HomeGamesPlayed")
+
+#=====================================================================================================#
+#Home 1stHalf under 0.5
+     if len(rfdA) - AwOvers[16][0] <= 1:          
+          HomeFrstunder[0].append(AwOvers[16][0])
+          HomeFrstunder[1].append(len(rfdA))
+          HomeFrstunder[2].append(t)
+          HomeFrstunder[3].append("HomeUnderFirstHlvGoal")
+          HomeFrstunder[4].append("HomeGamesPlayed")
+
+#Home 1stHalf under 1.5
+     if len(rfdA) - AwOvers[16][1] <= 1:          
+          HomeFrstunder1[0].append(AwOvers[16][1])
+          HomeFrstunder1[1].append(len(rfdA))
+          HomeFrstunder1[2].append(t)
+          HomeFrstunder1[3].append("HomeUnderFirstHlv2Goal")
+          HomeFrstunder1[4].append("HomeGamesPlayed")
+
+#Home 1stHalf under 2.5
+     if len(rfdA) - AwOvers[16][2] <= 1:          
+          HomeFrstunder2[0].append(AwOvers[16][2])
+          HomeFrstunder2[1].append(len(rfdA))
+          HomeFrstunder2[2].append(t)
+          HomeFrstunder2[3].append("HomeUnderFirstHlv3Goal")
+          HomeFrstunder2[4].append("HomeGamesPlayed")
+#=====================================================================================================#
+#Home 1stHalf over 0.5
+     if len(rfdA) - AwOvers[17][0] <= 1:          
+          HomefrstOver1[0].append(AwOvers[17][0])
+          HomefrstOver1[1].append(len(rfdA))
+          HomefrstOver1[2].append(t)
+          HomefrstOver1[3].append("HomeOverFirstHlvGoal")
+          HomefrstOver1[4].append("HomeGamesPlayed")
+
+#Home 1stHalf over 1.5
+     if len(rfdA) - AwOvers[17][1] <= 1:          
+          HomefrstOver2[0].append(AwOvers[17][1])
+          HomefrstOver2[1].append(len(rfdA))
+          HomefrstOver2[2].append(t)
+          HomefrstOver2[3].append("HomeOverFirstHlv2Goal")
+          HomefrstOver2[4].append("HomeGamesPlayed")
+
+#Home 1stHalf over 2.5
+     if len(rfdA) - AwOvers[17][2] <= 1:          
+          HomefrstOver3[0].append(AwOvers[17][2])
+          HomefrstOver3[1].append(len(rfdA))
+          HomefrstOver3[2].append(t)
+          HomefrstOver3[3].append("HomeOverFirstHlv3Goal")
+          HomefrstOver3[4].append("HomeGamesPlayed")
+
+#=====================================================================================================#
+#Home fulltime over 0.5
+     if len(rfdA) - AwOvers[0][0] <= 5:          
+          HomefullOver1[0].append(AwOvers[0][0])
+          HomefullOver1[1].append(len(rfdA))
+          HomefullOver1[2].append(t)
+          HomefullOver1[3].append("HomeOverHlvGoal")
+          HomefullOver1[4].append("HomeGamesPlayed")
+#Home fulltime over 1.5
+     if len(rfdA) - AwOvers[0][1] <= 1:          
+          HomefullOver2[0].append(AwOvers[0][1])
+          HomefullOver2[1].append(len(rfdA))
+          HomefullOver2[2].append(t)
+          HomefullOver2[3].append("HomeOverHlv1Goal")
+          HomefullOver2[4].append("HomeGamesPlayed")
+
+#Home fulltime over 2.5
+     if len(rfdA) - AwOvers[0][2] <= 1:          
+          HomefullOver3[0].append(AwOvers[0][2])
+          HomefullOver3[1].append(len(rfdA))
+          HomefullOver3[2].append(t)
+          HomefullOver3[3].append("HomeOverHlv2Goal")
+          HomefullOver3[4].append("HomeGamesPlayed")
+
+#Home fulltime over 3.5
+     if len(rfdA) - AwOvers[0][3] <= 1:          
+          HomefullOver4[0].append(AwOvers[0][3])
+          HomefullOver4[1].append(len(rfdA))
+          HomefullOver4[2].append(t)
+          HomefullOver4[3].append("HomeOverHlv3Goal")
+          HomefullOver4[4].append("HomeGamesPlayed")
+
+#=====================================================================================================#
+#Home fulltime Under 0.5
+     if len(rfdA) - AwOvers[1][0] <= 1:          
+          HomefullUnder1[0].append(AwOvers[1][0])
+          HomefullUnder1[1].append(len(rfdA))
+          HomefullUnder1[2].append(t)
+          HomefullUnder1[3].append("HomeUnderHlvGoal")
+          HomefullUnder1[4].append("HomeGamesPlayed")
+#Home fulltime Under 1.5
+     if len(rfdA) - AwOvers[1][1] <= 1:          
+          HomefullUnder2[0].append(AwOvers[1][1])
+          HomefullUnder2[1].append(len(rfdA))
+          HomefullUnder2[2].append(t)
+          HomefullUnder2[3].append("HomeUnderHlv1Goal")
+          HomefullUnder2[4].append("HomeGamesPlayed")
+
+#Home fulltime Under 2.5
+     if len(rfdA) - AwOvers[1][2] <= 1:          
+          HomefullUnder3[0].append(AwOvers[1][2])
+          HomefullUnder3[1].append(len(rfdA))
+          HomefullUnder3[2].append(t)
+          HomefullUnder3[3].append("HomeUnderHlv2Goal")
+          HomefullUnder3[4].append("HomeGamesPlayed")
+
+#Home fulltime Under 3.5
+     if len(rfdA) - AwOvers[1][3] <= 1:          
+          HomefullUnder4[0].append(AwOvers[1][3])
+          HomefullUnder4[1].append(len(rfdA))
+          HomefullUnder4[2].append(t)
+          HomefullUnder4[3].append("HomeUnderHlv3Goal")
+          HomefullUnder4[4].append("HomeGamesPlayed")
+
+#=====================================================================================================#
+#Home Fix fulltime Under 0.5
+     if len(rfdA) - HfullTimeOver[1][0] <= 1:          
+          HomeFixOver1[0].append(HfullTimeOver[1][0])
+          HomeFixOver1[1].append(len(rfdA))
+          HomeFixOver1[2].append(t)
+          HomeFixOver1[3].append("HomeFixtureNoGoal")
+          HomeFixOver1[4].append("HomeGamesPlayed")
+#Home Fix fulltime Under 1.5
+     if len(rfdA) - HfullTimeOver[1][1] <= 1:          
+          HomeFixOver2[0].append(HfullTimeOver[1][1])
+          HomeFixOver2[1].append(len(rfdA))
+          HomeFixOver2[2].append(t)
+          HomeFixOver2[3].append("HomeFixtureUnde1Goal")
+          HomeFixOver2[4].append("HomeGamesPlayed")
+
+#Home Fix fulltime Under 2.5
+     if len(rfdA) - HfullTimeOver[1][2] <= 1:          
+          HomeFixOver3[0].append(HfullTimeOver[1][2])
+          HomeFixOver3[1].append(len(rfdA))
+          HomeFixOver3[2].append(t)
+          HomeFixOver3[3].append("HomeFixtureUnder2Goal")
+          HomeFixOver3[4].append("HomeGamesPlayed")
+
+#Home Fix fulltime Under 3.5
+     if len(rfdA) - HfullTimeOver[1][3] <= 1:          
+          HomeFixOver4[0].append(HfullTimeOver[1][3])
+          HomeFixOver4[1].append(len(rfdA))
+          HomeFixOver4[2].append(t)
+          HomeFixOver4[3].append("HomeFixtureUnder3Goal")
+          HomeFixOver4[4].append("HomeGamesPlayed")
+
+  Info=(HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullUnder1,HomefullUnder2,HomefullUnder3,HomefullUnder4,H2ndHWins,H2ndHFailureWins,HHalftimeWins,HFuilureToHalfWins,HWins,HFuilureToWins,HomeFirstfailtToConceedOvs,HomeFirstfailtToConceedOvs2,HomeFirstfailtToConceedOvs3,HomeSfailtToConceedOvs,HomeSfailtToConceedOvs2,HomeSfailtToConceedOvs3,HomeSfailtToConceedOvs2,HomeSfailtToConceedOvs,HomeSConceedOvs,HomeSConceedOvs2,HomeSConceedOvs3,HomeFConceedOvs3,HomeFConceedOvs2,HomeFConceedOvs,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeSunder,HomeSunder1,HomeSunder2,HomeFrstunder2,HomeFrstunder1,HomeFrstunder,HomefrstOver3,HomefrstOver2,HomefrstOver1)
   createReport(Info,pd)
 homeFilter(sql_data)
 #awayFilter(sql_data)

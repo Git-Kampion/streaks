@@ -1,6 +1,202 @@
 #BetTypesObjectRet.py
 class BtOr:
+   
+       
+    def removeEmptyPAnels(pamels):
+      newMelem = []
+      for melem in pamels:
+        if melem.text != "":
+          newMelem.append(melem.text)
+        else:
+          s = ""
+      return newMelem
 
+    def MatchResbreakDown(panel):
+        
+        matchResHomeLbl = panel[0]
+        matchResHome = panel[1]
+        matchResAwayLbl = panel[4]
+        matchResAway = panel[5]
+        MatchRes= [matchResHomeLbl,matchResAwayLbl,matchResHome, matchResAway]
+        return MatchRes
+        
+    
+    def BothTSBreakDown(panel):
+        matchYesLbl = panel[0]
+        matchYesdd = panel[1]
+        matchNoLbl = panel[2]
+        matchNodd = panel[3]
+        MatchRes= [matchYesdd, matchNodd]
+        return MatchRes
+    
+    def firstBothTSBreakDown(panel):
+        matchYesLbl = panel[0]
+        matchYesdd = panel[1]
+        matchNoLbl = panel[2]
+        matchNodd = panel[3]
+        MatchRes= [matchYesdd, matchNodd]
+        return MatchRes
+
+    def DcBreakDown(panel):
+        DCHomeDrawLbl = panel[0]
+        DCHomeDrawdd = panel[1]
+        DCAwayDrawLbl = panel[5]
+        DCAwayDrawdd = panel[4]
+        DCAwayHomeLbl = panel[6]
+        DCAwayHomedd = panel[7]
+        MatchRes= [DCHomeDrawdd, DCAwayDrawdd, DCAwayHomedd]
+        return MatchRes
+    
+    def firstDCBreakDown(panel):
+        DCHomeDrawLbl = panel[0]
+        DCHomeDrawdd = panel[1]
+        DCAwayDrawLbl = panel[5]
+        DCAwayDrawdd = panel[4]
+        DCAwayHomeLbl = panel[6]
+        DCAwayHomedd = panel[7]
+        MatchRes= [DCHomeDrawdd, DCAwayDrawdd, DCAwayHomedd]
+        return MatchRes
+    
+    def firstHalvWin(panel):
+        matchResHomeLbl = panel[0]
+        matchResHome = panel[1]
+        matchResAwayLbl = panel[4]
+        matchResAway = panel[5]
+        MatchRes= [matchResHomeLbl,matchResAwayLbl,matchResHome, matchResAway]
+        return MatchRes
+       
+    def OverUndeBreakdown(panel):
+       
+      try:
+       OverallOverZeroLbl = panel[0]
+       OverallOverZerodd = panel[1]
+
+       OverallUnderZerLbl = panel[2]
+       OverallUnderZerdd = panel[3]
+
+       OverallOverOneLbl = panel[4]
+       OverallOverOnedd = panel[5]
+
+       OverallUnderOneLbl = panel[6]
+       OverallUnderOnedd = panel[7]
+
+       OverallOverYwoLbl = panel[8]
+       OverallOverYwodd = panel[9]
+       
+       OverallUnderYwoLbl = panel[10]
+       OverallUnderYwodd = panel[11]
+
+       OverallOverThreLbl = panel[12]
+       OverallOverThreodd = panel[13]
+       
+       OverallUnderThreLbl = panel[14]
+       OverallUnderThredd = panel[15]
+
+       OverallOverFourLbl = panel[16]
+       OverallOverFourodd = panel[17]
+       
+       OverallUnderFourLbl = panel[18]
+       OverallUnderFourdd = panel[19]
+
+       OverallOverFiveLbl = panel[20]
+       OverallOverFiveodd = panel[21]
+       
+       OverallUnderFiveLbl = panel[22]
+       OverallUnderFivedd = panel[23]
+       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallOverThreodd,OverallOverFourodd,OverallOverFiveodd,OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd,OverallUnderThredd,OverallUnderFourdd,OverallUnderFivedd]
+
+      except:
+         asä = "" 
+      return MatchRes
+    
+    def firstAwaOverUnderBreakDown(panel):
+       
+      try:
+       OverallOverZeroLbl = panel[0]
+       OverallOverZerodd = panel[1]
+
+       OverallUnderZerLbl = panel[2]
+       OverallUnderZerdd = panel[3]
+
+       OverallOverOneLbl = panel[4]
+       OverallOverOnedd = panel[5]
+
+       OverallUnderOneLbl = panel[6]
+       OverallUnderOnedd = panel[7]
+
+       OverallOverYwoLbl = panel[8]
+       OverallOverYwodd = panel[9]
+       
+       OverallUnderYwoLbl = panel[10]
+       OverallUnderYwodd = panel[11]
+
+      
+
+       
+       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
+
+      except:
+         asä = "" 
+      return MatchRes
+    def firstHomOverUnderBreakDown(panel):
+       
+      try:
+       OverallOverZeroLbl = panel[0]
+       OverallOverZerodd = panel[1]
+
+       OverallUnderZerLbl = panel[2]
+       OverallUnderZerdd = panel[3]
+
+       OverallOverOneLbl = panel[4]
+       OverallOverOnedd = panel[5]
+
+       OverallUnderOneLbl = panel[6]
+       OverallUnderOnedd = panel[7]
+
+       OverallOverYwoLbl = panel[8]
+       OverallOverYwodd = panel[9]
+       
+       OverallUnderYwoLbl = panel[10]
+       OverallUnderYwodd = panel[11]
+
+      
+
+       
+       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
+
+      except:
+         asä = "" 
+      return MatchRes
+    
+    def firstOverUnderBreakDown(panel):
+       
+      try:
+       OverallOverZeroLbl = panel[0]
+       OverallOverZerodd = panel[1]
+
+       OverallUnderZerLbl = panel[2]
+       OverallUnderZerdd = panel[3]
+
+       OverallOverOneLbl = panel[4]
+       OverallOverOnedd = panel[5]
+
+       OverallUnderOneLbl = panel[6]
+       OverallUnderOnedd = panel[7]
+
+       OverallOverYwoLbl = panel[8]
+       OverallOverYwodd = panel[9]
+       
+       OverallUnderYwoLbl = panel[10]
+       OverallUnderYwodd = panel[11]
+
+      
+
+       
+       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
+
+      except:
+         asä = "" 
+      return MatchRes
   
     def findConcurrentMAtche(t,data,betype,ht):
         count = 0
@@ -216,6 +412,14 @@ class BtOr:
         countOv5 = 0
         countOv6 = 0
 
+        Acount = 0     
+        AcountOv1 = 0
+        AcountOv2 = 0
+        AcountOv3 = 0
+        AcountOv4 = 0
+        AcountOv5 = 0
+        AcountOv6 = 0
+
         FrstHcount = 0     
         FrstHcountOv1 = 0
         FrstHcountOv2 = 0
@@ -305,6 +509,8 @@ class BtOr:
         AwaySecConcedcountOv5 = 0
         AwaySecConcedcountOv6 = 0
 
+         
+
         AwaySecConcedUnder0 = 0     
         AwaySecConcedUnder1 = 0
         AwaySecConcedUnder2 = 0
@@ -320,6 +526,8 @@ class BtOr:
         HomeSecConcedUnder4 = 0
         HomeSecConcedUnder5 = 0
         HomeSecConcedUnder6 = 0
+
+        
 
         HomeSecConcedcount = 0     
         HomeSecConcedcountOv1 = 0
@@ -358,7 +566,47 @@ class BtOr:
         FrstHalfAovers = []       
         FrstHalfAunders = []
 
+        FrstHalfHunders = []       
+        FrstHalfHovers = []
+
+        Aunder1 = 0
+        Aunder2 = 0
+        Aunder3 = 0
+        Aunder4 = 0
+        Aunder5 = 0
+        Aunder6 = 0 
+
+        HomeSecunder1 = 0
+        HomeSecunder2 = 0
+        HomeSecunder3 = 0
+        HomeSecunder4 = 0
+        HomeSecunder5 = 0
+        HomeSecunder6 = 0
+
+        HomeSecOver1 = 0
+        HomeSecOver2 = 0
+        HomeSecOver3 = 0
+        HomeSecOver4 = 0
+        HomeSecOver5 = 0
+        HomeSecOver6 = 0
+
+        Homefrstunder1 = 0
+        Homefrstunder2 = 0
+        Homefrstunder3 = 0
+        Homefrstunder4 = 0
+        Homefrstunder5 = 0
+        Homefrstunder6 = 0
+
+        HomefrstOver1 = 0
+        HomefrstOver2 = 0
+        HomefrstOver3 = 0
+        HomefrstOver4 = 0
+        HomefrstOver5 = 0
+        HomefrstOver6 = 0
+
+        SecHalfHovers = []
         SecHalfAovers = []
+        SecHalfHUnders = []
         SecHalfAUnders = []
 
         Concedovers = []
@@ -371,6 +619,9 @@ class BtOr:
         AwayConcedSecHovers = []
         AwayConcedSecHunder = []
         AwayConcedFirstHunder = []
+
+        HomeConcedSecHovers = []
+
         Concedunders = []
 
         FrstHalfovers = []
@@ -426,6 +677,12 @@ class BtOr:
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
                 AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
              
+                Homefrstunder1 = Homefrstunder1 + 1
+                Homefrstunder2 = Homefrstunder2 + 1
+                Homefrstunder3 = Homefrstunder3 + 1
+                Homefrstunder4 = Homefrstunder4 + 1
+                Homefrstunder5 = Homefrstunder5 + 1
+                Homefrstunder6 = Homefrstunder6 + 1
               case 1:    
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
                # AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
@@ -435,6 +692,13 @@ class BtOr:
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
                 AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1   
+
+                HomefrstOver1 = HomefrstOver1 + 1
+                Homefrstunder2 = Homefrstunder2 + 1
+                Homefrstunder3 = Homefrstunder3 + 1
+                Homefrstunder4 = Homefrstunder4 + 1
+                Homefrstunder5 = Homefrstunder5 + 1
+                Homefrstunder6 = Homefrstunder6 + 1
               case 2:    
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
                 AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
@@ -442,7 +706,14 @@ class BtOr:
                 AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
-                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1
+
+                HomefrstOver1 = HomefrstOver1 + 1
+                HomefrstOver2 = HomefrstOver2 + 1
+                Homefrstunder3 = Homefrstunder3 + 1
+                Homefrstunder4 = Homefrstunder4 + 1
+                Homefrstunder5 = Homefrstunder5 + 1
+                Homefrstunder6 = Homefrstunder6 + 1
 
               case 3:  
                 AwayFrstConcedcount = AwayFrstConcedcount + 1
@@ -451,7 +722,18 @@ class BtOr:
                 #AwayFrstConcedUnder3 = AwayFrstConcedUnder3 + 1
                 AwayFrstConcedUnder4 = AwayFrstConcedUnder4 + 1
                 AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
-                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
+                AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1 
+
+                HomefrstOver1 = HomefrstOver1 + 1
+                HomefrstOver2 = HomefrstOver2 + 1
+                HomefrstOver3 = HomefrstOver3 + 1
+                HomefrstOver4 = HomefrstOver4 + 1
+                HomefrstOver5 = HomefrstOver5 + 1
+                HomefrstOver6 = HomefrstOver6 + 1
+
+                Homefrstunder4 = Homefrstunder4 + 1
+                Homefrstunder5 = Homefrstunder5 + 1
+                Homefrstunder6 = Homefrstunder6 + 1
               case 4:                 
                  AwayFrstConcedcount = AwayFrstConcedcount + 1
                  AwayFrstConcedcountOv2 = AwayFrstConcedcountOv2 + 1
@@ -459,8 +741,15 @@ class BtOr:
                  AwayFrstConcedcountOv4 = AwayFrstConcedcountOv4 + 1
                  AwayFrstConcedUnder5 = AwayFrstConcedUnder5 + 1
                  AwayFrstConcedUnder6 = AwayFrstConcedUnder6 + 1  
-
-
+                 
+                 HomefrstOver1 = HomefrstOver1 + 1
+                 HomefrstOver2 = HomefrstOver2 + 1 
+                 HomefrstOver3 = HomefrstOver3 + 1
+                 HomefrstOver4 = HomefrstOver4 + 1
+                 HomefrstOver5 = HomefrstOver5 + 1
+                 HomefrstOver6 = HomefrstOver6 + 1  
+                 Homefrstunder5 = Homefrstunder5 + 1
+                 Homefrstunder6 = Homefrstunder6 + 1 
             match HomSecHlf:
               case 0:  
                 AwaySecConcedUnder0 = AwaySecConcedUnder0 + 1     
@@ -471,6 +760,17 @@ class BtOr:
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
                 AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1  
              
+                HomeSecunder1 = HomeSecunder1 + 1
+                HomeSecunder2 = HomeSecunder2 + 1
+                HomeSecunder3 = HomeSecunder3 + 1
+                HomeSecunder4 = HomeSecunder4 + 1
+                HomeSecunder5 = HomeSecunder5 + 1
+                HomeSecunder6 = HomeSecunder6 + 1 
+
+               
+                
+               
+                 
               case 1:    
                 AwaySecConcedcount = AwaySecConcedcount + 1
                 AwaySecConcedUnder1 = AwaySecConcedUnder1 + 1
@@ -478,7 +778,14 @@ class BtOr:
                 AwaySecConcedUnder3 = AwaySecConcedUnder3 + 1
                 AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
-                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1  
+                AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1 
+
+                HomeSecOver1 = HomeSecOver1 + 1
+                HomeSecunder2 = HomeSecunder2 + 1
+                HomeSecunder3 = HomeSecunder3 + 1
+                HomeSecunder4 = HomeSecunder4 + 1
+                HomeSecunder5 = HomeSecunder5 + 1
+                HomeSecunder6 = HomeSecunder6 + 1 
               case 2:  
                 AwaySecConcedcount = AwaySecConcedcount + 1  
                 AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
@@ -488,6 +795,13 @@ class BtOr:
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
                 AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
 
+                HomeSecOver1 = HomeSecOver1 + 1
+                HomeSecOver2 = HomeSecOver2 + 1
+                HomeSecunder3 = HomeSecunder3 + 1
+                HomeSecunder4 = HomeSecunder4 + 1
+                HomeSecunder5 = HomeSecunder5 + 1
+                HomeSecunder6 = HomeSecunder6 + 1 
+
               case 3:  
                 AwaySecConcedcount = AwaySecConcedcount + 1
                 AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
@@ -496,6 +810,15 @@ class BtOr:
                 AwaySecConcedUnder4 = AwaySecConcedUnder4 + 1
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
                 AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
+
+
+                HomeSecOver1 = HomeSecOver1 + 1
+                HomeSecOver2 = HomeSecOver2 + 1
+                HomeSecOver3 = HomeSecOver3 + 1
+                
+                HomeSecunder4 = HomeSecunder4 + 1
+                HomeSecunder5 = HomeSecunder5 + 1
+                HomeSecunder6 = HomeSecunder6 + 1 
               case 4:  
                 AwaySecConcedcount = AwaySecConcedcount + 1               
                 AwaySecConcedcountOv1 = AwaySecConcedcountOv1 + 1
@@ -505,59 +828,66 @@ class BtOr:
                 AwaySecConcedUnder5 = AwaySecConcedUnder5 + 1
                 AwaySecConcedUnder6 = AwaySecConcedUnder6 + 1
 
+                HomeSecOver1 = HomeSecOver1 + 1
+                HomeSecOver2 = HomeSecOver2 + 1
+                HomeSecOver3 = HomeSecOver3 + 1
+                HomeSecOver4 = HomeSecOver4 + 1
+                HomeSecunder5 = HomeSecunder5 + 1
+                HomeSecunder6 = HomeSecunder6 + 1 
+
             match Acon:
               case 0:                 
-               under1 = under1 + 1
-               under2 = under2 + 1
-               under3 = under3 + 1
-               under4 = under4 + 1
-               under5 = under5 + 1
-               under6 = under6 + 1  
+               Aunder1 = Aunder1 + 1
+               Aunder2 = Aunder2 + 1
+               Aunder3 = Aunder3 + 1
+               Aunder4 = Aunder4 + 1
+               Aunder5 = Aunder5 + 1
+               Aunder6 = Aunder6 + 1  
               case 1:    
-                count = count + 1
-                under2 = under2 + 1
-                under3 = under3 + 1
-                under4 = under4 + 1
-                under5 = under5 + 1
-                under6 = under6 + 1
+                Acount = Acount + 1
+                Aunder2 = Aunder2 + 1
+                Aunder3 = Aunder3 + 1
+                Aunder4 = Aunder4 + 1
+                Aunder5 = Aunder5 + 1
+                Aunder6 = Aunder6 + 1
               case 2:    
-               count = count + 1
-               countOv1 = countOv1 +1
+               Acount = Acount + 1
+               AcountOv1 = AcountOv1 +1
                     
-               under3 = under3 + 1
-               under4 = under4 + 1
-               under5 = under5 + 1
-               under6 = under6 + 1
+               Aunder3 = Aunder3 + 1
+               Aunder4 = Aunder4 + 1
+               Aunder5 = Aunder5 + 1
+               Aunder6 = Aunder6 + 1
               case 3:                 
-               count = count + 1
-               countOv1 = countOv1 +1
-               countOv2 = countOv2 +1
-               under4 = under4 + 1
-               under5 = under5 + 1
-               under6 = under6 + 1
+               Acount = Acount + 1
+               AcountOv1 = AcountOv1 +1
+               AcountOv2 = AcountOv2 +1
+               Aunder4 = Aunder4 + 1
+               Aunder5 = Aunder5 + 1
+               Aunder6 = Aunder6 + 1
               case 4:                 
-                count = count + 1
-                countOv1 = countOv1 +1
-                countOv2 = countOv2 +1
-                countOv3 = countOv3 +1
-                under5 = under5 + 1
-                under6 = under6 + 1
+                Acount = Acount + 1
+                AcountOv1 = AcountOv1 +1
+                AcountOv2 = AcountOv2 +1
+                AcountOv3 = AcountOv3 +1
+                Aunder5 = Aunder5 + 1
+                Aunder6 = Aunder6 + 1
               case 5:                 
-                count = count + 1
-                countOv1 = countOv1 +1
-                countOv2 = countOv2 +1
-                countOv3 = countOv3 +1
-                countOv4 = countOv4 +1
+                Acount = Acount + 1
+                AcountOv1 = AcountOv1 +1
+                AcountOv2 = AcountOv2 +1
+                AcountOv3 = AcountOv3 +1
+                AcountOv4 = AcountOv4 +1
                
-                under6 = under6 + 1
+                Aunder6 = Aunder6 + 1
               case 6:                 
-                count = count + 1
-                countOv1 = countOv1 +1
-                countOv2 = countOv2 +1
-                countOv3 = countOv3 +1
-                countOv4 = countOv4 +1
-                countOv5 = countOv5 +1
-                under6 = under6 + 1
+                Acount = Acount + 1
+                AcountOv1 = AcountOv1 +1
+                AcountOv2 = AcountOv2 +1
+                AcountOv3 = AcountOv3 +1
+                AcountOv4 = AcountOv4 +1
+                AcountOv5 = AcountOv5 +1
+                Aunder6 = Aunder6 + 1
             match Hcon:
               case 0:                 
                under1 = under1 + 1
@@ -773,6 +1103,22 @@ class BtOr:
         FrstHalfAunders.append(Frstunder1)        
         FrstHalfAunders.append(Frstunder2)   
 
+        FrstHalfHovers.append(HomefrstOver1)        
+        FrstHalfHovers.append(HomefrstOver2)        
+        FrstHalfHovers.append(HomefrstOver3)    
+        FrstHalfHovers.append(HomefrstOver4)    
+        
+        FrstHalfHunders.append(Homefrstunder1)        
+        FrstHalfHunders.append(Homefrstunder2)        
+        FrstHalfHunders.append(Homefrstunder3) 
+        FrstHalfHunders.append(Homefrstunder4) 
+
+        HomeConcedSecHovers.append(HomeSecConcedcount)
+        HomeConcedSecHovers.append(HomeSecConcedcountOv2)
+        HomeConcedSecHovers.append(HomeSecConcedcountOv3)
+        HomeConcedSecHovers.append(HomeSecConcedcountOv4)
+
+
         HomeConcedFirstHovers.append(HomeFrstConcedcount)
         HomeConcedFirstHovers.append(HomeFrstConcedcountOv2)
         HomeConcedFirstHovers.append(HomeFrstConcedcountOv3)
@@ -790,7 +1136,18 @@ class BtOr:
      
         SecHalfAovers.append(ASecOver0)        
         SecHalfAovers.append(ASecOver1)        
-        SecHalfAovers.append(ASecOver2)    
+        SecHalfAovers.append(ASecOver2)  
+
+        SecHalfHovers.append(HomeSecOver1)        
+        SecHalfHovers.append(HomeSecOver2)        
+        SecHalfHovers.append(HomeSecOver3) 
+        SecHalfHovers.append(HomeSecOver4)
+
+        SecHalfHUnders.append(HomeSecunder1)        
+        SecHalfHUnders.append(HomeSecunder2)        
+        SecHalfHUnders.append(HomeSecunder3) 
+        SecHalfHUnders.append(HomeSecunder4)  
+
         SecHalfAUnders.append(ASecunder0)        
         SecHalfAUnders.append(ASecunder1)        
         SecHalfAUnders.append(ASecunder2)  
@@ -821,7 +1178,7 @@ class BtOr:
         
        
 
-        arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder,HomeFailConcedFirstHovers,HomeConcedFirstHovers,HomeFailConcedSecHovers])
+        arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder,HomeFailConcedFirstHovers,HomeConcedFirstHovers,HomeFailConcedSecHovers,HomeConcedSecHovers,SecHalfHovers,SecHalfHUnders,FrstHalfHunders,FrstHalfHovers])
         return arr
     
     

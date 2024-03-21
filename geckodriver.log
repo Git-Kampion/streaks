@@ -31320,3 +31320,1425 @@ aa.Jk/c/<@https://www.googletagmanager.com/gtag/js?id=G-3NV6GD9ZTT&l=dataLayer&c
 
 1703535525317	Marionette	INFO	Stopped listening on port 63231
 Dynamically enable window occlusion 1
+1706185417516	geckodriver	INFO	Listening on 127.0.0.1:52710
+1706185418063	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52711" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile1Kztfe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706185418657	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1706185418821	Marionette	INFO	Listening on port 52738
+WebDriver BiDi listening on ws://127.0.0.1:52711
+Read port: 52738
+1706185419058	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52711/devtools/browser/c298ee46-a9a4-4366-a9d8-f55214cdf0d1
+1706185475210	geckodriver	INFO	Listening on 127.0.0.1:65158
+1706185475723	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65159" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileL5AsGs"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706185476198	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1706185476343	Marionette	INFO	Listening on port 58271
+WebDriver BiDi listening on ws://127.0.0.1:65159
+Read port: 58271
+1706185476545	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65159/devtools/browser/5628aef2-3036-4020-8dbe-f64aae53a335
+1706185510734	geckodriver	INFO	Listening on 127.0.0.1:58427
+1706185511233	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58428" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileBKt2bu"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1706185511773	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1706185511930	Marionette	INFO	Listening on port 58437
+WebDriver BiDi listening on ws://127.0.0.1:58428
+Read port: 58437
+1706185512120	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58428/devtools/browser/97083aa8-911e-4e26-ac01-987ef367e1c0
+1706185541807	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707512155858	geckodriver	INFO	Listening on 127.0.0.1:62891
+1707512156405	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62892" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilehJYxDh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707512157028	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707512157202	Marionette	INFO	Listening on port 58680
+WebDriver BiDi listening on ws://127.0.0.1:62892
+Read port: 58680
+1707512157411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62892/devtools/browser/5f65c5ad-83f1-40a9-9578-674490b84cec
+1707512187238	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707512356652	geckodriver	INFO	Listening on 127.0.0.1:60687
+1707512357187	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60688" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile84hNbh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707512357658	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707512357903	Marionette	INFO	Listening on port 60694
+Read port: 60694
+WebDriver BiDi listening on ws://127.0.0.1:60688
+1707512357981	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60688/devtools/browser/eb67b029-5ad5-449d-b6d0-38b64f615c54
+1707512388047	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707515076150	geckodriver	INFO	Listening on 127.0.0.1:53966
+1707515076667	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53967" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilesymrmC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707515077247	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707515077447	Marionette	INFO	Listening on port 53981
+WebDriver BiDi listening on ws://127.0.0.1:53967
+Read port: 53981
+1707515077653	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53967/devtools/browser/ee348138-7cf3-4c29-af57-2bed3e415aa8
+1707515107284	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707515229354	geckodriver	INFO	Listening on 127.0.0.1:54182
+1707515229858	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54183" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile9AQ1nR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707515230569	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707515230826	Marionette	INFO	Listening on port 54189
+WebDriver BiDi listening on ws://127.0.0.1:54183
+Read port: 54189
+1707515231038	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54183/devtools/browser/149b7dbb-4857-40d5-8b0c-b3d8169582e9
+1707515260668	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707515337452	geckodriver	INFO	Listening on 127.0.0.1:54374
+1707515337970	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54375" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilecME4wV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707515338528	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707515338696	Marionette	INFO	Listening on port 54384
+WebDriver BiDi listening on ws://127.0.0.1:54375
+Read port: 54384
+1707515338926	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54375/devtools/browser/dd23c266-1b88-45d7-a5a3-9fab93110f74
+1707515368591	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707655844816	geckodriver	INFO	Listening on 127.0.0.1:59109
+1707655845311	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59110" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofiled9TJp4"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707655846009	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707655846169	Marionette	INFO	Listening on port 59119
+WebDriver BiDi listening on ws://127.0.0.1:59110
+Read port: 59119
+1707655846397	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59110/devtools/browser/54806024-d13b-4f2b-9fae-fca73d1eb2fa
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707655876045	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707657487539	geckodriver	INFO	Listening on 127.0.0.1:59847
+1707657488057	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59848" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilezE9W5c"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707657488757	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707657488936	Marionette	INFO	Listening on port 59860
+WebDriver BiDi listening on ws://127.0.0.1:59848
+Read port: 59860
+1707657489186	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59848/devtools/browser/af746ad6-4582-453b-9fd0-da4a378d0235
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707657518796	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707659407762	geckodriver	INFO	Listening on 127.0.0.1:60825
+1707659408271	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60826" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileWotIUM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707659408657	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707659408767	Marionette	INFO	Listening on port 60835
+WebDriver BiDi listening on ws://127.0.0.1:60826
+Read port: 60835
+1707659408928	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60826/devtools/browser/925a2e5f-ca40-48f1-bd40-e0a3b16a5222
+1707659438786	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707659535135	geckodriver	INFO	Listening on 127.0.0.1:61109
+1707659535656	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61110" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileLdx3K6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707659536033	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707659536139	Marionette	INFO	Listening on port 61119
+WebDriver BiDi listening on ws://127.0.0.1:61110
+Read port: 61119
+1707659536274	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61110/devtools/browser/df3bc555-043e-419f-bdb1-825b9589de53
+1707659566524	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707662540416	geckodriver	INFO	Listening on 127.0.0.1:56975
+1707662540949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56976" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileDBwp7L"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707662541575	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707662541765	Marionette	INFO	Listening on port 56985
+Read port: 56985
+WebDriver BiDi listening on ws://127.0.0.1:56976
+1707662541875	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56976/devtools/browser/3917af77-b6f7-4ab1-92c2-eff86e6ecab1
+1707662571739	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707757462383	geckodriver	INFO	Listening on 127.0.0.1:59028
+1707757462902	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59029" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileePpUoj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707757465711	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707757465861	Marionette	INFO	Listening on port 59039
+WebDriver BiDi listening on ws://127.0.0.1:59029
+Read port: 59039
+1707757466060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59029/devtools/browser/e1b73fb4-4ad4-43cc-b548-fa30d0e9d410
+1707757495791	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707772786530	geckodriver	INFO	Listening on 127.0.0.1:56801
+1707772787035	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56802" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilevUq17a"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707772787558	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707772787695	Marionette	INFO	Listening on port 56813
+WebDriver BiDi listening on ws://127.0.0.1:56802
+Read port: 56813
+1707772787895	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56802/devtools/browser/bb45db8e-abb6-4335-8821-971277e9693e
+1707772817590	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707772845808	Marionette	INFO	Stopped listening on port 56813
+Dynamically enable window occlusion 1
+1707774148482	geckodriver	INFO	Listening on 127.0.0.1:53718
+1707774149004	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53719" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileOKhBky"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707774149719	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707774149893	Marionette	INFO	Listening on port 53728
+WebDriver BiDi listening on ws://127.0.0.1:53719
+Read port: 53728
+1707774150110	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53719/devtools/browser/cd8a84bb-6b47-43b9-8384-84deadedc04d
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707774179775	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707774280330	geckodriver	INFO	Listening on 127.0.0.1:53929
+1707774280810	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53930" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile627Il9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707774281578	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707774281741	Marionette	INFO	Listening on port 53939
+WebDriver BiDi listening on ws://127.0.0.1:53930
+Read port: 53939
+1707774281985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53930/devtools/browser/c6b67b40-b0fd-425a-996e-26c39683c7f3
+1707774311643	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707774330885	geckodriver	INFO	Listening on 127.0.0.1:54998
+1707774331378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54999" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilexb3zQF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707774332054	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707774332221	Marionette	INFO	Listening on port 55005
+WebDriver BiDi listening on ws://127.0.0.1:54999
+Read port: 55005
+1707774332437	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54999/devtools/browser/85f590b5-6c21-43f1-8a35-7a3e8661ec43
+1707774362103	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707774468767	geckodriver	INFO	Listening on 127.0.0.1:55217
+1707774469288	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55218" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileo2v6vv"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707774470028	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707774470205	Marionette	INFO	Listening on port 55227
+Read port: 55227
+WebDriver BiDi listening on ws://127.0.0.1:55218
+1707774470291	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55218/devtools/browser/269e397d-f7bc-48d5-a194-39ef9af2e196
+1707774500065	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1707775093653	geckodriver	INFO	Listening on 127.0.0.1:55512
+1707775094176	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55513" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileSauFNg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707775094891	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707775095106	Marionette	INFO	Listening on port 55521
+WebDriver BiDi listening on ws://127.0.0.1:55513
+Read port: 55521
+1707775095371	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55513/devtools/browser/36991047-5032-48a8-bbf3-c936c7fc0282
+1707775124948	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707775188889	geckodriver	INFO	Listening on 127.0.0.1:55740
+1707775189382	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55741" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileyEDqdn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707775190009	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707775190192	Marionette	INFO	Listening on port 55747
+WebDriver BiDi listening on ws://127.0.0.1:55741
+Read port: 55747
+1707775190400	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55741/devtools/browser/509eb3eb-1605-49e0-b98a-355d16cef58c
+1707775220085	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707776888233	geckodriver	INFO	Listening on 127.0.0.1:56317
+1707776888751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56318" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilerxbGta"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707776889523	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707776889705	Marionette	INFO	Listening on port 56338
+WebDriver BiDi listening on ws://127.0.0.1:56318
+Read port: 56338
+1707776889914	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56318/devtools/browser/4c1e877b-0a20-459f-8690-2f679552af14
+1707776919552	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707776978271	geckodriver	INFO	Listening on 127.0.0.1:56528
+1707776978787	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56529" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileGFzV4i"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707776979537	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707776979711	Marionette	INFO	Listening on port 56535
+WebDriver BiDi listening on ws://127.0.0.1:56529
+Read port: 56535
+1707776979939	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56529/devtools/browser/40b06043-c46e-482a-9ff8-3216969af415
+1707777009597	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777061225	geckodriver	INFO	Listening on 127.0.0.1:56708
+1707777061711	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56709" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile3Z8XWe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777062402	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777062588	Marionette	INFO	Listening on port 56717
+WebDriver BiDi listening on ws://127.0.0.1:56709
+Read port: 56717
+1707777062829	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56709/devtools/browser/df1bfa09-4aa5-440a-819c-393933735dc6
+1707777092470	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777147909	geckodriver	INFO	Listening on 127.0.0.1:56884
+1707777148405	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56885" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilebFUaNy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777149210	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777149445	Marionette	INFO	Listening on port 56890
+WebDriver BiDi listening on ws://127.0.0.1:56885
+Read port: 56890
+1707777149675	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56885/devtools/browser/5f42c656-30bb-4e1f-ac04-166e15cc0701
+1707777179282	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777222464	geckodriver	INFO	Listening on 127.0.0.1:57064
+1707777222966	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57065" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile1nzo0r"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777223646	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777223812	Marionette	INFO	Listening on port 57070
+WebDriver BiDi listening on ws://127.0.0.1:57065
+Read port: 57070
+1707777224020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57065/devtools/browser/89d12ea0-ccc2-45ac-85e4-01707ae50249
+1707777253734	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777500348	geckodriver	INFO	Listening on 127.0.0.1:57274
+1707777500865	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57275" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileWlqSqc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777501502	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777501695	Marionette	INFO	Listening on port 57280
+WebDriver BiDi listening on ws://127.0.0.1:57275
+Read port: 57280
+1707777501918	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57275/devtools/browser/ada3be6b-17cb-4427-a5c3-6b96660867e0
+1707777531537	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777666018	geckodriver	INFO	Listening on 127.0.0.1:57772
+1707777666540	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57773" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile4w0ilV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777667295	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777667480	Marionette	INFO	Listening on port 57781
+WebDriver BiDi listening on ws://127.0.0.1:57773
+Read port: 57781
+1707777667750	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57773/devtools/browser/b62441ca-ce44-4b0d-bf1b-db23e5436fcb
+1707777697324	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777831690	geckodriver	INFO	Listening on 127.0.0.1:58130
+1707777832217	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58131" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilee6vFHj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777832898	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777833085	Marionette	INFO	Listening on port 58154
+WebDriver BiDi listening on ws://127.0.0.1:58131
+Read port: 58154
+1707777833449	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58131/devtools/browser/3048c397-48dd-4b3b-a148-a4e4d7789d49
+1707777862951	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707777949797	geckodriver	INFO	Listening on 127.0.0.1:58351
+1707777950302	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58352" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilewOC7xA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707777951119	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707777951338	Marionette	INFO	Listening on port 58363
+WebDriver BiDi listening on ws://127.0.0.1:58352
+Read port: 58363
+1707777951578	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58352/devtools/browser/5c21da9f-85b2-4c4c-ae95-cd3be059df84
+1707777981201	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707778007751	geckodriver	INFO	Listening on 127.0.0.1:58541
+1707778008249	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58542" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile9IxQhk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707778008993	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707778009165	Marionette	INFO	Listening on port 58547
+Read port: 58547
+WebDriver BiDi listening on ws://127.0.0.1:58542
+1707778009240	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58542/devtools/browser/0d08dad8-58f4-45a1-af6e-e5266a55cb97
+1707778039066	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707778084255	geckodriver	INFO	Listening on 127.0.0.1:58724
+1707778084751	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58725" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileqSY37S"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707778085489	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707778085672	Marionette	INFO	Listening on port 58732
+WebDriver BiDi listening on ws://127.0.0.1:58725
+Read port: 58732
+1707778085865	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58725/devtools/browser/c09a7704-c5a0-4af9-b507-68d311b01783
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707778115571	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707849520503	geckodriver	INFO	Listening on 127.0.0.1:64888
+1707849521005	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64889" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileiU1x0z"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707849521655	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707849521878	Marionette	INFO	Listening on port 64899
+WebDriver BiDi listening on ws://127.0.0.1:64889
+Read port: 64899
+1707849522086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64889/devtools/browser/5505743f-c9b2-451c-8c52-d17faf172d13
+1707849551793	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707849673524	geckodriver	INFO	Listening on 127.0.0.1:65128
+1707849674033	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65129" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileUzbFeE"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707849674818	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707849675044	Marionette	INFO	Listening on port 65135
+WebDriver BiDi listening on ws://127.0.0.1:65129
+Read port: 65135
+1707849675226	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65129/devtools/browser/254dae4a-7e1d-4862-a99c-42b47b31ac0c
+1707849704857	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707849864790	geckodriver	INFO	Listening on 127.0.0.1:65378
+1707849865291	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65379" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilegEcjYt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707849865779	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707849865985	Marionette	INFO	Listening on port 65385
+WebDriver BiDi listening on ws://127.0.0.1:65379
+Read port: 65385
+1707849866196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65379/devtools/browser/3cf688b7-270a-4b13-a448-acb90b7427bc
+1707849896009	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707850024724	geckodriver	INFO	Listening on 127.0.0.1:49235
+1707850025260	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49236" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilebFKLwc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707850025762	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707850025947	Marionette	INFO	Listening on port 49241
+WebDriver BiDi listening on ws://127.0.0.1:49236
+Read port: 49241
+1707850026151	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49236/devtools/browser/4316d561-255a-495e-b8b4-f9c7b3db6941
+1707850055844	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707850202881	geckodriver	INFO	Listening on 127.0.0.1:49775
+1707850203410	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49776" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilemm5o0M"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707850204016	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707850204186	Marionette	INFO	Listening on port 49782
+WebDriver BiDi listening on ws://127.0.0.1:49776
+Read port: 49782
+1707850204380	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49776/devtools/browser/e5d2d3e2-8586-4eda-8d13-d3fb7b6fdcf3
+1707850234053	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707850424082	geckodriver	INFO	Listening on 127.0.0.1:50014
+1707850424581	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50015" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilelQkJel"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707850425209	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707850425459	Marionette	INFO	Listening on port 50020
+WebDriver BiDi listening on ws://127.0.0.1:50015
+Read port: 50020
+1707850425665	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50015/devtools/browser/4cf7e34d-316f-4aec-aa07-da897e3a0cba
+1707850455437	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707850649606	geckodriver	INFO	Listening on 127.0.0.1:50277
+1707850650095	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50278" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilegmLRCN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707850650738	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707850650928	Marionette	INFO	Listening on port 50286
+WebDriver BiDi listening on ws://127.0.0.1:50278
+Read port: 50286
+1707850651126	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50278/devtools/browser/c4bccfd5-d005-49b6-9e0d-ad4c0f6fb2b3
+1707850680928	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707850847468	geckodriver	INFO	Listening on 127.0.0.1:50534
+1707850847986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50535" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileVaXKjc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707850848750	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707850848921	Marionette	INFO	Listening on port 50540
+WebDriver BiDi listening on ws://127.0.0.1:50535
+Read port: 50540
+1707850849123	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50535/devtools/browser/81152b69-b085-410e-af7f-d7771b3afef6
+1707850878957	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: (new Error("Polling for changes failed: NetworkError: Network request failed.", "resource://services-settings/remote-settings.sys.mjs", 324))
+1707851153772	geckodriver	INFO	Listening on 127.0.0.1:50793
+1707851154286	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50794" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileEjmEvh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707851154990	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707851155164	Marionette	INFO	Listening on port 50799
+WebDriver BiDi listening on ws://127.0.0.1:50794
+Read port: 50799
+1707851155391	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50794/devtools/browser/b6ffc031-572d-41bd-921c-9f71226117d3
+1707851185108	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707851523430	geckodriver	INFO	Listening on 127.0.0.1:51124
+1707851523943	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51125" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNEUbmh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707851524489	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707851524626	Marionette	INFO	Listening on port 51130
+WebDriver BiDi listening on ws://127.0.0.1:51125
+Read port: 51130
+1707851524816	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51125/devtools/browser/7a688af1-2be6-4cf0-a167-6d2f785a7809
+1707851554985	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707851827327	geckodriver	INFO	Listening on 127.0.0.1:54813
+1707851827857	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54814" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileLkS3lw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707851828423	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707851828590	Marionette	INFO	Listening on port 54823
+WebDriver BiDi listening on ws://127.0.0.1:54814
+Read port: 54823
+1707851828817	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54814/devtools/browser/a86d2449-1572-48e9-b327-d999dd400edf
+1707851858624	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707851946124	geckodriver	INFO	Listening on 127.0.0.1:55025
+1707851946621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55026" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileOnQyrh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707851947302	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707851947490	Marionette	INFO	Listening on port 55032
+WebDriver BiDi listening on ws://127.0.0.1:55026
+Read port: 55032
+1707851947707	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55026/devtools/browser/c1b33291-c9b5-4b2d-bf82-7e731b4dd588
+1707851977351	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707852006962	geckodriver	INFO	Listening on 127.0.0.1:55205
+1707852007474	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55206" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileUn3CUo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707852007993	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707852008144	Marionette	INFO	Listening on port 55211
+WebDriver BiDi listening on ws://127.0.0.1:55206
+Read port: 55211
+1707852008388	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55206/devtools/browser/22a9e9b9-d441-40f8-8eeb-1b6fa827c6cd
+1707852038048	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707852445545	geckodriver	INFO	Listening on 127.0.0.1:55506
+1707852446071	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55507" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile2Gi6L0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707852446594	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707852446784	Marionette	INFO	Listening on port 55512
+WebDriver BiDi listening on ws://127.0.0.1:55507
+Read port: 55512
+1707852446967	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55507/devtools/browser/d3b90f7b-eb1d-42b6-b10c-6ba94ee896c3
+1707852476763	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707852702424	geckodriver	INFO	Listening on 127.0.0.1:53574
+1707852702949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53575" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileToaimU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707852703635	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707852703813	Marionette	INFO	Listening on port 53581
+WebDriver BiDi listening on ws://127.0.0.1:53575
+Read port: 53581
+1707852704014	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:53575/devtools/browser/2ff09103-d5ca-4241-bf7e-a0dcfaea6915
+1707852733672	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707852955544	geckodriver	INFO	Listening on 127.0.0.1:64382
+1707852956041	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64383" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNnCsGq"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707852956648	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707852956871	Marionette	INFO	Listening on port 64388
+WebDriver BiDi listening on ws://127.0.0.1:64383
+Read port: 64388
+1707852957063	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64383/devtools/browser/f1036ca8-8822-46f4-8481-c4841b07b421
+1707852986692	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707853201832	geckodriver	INFO	Listening on 127.0.0.1:64644
+1707853202328	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64645" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileIbchyD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707853202936	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707853203114	Marionette	INFO	Listening on port 64651
+WebDriver BiDi listening on ws://127.0.0.1:64645
+Read port: 64651
+1707853203321	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64645/devtools/browser/1efc637b-c141-40b6-9009-7bcd34c1b63c
+1707853233104	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707853261989	geckodriver	INFO	Listening on 127.0.0.1:62663
+1707853262503	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62664" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile1eYAlv"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707853263083	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707853263268	Marionette	INFO	Listening on port 62669
+WebDriver BiDi listening on ws://127.0.0.1:62664
+Read port: 62669
+1707853263477	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62664/devtools/browser/f2a5eb94-95f3-4c2a-a190-011518bc155b
+1707853293151	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707853654701	geckodriver	INFO	Listening on 127.0.0.1:52018
+1707853655210	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52019" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile2nKsWe"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707853655724	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707853655886	Marionette	INFO	Listening on port 52024
+WebDriver BiDi listening on ws://127.0.0.1:52019
+Read port: 52024
+1707853656079	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52019/devtools/browser/c30ef584-5f6d-465e-83d0-b502026751c7
+1707853685834	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707853818458	Marionette	INFO	Stopped listening on port 52024
+Dynamically enable window occlusion 1
+k\\AppData\\Local\\Temp\\rust_mozprofilezOdaCd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707853812480	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707853812710	Marionette	INFO	Listening on port 52276
+WebDriver BiDi listening on ws://127.0.0.1:52268
+Read port: 52276
+1707853812897	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52268/devtools/browser/66afbb2d-49b1-430b-9aad-63afff3b28d7
+1707853842560	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707854056929	Marionette	INFO	Stopped listening on port 52276
+Dynamically enable window occlusion 1
+k\\AppData\\Local\\Temp\\rust_mozprofile4ibfGQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707853943254	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707853943476	Marionette	INFO	Listening on port 52505
+WebDriver BiDi listening on ws://127.0.0.1:52498
+Read port: 52505
+1707853943694	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52498/devtools/browser/7e77c9d5-51c3-4bde-8c34-b95cfcc7cf58
+1707853973343	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1707854089712	Marionette	INFO	Stopped listening on port 52505
+Dynamically enable window occlusion 1
+1707854100881	geckodriver	INFO	Listening on 127.0.0.1:52653
+1707854101393	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52654" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile38zKFw"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707854102060	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707854102261	Marionette	INFO	Listening on port 52661
+WebDriver BiDi listening on ws://127.0.0.1:52654
+Read port: 52661
+1707854102477	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52654/devtools/browser/91657625-b1ce-4ad1-b7ef-4bbaabcf03ea
+1707854132119	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c, line 128: Script terminated by timeout at:
+Ra@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:128:437
+ek@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:272:258
+em@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:292:613
+cH/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:549:178
+aa.Zk/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:498:126
+aa.Zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:497:420
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:24913
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:15697
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:27074
+_0x9d541a@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54524
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:55317
+
+1707854203317	Marionette	INFO	Stopped listening on port 52661
+Dynamically enable window occlusion 1
+1707862314942	geckodriver	INFO	Listening on 127.0.0.1:50732
+1707862315435	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50733" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileSkv4nU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707862316207	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707862316385	Marionette	INFO	Listening on port 50739
+WebDriver BiDi listening on ws://127.0.0.1:50733
+Read port: 50739
+1707862316649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50733/devtools/browser/2ff6c57d-9c00-49cd-8f9c-5b0c12fb17fd
+1707862346239	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707862826682	Marionette	INFO	Stopped listening on port 50739
+Dynamically enable window occlusion 1
+1707862867548	geckodriver	INFO	Listening on 127.0.0.1:50983
+1707862868033	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50984" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilebeIylD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707862868593	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707862868752	Marionette	INFO	Listening on port 50990
+Read port: 50990
+WebDriver BiDi listening on ws://127.0.0.1:50984
+1707862868847	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50984/devtools/browser/c6bf2952-00f5-451b-a6d0-eb696f2f3f50
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707862898623	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707864569749	Marionette	INFO	Stopped listening on port 50990
+Dynamically enable window occlusion 1
+k\\AppData\\Local\\Temp\\rust_mozprofileanvcua"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707862992370	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707862992559	Marionette	INFO	Listening on port 51186
+WebDriver BiDi listening on ws://127.0.0.1:51178
+Read port: 51186
+1707862992841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51178/devtools/browser/f5182fa6-166c-4eac-a67a-d6f0e89b9024
+1707863022410	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c, line 297: Script terminated by timeout at:
+lm.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:297:443
+cH/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:549:142
+aa.Zk/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:498:126
+aa.Zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:497:420
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:24913
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:15697
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:27074
+_0x9d541a@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54524
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:55317
+
+1707864570729	Marionette	INFO	Stopped listening on port 51186
+Dynamically enable window occlusion 1
+https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1707863222764	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:55215
+
+1707864571703	Marionette	INFO	Stopped listening on port 51403
+Dynamically enable window occlusion 1
+k\\AppData\\Local\\Temp\\rust_mozprofileQQXlr8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707863887266	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707863887437	Marionette	INFO	Listening on port 51798
+WebDriver BiDi listening on ws://127.0.0.1:51787
+Read port: 51798
+1707863887746	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51787/devtools/browser/9eb987e7-60c4-4eee-a359-5ad8e8b05ccc
+1707863917299	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c, line 133: Script terminated by timeout at:
+jb@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:133:90
+mb@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:134:49
+mm@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:293:221
+lm.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:297:266
+lm.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:295:207
+em@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:292:636
+cH/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:549:178
+aa.Zk/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:498:126
+aa.Zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:497:420
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:24913
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:15697
+@httpsJavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707864573246	Marionette	INFO	Stopped listening on port 52077
+Dynamically enable window occlusion 1
+cclusion 1
+Local\\Temp\\rust_mozprofilemDJjUS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707864454145	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707864454292	Marionette	INFO	Listening on port 52302
+WebDriver BiDi listening on ws://127.0.0.1:52290
+Read port: 52302
+1707864454553	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52290/devtools/browser/c1846d91-91d2-439a-aaf9-9bf1fe814556
+1707864484175	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://betbooster-widget.lvision.io/v3/prod/140.js, line 1: Script terminated by timeout at:
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54841
+
+1707864574915	Marionette	INFO	Stopped listening on port 52302
+Dynamically enable window occlusion 1
+1707864636037	geckodriver	INFO	Listening on 127.0.0.1:52519
+1707864636530	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52520" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile3XKEtG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1707864637069	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1707864637289	Marionette	INFO	Listening on port 52526
+WebDriver BiDi listening on ws://127.0.0.1:52520
+Read port: 52526
+1707864637563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52520/devtools/browser/a0f664fc-93f7-4e15-b594-3d5593e65b59
+1707864667102	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1709884085806	geckodriver	INFO	Listening on 127.0.0.1:55626
+1709884086316	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55627" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileyF9kFG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709884093705	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709884093866	Marionette	INFO	Listening on port 55680
+Read port: 55680
+WebDriver BiDi listening on ws://127.0.0.1:55627
+1709884093955	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55627/devtools/browser/700cf556-495d-424f-ae7a-ea30989e77b1
+1709884123920	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/P1KLcePBdUU4gMuc?0ed5736bac8049d2=hDVnwqqNjJYgbA3Gah_C3YMftJH9ZilTdhy0axU8Y151ofrtpzjhLaPZQQBxKqohlyqTRqMmquAUJ9-RdYfWT8qrcmuvL-XDuFOqg6Qy3mr7okWCBf2vw9K2iYru3ywzg4SXGu1i5lgV4X1zB5bcuFnnz4xQPjY__TAozoiGpOKoWI6Y2jrB2Fo6ni0AprMILxbBge_KTKjyeL3ogJkm2uDyEt45UpFktB0M&jb=34332e246a716d773f556b6c646f757126687b6f3d556b6e6c6d77712730383332246a7362773d466b706d646f7a246871603f44697267646f7a2d3230333033, line 458: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1709895852589	geckodriver	INFO	Listening on 127.0.0.1:64196
+1709895853115	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64197" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileMbYfMr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709895853698	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709895853868	Marionette	INFO	Listening on port 64207
+WebDriver BiDi listening on ws://127.0.0.1:64197
+Read port: 64207
+1709895854109	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64197/devtools/browser/57875310-1192-4e99-a7c6-e1eb7264e11f
+JavaScript warning: https://info.betway.co.za/YvYFuLtBmiyloyLp?e17389edb816b0af=vaemoQJNnZMsusX44nG-gPk-sIaeSRNC9q1iSC-GKHpfRKsP1Fk1K5Pu8s7fHx9r5eHLDsPLVjkjM9hkXGo1o01OAglxcXAB7wmaMA23O5zCkqEXULq9ygtD2d76VYqoSsTTzlky9AGaAggLa57tMqtGfoAb8afL5F9C3bpK4TgiO9NAPVThS65buXWKQQlY2Jzi43kiBHGrIcNjvm27EYTOj9w0gpG50DwP&jb=36312e2e68736f773d556b66666d777b2e68736d3d57696c646d7571253032313026687162753f4469726d6e6d78266873603f4e6b70656e677a253030313231, line 1231: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709895883710	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1709896946659	geckodriver	INFO	Listening on 127.0.0.1:65009
+1709896947181	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65010" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileEcB0hJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709896947675	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709896947835	Marionette	INFO	Listening on port 65016
+WebDriver BiDi listening on ws://127.0.0.1:65010
+Read port: 65016
+1709896948012	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65010/devtools/browser/2d65185e-76d2-48db-8653-4162bf4a6e1f
+JavaScript warning: https://info.betway.co.za/p59hkpqcLlhVf4Wn?63aee552d89e0781=MCx_nd1vNRgwy4mh-nVjjEoSRUbV6RIKyz30-FfXZM9esYoJVR--170_Z_CWbX0G56W3kX0Nz9i-fx-o3y146OkYotJ5pr5dnWvKhR6Tg6lVTY3vFZOxK5IVJz50ln2CA1qy53_QnNak4xAx1A09dqpSs8fZN9WKSxUpTL6c4TDVYzW3InXz714hH1OJUDyNvKdTd2Ggn6R0mg7E3HnSDu-301FVryGRjCBp&jb=3439262468736d773d556b6e666f7573246a716d3555616e666d77712732303932266a7360773f446b7a65646d78246873603f466b7267666d78273038333a33, line 1247: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709896977706	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709897149444	geckodriver	INFO	Listening on 127.0.0.1:56945
+1709897149953	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56946" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileZpUWTQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709897150449	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709897150602	Marionette	INFO	Listening on port 56955
+WebDriver BiDi listening on ws://127.0.0.1:56946
+Read port: 56955
+1709897150817	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56946/devtools/browser/fb4ff9f6-5d40-4032-8713-b4bc4f97a43f
+JavaScript warning: https://info.betway.co.za/TzWrWjr0xx4LDlhC?dc033108efedfddb=aH0FbHGLLxex31AAS9bd8ViGeaQeeCLe_tkNWfAj60ZAHkIAfFWC53tszsBdeAgVPzoRjqgkf77HvPEqIBEdLihNH0mxAyCwn4ceGGz8EdxSp_Zl1bU-kRYNUnTk3TxlJe7zyePP4bL874g9GNJHDTM_jQpjD-3FHambOrl7N0yyg2XaocNzlQdRm1nNyMuIGCi9xiPaLTI5tPGn769VTfXvxyho-v0GqqzQ&jb=343324246a716d773d556b666c6d7773246a736d3f55696e666f75732d3a3239302e627162773d466b7067646f7a246873603f4e617065666d78253032333233, line 827: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709897180476	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709897865910	geckodriver	INFO	Listening on 127.0.0.1:57950
+1709897866423	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57951" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileF7QUvS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709897866911	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709897867070	Marionette	INFO	Listening on port 57960
+WebDriver BiDi listening on ws://127.0.0.1:57951
+Read port: 57960
+1709897867274	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57951/devtools/browser/4844dce4-47f7-4ea6-a871-cf8bffff66cc
+JavaScript warning: https://info.betway.co.za/8rYtbzLTF33cMunl?0e89bcb670cf9135=gYndKNOSaNF4acsEloKwmHlJQ46BhisoKVFJwRswCRLoIDYG-0-Njz6FF4po6xxeV-47oiQwuc0Xf-XrLSEedBr90omTW3FXUFMCXn5VTcMrc83k0H2k9t8E1LTh3t6mCTyRtbY9Um3iyIvNGaTyptRP9p8oGM6TstoU-1EHMl9LHjx8g3L6LQOJZLG88DZfYz1WmbmcPjWmcod-D0J-7hkCU1cWwC267Iuc&jb=36312e266a716f7d3f556b6e666f77712462736d3f576b6e666775732d3a32313826687362773d4e69726d666f7a266271603f466b7265646d70253032313033, line 707: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: uncaught exception: Handshake Reply Failed
+1709897896987	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709898110976	geckodriver	INFO	Listening on 127.0.0.1:58249
+1709898111502	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58250" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilegeoVaM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709898112027	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709898112190	Marionette	INFO	Listening on port 58256
+WebDriver BiDi listening on ws://127.0.0.1:58250
+Read port: 58256
+1709898112367	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58250/devtools/browser/dba6fe2e-7a37-4e92-898c-7fd849a3ea42
+1709898142422	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/gUsDQ5YkHZy5y3ea?cecb7cba8cfb7b17=uOeZXKUo-7VYIqWOM8BS5nBjZV4gF4wAQtg3iH6DQvCvT_HWv8fOA3_Ic4DLJiaYN4G21i41PwhB0X8JbOmu1m6XBZqjVA6PtOFEXvf7YqlM71sbkTfBKLgA17h0fzV-9RbrTBU1thswk58WEfU6ktTfhs3ZE8vVVTRta3JZNq24Zhy0p7eu-DL6My3xfF6Lw1S4t63CaVjh7BlE4B0ms_jzptL3mw-YLjUp&jb=3631262468736d773f5f696e646777732468716f3d57696e666f777b273230393226687162773d46697265646d782468716a3d46697a65666d7a273230313233, line 751: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+Marionette threw an error: [Exception... "Failure"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137"  data: no]
+capture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62
+takeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37
+
+console.error: "Marionette threw an error: [Exception... \"Failure\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: chrome://remote/content/shared/Capture.sys.mjs :: capture.canvas :: line 137\"  data: no]\ncapture.canvas@chrome://remote/content/shared/Capture.sys.mjs:137:62\ntakeScreenshot@chrome://remote/content/marionette/actors/MarionetteCommandsParent.sys.mjs:295:37\n"
+1709908835846	geckodriver	INFO	Listening on 127.0.0.1:49356
+1709908836339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49357" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileQ0w0Jf"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709908836902	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709908837069	Marionette	INFO	Listening on port 49369
+WebDriver BiDi listening on ws://127.0.0.1:49357
+Read port: 49369
+1709908837312	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49357/devtools/browser/61208ff5-bfbf-470d-8a74-acd018d0b73f
+1709908867375	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/XWceGDqRSKLAAunQ?e26784b9e29707dd=iefADNwHykd8gItTLBWjLtBoc72_-EpUJV8Z4MxON5ZuAWnhtbHsgJZm55bWooEVGghkjTKzJ7znvwt884rpc8w-ZiA1JmriTxFSxVkyLEnmPzgCs53zu7cck-sMoM2O-c0jjQwNFxuH_zsnaJ_DIGiFpKTOlJTL8maY5xIRhE2nmS-ayuiAs_P_YUxd9qPOFMfbfM_PehQCO08qQQsrEUFW3lcoyugc0zXF&jb=3431242e6a716d753d5f6966666d7571266a716d3f57696e646f7771253a323932246a716a773f466b72676e6f7a246a736a3d4e6b7067646f78273032313233, line 53: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709909617866	geckodriver	INFO	Listening on 127.0.0.1:50755
+1709909618388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50756" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofiletMT4WU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709909618932	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709909619078	Marionette	INFO	Listening on port 50763
+WebDriver BiDi listening on ws://127.0.0.1:50756
+Read port: 50763
+1709909619269	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50756/devtools/browser/d3d8008e-34e1-46dc-9811-47f80be4a6a7
+JavaScript warning: https://info.betway.co.za/trRm_3vR8EuAxqpm?2c3c569b2513cef3=DgmmbaCAw59MRr2LQquuzdiCoBw73pQV6690DqJQ-3M7a1OhSKFXZFQzxoTphNQxDKvhfsg5-ciRA-te1IaMNKUGoWnLfsAyRxbxioCb76Zz7lQwPrjC8sPaXoOUGaOTwBY4qj3xbM6nZZNcD_a-eDtMbjmtKqN8HLdYB69QTEz8_kN_2-yiPyQYXEjlQ_Ymz2nz5xPvp_Ylmx2XRxM19b-EX9AJoTaYZyTS&jb=343324246a736f773f57616c666f77732468716d3f556b6e666d75712530323332246a7160773f466b7067646f782668716235446b7265666d7a273032333033, line 816: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709909649010	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709914752232	geckodriver	INFO	Listening on 127.0.0.1:56135
+1709914752752	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56136" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile3LDxmf"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709914753234	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709914753382	Marionette	INFO	Listening on port 56145
+WebDriver BiDi listening on ws://127.0.0.1:56136
+Read port: 56145
+1709914753597	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56136/devtools/browser/c13237e5-6a09-43da-a5e5-ffce71692e4b
+1709914783355	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.error: services.settings: 
+  security-state/cert-revocations Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.sys.mjs:107:1
+NetworkError@resource://services-settings/RemoteSettingsClient.sys.mjs:111:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.sys.mjs:911:14
+maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:816:38
+
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+JavaScript warning: https://info.betway.co.za/4PsZpD9ud3WR42As?ea4debd7a423e011=2Lhj-KmXQkXUCD9-9RSSRRSQdoc0cgr6CiCNPt_BNNoKAoBClA3L3mS6SIPaOzwXM252nxPV2xkAkpBM5N1mhzYNwwXHqeYqe_8tqqGqCYJJakApnlUsMt05_vXav5_TFwgsYwxruZQtIZCZsKroSGyPQBhhsyiu_S-5yyoI5wFQ4nknpccODiNRon8ZuB9OrZpb2l2vqXKUizsvOnzep1mZ2kJMfhW6uoDR&jb=3433262e68736d753d5f696c646775712e6a7b6f3d576b6c646f757b273230333224687362753d466b70656e6d78246a736a3d44697a676467782d3230313031, line 101: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709914953325	geckodriver	INFO	Listening on 127.0.0.1:50820
+1709914953833	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50821" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileQjMTYm"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709914954317	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709914954452	Marionette	INFO	Listening on port 50826
+WebDriver BiDi listening on ws://127.0.0.1:50821
+Read port: 50826
+1709914954649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50821/devtools/browser/f9067a5e-76ff-48ed-a4e8-ad57f340167c
+1709914984847	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709983068268	geckodriver	INFO	Listening on 127.0.0.1:61766
+1709983068795	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61767" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileCqBBBU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709983069146	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709983069254	Marionette	INFO	Listening on port 61800
+WebDriver BiDi listening on ws://127.0.0.1:61767
+Read port: 61800
+1709983069408	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61767/devtools/browser/60c5d47a-bcd8-4366-b417-553c26b48c40
+1709983099329	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1709983502519	geckodriver	INFO	Listening on 127.0.0.1:62081
+1709983503035	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62082" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilenTdfrF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709983503336	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709983503435	Marionette	INFO	Listening on port 62088
+WebDriver BiDi listening on ws://127.0.0.1:62082
+Read port: 62088
+1709983503560	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62082/devtools/browser/f0fa58fd-cf47-46f3-a173-ebe2bf9f157a
+1709983533454	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/-SwpA9Q5WaiCbX8E?846bec73b1c9d057=XeLNyYphBVp124YEv4XpShqJGb-7nv1MtSDmFKpiKjgnoOz3dVYe59dZr923KetFqoBv6ggn3PHYdt-qg08xUlOzPjTatwCa5v64ymbQ6i2qLaB7Wmcq6UnAGbwOjLCT8bfkCr2lkchywA12Q-JiKSxoMn0L5-1d0MPhGHxTTFlL1raB7_UtcKUXQZqW0fJilTck4kgNgYt2bCQHLL2u-ZbmHuSFW5PTg6ex&jb=3433242668716f773f55696e666d77732662736d3f556966646d757b2730303130266a7160753d466b7067666d7a266871603d466b7065666f7025303233323b, line 948: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709983688495	geckodriver	INFO	Listening on 127.0.0.1:62368
+1709983689008	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62369" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilezsO7KO"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709983689331	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709983689431	Marionette	INFO	Listening on port 62375
+WebDriver BiDi listening on ws://127.0.0.1:62369
+Read port: 62375
+1709983689575	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62369/devtools/browser/76289635-0f79-4d56-95cb-10e7f4ab78ee
+1709983719843	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/XzIX0eIoys0VJ0lj?2ce2334dc4867b1b=ZM-3bB_5bcLJNSu6pgNMZ7ftA9_ymoexjcyWAXyEyA20Luzhzx20OUTkO34TyE1iYTGd-U_BfvcaGtWzvvs5IN9im8fZPtc8qXE5A1IlhEYPn7zv_x7Q6Ra3lbCpAPRloKRCze9_r7ZFcDd0cGSXYwSZKZA17Lz1-3NUx1Qk1AmQUtzKvUdbdc-o7DuTOFpAScWjpRCQ406gdfL-YUL-DRJcrrgYFWPXXF1i&jb=34332e2468736d773f576b6e646d75712e6a736d3f5f6b6e6c6d77712730383338266a7b60753f466b706d646d78246871623f46697067646778253032393033, line 142: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709985212773	geckodriver	INFO	Listening on 127.0.0.1:63394
+1709985213294	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63395" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileZHUNHy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709985213600	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709985213698	Marionette	INFO	Listening on port 63404
+WebDriver BiDi listening on ws://127.0.0.1:63395
+Read port: 63404
+1709985213749	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63395/devtools/browser/1e0d9a3c-8486-4456-9cbe-61aeae4c662f
+1709985243850	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/AQnlEsELDcrnGT0-?afe3a856ed4c1eb6=pe5NYGAhJyVyYtjZQD3qX9b_d0SARlhfS-KM451uN20wS2WWy2wCihky3egx1IyrkCDVdyZK1qIVweM5ZaiThGkGMd12EfaIVOkFeEpWfeKgRx86iHYfUI3DcQWb7BXk1d4pZTOhRIrOOMP9IX2vMvrZ3vwoGUbHWqglHoaBsqZZ4n806yPtMG3T7MG-M8vhvhVTkqmfT9hAZEJtKktLuq9mVE8gZjb--k0z&jb=363326246a736f773d55696c646d7573246a7b673557696c666d7f712732303338266a7360773d4e697065646f78266873603d44697067666d782d3a38313231, line 1003: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709985568707	geckodriver	INFO	Listening on 127.0.0.1:63709
+1709985569231	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63710" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileKTtm9f"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709985569570	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709985569673	Marionette	INFO	Listening on port 63715
+WebDriver BiDi listening on ws://127.0.0.1:63710
+Read port: 63715
+1709985569821	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63710/devtools/browser/21613910-7a6f-4236-b402-e0f5ebf09b2a
+1709985599934	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/nnwvJ3x0mnxdyQhU?28895dd64f0e89ac=s4dmN1thySm5VZKuASuTeN_oiSrp1Ib0u68SL_WpP4JrXebVQX_Y7ZmMdHX1OQ6lgr8uPECaF7H7FJT92RRxVC80DbV9yh9QvMUlEuzeTzDjdwGiDvGEdE3s-lGQFemb6pj1q0WVk7O3XKDqPJf892w71AVlPPNV4v2BBY6FXzUeYbGLVY_bg6MQKXN-9vX9NhEgQcbBEQBz5zZ2DuBlY8c-QS6-eFWj5i9w&jb=36312426687b6f753f5f696e666f7771266a736f3d556b6e666d7773253a30333224687b62753546697267666d70266a716a3d466b7265646f78253230333033, line 1247: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1709987024639	geckodriver	INFO	Listening on 127.0.0.1:55084
+1709987025148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55085" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileg01dhc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1709987025446	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1709987025550	Marionette	INFO	Listening on port 55095
+WebDriver BiDi listening on ws://127.0.0.1:55085
+Read port: 55095
+1709987025676	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55085/devtools/browser/a8667135-55c6-4c83-8e1d-e57e92077c14
+1709987055482	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/vIwMv6H9Pwibnb2t?d39adfbe9182dcce=cQ3jPvUK3JCObXPbNdz9uNNTlbMizcGsJTX5Mv3jeXIJhj4knPyfjC_EZLfRLXnzMfKLnjx_B92YsoEIFRgKCWt5VmQ9MxazK7pzOhdgw07uIbKWXjoB5NKUzwqnaFEVv17i5O7IWSnh-10oE8p45WPwOceScbq1T4nPvuUSrQXKYY7kXKOGQ0JC2Q-wXF2vRDqlzQBGteNRvGz1a3jrWX2wuGINnamxQRCG&jb=343924266a736f753f556b6e646f77732668736f3f5f6b6e6c6d75732d3a303332266a7b627d3f466b7a67666f78266a71603f46697265666f7a253232393033, line 380: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711037368096	geckodriver	INFO	Listening on 127.0.0.1:49827
+1711037368626	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49828" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileG2sxEP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711037371484	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711037371641	Marionette	INFO	Listening on port 57729
+WebDriver BiDi listening on ws://127.0.0.1:49828
+Read port: 57729
+1711037371854	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49828/devtools/browser/2318bab4-658f-4125-af51-5916ee9942cc
+1711037401598	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/e64RHnFQNIx84XxHRhxg9DwZA7LLjKxb4Db67P0QgzI.js line 2 > eval line 1231 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711037402415	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711037403176	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 7682 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 4271 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 2804 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711037423437	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711037508007	geckodriver	INFO	Listening on 127.0.0.1:58543
+1711037508538	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58544" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileQHYSC0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711037509152	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711037509289	Marionette	INFO	Listening on port 58550
+WebDriver BiDi listening on ws://127.0.0.1:58544
+Read port: 58550
+1711037509475	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58544/devtools/browser/350ea334-7e01-4f04-8171-7eae946cedfe
+1711037539209	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 7010 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 6764 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 4750 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711037589922	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711037608672	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711037647955	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711039348164	geckodriver	INFO	Listening on 127.0.0.1:57356
+1711039348665	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57357" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile5z6rEH"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711039349226	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711039349387	Marionette	INFO	Listening on port 57368
+WebDriver BiDi listening on ws://127.0.0.1:57357
+Read port: 57368
+1711039349595	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57357/devtools/browser/dee66589-bcdd-4259-ad53-0579fef8bb29
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+1711039379280	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1711039446922	geckodriver	INFO	Listening on 127.0.0.1:57579
+1711039447451	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57580" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileRxVQOt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711039448007	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711039448195	Marionette	INFO	Listening on port 57587
+WebDriver BiDi listening on ws://127.0.0.1:57580
+Read port: 57587
+1711039448411	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57580/devtools/browser/52eab570-e143-45d3-8236-6680994c3019
+1711039478042	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1711039490730	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/e64RHnFQNIx84XxHRhxg9DwZA7LLjKxb4Db67P0QgzI.js line 2 > eval line 6350 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711039491738	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711039492146	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 1491 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 4257 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcSPgTpNjWBfoBtPLqdYJvwYrrQ.js line 2 > eval line 3539 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711039511783	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711039580124	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711039581146	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711039581147	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.

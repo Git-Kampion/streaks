@@ -36,6 +36,7 @@ findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
 findCookie.click()
 time.sleep(10)
 
+""""
 _flag = True
 while _flag:
 		try:
@@ -45,11 +46,12 @@ while _flag:
 		except(NoSuchElementException):
 			_flag = False
 time.sleep(10)	  
-
+"""
 matches = browser.find_elements(By.ID, "live-table") 
 
 rounds = matches[0].text.split("ROUND")
 
+elem = rounds[0].click()
 
 
 for elem in rounds:
@@ -104,10 +106,10 @@ for elem in rounds:
        #  home = 
       
       if "Pen" in polstriped[2]:
-          insert_stmt = "INSERT INTO SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO Copy Of SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7],polstriped[8])
       else:
-          insert_stmt = "INSERT INTO SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO Copy Of SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[2],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7])
       cursor.execute(insert_stmt, data)
       cursor.commit()
