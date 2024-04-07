@@ -32742,3 +32742,545 @@ JavaScript warning: https://pagead2.googlesyndication.com/bg/ClgGLJT-anMFFp_jPcS
 1711039580124	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1711039581146	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1711039581147	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965134282	geckodriver	INFO	Listening on 127.0.0.1:64892
+1711965134790	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64893" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileilWK6B"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711965135568	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711965135895	Marionette	INFO	Listening on port 64903
+Read port: 64903
+WebDriver BiDi listening on ws://127.0.0.1:64893
+1711965136060	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64893/devtools/browser/eb29d8a9-2bcf-422f-84d9-867073c6e1e2
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3059 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 996 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 393 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711965165760	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1711965165949	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965165957	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965166797	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965166798	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965167895	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965235830	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965264013	geckodriver	INFO	Listening on 127.0.0.1:59191
+1711965264521	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59192" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilergVid2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711965265297	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711965265512	Marionette	INFO	Listening on port 59198
+WebDriver BiDi listening on ws://127.0.0.1:59192
+Read port: 59198
+1711965265778	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59192/devtools/browser/dda5f540-0ced-47af-aaba-145c3b8a3496
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4294 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711965295341	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3874 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5374 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711965325015	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965370754	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965385516	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965385524	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965388513	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965494886	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711965766833	geckodriver	INFO	Listening on 127.0.0.1:57720
+1711965767339	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57721" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileinOMUC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711965774705	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711965774849	Marionette	INFO	Listening on port 57727
+WebDriver BiDi listening on ws://127.0.0.1:57721
+Read port: 57727
+1711965775047	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57721/devtools/browser/e5ff1dde-2c6e-4e5b-bd6f-0117d14e01a5
+1711965813249	geckodriver	INFO	Listening on 127.0.0.1:57796
+1711965813768	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57797" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile1mf6y9"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711965814177	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711965814323	Marionette	INFO	Listening on port 57803
+WebDriver BiDi listening on ws://127.0.0.1:57797
+Read port: 57803
+1711965814518	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57797/devtools/browser/e8981d6e-8294-4175-8ced-07f22b7e92a9
+1711969153460	geckodriver	INFO	Listening on 127.0.0.1:63665
+1711969153967	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63666" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile3aXZB0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1711969154770	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1711969154930	Marionette	INFO	Listening on port 63673
+WebDriver BiDi listening on ws://127.0.0.1:63666
+Read port: 63673
+1711969155194	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63666/devtools/browser/6dc9c537-47bf-4618-9d21-51f6e5f84d0a
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 834 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711969177677	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3890 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7800 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1711969183920	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1711969184890	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712170781806	geckodriver	INFO	Listening on 127.0.0.1:58816
+1712170782318	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58817" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileKOgPMf"
+1712170807331	geckodriver	INFO	Listening on 127.0.0.1:58837
+1712170807945	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58838" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilexi0QDj"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712170810739	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712170811083	Marionette	INFO	Listening on port 58868
+WebDriver BiDi listening on ws://127.0.0.1:58838
+Read port: 58868
+1712170811262	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58838/devtools/browser/c1a3b1b9-3756-4a5e-af37-4dcffa763ce9
+1712170821912	Marionette	INFO	Stopped listening on port 58868
+Dynamically enable window occlusion 1
+1712170842144	geckodriver	INFO	Listening on 127.0.0.1:58910
+1712170842636	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58911" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile4U8bQQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712170843544	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712170843753	Marionette	INFO	Listening on port 58917
+WebDriver BiDi listening on ws://127.0.0.1:58911
+Read port: 58917
+1712170844103	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58911/devtools/browser/1863f8c4-d61f-408b-ba20-e9f2021ae9c4
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+1712170873563	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712170887463	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712170890970	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7681 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712170953414	geckodriver	INFO	Listening on 127.0.0.1:56223
+1712170953938	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56224" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileOc4CAD"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712170955108	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712170955324	Marionette	INFO	Listening on port 56232
+WebDriver BiDi listening on ws://127.0.0.1:56224
+Read port: 56232
+1712170955626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56224/devtools/browser/bd81282d-d7c7-41a4-a9e0-2a2b9a669168
+1712170985144	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712171067163	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712171077764	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712171082590	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712171111925	geckodriver	INFO	Listening on 127.0.0.1:56885
+1712171112435	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56886" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileAJB1lC"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712171113333	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712171113533	Marionette	INFO	Listening on port 56892
+WebDriver BiDi listening on ws://127.0.0.1:56886
+Read port: 56892
+1712171113785	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56886/devtools/browser/9b00f3d2-a053-4d67-b1dc-fff232d53027
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7741 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4806 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5133 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712171143637	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712171148250	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712171175839	geckodriver	INFO	Listening on 127.0.0.1:57302
+1712171176336	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57303" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileHRklvM"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712171177223	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712171177470	Marionette	INFO	Listening on port 57308
+WebDriver BiDi listening on ws://127.0.0.1:57303
+Read port: 57308
+1712171177787	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57303/devtools/browser/f18d1065-43c2-4856-a093-4611f8229407
+JavaScript warning: https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536, line 1: Script terminated by timeout at:
+75261341922033/t.prototype.Ln@https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536:1:44931
+75261341922033/t/this.In@https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536:1:44434
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3043 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7488 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712171207319	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 60 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712171230772	geckodriver	INFO	Listening on 127.0.0.1:57705
+1712171231278	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "57706" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileqIWp1g"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712171232364	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712171232583	Marionette	INFO	Listening on port 57715
+WebDriver BiDi listening on ws://127.0.0.1:57706
+Read port: 57715
+1712171232848	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:57706/devtools/browser/d1df1155-b54d-4196-8484-1f03b3b0ea58
+1712171262423	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+console.warn: "Listener for event 'frame' did not return a promise."
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+NetworkHelper.parseSecurityInfo threw an exception: Security state 0 has no known STATE_IS_* flags.
+console.error: "Security state 0 has no known STATE_IS_* flags."
+1712171392643	geckodriver	INFO	Listening on 127.0.0.1:58107
+1712171393135	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58108" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNc69z7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712171394171	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712171394368	Marionette	INFO	Listening on port 58118
+WebDriver BiDi listening on ws://127.0.0.1:58108
+Read port: 58118
+1712171394681	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58108/devtools/browser/4ef2585c-1273-44b5-93e6-561243a7fd0c
+1712171424849	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712171449972	Marionette	INFO	Stopped listening on port 58118
+Dynamically enable window occlusion 1
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError: Network request failed
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: services.settings: 
+  Message: NetworkError: Network error: TypeError: NetworkError: Network request failed
+  Stack:
+    APIError@resource://services-settings/RemoteSettingsClient.sys.mjs:107:1
+NetworkError@resource://services-settings/RemoteSettingsClient.sys.mjs:111:5
+_adjustedError@resource://services-settings/RemoteSettingsClient.sys.mjs:911:14
+maybeSync@resource://services-settings/RemoteSettingsClient.sys.mjs:816:38
+
+console.warn: services.settings: main/anti-tracking-url-decoration sync interrupted by shutdown
+console.error: (new Error("IndexedDB: main/public-suffix-list getLastModified() IndexedDB:  execute() The application is shutting down", "resource://services-settings/IDBHelpers.sys.mjs", 16))
+1712179250257	geckodriver	INFO	Listening on 127.0.0.1:60202
+1712179250755	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60203" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileyA0Oe1"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712179251704	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712179251994	Marionette	INFO	Listening on port 60214
+WebDriver BiDi listening on ws://127.0.0.1:60203
+Read port: 60214
+1712179252290	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60203/devtools/browser/5005d7f2-30a1-4244-ae19-cb73fa1e71b7
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2165 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179275444	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179281718	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3606 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 292 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179296584	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179408335	geckodriver	INFO	Listening on 127.0.0.1:60658
+1712179408839	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60659" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileyFmdHX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712179409822	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712179410026	Marionette	INFO	Listening on port 60664
+WebDriver BiDi listening on ws://127.0.0.1:60659
+Read port: 60664
+1712179410292	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60659/devtools/browser/81b8b233-8534-4e11-b73e-e1d9006882fe
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6018 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4651 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2448 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179434116	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179434315	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179439854	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712179455117	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179455511	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179801785	geckodriver	INFO	Listening on 127.0.0.1:61118
+1712179802311	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61119" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilepEQ8UL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712179803168	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712179803414	Marionette	INFO	Listening on port 61124
+WebDriver BiDi listening on ws://127.0.0.1:61119
+Read port: 61124
+1712179803647	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61119/devtools/browser/f16bd14f-20a1-4d75-afc2-cff9e36849c5
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3522 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179824654	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4672 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179825978	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179827347	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6211 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712179833199	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712179847173	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179848263	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712179915605	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712180974795	geckodriver	INFO	Listening on 127.0.0.1:61664
+1712180975305	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61665" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilectN2VG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712180975993	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712180976153	Marionette	INFO	Listening on port 61670
+WebDriver BiDi listening on ws://127.0.0.1:61665
+Read port: 61670
+1712180976432	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61665/devtools/browser/2fb27068-8ca0-4dca-aaa1-f5b4f09579e2
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6319 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5776 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181001196	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181006009	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181175744	geckodriver	INFO	Listening on 127.0.0.1:62432
+1712181176253	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62433" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileFaCI7i"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181176787	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181176942	Marionette	INFO	Listening on port 62438
+WebDriver BiDi listening on ws://127.0.0.1:62433
+Read port: 62438
+1712181177184	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62433/devtools/browser/602d9190-4fee-439b-bf7b-3b19b28c2378
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3341 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4174 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6727 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181197899	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181200024	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181200107	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181206825	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181219160	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181221181	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181221232	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181389361	geckodriver	INFO	Listening on 127.0.0.1:62855
+1712181389867	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62856" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileacA0n5"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181390607	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181390871	Marionette	INFO	Listening on port 62872
+WebDriver BiDi listening on ws://127.0.0.1:62856
+Read port: 62872
+1712181391127	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62856/devtools/browser/57ae22bd-455c-4f27-a820-7dd49457b2e7
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5120 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3344 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2220 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181412826	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181412882	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181420652	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181434014	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181455423	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181532614	geckodriver	INFO	Listening on 127.0.0.1:63273
+1712181533122	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63274" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileCPV9kn"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181533686	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181533833	Marionette	INFO	Listening on port 63279
+WebDriver BiDi listening on ws://127.0.0.1:63274
+Read port: 63279
+1712181534152	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63274/devtools/browser/98c0a631-d90c-4889-88e8-00db62dc0de5
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7367 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5325 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2313 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181553864	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181563733	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181596330	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181713508	geckodriver	INFO	Listening on 127.0.0.1:63659
+1712181714023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63660" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileF2yDXI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181714498	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181714668	Marionette	INFO	Listening on port 63665
+WebDriver BiDi listening on ws://127.0.0.1:63660
+Read port: 63665
+1712181714954	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63660/devtools/browser/2767cba8-43bf-4363-ae7d-fb13d7d62c6d
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3968 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 3076 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7715 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181737296	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181744544	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181758528	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181803806	geckodriver	INFO	Listening on 127.0.0.1:64114
+1712181804313	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64115" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile1zaYZQ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181804921	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181805077	Marionette	INFO	Listening on port 64121
+WebDriver BiDi listening on ws://127.0.0.1:64115
+Read port: 64121
+1712181805359	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64115/devtools/browser/ac0058cc-8a9e-4be0-bdf2-65fdbf4140d1
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2756 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181825063	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4887 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6478 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712181827285	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181834966	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712181848387	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181916236	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712181979365	geckodriver	INFO	Listening on 127.0.0.1:51913
+1712181979870	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51914" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileclkSC2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712181980406	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712181980557	Marionette	INFO	Listening on port 51919
+WebDriver BiDi listening on ws://127.0.0.1:51914
+Read port: 51919
+1712181980891	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51914/devtools/browser/b8ed1dac-6447-4013-bad4-6418f4ba3f4f
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7712 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 5796 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712182003922	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7533 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712182010447	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712182024960	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712182093234	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712182093240	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712182289194	geckodriver	INFO	Listening on 127.0.0.1:52436
+1712182289692	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52437" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilei3JuYa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712182290662	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712182290809	Marionette	INFO	Listening on port 52442
+WebDriver BiDi listening on ws://127.0.0.1:52437
+Read port: 52442
+1712182291115	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52437/devtools/browser/9cb41555-ed01-44a3-85ff-2c63e1b88983
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 1446 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6999 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 6040 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712182312996	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712182320716	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712182334313	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712184150414	geckodriver	INFO	Listening on 127.0.0.1:58036
+1712184150925	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58037" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilexDP3Im"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712184151504	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712184151665	Marionette	INFO	Listening on port 58044
+WebDriver BiDi listening on ws://127.0.0.1:58037
+Read port: 58044
+1712184151998	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58037/devtools/browser/c6719496-0132-4720-b986-e776ad982925
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 2962 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 7525 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/8IdVU_5hiTnoSVFpifzETCOPuU7V9vAnpxqXHqRkotI.js line 2 > eval line 4583 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712184172590	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.sys.mjs:219:24
+TimedPromise@chrome://remote/content/marionette/sync.sys.mjs:203:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.sys.mjs:468:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:219:33
+1712184175303	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712184181536	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712184196576	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712184263440	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712254158001	geckodriver	INFO	Listening on 127.0.0.1:62753
+1712254158505	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62754" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNO5snP"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712254159214	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712254159411	Marionette	INFO	Listening on port 62766
+Read port: 62766
+WebDriver BiDi listening on ws://127.0.0.1:62754
+1712254159619	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62754/devtools/browser/a8e04ad2-e5cf-42ce-b6e9-a87b3c1a60d8
+JavaScript warning: https://cdn.bannerflow.com/scripts/1.5.24/render.min.js, line 1: Script terminated by timeout at:
+processProgressEventQueue@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:23961
+r@https://cdn.bannerflow.com/scripts/1.5.24/render.min.js:1:7624
+
+1712254189257	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712518963019	geckodriver	INFO	Listening on 127.0.0.1:54519
+1712518963520	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54520" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilewOgXtA"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712518966897	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712518967172	Marionette	INFO	Listening on port 54530
+WebDriver BiDi listening on ws://127.0.0.1:54520
+Read port: 54530
+1712518967474	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54520/devtools/browser/ea5816a8-46cf-4465-b9a8-063c425cb5d2
+JavaScript warning: https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536, line 1: Script terminated by timeout at:
+75261341922033/t.prototype.Ln@https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536:1:44931
+75261341922033/t/this.In@https://c.bannerflow.net/a/65bba1dd82bc191c9bd4f253?did=5d84d4514e229b0001b4c7e6&deeplink=on&&clickservice=https%3A%2F%2Fmediaserver.entainpartners.com%2FtrackAffiliateClick.do%3FzoneId%3D2131536%26trackerId%3D5399493&wm=5399493&zoneid=2131536:1:44434
+
+1712518996951	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712519000712	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519001814	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519010237	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519010250	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519012630	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519012635	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519015929	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+JavaScript error: , line 0: uncaught exception: undefined
+1712519022985	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519029841	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1712519089127	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.

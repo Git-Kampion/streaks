@@ -48,13 +48,47 @@ while _flag:
 time.sleep(10)	  
 """
 matches = browser.find_elements(By.ID, "live-table") 
-
-rounds = matches[0].text.split("ROUND")
-
-elem = rounds[0].click()
+matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
+homeaway2ndHScore = ([],[])
 
 
-for elem in rounds:
+for bele in matches:
+ elem = bele.click()
+ secWindow = browser.window_handles[1]
+ browser.switch_to.window(secWindow)
+ time.sleep(10)
+ kjj = browser.find_element(By.CLASS_NAME,"smv__verticalSections").text.split()
+ home2ndHScore = []
+ away2ndHScore = []
+ ndFound = False
+ ndfoundSec = False
+ SecHalfDash = False
+ for id in kjj:
+    if id == "2ND":
+       ndFound = True
+    else:
+      if ndFound == True and id != "HALF":
+          home2ndHScore.append(id)
+          ndFound = False
+          SecHalfDash = True
+      if id == "-" and SecHalfDash == True:
+        ndfoundSec = True
+        SecHalfDash = False
+      else:
+        if ndfoundSec == True:
+          away2ndHScore.append(id)
+          ndfoundSec = False
+ homeaway2ndHScore[0].append(home2ndHScore)
+ homeaway2ndHScore[1].append(away2ndHScore)
+ firstWindow = browser.window_handles[0]
+ browser.close()
+ browser.switch_to.window(firstWindow)
+ 
+
+
+rounds = browser.find_elements(By.CLASS_NAME, "event__round") 
+#rounds = matches[0].text.split("ROUND")
+for elem in matches:
  matchRound = 0;
  firstIter = 1;
  soccerMAtch = "";
