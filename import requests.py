@@ -13,7 +13,10 @@ options = webdriver.FirefoxOptions()
 browser = webdriver.Firefox(options=options)
 
 # Load web page
+
 browser.get("https://www.flashscore.com/football/italy/serie-b/results/")
+
+
 # Network transport takes time. Wait until the page is fully loaded
 def is_ready(browser):
     return browser.execute_script(r"""
@@ -29,7 +32,7 @@ browser.maximize_window()
 # Search for news headlines and print
 loops = 3
 #loadFullFix = browser.find_elements(By.LINK_TEXT, "Show more mataches")
-time.sleep(5)
+time.sleep(10)
 #loadFullFix = browser.find_elements(By.CLASS_NAME, "event__more") 
 findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
 
@@ -47,12 +50,12 @@ while _flag:
 			_flag = False
 time.sleep(10)	  
 """
-matches = browser.find_elements(By.ID, "live-table") 
+""""
 matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
 homeaway2ndHScore = ([],[])
 
 
-for bele in matches:
+for bele in matchesPopUps:
  elem = bele.click()
  secWindow = browser.window_handles[1]
  browser.switch_to.window(secWindow)
@@ -83,51 +86,45 @@ for bele in matches:
  firstWindow = browser.window_handles[0]
  browser.close()
  browser.switch_to.window(firstWindow)
- 
+ """
 
-
-rounds = browser.find_elements(By.CLASS_NAME, "event__round") 
-#rounds = matches[0].text.split("ROUND")
-for elem in matches:
+matches = browser.find_elements(By.ID, "live-table") 
+#rounds = browser.find_elements(By.CLASS_NAME, "event__round") 
+rounds = matches[0].text.split("ROUND")
+for elem in rounds:
  matchRound = 0;
- firstIter = 1;
+ firstIter = 0;
  soccerMAtch = "";
  skipLeagueNAme = False
  flag = False;
  soccerList = []
+
  if "ITALY" in elem:
     skipLeagueNAme = 0
  else:
    
        sdsc = elem.splitlines()
        for matcd in sdsc:
-        if matcd != "Abn":
-         if matchRound == 0:
-           matchRound = matcd.strip()
-         else:  
-           #try:   
-            if firstIter != 8:
-                convey = matcd.strip().split(" ")
-                if len(convey) > 1:
-                 matcd = convey[0] + convey[1]
-                soccerMAtch = soccerMAtch + " " + matcd
-                firstIter = firstIter + 1  
-            else:
-              soccerList.append(matchRound  + soccerMAtch)
-             
-              soccerMAtch = "";
-              matcd = matcd.strip().split(" ")
-              if len(matcd) > 1:
-                matcd = matcd[0] + matcd[1]
-              soccerMAtch = soccerMAtch + " " + matcd;
-              firstIter = 2;
-        else:          
-           a = 0; 
-             
+        if matchRound == 0:
+           matchRound = matcd.strip()           
+        else:
+          if matchRound != 0:
+                  dateTime= matcd.strip().split(" ")
+                  if len(dateTime) > 1:
+                    matcd = dateTime[0] + dateTime[1]
+                  soccerMAtch = soccerMAtch + " " + matcd
+                  firstIter = firstIter + 1  
+          if firstIter == 5:
+                if soccerMAtch != "":
+                  soccerList.append(matchRound  + soccerMAtch + " " + "5" + " " +"8")
+                  soccerMAtch = "";
+                  firstIter =0;
+            
            
-       soccerList.append(matchRound + " " + soccerMAtch.strip())   
+       #soccerList.append(matchRound + " " + soccerMAtch.strip())   
  
  if len(soccerList) > 0:
+
    conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb;')
    cursor = conn.cursor()
          #cursor.execute("Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ('38','2023-04-01','Arsenal','Watford','4','3')")
@@ -140,10 +137,10 @@ for elem in matches:
        #  home = 
       
       if "Pen" in polstriped[2]:
-          insert_stmt = "INSERT INTO Copy Of SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO serieBB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7],polstriped[8])
       else:
-          insert_stmt = "INSERT INTO Copy Of SeriaB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
+          insert_stmt = "INSERT INTO serieBB(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
           data = (polstriped[0],polstriped[1],polstriped[2],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7])
       cursor.execute(insert_stmt, data)
       cursor.commit()
