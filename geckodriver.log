@@ -34096,3 +34096,63 @@ DevTools listening on ws://127.0.0.1:65412/devtools/browser/31026656-b9ce-4370-b
 JavaScript warning: https://pagead2.googlesyndication.com/bg/APV3dACaA-z2K_GiiKi9AtRZMcv8tkt2uQCJ7vSl1g4.js line 2 > eval line 2192 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://pagead2.googlesyndication.com/bg/APV3dACaA-z2K_GiiKi9AtRZMcv8tkt2uQCJ7vSl1g4.js line 2 > eval line 1372 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
 JavaScript warning: https://pagead2.googlesyndication.com/bg/APV3dACaA-z2K_GiiKi9AtRZMcv8tkt2uQCJ7vSl1g4.js line 2 > eval line 3449 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712607470043	geckodriver	INFO	Listening on 127.0.0.1:62558
+1712607470535	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62559" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileCKX3mX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712607471360	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712607471569	Marionette	INFO	Listening on port 62573
+WebDriver BiDi listening on ws://127.0.0.1:62559
+Read port: 62573
+1712607471842	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62559/devtools/browser/4bf87cad-2537-4a0f-bc68-30e773e6a83f
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1712607501428	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: https://cdn.betwayafrica.com/BWA/lntk.js, line 5: TypeError: u is null
+JavaScript warning: https://info.betway.co.za/L1LmUTNjaLtkh_Ur?e5fa69a08d24e946=5geF6grWubmWXebe246FUvAg2qay7p_tcgflQGwFx-VIpyIxRjt5xHD3g7Z0NqT1sgHITbIpSjFI-4F3pMvcAbV_VRS9jrqa60bJExnqJI27eEq3t4GQOnodIDXmcKMDS4WViDREAayxx6wiW1aifJYUwH_SW-HUnupUwo-Apb8U_Ihp3kReFsHIdkV1GgbOzXfpMPhofQHQQW9rWJjKaX4XAgq78GcJ8wRe&jb=343326246a736f773f57616e646f7571266a736f3d57696e666d7773273a30313026687160773f466b7065646f78266871623546697267646f78253230313234, line 919: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712607639304	geckodriver	INFO	Listening on 127.0.0.1:63082
+1712607639833	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63083" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilekJNkse"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712607640562	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712607640781	Marionette	INFO	Listening on port 63093
+WebDriver BiDi listening on ws://127.0.0.1:63083
+Read port: 63093
+1712607641050	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63083/devtools/browser/558ad6be-d81b-41cd-8a6e-c073b6eec5f4
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+JavaScript warning: https://info.betway.co.za/PqDFJNSTF_ERQq6R?2c528f491e0c9546=enSF0FIWtS-f-SLG00IVfMtHkqU6Vhf-ablQ1ZT1YJG5G-9j3ymEhFEJG4sZ0QAEDcxg5WQQLIRu4cPZrNTWI2xbHdOmlc2LiHkjYpnluVLl18usgdZD3oOjULt0g5vBSM9gkNY7mJ-3PpqjDRoccd4BiDusii7V0fr4zcSlTqHIl-mlHm1EtL-TlluoRCMSm9ukQl0TTbqw36e3uzwROIJRsJLJD4qRSwmo&jb=3431262e6a716f773f556b6e646f7571246a736d3d556166646f7771253030333024627360753d4e6b72656e6f7a266871603f46697267646d78253030333a3c, line 102: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712607670605	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/qHOb13wAFr_vkyvp?d098f0589c345dbb=4vjK_X--6WS2LFf39MZBNf79tgu6podobUq-LKXinARuMOFp3TeW7DHrvqqO5U9fntC2TPCWDHgycuZsb9J8LyOJcGUg_QPPFFgqUUEqTGry-viGpZS51tHaBxhe0TfaGTWd9rhdzhCAgDo8TO08LfAaBzcUl7DL0TRgrLhS4sCT2GDv40UcdPbrclzKJGIWYcXhQhF2wGxBAatx4mL34enFq98TKe8R-nLz&jb=3431262e6a716f773f556b6e646f7571246a736d3d556166646f7771253030333024627360753d4e6b72656e6f7a266871603f46697267646d78253030333a3c, line 615: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712607855596	geckodriver	INFO	Listening on 127.0.0.1:63421
+1712607856128	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63422" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilenwE4yL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712607857044	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712607857257	Marionette	INFO	Listening on port 63429
+WebDriver BiDi listening on ws://127.0.0.1:63422
+Read port: 63429
+1712607857526	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63422/devtools/browser/37dd42e9-be59-4d3d-a8c5-4d42dd13a7b3
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1712607887092	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/bCl2Glo2pmfc9c_d?cdbb047658f4ebf3=pK_8YY5ripjVxa8C6RWk4Hko-7o1J_j42VfAmS9lTOf8TkLROmOpNS7O99IuM8gS0RHRa5cYej0NOV_0wp9flKRknFFZvalNOlGz6rWsgzMutZGjEj6ALA4BIjnqK0rQqUhJejSxFFBBnqMK7LZuRhR575TlVQwntrOinKSBXWTr99JBZSYdbPuwJxT2XDa72Laxq7oJFQ13bHVTcAO4eomZ0PFG8uQICmv7&jb=3631242e6a736f753d5f696e666d7f73246a71673d55696e6c6d75712532323332266a7b60753f446972676e6f78266a736a3d466b706d666d78273a30333234, line 544: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://info.betway.co.za/Ms8UsO_g382WPpMv?0b8445611a9770a2=z5xmuz-Jv2urO3tuinkgHBs1s4PkAA5uTDNC2IqdcBLP7UIgMft5fbrE1RqgBm7ibLlyj-aV9UYu_Y4y_YHoxITbAu8VtdsQfmE9mFi6Dhk5gfngHJ0gdUZ0vyD8t3hpU3FGR278ZviA-AtZD1avXqdGGoSAHxadwnH7jw4cjRq5wKGqiwShXByoflQY_1a_VqY8OATvuG9ekAiW9WxMNR8_EEeOuiHLFBtV&jb=3631242e6a736f753d5f696e666d7f73246a71673d55696e6c6d75712532323332266a7b60753f446972676e6f78266a736a3d466b706d666d78273a30333234, line 170: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712607997482	geckodriver	INFO	Listening on 127.0.0.1:63760
+1712607997991	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63761" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileeXoRft"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712607998792	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712607999001	Marionette	INFO	Listening on port 63768
+Read port: 63768
+WebDriver BiDi listening on ws://127.0.0.1:63761
+1712607999112	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63761/devtools/browser/c0d09029-9cb5-4cac-9275-5987cb8df87a
+JavaScript warning: https://info.betway.co.za/cNdO7BDP4xEdyGyt?47139eb465d6e572=EQ_cPsbg9e6Fv3zEfB6_z1DXRF5QkZnQADFj6EBjrRWwl0zFPUa8nAoGv6nNkUvJFq-co5zLJY9pZB7WDTkoUzTVrkSchPeWlUH70lxSoc4__MVCLD0_pUN5wn7wf9szgC3oVgwpSvblLxh5_hhxgreK-TAg1F2yWdj3buj1-WKwBIIq-nmCp-sCUlSKu3vf7iIRw81OV_xUmf8vh8mcTDpiUT9tO5cfOSih&jb=3633242468716d7d3d55696c646f7571266a736d3f556b6e646f77732730323130266a7b60773f44697067646d7a246273603d44697267646f78253032333034, line 115: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://info.betway.co.za/AO3TOH3vA_VrVKMR?24b4d4f9101d9435=PG2EqPNnbdB9bQatuwaXjG130rW2Q5r0JEOhWT14pTA_7m-U4DOZsj1jOeqnsOnxOiAjEu7YhPno8dyxUow3CJHd83gHsx1JKASE8JzTdy5sEy-mHF0-ZUOkIu4aRSQoXZDMigZsVOzcRnAs9TysyavawF4uwib7AHYpbLywvuyhNDHzQMERJPwlbCyMZr5azE4SwlL9K75L7HOuM3XAHlJzexEBK29Dr2JE&jb=3633242468716d7d3d55696c646f7571266a736d3f556b6e646f77732730323130266a7b60773f44697067646d7a246273603d44697267646f78253032333034, line 1070: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://info.betway.co.za/F36aTmF0s7pMFwLN?ba3bbee2a26024ee=DkPyjcqlsKrYM2D-kk2DXOmAf7BSmw_25YrscB7yTZh8jvhjbf_OaiXJwMzP8jKpHwOUiHOn8PMjahubAXl6RAK-PCiJ1UqB5za9-urIEVWyz4pRBmjdG4-oRvUpr-qESitmJEpJ2TqmpVDfHLy87hS0ox_-REtxlVVnusWEN7q8EOIkAnAlz_czF6d_rhFpwEIZvMAB-ixE-81gySJZf8AaQxfwX0CfAuSX&jb=3633242468716d7d3d55696c646f7571266a736d3f556b6e646f77732730323130266a7b60773f44697067646d7a246273603d44697267646f78253032333034, line 15: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712608028841	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.

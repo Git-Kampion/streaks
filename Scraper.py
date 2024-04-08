@@ -13,7 +13,7 @@ options = webdriver.FirefoxOptions()
 browser = webdriver.Firefox(options=options)
 
 # Load web page
-browser.get("https://www.betway.co.za/sport/soccer/ita/serie_a#")
+browser.get("https://www.betway.co.za/sport/soccer/eng/premier_league#")
 # Network transport takes time. Wait until the page is fully loaded
 def is_ready(browser):
     return browser.execute_script(r"""
@@ -39,7 +39,7 @@ time.sleep(4)
 #findCookie = browser.execute_script("document.getElementsByClassName('PaddingScreen')")
 
 
-findCookie = browser.find_elements(By.XPATH, "//div[contains(@id, 'leagueGroup-ITASerieA')]//a[contains(@class, 'PaddingScreen')]")
+findCookie = browser.find_elements(By.XPATH, "//div[contains(@id, 'leagueGroup-ENGPremierLeague')]//a[contains(@class, 'PaddingScreen')]")
 href = findCookie[0].get_attribute('href')
 browser.get(href)
 time.sleep(2)
@@ -81,117 +81,54 @@ OUres = []
 res = []
 BTSRes = []
 DCRes = []
-for elem in panelsBodies:
-    innt = len(lastDiv)
-    divId = elem.get_property("id")  
-    browser.execute_script("document.getElementById('"+divId+"').style.display = 'block';")
-    for melem in newMelem:
 
-     if melem not in lastDiv:
-        lastDiv.append(melem)
+lopI = 1;
+for kekk in panelsBodies:
+  elemID =  kekk.get_attribute("id"); 
+  browser.execute_script("document.getElementById('" + elemID +"').style.display = 'block';")
+  panelBody = browser.find_element(By.XPATH, "//div[contains(@id,'" + elemID+ "')]//div[contains(@class, 'panel-body')]").text
+  
+  panelText = panels[lopI].text
+  
+  #refinedRes = BtOr.MatchRes(panelText,panelBody) 
 
-        #if innt == 1: 
-        txt = melem.split("\n")[0]
-        elem =  elem.text.split("\n")
-        match txt:
-            case "Overs/Unders":
-              OUres =  BtOr.OverUndeBreakdown(elem)
-            case "Match Result (1X2)":
-              res =  BtOr.MatchResbreakDown(elem)
-            case "Both Teams To Score":
-              BTSRes =  BtOr.BothTSBreakDown(elem)            
-            case "DC":
-                BtOr.DcBreakDown(elem)
-            case "Double Chance":
-              DCRes =  BtOr.DcBreakDown(elem)
-            
-            case "1st Half - 1X2":
-              firstHRes =  BtOr.firstHalvWin(elem)
-            case "1st Half - Both Teams To Score":
-              firstHBTS =  BtOr.firstBothTSBreakDown(elem)
-            case "1st Half - Double Chance":
-              firstHDC =  BtOr.firstDCBreakDown(elem)
-            case "1st Half - Overs/Unders":
-              firstHOU =  BtOr.firstOverUnderBreakDown(elem)
-            case "1st Half - Home Overs/Unders":
-              firstHHOU =  BtOr.firstHomOverUnderBreakDown(elem)
-            case "1st Half - Away Overs/Unders":
-              firstHAOU =  BtOr.firstAwaOverUnderBreakDown(elem)
+  match panelText:
+    case "Match Result (1X2)":
+       refinedRes = BtOr.MatchRes(panelText,panelBody) 
+    case "Both Teams To Score":
+         refinedBTS = BtOr.Bts(panelText,panelBody) 
+    case "Double Chance":
+         refinedDC = BtOr.Dc(panelText,panelBody)
+    case "Draw No Bet":
+         refinedDnB = BtOr.DrawNoBet(panelText,panelBody)
+    case "Overs/Under":
+         refinedDnB = BtOr.OverUndeBreakdown(panelText,panelBody)
+    case "Handicap":
+         refinedDnB = BtOr.Handicap(panelText,panelBody)
+    case "1st Goal":
+         refinedDnB = BtOr.FirstGoal(panelText,panelBody)
+    case "10 Minutes - 1X2 From 1 To 10":
+         refinedDnB = BtOr.TenMin(panelText,panelBody) 
+    case "Both Halves Over 1.5":
+         refinedDnB = BtOr.BothHalfsOever(panelText,panelBody) 
+    case "Both Halves Under 1.5":
+         refinedDnB = BtOr.BothHalfsUnder(panelText,panelBody)
+    case "Multigoals":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody)  
+    case "Sending Off":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - 1X2":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody)
+    case "1st Half - Both Teams To Score":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody)   
+    case "1st Half - Double Chance":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - Overs/Unders":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody) 
+    case "1st Half - Handicap":
+         refinedDnB = BtOr.MultiGoals(panelText,panelBody)  
+   
+  lopI = lopI + 1  
 
-            case "1st Half - Away Overs/Unders":
-              firstHAOU =  BtOr.firstAwaOverUnderBreakDown(elem)
-        break;
-insert_stmt = "INSERT INTO EplBetOdds(ATeam,HTeam,MatchResHome,MatchResAway,DCHome,DCAway,DCHomeAway,BTSYes,BTSNo,MatchResOverZ,MatchResOverOne,MatchResOverTwo,MatchResOverThree,MatchResOverFour,MatchResOverFive,MatchResUnderZ,MatchResUnderOne,MatchResUnderTwo,MatchResUnderThree,MatchResUnderFour,MatchResUnderFive,firstHalvHomeWin,firstHalvAwayWin,firstHalvBTSYes,firstHalvBTSNo,firstHalvAwayHome,firstHalvAwayDraw,firstHalvHomeDraw,firstHalvOverZero,firstHalvOverOne,firstHalvOverTwo,firstHalvUnderZero,firstHalvUnderOne,firstHalvUnderTwo,firstHalvHomeOverZero,firstHalvHomeOverOne,firstHalvHomeOverTwo,firstHalvHomeUnderZero,firstHalvHomeUnderOne,firstHalvHomeUnderTwo,firstHalvAwayOverZero,firstHalvAwayOverOne,firstHalvAwayOverTwo,firstHalvAwayUnderZero,firstHalvAwayUnderOne,firstHalvAwayUnderTwo) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-data = (res[1],res[0],res[2],res[3],DCRes[0],DCRes[1],DCRes[2],BTSRes[0],BTSRes[1],OUres[0],OUres[1],OUres[2],OUres[3],OUres[4],OUres[5],OUres[6],OUres[7],OUres[8],OUres[9],OUres[10],OUres[11],firstHRes[2],firstHRes[3],firstHBTS[0],firstHBTS[1],firstHDC[0],firstHDC[1],firstHDC[2],firstHOU[0],firstHOU[1],firstHOU[2],firstHOU[3],firstHOU[4],firstHOU[5],firstHHOU[0],firstHHOU[1],firstHHOU[2],firstHHOU[3],firstHHOU[4],firstHHOU[5],firstHAOU[0],firstHAOU[1],firstHAOU[2],firstHAOU[3],firstHAOU[4],firstHAOU[5])
-cursor.execute(insert_stmt, data)
-cursor.commit()
-    
-
-
-""""
-panelBody = browser.find_elements(By.XPATH, "//div[contains(@id,'" + pandelID+ "')]//div[contains(@class, 'panel-body')]")
-findCookies = findCookie[0].find_element(By.TAG_NAME, "a")    
-
-
-insert_stmt = "INSERT INTO EplBetOdds(ATeam,Hteam,MatchResHome,MatchResAway,DCHome,DCAway,DCHomeAway,BTS/Yes,BTS/No,MatchResOverZ,MatchResOverOne,MatchResOverTwo,MatchResOverThree,MatchResOverFour,MatchResOverFive,MatchResUnderZ,MatchResUnderOne,MatchResUnderTwo,MatchResUnderThree,MatchResUnderFour,MatchResUnderFive) VALUES (?,?, ?, ?, ?,?, ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-data = (res[1],res[0],res[2],res[3],DCRes[0],DCRes[1],DCRes[2],BTSRes[0],BTSRes[1],OUres[0],OUres[1],OUres[2],OUres[3],OUres[4],OUres[5],OUres[6],OUres[7],OUres[8],OUres[9],OUres[10],OUres[11])
-cursor.execute(insert_stmt, data)
-cursor.commit()
-
-
-
-print(browser.find_element_by_css_selector("p.PaddingScreen > a").get_attribute('href'))
-
-href = findCookies.get_attribute('href')
-browser.get(href)
-time.sleep(10)
-"""
-"""
-try:
- almb = browser.find_element(By.ID,"AllMarketsButton").click()
-except(NoSuchElementException):
-    while _flag:
-        try:
-           lmb = browser.find_element(By.ID,"loadMoreButton").click()
-           _flag = True
-           time.sleep(5)
-        except(NoSuchElementException):
-                _flag = False
-                time.sleep(10)	  
-
-"""
-
-#eventName = browser.find_element(By.CLASS_NAME, "ellipsMultiMarket theFont")
-
-#WebDriverWait(browser,30).until(EC.element_to_be_clickable((By.CSS_SELECTOR,"#btnSearch"))).click()
-
-#findCookies[0].click()
-#time.sleep(5)
-
-"""
-findCookie = browser.find_element(By.ID, "leagueGroup")
-
-browser.execute_script("document.getElementById('leagueGroup').style.display = 'block';")
 time.sleep(5)
-loadFullFix = browser.find_elements(By.CLASS_NAME, "dropdown-submenu") 
-browser.execute_script("document.getElementsByClassName('dropdown-submenu')[0].setAttribute('class', 'dropdown-submenu open')")
-browser.execute_script(loadFullFix[0]+".setAttribute('class', 'dropdown-submenu open')")
-browser.execute_script("document.getElementsByClassName('state-icon glyphicon glyphicon-unchecked')[0].setAttribute('class', 'state-icon glyphicon glyphicon-check')")
-loadFullFix2 = browser.execute_script("document.getElementsByClassName('state-icon glyphicon glyphicon-unchecked')")
-browser.execute_script(loadFullFix2[0]+".setAttribute('class', 'state-icon glyphicon glyphicon-check')")
-findCooki = browser.find_element(By.ID, "continueBtn")
-findCooki.click()
-time.sleep(5)
-"""
-"""
-for elem in loadFullFix:
-    browser.execute_script(elem+".setAttribute('class', 'dropdown-submenu open')")
-    loadFullFix2 = browser.execute_script("document.getElementByClassName('state-icon glyphicon glyphicon-unchecked')")
-    for belem in loadFullFix2:
-         browser.execute_script(belem+".setAttribute('class', 'state-icon glyphicon glyphicon-check')")
-         break;
-#browser.execute_script("document.getElementsByClassName('dropdown-submenu')[0].setAttribute('class', 'dropdown-submenu open')");
-#browser.execute_script("document.getElementByClassName('dropdown-submenu').setAttribute('class', 'dropdown-submenu open')");
-#browser.execute_script("arguments[0].setAttribute('class','vote-link up voted')", element)
-"""
-time.sleep(5)
+
