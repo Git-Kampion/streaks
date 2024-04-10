@@ -70,43 +70,89 @@ class BtOr:
       try:
        OverallOverZeroLbl = panel[0]
        OverallOverZerodd = panel[1]
+      except:
+       OverallOverZeroLbl = "def"
+       OverallOverZerodd = "N/A"
 
+      try:
        OverallUnderZerLbl = panel[2]
        OverallUnderZerdd = panel[3]
+      except:
+       OverallUnderZerLbl = "def"
+       OverallUnderZerLbl = "N/A"
 
+      try:
        OverallOverOneLbl = panel[4]
        OverallOverOnedd = panel[5]
+      except:
+       OverallOverOneLbl = "def"
+       OverallOverOnedd = "N/A"
 
+      try:
        OverallUnderOneLbl = panel[6]
        OverallUnderOnedd = panel[7]
+      except:
+        OverallUnderOneLbl = "def"
+        OverallUnderOnedd = "N/A"
 
+      try:
        OverallOverYwoLbl = panel[8]
        OverallOverYwodd = panel[9]
-       
+      except:
+       OverallOverYwoLbl = "def"
+       OverallOverYwodd = "N/A"
+
+      try:
        OverallUnderYwoLbl = panel[10]
        OverallUnderYwodd = panel[11]
+      except:
+       OverallUnderYwoLbl=  "def"
+       OverallUnderYwodd =  "N/A"
 
+      try:
        OverallOverThreLbl = panel[12]
        OverallOverThreodd = panel[13]
-       
+      except:
+       OverallOverThreLbl = "def"
+       OverallOverThreodd = "N/A"
+
+      try:
        OverallUnderThreLbl = panel[14]
        OverallUnderThredd = panel[15]
-
+      except:
+       OverallUnderThreLbl = "def"
+       OverallUnderThredd = "N/A"
+       
+      try:
        OverallOverFourLbl = panel[16]
        OverallOverFourodd = panel[17]
-       
+      except:
+       OverallOverFourLbl = "def"
+       OverallOverFourodd = "N/A"
+
+      try:
        OverallUnderFourLbl = panel[18]
        OverallUnderFourdd = panel[19]
+      except:
+       OverallUnderFourLbl = "def"
+       OverallUnderFourdd = "N/A"
 
+      try:
        OverallOverFiveLbl = panel[20]
        OverallOverFiveodd = panel[21]
-       
+      except:
+       OverallOverFiveLbl = "def"
+       OverallOverFiveodd = "N/A"
+
+      try:
        OverallUnderFiveLbl = panel[22]
        OverallUnderFivedd = panel[23]
-       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallOverThreodd,OverallOverFourodd,OverallOverFiveodd,OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd,OverallUnderThredd,OverallUnderFourdd,OverallUnderFivedd]
-
       except:
-         asä = "" 
+       OverallUnderFiveLbl = "def"
+       OverallUnderFivedd = "N/A"
+
+
+      MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallOverThreodd,OverallOverFourodd,OverallOverFiveodd,OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd,OverallUnderThredd,OverallUnderFourdd,OverallUnderFivedd]    
       return MatchRes
     
     def firstAwaOverUnderBreakDown(panel):
