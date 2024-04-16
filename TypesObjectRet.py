@@ -11,57 +11,180 @@ class BtOr:
           s = ""
       return newMelem
 
+    def checkBolts(elel):
+      newElem = []
+      for uu in elel:
+        if uu == "bolt":
+          a = 1
+        else:
+          newElem.append(uu)
+      return newElem
+    
     def MatchResbreakDown(panel):
         
-        matchResHomeLbl = panel[0]
-        matchResHome = panel[1]
-        matchResAwayLbl = panel[4]
-        matchResAway = panel[5]
+        try:
+         matchResHomeLbl = panel[0]
+        except:
+          matchResHomeLbl = "N/A"
+        try:
+         matchResHome = panel[1]
+        except:
+          matchResHome = "N/A"
+
+        try:
+         matchResAwayLbl = panel[4]
+        except:
+          matchResAwayLbl = "N/A"
+        try:
+         matchResAway = panel[5]
+        except:
+            matchResAway = "N/A"
         MatchRes= [matchResHomeLbl,matchResAwayLbl,matchResHome, matchResAway]
         return MatchRes
         
     
     def BothTSBreakDown(panel):
-        matchYesLbl = panel[0]
-        matchYesdd = panel[1]
-        matchNoLbl = panel[2]
-        matchNodd = panel[3]
+        
+        try:
+         matchYesLbl = panel[0]
+        except:
+           matchYesLbl = "N/A"
+
+        try:
+         matchYesdd = panel[1]
+        except:
+           matchYesdd = "N/A"
+        
+        try:
+         matchNoLbl = panel[2]
+        except:
+           matchNoLbl = "N/A"
+        
+        try:
+         matchNodd = panel[3]
+        except:
+           matchNodd = "N/A"
+        
         MatchRes= [matchYesdd, matchNodd]
         return MatchRes
     
     def firstBothTSBreakDown(panel):
-        matchYesLbl = panel[0]
-        matchYesdd = panel[1]
-        matchNoLbl = panel[2]
-        matchNodd = panel[3]
+        try:
+         matchYesLbl = panel[0]
+        except:
+           matchYesLbl = "N/A"
+
+        try:
+         matchYesdd = panel[1]
+        except:
+           matchYesdd = "N/A"
+        
+        try:
+         matchNoLbl = panel[2]
+        except:
+           matchNoLbl = "N/A"
+
+        try:
+         matchNodd = panel[3]
+        except:
+           matchNodd = "N/A"
+        
+        
         MatchRes= [matchYesdd, matchNodd]
         return MatchRes
 
     def DcBreakDown(panel):
-        DCHomeDrawLbl = panel[0]
-        DCHomeDrawdd = panel[1]
-        DCAwayDrawLbl = panel[5]
-        DCAwayDrawdd = panel[4]
-        DCAwayHomeLbl = panel[6]
-        DCAwayHomedd = panel[7]
+        try:
+         DCHomeDrawLbl = panel[0]
+        except:
+           DCHomeDrawLbl = "N/A"
+
+        try:
+         DCHomeDrawdd = panel[1]
+        except:
+           DCHomeDrawLbl = "N/A"
+
+        try:
+         DCAwayDrawLbl = panel[5]
+        except:
+           DCAwayDrawLbl = "N/A"
+        
+        try:
+         DCAwayDrawdd = panel[4]
+        except:
+           DCAwayDrawdd = "N/A"
+
+        try:
+         DCAwayHomeLbl = panel[6]
+        except:
+           DCAwayHomeLbl = "N/A"
+        
+        try:
+         DCAwayHomedd = panel[7]
+        except:
+           DCAwayHomedd = "N/A"
+        
         MatchRes= [DCHomeDrawdd, DCAwayDrawdd, DCAwayHomedd]
         return MatchRes
     
     def firstDCBreakDown(panel):
-        DCHomeDrawLbl = panel[0]
-        DCHomeDrawdd = panel[1]
-        DCAwayDrawLbl = panel[5]
-        DCAwayDrawdd = panel[4]
-        DCAwayHomeLbl = panel[6]
-        DCAwayHomedd = panel[7]
+
+        try:
+         DCHomeDrawLbl = panel[0]
+        except:
+           DCHomeDrawLbl = "N/A"
+
+        try:
+         DCHomeDrawdd = panel[1]
+        except:
+           DCHomeDrawdd = "N/A"
+
+        try:
+         DCAwayDrawLbl = panel[5]
+        except:
+           DCAwayDrawLbl = "N/A"
+
+        try:
+          DCAwayDrawdd = panel[4]
+        except:
+           DCAwayDrawdd = "N/A"
+        
+        try:
+          DCAwayHomeLbl = panel[6]
+        except:
+           DCAwayHomeLbl = "N/A"
+       
+        try:
+          DCAwayHomedd = panel[7]
+        except:
+           DCAwayHomedd = "N/A"
+        
+        
         MatchRes= [DCHomeDrawdd, DCAwayDrawdd, DCAwayHomedd]
         return MatchRes
     
     def firstHalvWin(panel):
-        matchResHomeLbl = panel[0]
-        matchResHome = panel[1]
-        matchResAwayLbl = panel[4]
-        matchResAway = panel[5]
+        try:
+         matchResHomeLbl = panel[0]
+        except:
+           matchResHomeLbl = "N/A"
+
+        try:
+         matchResHome = panel[1]
+        except:
+           matchResHome = "N/A"
+
+        try:
+         matchResAwayLbl = panel[4]
+        except:
+           matchResAwayLbl = "N/A"
+        
+        try:
+         matchResAway = panel[5]
+        except:
+           matchResAway = "N/A"
+        
+        
         MatchRes= [matchResHomeLbl,matchResAwayLbl,matchResHome, matchResAway]
         return MatchRes
        
@@ -160,58 +283,95 @@ class BtOr:
       try:
        OverallOverZeroLbl = panel[0]
        OverallOverZerodd = panel[1]
+      except:
+       OverallOverZeroLbl = "def"
+       OverallOverZerodd = "N/A"
 
-       OverallUnderZerLbl = panel[2]
-       OverallUnderZerdd = panel[3]
+      try:
+        OverallUnderZerLbl = panel[2]
+        OverallUnderZerdd = panel[3]
+      except:
+        OverallUnderZerLbl = "def"
+        OverallUnderZerdd = "N/A"
 
+      try:
        OverallOverOneLbl = panel[4]
        OverallOverOnedd = panel[5]
+      except:
+        OverallOverOneLbl = "def"
+        OverallOverOnedd = "N/A"
 
+      try:
        OverallUnderOneLbl = panel[6]
        OverallUnderOnedd = panel[7]
+      except:
+       OverallUnderOneLbl = "def"
+       OverallUnderOnedd = "N/A"
 
+      try:
        OverallOverYwoLbl = panel[8]
        OverallOverYwodd = panel[9]
-       
+      except:
+       OverallOverYwoLbl = "def"
+       OverallOverYwodd = "N/A"
+
+      try:
        OverallUnderYwoLbl = panel[10]
        OverallUnderYwodd = panel[11]
-
-      
+      except:
+       OverallUnderYwoLbl = "def"
+       OverallUnderYwodd = "N/A"
 
        
-       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
-
-      except:
-         asä = "" 
+      MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
       return MatchRes
     def firstHomOverUnderBreakDown(panel):
        
       try:
        OverallOverZeroLbl = panel[0]
        OverallOverZerodd = panel[1]
+      except:
+       OverallOverZeroLbl = "def"
+       OverallOverZerodd = "N/A"
 
-       OverallUnderZerLbl = panel[2]
-       OverallUnderZerdd = panel[3]
+      try:
+        OverallUnderZerLbl = panel[2]
+        OverallUnderZerdd = panel[3]
+      except:
+        OverallUnderZerLbl = "def"
+        OverallUnderZerdd = "N/A"
 
+      try:
        OverallOverOneLbl = panel[4]
        OverallOverOnedd = panel[5]
+      except:
+        OverallOverOneLbl = "def"
+        OverallOverOnedd = "N/A"
 
+      try:
        OverallUnderOneLbl = panel[6]
        OverallUnderOnedd = panel[7]
+      except:
+       OverallUnderOneLbl = "def"
+       OverallUnderOnedd = "N/A"
 
+      try:
        OverallOverYwoLbl = panel[8]
        OverallOverYwodd = panel[9]
+      except:
+       OverallOverYwoLbl = "def"
+       OverallOverYwodd = "N/A"
        
+      try:
        OverallUnderYwoLbl = panel[10]
        OverallUnderYwodd = panel[11]
-
-      
-
-       
-       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
-
       except:
-         asä = "" 
+       OverallUnderYwoLbl = "def"
+       OverallUnderYwodd = "N/A"
+
+
+      MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
+
       return MatchRes
     
     def firstOverUnderBreakDown(panel):
@@ -219,29 +379,49 @@ class BtOr:
       try:
        OverallOverZeroLbl = panel[0]
        OverallOverZerodd = panel[1]
+      except:
+       OverallOverZeroLbl = "def"
+       OverallOverZerodd = "N/A"
 
-       OverallUnderZerLbl = panel[2]
-       OverallUnderZerdd = panel[3]
+      try:
+        OverallUnderZerLbl = panel[2]
+        OverallUnderZerdd = panel[3]
+      except:
+        OverallUnderZerLbl = "def"
+        OverallUnderZerdd = "N/A"
 
+      try:
        OverallOverOneLbl = panel[4]
        OverallOverOnedd = panel[5]
+      except:
+        OverallOverOneLbl = "def"
+        OverallOverOnedd = "N/A"
 
+      try:
        OverallUnderOneLbl = panel[6]
        OverallUnderOnedd = panel[7]
+      except:
+       OverallUnderOneLbl = "def"
+       OverallUnderOnedd = "N/A"
 
+      try:
        OverallOverYwoLbl = panel[8]
        OverallOverYwodd = panel[9]
+      except:
+       OverallOverYwoLbl = "def"
+       OverallOverYwodd = "N/A"
        
+      try:
        OverallUnderYwoLbl = panel[10]
        OverallUnderYwodd = panel[11]
+      except:
+       OverallUnderYwoLbl = "def"
+       OverallUnderYwodd = "N/A"
 
-      
 
        
-       MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
+      MatchRes= [OverallOverZerodd, OverallOverOnedd, OverallOverYwodd, OverallUnderZerdd,OverallUnderOnedd,OverallUnderYwodd]
 
-      except:
-         asä = "" 
       return MatchRes
   
     def findConcurrentMAtche(t,data,betype,ht):
