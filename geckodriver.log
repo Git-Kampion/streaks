@@ -34693,3 +34693,900 @@ DevTools listening on ws://127.0.0.1:54133/devtools/browser/4df1209a-163b-45ad-a
 JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
 1712785743767	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
 JavaScript warning: https://info.betway.co.za/dm8xAv7uQaWd0FRv?410239e28f0c6c9f=-vrcpAehVOMjtDdFvj2o9pPw80QtCQPIMHmXLydFt_SlpSmkQ7W_nzK9VPCY-9oFZOuNkgGbg5DOv73eMjqAeqgmq8-Bof2unzWp9HWZ1QyK3S9S6tirztrMYeK820VcXyGvnWJ3m3sUbgeyLMcuoe-OPckxZtGxJXq-ItuqFYLreDV99COVTJDXWdWKucdxKCh5WCVT5fzDXqc99asiaxeCXBFBG-p8H92u&jb=3e3326266a716d773f55696e646d75712662716d35556b6e666d75712530323930266a7362773f46617065666f7a246871603d46697067646f70273038333034, line 1194: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712856892216	geckodriver	INFO	Listening on 127.0.0.1:62736
+1712856892717	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62737" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilegr6xK0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712856893388	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712856893583	Marionette	INFO	Listening on port 62744
+WebDriver BiDi listening on ws://127.0.0.1:62737
+Read port: 62744
+1712856893879	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62737/devtools/browser/de778a1d-b35a-4af2-a991-62462d60abda
+1712856923537	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712857024256	geckodriver	INFO	Listening on 127.0.0.1:62795
+1712857024758	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "62796" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileII9Ja6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712857025303	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712857025485	Marionette	INFO	Listening on port 62802
+WebDriver BiDi listening on ws://127.0.0.1:62796
+Read port: 62802
+1712857025748	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:62796/devtools/browser/47c8ffd3-4bf7-4837-85a4-74714dbe1782
+1712876205914	geckodriver	INFO	Listening on 127.0.0.1:52091
+1712876206422	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52092" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilea79rjz"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712876209670	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712876210339	Marionette	INFO	Listening on port 52111
+Read port: 52111
+WebDriver BiDi listening on ws://127.0.0.1:52092
+1712876210644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52092/devtools/browser/dbf3b65b-fcb9-41a2-9809-86e23e750897
+1712876240360	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/EENqqqiByu4ynVOP?38be1a5111189ce3=VhaOP_rpwc9MNPouri6fpkw8QJZsJcHA9_672iHBSyNakM-OfzkOwLLStYB3GL5jmxG0hANBcbM_YpRF3R78FqX4Ql8bxRUrwjVe3JcQS941K4bVOLfpLlv2ny8HetTflEISUqwxA_gRz_fpfgsDggjS1mVpp2crDD-iiSZJHt2m1VOJgeohFt2ctWm37cTETsZM8ZJL_rjleBtQF6JqXQdJL2uS31O0tgrq&jb=3633262462736d753d57696c646f77732468716f3d55696c6c6f77712d30323330266a7360753d4e697065646778246a73623d44697265666d7a273230333236, line 200: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712944315548	geckodriver	INFO	Listening on 127.0.0.1:58659
+1712944316059	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58660" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilerCg6UT"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712944316788	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712944316993	Marionette	INFO	Listening on port 58687
+WebDriver BiDi listening on ws://127.0.0.1:58660
+Read port: 58687
+1712944317324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58660/devtools/browser/ef094af5-0f35-46df-b25e-ed5377112597
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1712944346840	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712944522467	geckodriver	INFO	Listening on 127.0.0.1:55827
+1712944522978	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55828" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile8PgPA5"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712944523636	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712944523813	Marionette	INFO	Listening on port 55834
+WebDriver BiDi listening on ws://127.0.0.1:55828
+Read port: 55834
+1712944524037	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55828/devtools/browser/61349ad6-ccd9-49a1-826b-66b94fdfdfec
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1712944553668	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712944626912	geckodriver	INFO	Listening on 127.0.0.1:65024
+1712944627440	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65025" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilezPQf1R"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712944628098	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712944628299	Marionette	INFO	Listening on port 65033
+WebDriver BiDi listening on ws://127.0.0.1:65025
+Read port: 65033
+1712944628548	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65025/devtools/browser/8577b464-a77a-4639-a253-9caf2ca17bff
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1712944658215	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712961512701	geckodriver	INFO	Listening on 127.0.0.1:63781
+1712961513212	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63782" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilepZS8f8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712961514130	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712961514386	Marionette	INFO	Listening on port 63794
+WebDriver BiDi listening on ws://127.0.0.1:63782
+Read port: 63794
+1712961514644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:63782/devtools/browser/58af74f6-a4e8-4fad-a1c6-8478baf3353e
+JavaScript warning: https://info.betway.co.za/GtIT_6lKt8pIfTp2?5d65fe7acdab7cc9=D6_NF3Ve2IjeYJjhYd-dx4sn6EEM1xe4EramM2NVL7kL2YXmRJZcM7CPkgOS2BikH4dKTyp5ZLBJY8fkcQBPubS9Zu7DZzNenEM_s9HAJe9rpyaXC3XNnSdvqQkcuWMWA6ufQbbkhbBbgN6tDBAoOysg0wj8aSkJgZqUyUKJpHjBQGci0lWKilcSh-f8Ism016RPbYl-Qn9zj_pLdH8CcRjZ2mdhZ-gfHaKK&jb=363124266a716d773f556966646d777b246871673d556b6e646f777b2730323938246a7362773d46697267666f7a246871603d4e6970656e6d7a273a30333034, line 421: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712961544173	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712961744502	geckodriver	INFO	Listening on 127.0.0.1:64043
+1712961745006	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64044" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile2gzN98"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712961745792	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712961745965	Marionette	INFO	Listening on port 64053
+WebDriver BiDi listening on ws://127.0.0.1:64044
+Read port: 64053
+1712961746204	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64044/devtools/browser/ceb18cd0-6914-4475-bf6b-8ca8c194d748
+JavaScript warning: https://info.betway.co.za/-cO7EKfLxOYUL2wQ?8d8257184dfdfeeb=sklT0A8YLwdpOSub3oXGDxRbmnSf6ijSnngbWM4UR6nMGh05fO2ei85MdCf2sO28rmpD68e0e31ZoCSF4TuQzVmtTJvLe6XZJ2ip2YKiouhY1ISYSlp9gX_uBmbtk1ql1uWx0S5P6hh93nPpHfylZnCMmzg9c-brcMn9mrQnlpN70uVNekLU9XaWzr7X0er9mdQRf5Ybtn7aeVWmmGdqjB9pS6lyfrojumPu&jb=3633262e62716d773f57616c646f7f712462716d3f55616c666d7773253230333226687362773f466970656e677a24687162354469726d646d70273032333a36, line 895: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712961775836	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1712964978559	geckodriver	INFO	Listening on 127.0.0.1:65216
+1712964979088	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65217" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileYZmFBN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712964979979	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712964980179	Marionette	INFO	Listening on port 65223
+WebDriver BiDi listening on ws://127.0.0.1:65217
+Read port: 65223
+1712964980422	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65217/devtools/browser/0919070f-0af1-44c2-b81f-f22a77fc71d8
+JavaScript warning: https://info.betway.co.za/uTO_bHpKrTBSwwJM?8d5b39d1642c6a69=diJPsoyn2DPPHRrfwKk_vCdOfqu8gkYO9ZnylJ6Yq-gnIq9Ry1lUnyvVCWu_QsjBmbVLSy8nCSkzl_rvdynT9gJxg8T616gcdo9S3768S3BuX2vnKjcnmTbagEz_eVnAbwxOD1al7xcIdK1qnRpTrcPsxGfmym96sZSXrD2qqWgRzzSewCE0ebMAeiJYv_0xrGOK4obdQt8aJxgEPnKonDaAwHw7fBlM0HM7&jb=3e312426687b6f7d3d57696e646d7571246273673d576b666c6f7771273232333224687362773d46617267666d70266273623d46697067646d70253a3031303c, line 1142: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712965010031	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1712965782897	geckodriver	INFO	Listening on 127.0.0.1:65511
+1712965783409	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65512" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilel43q6T"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712965784219	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712965784456	Marionette	INFO	Listening on port 65520
+WebDriver BiDi listening on ws://127.0.0.1:65512
+Read port: 65520
+1712965784727	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65512/devtools/browser/025e9d32-1195-482a-bb34-79c11a1df691
+JavaScript warning: https://info.betway.co.za/kuE8IUyskfiBWpln?98c9a4606b7504cc=fY9allyun9T1eD9B4e2GRkaVhc6UeMoFX6S6BzrW2--j9v4xa5ux3itESw6pY9yXs9kvnawe4OT4ofgTqzKJkMyBA7LpBmHTkSpwRtYX9Carqeyspr1-jeJ5vAMGSOPtoE6ZNSLL-Gt3aoe2q_vXxav1Z-EPy4VKhe1RtwPbItACq59UUTa18cEOH6_Xb2nfBw6w0Omu2CTCf9RpzoNbV7ZwgWfhbSATAJGC&jb=34332e26687167753f556b6c646d7f71246a736f3f576b6c666d777325303033322462716a753d446b706d666d7a2e6a71603f4469706d646d78253232313036, line 1240: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712965814261	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712966006960	geckodriver	INFO	Listening on 127.0.0.1:49396
+1712966007483	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49397" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileJy6Zra"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712966008292	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712966008485	Marionette	INFO	Listening on port 49403
+WebDriver BiDi listening on ws://127.0.0.1:49397
+Read port: 49403
+1712966008716	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49397/devtools/browser/3c508864-d0cd-45bb-92a8-188ff3f05cca
+JavaScript warning: https://info.betway.co.za/rk3vogixtNAr28YW?132eb73bfe6e341d=UPVQMj40UUOjY3csZHPh3VCR4XfXiZvz-cfF0iwV5Pr1voD50ZLPXNtE9BGqFh0q4zTl5R2Dn_FClHgz8eErbCIfnjH8IoBI5FFYndHAau7YAFAliljXlQg9Jyt7UwMn9wk0HsqXfodAzcGPXTExUayhQkKMtn2cftADMdg4YazJzesa4npUrrfpZCnQo5i97eRTSj0S600aCnQSQe3o9kEO6XMNOSvjq4fG&jb=343126246a716f7d3d55616c666d75712462716d3d576b6e666f7771273a323132246a7362753d446b7265646f7a2662736035446b7067646d70273030313034, line 471: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712966038321	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712966248511	geckodriver	INFO	Listening on 127.0.0.1:49928
+1712966249033	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49929" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileUOSbNx"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712966249972	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712966250163	Marionette	INFO	Listening on port 49936
+WebDriver BiDi listening on ws://127.0.0.1:49929
+Read port: 49936
+1712966250415	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49929/devtools/browser/7531f585-34e0-42ef-9ada-2b65cc87f16c
+JavaScript warning: https://info.betway.co.za/VzdSQMLLAnypwTGY?9d4427f963f26af0=GXYmMdrpURocXPR2MA6DYLnuybEMugbbx7VZyXZG2Lw4oNbRzhypsqFUulPRbuRNps6OYHpmnpN0bbd2pD4bBqfkOlWHRv1ZH_nqIyziANileWiIwopZDKmWEL2KO3f7EBZ-JPgUB4y23IK4-eIsuK_rWpnrCKCECZDwycqRgqIjbWLJgy_F7lL5jiB3FOAnpAPYgd6i0gAp7HQczxtU3_u_8KJl-GxIus4M&jb=363324266a736d753f57696e646d7771266871673d5f696e666d77732530303132246a736a753d46697067666f78246a71623d46697065646f7a273a30393234, line 1240: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712966280029	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712966532511	geckodriver	INFO	Listening on 127.0.0.1:50262
+1712966533011	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50263" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileM5k4Or"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712966534097	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712966534326	Marionette	INFO	Listening on port 50268
+Read port: 50268
+WebDriver BiDi listening on ws://127.0.0.1:50263
+1712966534429	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50263/devtools/browser/4cae6a79-bd7d-49cc-8422-3513dbfe4ce2
+JavaScript warning: https://info.betway.co.za/mPT9js_jvUR51yxy?542fd47104efd58a=PppT1d0Ous8qn3pTh0KEOHinbcpzZjyi9ioNUCIuI2dhLXHTDHxTj4ERpcAbkUBiw_hCzMqPfDW-NZZRoXcKF4azGNDaRE_j4WuVf_5ENYER7mtdDN37PYWgXt9YDzh04CXlF73lIEDWI0B87x9_iiqbdbXpCtbe9yX21EJDQ7nJzgcMEQM-igX2otgL9M-8hdByLRfXJgl0FBzG6CJCPIsuVNkJadDv5M2s&jb=3631242468736d773d57616e6c6d7773266a7b6f3f57616c6c6f75712730383132266a736a753d44697267646d78246873623546617065666f782d3232313a36, line 299: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712966564129	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1712969525883	geckodriver	INFO	Listening on 127.0.0.1:51436
+1712969526412	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51437" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilerMRGzr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712969527334	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712969527564	Marionette	INFO	Listening on port 51445
+WebDriver BiDi listening on ws://127.0.0.1:51437
+Read port: 51445
+1712969527827	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51437/devtools/browser/9dad52e6-71f7-4620-a2e3-9da899495a6f
+JavaScript warning: https://info.betway.co.za/Ge1VTQp9RGPHZ1Dq?f113669a9728f2b3=nZKcFocTqIhwsXYvYeFjdMSi-H2oOIn_iCcSupJttRsa6A0rJrFdsEkXJ-EuZBRxdtsY5BRogzEEoLr9glQLXbMAiOUJexz4uuOm86ZN5K1cuK_7o0oAKr1R65MjWpsiskyfBqkAkh6fp-6IBK0qije8Yanxwoo7M-vNVDbtB0TjzIfULCCxnDVhbJZl_7WNMT_Hjyf1dViSdmLi7WNWXd-F1CDV5gPwyRIA&jb=3633262668736f753f57696c666d7f71266a736d3d5f6b6c6c6d777b2d32323130246a716a753d46697065666d78266a71623d446b706d646f78253030393036, line 1145: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712969557380	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1712970143453	geckodriver	INFO	Listening on 127.0.0.1:51789
+1712970143973	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51790" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileeSkRyI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712970144543	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712970144698	Marionette	INFO	Listening on port 51800
+WebDriver BiDi listening on ws://127.0.0.1:51790
+Read port: 51800
+1712970145054	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51790/devtools/browser/875768e9-9afc-41a8-994e-56df2f70deff
+JavaScript warning: https://info.betway.co.za/utcg_t0GuRyfPJhd?b87474cb3cf8401d=fCUsd-x1_BGaLvqA7U3lTX0pangcOegPGAmhWByCpZMBYc2_9qNaOcM9yhT_V491jo3c3SSPxQfBrhTpjawPI4tfbraM58MnYSCkM5-evgTbQ1My9afaHVLVQqOz3a1Wls_8tEBBbhqw91YCher7yqdHWqMdRDEYDart6DVeeBy-olZDL5tXQtwad852aeJgrjjYORa8TcjPCGJAh5c_2sj1pMqjpdGYfqDf&jb=3631242462716d753d57696c646f75732668716d3d5f696e64677571273032313226687160753f4469726764677a246a73623d44697267666f7a273030393234, line 860: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712970174573	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712970402182	geckodriver	INFO	Listening on 127.0.0.1:52066
+1712970402694	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52067" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile46B0oh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712970403167	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712970403346	Marionette	INFO	Listening on port 52072
+WebDriver BiDi listening on ws://127.0.0.1:52067
+Read port: 52072
+1712970403686	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52067/devtools/browser/ace103e6-8d83-4163-8269-57311020dd79
+JavaScript warning: https://info.betway.co.za/ZdXTtLfm5YC7aufQ?d9c15b3649b4c411=DkOze5ihcoJ61fbTFDX4GUm9VPQF-ANaDxU8EPJyyUbo-NTVp7dRHeQppMRAltwvQ8HLQp2tErxhYxwVSNTPp0F0L2NUMMJUPDk9ULRq8kUo9erLmxIN85Sr40M-nYwlgpycaQzkN5IWbcEvw4F9wFZqa0vZ2Wfhiq6ZwSXJXiupLYBlxP7okfgcckX2KAE7P3O9BAcDWnfFxFJYXU--pmvk1hGYLUu94oIl&jb=3633262468716f773d55616c666f7771266a716d3f556b6c646f777b2730323130266271607d3f44697065646d7a2668736035446b7265646f78273032333036, line 303: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712970433206	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712970843449	geckodriver	INFO	Listening on 127.0.0.1:52337
+1712970843974	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52338" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileHFKQXt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712970844549	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712970844722	Marionette	INFO	Listening on port 52346
+WebDriver BiDi listening on ws://127.0.0.1:52338
+Read port: 52346
+1712970844985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52338/devtools/browser/1909e749-aed1-4149-9c0a-fd82786f3afd
+JavaScript warning: https://info.betway.co.za/uMvfhks6KhQ8Ccw3?ec267b57ffe7c94e=nsr0NaCPS_dMMRDgrs9H7V25R1-fRfgk0W55gdDlSkkWdf2z9aXse38PLjRN4vuKAwhjwhVyMFQnEkW8NW2I8bI5pCnKFPAcZphPBh3zp5-3klurcE1Ti9_ZLKdrtIToMAPUdYAFzxkhoHVQLP6BUuhShs5W_qkJZxxgIVc6muakJPEAm-0Uv0QbJEIVST7Lja8z3Jor7_Gb-5R9UgPuZ5lsJam0bqMebQKw&jb=343124246a716d753f57696e646f77712668716f3d556b6c646d7f7b253a303130246871627d35446b7267646f7a246a71623d46697265646f7a273230333036, line 207: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712970874603	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712971613877	geckodriver	INFO	Listening on 127.0.0.1:52766
+1712971614398	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52767" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileFeeyP1"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712971614994	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712971615162	Marionette	INFO	Listening on port 52772
+WebDriver BiDi listening on ws://127.0.0.1:52767
+Read port: 52772
+1712971615405	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52767/devtools/browser/677ad1dc-bc13-4e87-a4aa-22f220a93783
+JavaScript warning: https://info.betway.co.za/noBt_geyEXRv359c?4ccc9e107f2e86c5=0Y6XgTqa16FUdISb8cJ3DGK5U7lMnVgRUoDGa3-uOW8sncYwBrwIixLHkJl-Ed3VKJrT1h3JWY7TUqRJ8aoaAmqB3FmfJvc0qfJGQOc-VxsI5slVv0P7BO7rmVQSF2S9nRL1zhbWhJQo3IfuuOcjO6przs6FB-cngN72cPUcnGjkRbAV8BwwvJfz6dbCEts8hKYD-66lT_yfJOB39hqahcoAmr3dJKWt9LZK&jb=3e33262668736f753f576b6c666f7f732462716d3f556b666c6d77712d30323330266a7360773f46617065666d78266a71623f446b726d666d7027303233303c, line 1006: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1712971645020	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712972776966	geckodriver	INFO	Listening on 127.0.0.1:61309
+1712972777481	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61310" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile8h5QO8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712972778076	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712972778234	Marionette	INFO	Listening on port 61315
+WebDriver BiDi listening on ws://127.0.0.1:61310
+Read port: 61315
+1712972778506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61310/devtools/browser/09f8fcab-dab8-4053-a336-dc730df725dd
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/jqueryval.js?v=1294, line 1: TypeError: n.data(...) is undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972796855	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972815332	geckodriver	INFO	Listening on 127.0.0.1:61475
+1712972815843	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61476" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileqYKHa0"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712972816343	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712972816516	Marionette	INFO	Listening on port 61481
+WebDriver BiDi listening on ws://127.0.0.1:61476
+Read port: 61481
+1712972816786	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61476/devtools/browser/5d19f7b6-8521-41e0-9b77-4aba5eccbcff
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972831557	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972833989	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js, line 1: Error: Cannot instantiate firebase-messaging - be sure to load firebase-app.js first.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972839482	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js, line 1: Error: Cannot instantiate firebase-messaging - be sure to load firebase-app.js first.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972845387	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1712972846387	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972853215	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972855716	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1712972870135	geckodriver	INFO	Listening on 127.0.0.1:61712
+1712972870655	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61713" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileQbeS65"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712972871241	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712972871429	Marionette	INFO	Listening on port 61718
+WebDriver BiDi listening on ws://127.0.0.1:61713
+Read port: 61718
+1712972871659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61713/devtools/browser/c020df34-4910-4c79-a197-11e244651bde
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://www.gstatic.com/firebasejs/6.2.0/firebase-messaging.js, line 1: Error: Cannot instantiate firebase-messaging - be sure to load firebase-app.js first.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972890352	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+1712972900691	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+1712972901342	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1712972928370	geckodriver	INFO	Listening on 127.0.0.1:61911
+1712972928881	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "61912" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilekDDvtN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1712972929423	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1712972929587	Marionette	INFO	Listening on port 61917
+Read port: 61917
+WebDriver BiDi listening on ws://127.0.0.1:61912
+1712972929707	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:61912/devtools/browser/6a7e3caa-09ad-4ac8-ad73-4bfe3ad0b3ce
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1294, line 58: NS_ERROR_FAILURE: 
+1713046407665	geckodriver	INFO	Listening on 127.0.0.1:59794
+1713046408148	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59795" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileMcVeKF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713046409026	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713046409200	Marionette	INFO	Listening on port 59802
+WebDriver BiDi listening on ws://127.0.0.1:59795
+Read port: 59802
+1713046409476	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59795/devtools/browser/c4a19b0b-2229-4b10-bf0c-68e9dafe6f5a
+JavaScript warning: https://info.betway.co.za/7IbDxc2ctb_fkaCw?c241ce3ea44bf9a3=nX3t-cd2DMArlWSDenc8_8WuOHfXZTTWiyAOq_jFqGhSj2kGmnnQ7IVxeJWVgR-NPPr6n7lvMknRENt4BJ3SxECRrN9nEcXvYcA8VAB3wnnu90J5SGghBRAltKPtgCblR88s7hMchbvuMsDIZ5kDbwmiTtjKpx3rl9mGtPQNC4fCSaBZDgrfHLQdGOIFJjmJs8Cszc19A_6erfrbJnS_gx01MNxArZ3XBv8f&jb=363324246a736d753f576b6c64677571246a716f3f556b6c6c6d777327323031302e6a71607d3d46697067646f78246a71623f44697a67646d78273232333036, line 189: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713046439052	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713046471260	geckodriver	INFO	Listening on 127.0.0.1:60024
+1713046471763	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60025" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileTHxA5f"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713046472415	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713046472586	Marionette	INFO	Listening on port 60031
+WebDriver BiDi listening on ws://127.0.0.1:60025
+Read port: 60031
+1713046472828	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60025/devtools/browser/eaf7a336-9e3d-43c1-95b7-bdeb1b40e828
+JavaScript warning: https://info.betway.co.za/NbTGhp-bDymCmmTa?ed66b4bb768e5aee=iimHH8MunNvx670_-9GpUXbfvNHzgoQgcxYBC24l_fOLUnuzzUSHP3qCWwu1SyazKHx7Q0249Y72bzfLtFDvaTeV7eGCavLmhx-020F7tKkX8SXbaGaJWe_UuZeKigroCKAKtz1H39DoIsOhEi9iqll8munxoDBbowrWdxvgwGkBjk1HLOHjUWT5y7wsbO7vN4mYzF-n--ddWQP1zww8y0DfaRc0LlX3DPv6&jb=3633262e68716d753f5f6b6e6667777b2662716f3f576b6c666f7573253232393226687362773d446970656e6d7a246a716a3f466b7a656e6f70273232313036, line 813: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713046502485	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.betway.co.za."
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713051044293	geckodriver	INFO	Listening on 127.0.0.1:49685
+1713051044825	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49686" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilePPVRCS"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713051045679	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713051045856	Marionette	INFO	Listening on port 49694
+WebDriver BiDi listening on ws://127.0.0.1:49686
+Read port: 49694
+1713051046099	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49686/devtools/browser/98bdb9eb-3222-410e-81d5-6b57b0446857
+JavaScript warning: https://info.betway.co.za/XG_suhADIk_rBwmq?1e613713462eaf2f=6D56sqf502wCpZBDutkQSIucuDE0RRZhbFTExOiChiLlBwZ2dkPDUUdMfvWVz0DGChnPhOhhGmGtZKXk8kDbmr6XG6k9abZMTbQbAFyGMw0bOBN1JCTwttYRmJjLEJuBGXC49YHT5I5z-h2C0SigFQc3qGRN2eXc8UgNHSydFV65SBd-aNj3QxGjvU-1H5gbXX_N9DA9RkYrEPPsYn5nouZVTCosbwM_Jn6r&jb=3633242462736d773f556b6c646d7f73246a716f35576b6e646f757125323033322e6a736a773d4e697067646778246871603f4469706d666d78273238313034, line 1081: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713051075727	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713057754660	geckodriver	INFO	Listening on 127.0.0.1:51178
+1713057755169	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51179" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileoirP9l"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713057755788	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713057755967	Marionette	INFO	Listening on port 51189
+WebDriver BiDi listening on ws://127.0.0.1:51179
+Read port: 51189
+1713057756324	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51179/devtools/browser/ee1e6206-59dd-4f22-af45-dc71b63514dc
+JavaScript warning: https://info.betway.co.za/b-Xz-8IV8SsklvwK?e4ab794387ea538a=h6VzLCSE1d043QXA3aXBeVJInVhlwsHgEGl2DKSDhDByj5Fgr7EwYByC_RtVYlp1qeHiArD_TSVvwVKIBUVoMxI1BAT6rTGWapc7hPLJ3DwuOM-9AsfNeVn8IOItvUOAvS9F1R3f9jUiooRazy0Gd9whRZ7WW-32MQ8NAQeicOjK5ICl4jax4QhU7vfROAH5IkkyZoL2utW8Mo5FhPkeVVOnbE7X9Z8gZdjw&jb=363124266a7b6d773d5f696e666f75732468716d3f55696c666f757b2530303138246a7162773f46697267666f702468736a3d466b7267666d7a273032333236, line 796: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713057785820	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c, line 174: Script terminated by timeout at:
+xb@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:174:391
+Gl@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:330:594
+pm@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:335:613
+pG/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:624:178
+aa.tk/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:572:126
+aa.tk/c/<@https://www.googletagmanager.com/gtag/js?id=G-S7B3NZ61BD&l=dataLayer&cx=c:571:420
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:24913
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:15697
+@https://betbooster-widget.lvision.io/v3/prod/140.js:1:27074
+_0x9d541a@https://betbooster-widget.lvision.io/v3/prod/140.js:1:54524
+_0x328625@https://betbooster-widget.lvision.io/v3/prod/140.js:1:55317
+
+1713058462944	Marionette	INFO	Stopped listening on port 51189
+Dynamically enable window occlusion 1
+1713060410766	geckodriver	INFO	Listening on 127.0.0.1:59866
+1713060411281	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59867" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofiletNR5db"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713060411783	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713060411917	Marionette	INFO	Listening on port 59887
+WebDriver BiDi listening on ws://127.0.0.1:59867
+Read port: 59887
+1713060412125	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59867/devtools/browser/632c7d60-9053-4578-9577-b58c45998bb3
+JavaScript warning: https://info.betway.co.za/9GcYgDlHVI4CVQHU?199a586b77a3d6b2=RQ3h4VpNKgeW67AZzOc7qEWKIvxxW6xdW9deXdcfHQmDbej-rp70-aflEP4PfVdxr1c32COQLj0pRAkiWnSPwXrS5ZlCEu3pokB8Jw_S9zlQCVUeBmx4rRdrY2LfqLJbB2iBYJb9YbBBrD7Le3klphjwUsvwadkJybobG8gxjNcANJeO_6rvL_jAv6FC95n5CL2XRx6zI913glvV8NXC7Ta2ZvQsUmz3R7SM&jb=3439262e68716f753d57696e646d7771246a716f3f57696c666d75732d3232333026627360773f466b7a656e6d7a266a73623d46697065646d78273232313236, line 54: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713060441809	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713060618442	geckodriver	INFO	Listening on 127.0.0.1:60208
+1713060618919	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60209" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilef4mXWy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713060619984	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713060620418	Marionette	INFO	Listening on port 60245
+WebDriver BiDi listening on ws://127.0.0.1:60209
+Read port: 60245
+1713060620640	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60209/devtools/browser/1e0bbc27-9432-40ca-86a6-d32816897b04
+JavaScript warning: https://info.betway.co.za/4tCrXoGrLZcWZuSx?c9de027bcf7e891c=ig7R6oNQB0lv47X4g7aTFMI-yeFO7XRZ9bPOHeB47HbMTMRrm90p3zs-Xld5ZV4jYYZvZV3ckg0a6DRJbf3ptFSCZ_zLiNZ2t43zf_UOJfeGdbjy4d-CO1mUHQdl6Hmbo30C_S8uiK9MRo-WH7Hp6GWyd4N1q8-JprZBOES-mg2u5LVc6R6OUmmxS2ap0FwaqRgOlvL2h9t59E5tg_zwJe-V5v1rKSMJc-In&jb=343324246a716f753d576b6e666f7773246a716d3d5f696c646d7573253a3231322468736a773d446b7067646f7a266a73623f466b7265666d78273030393236, line 885: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713060650027	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713060812057	geckodriver	INFO	Listening on 127.0.0.1:60718
+1713060812720	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60719" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilefdRpUI"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713060814142	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713060814541	Marionette	INFO	Listening on port 60724
+WebDriver BiDi listening on ws://127.0.0.1:60719
+Read port: 60724
+1713060815020	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60719/devtools/browser/da90422e-31a2-47f9-9c0b-4f70749b4a3d
+JavaScript warning: https://info.betway.co.za/D6HJiIC6cTYVk82j?b7bba6d75067654d=bGRnx3v_Pm3ISUdjFYwzNHyjfjUsb5znnV8kXtrT3gF3BheMcWT5BVewpg4uuuZ_5qVM1P_OEYYq-5hqhzMU3y3bj32YyqFeBU4R-G-uFjYq1LluVrd4iRWKij5Ae0fHJuoyF2DGWTaJ8EPgGvagEs7XV3g_A7ELZnschzd7Q93V8BQvCHFI3SKFyqm1OWruina5hNJrpOMN2NbhW8wKMflm2_L4TuRUGUn2&jb=3431262668736f773d57696c666d77712468736d3d576b6e646d7773253230333226687b62773f466b7265666d78266873623d446b7065646d7a253030313034, line 475: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713060844199	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713194513662	geckodriver	INFO	Listening on 127.0.0.1:59482
+1713194514177	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59483" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileueIlMd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713194514839	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713194515038	Marionette	INFO	Listening on port 59491
+WebDriver BiDi listening on ws://127.0.0.1:59483
+Read port: 59491
+1713194515319	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59483/devtools/browser/ab7d64a8-fb19-478f-87c4-9b6e53f53c9f
+JavaScript warning: https://info.betway.co.za/xrhEtOVQa0_x9LD2?2a9a22a8097c10aa=eKS21J5SCXLGpe6w2kH3Qb4IpZ6sz6EuLsXvFrnU82Uz1W84ZnTcZ587svcgGkgmJyc0HHW1n2R_TCeinv8BEdO7DXf3V00XIaftjFxZeUEucS1zhRZdN5SCjMxZkekadhoe9IeBkN02CFG-GLuxUVhasT-43FVBKKiM3NZUoSfM-nGYOV7mWAhiCV9C5kJA07mTVrTRhdodboNjN4f3yEQM1XLWz9WNyDQf&jb=343326246a716d753f556b6e646f7571266a716d3d556b6e646d7571253230313026687b60753d446b7065646f7a246a71603f46697267646f78273030333034, line 729: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713194544870	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713194811873	geckodriver	INFO	Listening on 127.0.0.1:59751
+1713194812388	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59752" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileHkIjoU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713194812916	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713194813055	Marionette	INFO	Listening on port 59759
+WebDriver BiDi listening on ws://127.0.0.1:59752
+Read port: 59759
+1713194813369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59752/devtools/browser/550da700-b1c6-4c42-9613-860ea74e2d74
+JavaScript error: https://cdn.betwayafrica.com/BWA/client.js, line 68: TypeError: d.getElementsByTagName(...)[0] is undefined
+1713194843182	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/pg8kfP5rHI9QH0Y5?4cc78e8bf353d299=XRHMK6PNFLZabi3ZSnygEP7gKYOMQXsLIg-3uUkftP6REIo5CXgcyKs-hNLmfvaXGV8CARZ33cYK_DlEF99cpVMGl7z80CcXbqKhVXDkjX8SCtVSqzWNBooGzJ1Aq4Tqt3_j18nJZH5_hOULU6enbP2mcJlSwXLMzLVy5t5EiOySjUnMoOInVMsiM3c2umG1l_ufzlaWZcR24dlbJrn0wUbg2J50jimKZok3&jb=363326266a7b6f773f576b66646f77712468716f3d57696c666f75732d30303332246a7160753d44697065666f70266871623f4e697265646d7a273230313236, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713195988905	geckodriver	INFO	Listening on 127.0.0.1:58346
+1713195989405	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58347" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofile2koEJk"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713195989872	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713195990002	Marionette	INFO	Listening on port 58354
+Read port: 58354
+WebDriver BiDi listening on ws://127.0.0.1:58347
+1713195990215	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58347/devtools/browser/66a3dc28-3345-46a2-a4f3-d2ed6622c0af
+JavaScript warning: https://info.betway.co.za/w_KVDHQaLJdoiIlN?d2baa2ff90225cc9=HgQeaysF-9AAcFuBv5LyOE2iU-4zH5MtC88JJ9W256pQ803LbGdZIaJaVP3KaYF_dPHuU_3DakMO59v2xNjxtwe5-zgcWm3VzIsNd_x0u05InDmeFUmd0616xn3FYDCIrCOgh5Do35JGfxAB08MheUDl3XxOQBj9ro9rWFxfihvNeHhWOOCG-ip5-AzJCLMbO8CHuMYc9zowpe8jyV4kb530qMRw1ESPqoPr&jb=36392426687b6f7d3f55696e646d77712668736d3555696e666f77732532323332246a7b60773f44697a67666d70266271603d46697065646f7a253038333234, line 15: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713196019922	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713199234391	geckodriver	INFO	Listening on 127.0.0.1:60988
+1713199234949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60989" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilei0h0eh"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713199235526	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713199235717	Marionette	INFO	Listening on port 60996
+WebDriver BiDi listening on ws://127.0.0.1:60989
+Read port: 60996
+1713199236052	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:60989/devtools/browser/a91c0f7b-77f9-4a39-815f-856cd5ca9a76
+1713199265569	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://info.betway.co.za/18zrC_ZRZdX_y3qb?194b1fa0a1007354=0KjjmOOUngui7yLLXDp7nyzaQgQzYo1gdsLZGwvu49UPEGuViTw4cvhjzl0F_ej_48gMewy5Qo7aKwa1fg2Ln2MYFR1tzBPYFWKBu_kN95c-2trgBIO9K4zQQv_JwDbasYa_Ji3zkTXxz9weGYiKcAuRrEtPwm0KEz-EeUwKuV8zTzaL6_dbb41ek4y_JQY8PnRbQwJ5DyRXsw77mwaTIsT4Wj95yL3OT3AE&jb=3639262668736d773f57696e646f7571246a716d3d576b6c666d7571253232313826687362773d46697a65666d78246871623d46697267646d78273030313036, line 105: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
