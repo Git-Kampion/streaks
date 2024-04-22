@@ -9,10 +9,10 @@ import seaborn as sb
 
 #engine = sqlalchemy.create_engine('mysql+pymysql://username:password@localhost:3306/db_name')
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\odds.accdb')
 cursor = conn.cursor()
 
-insert_stmt2 = "select * from eplNo"
+insert_stmt2 = "select * from EplBetOdds"
 #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
 data = ("Chelsea")
 cursor.execute(insert_stmt2)

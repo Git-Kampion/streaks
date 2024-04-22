@@ -1,4 +1,5 @@
 #BetTypesObjectRet.py
+import pandas as pd
 class BtOr:
    
        
@@ -1574,6 +1575,19 @@ class BtOr:
          BHUNoLabel =   cl1[2]
          BHUNoOdd =   cl1[3]  
 
+    def checkDataBase(conn,eventName,tableName):
+        #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+        cursor = conn.cursor()
+
+        insert_st = "SELECT * FROM "+ tableName+" where HTeam = ? AND ATeam = ?"
+        #insert_stmt2 = "select * from EplBetOdds where HTeam = " + eventName.split(" ")[0] +" and ATeam = " + eventName.split(" ")[2]
+        #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
+        newEvent = eventName.split(" v ")
+        data = (newEvent[0].strip(),newEvent[1].strip())
+        #cursor.execute(insert_stmt2)
+        cursor.execute(insert_st,data)
+        sql_data = pd.DataFrame(cursor.fetchall())
+        return sql_data
 
                 
                     

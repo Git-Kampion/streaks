@@ -1,4 +1,4 @@
-https://www.betway.co.za/sport/soccer/eng/premier_league# EplBetOdds leagueGroup-ENGPremierLeague
+# https://www.betway.co.za/sport/soccer/eng/premier_league# EplBetOdds leagueGroup-ENGPremierLeague
 https://www.betway.co.za/sport/soccer/esp/la_liga# laligaOdds leagueGroup-ESPLaLiga
 https://www.betway.co.za/sport/soccer/ita/serie_a# seriaOdds leagueGroup-ITASerieA
 https://www.betway.co.za/sport/soccer/germany/bundesliga# BundesLigaOdds leagueGroup-GermanyBundesliga

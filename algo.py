@@ -1,6 +1,7 @@
 import pandas as pd
 import time
 import pyodbc
+import openpyxl
 
 
 tencents = 0.10
@@ -11,7 +12,7 @@ def getInfo(parm):
 def btParse(ftype,Ttype,team):
  match ftype:
     case "Away2ndHalfWins":
-      res = getOdds("away","secHalvAwayWin",team)
+      res = getOdds(Ttype,ftype,team)
     case "AwayHalftimeFailToWin":
        a = 1 
     case "AwayHalfWins":
@@ -181,15 +182,27 @@ def btParse(ftype,Ttype,team):
     case "HomeFixtureUnder3Goal":
        a = 1
 def getOdds(HomeAway,sqlparm,TeamName):
+    teamQuery = ""
+    if len(TeamName) > 1:
+       for t in TeamName:
+          teamQuery =  t + " " + teamQuery 
+    else:
+       teamQuery = TeamName[0]
     conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\odds.accdb')
     cursor = conn.cursor()
-    insert_stmt2 = "select * from EplBetOdds"
+    insert_stmt2 = "select "+sqlparm+ " from EplBetOdds Where " +HomeAway+ "= " + TeamName 
     data = ("Chelsea")
     cursor.execute(insert_stmt2)
     sql_data = pd.DataFrame(cursor.fetchall())
 
-dataframe1 = pd.ExcelFile('streaks.xlsx')
-sheetNames = dataframe1.sheet_names
+v = pd.ExcelFile('streaks.xlsx')
+
+sheetNames = v.sheet_names
+
+teams = []
+
 for sn in sheetNames:
-    btParse(sn,sn)
-getInfo(tencents)
+   xl = v.parse(sn)
+   teams = xl.iloc[:,0].values
+   Ttype = sn[:4]
+   btParse(sn,Ttype,teams)
