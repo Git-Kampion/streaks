@@ -36147,3 +36147,378 @@ JavaScript warning: https://info.betway.co.za/TmZ7w0phyMaRzqa6?2119ee3c2f978e25=
 JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
 eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
 
+1713824185791	geckodriver	INFO	Listening on 127.0.0.1:49867
+1713824186270	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49868" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileNbMzVF"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713824187246	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713824187532	Marionette	INFO	Listening on port 60964
+WebDriver BiDi listening on ws://127.0.0.1:49868
+Read port: 60964
+1713824187860	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49868/devtools/browser/8d21909f-27b7-4766-8820-3076b00e0579
+1713824217324	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713824247695	geckodriver	INFO	Listening on 127.0.0.1:54036
+1713824248204	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54037" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileuxLOYY"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713824248994	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713824249173	Marionette	INFO	Listening on port 54042
+WebDriver BiDi listening on ws://127.0.0.1:54037
+Read port: 54042
+1713824249472	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:54037/devtools/browser/0cce73e1-bc07-4053-9cd8-8007991f5666
+JavaScript warning: https://info.betway.co.za/Y4SpiFd0hAouCoBR?5c52557c8c9e89c5=W57HEbJ7WCrU93YHIha_xhzZTwbceiuOFsFO7PQGwByjqfphLaguREu9-S69llIPgVMq394f63UTLjtyOYz1qD952bDFCAnqRSnMN318e_JgttIvvB3z27u4-RrGZMCWMdqBnZe80WvSd305PszCNbJnROOezcdhWrXTCVxA3CDel3fs18zwuD8JUY5_YfCCxvMkx137xZSfQaJm_fCe_K18F3VUlplD1g5g&jb=34312426687b677d3f576b6c646f77732668716f3f57696e646d777127303039302468736a773f446b7267666d702e6271623f44697265666f7a273232313234, line 520: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713824279090	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+1713826168086	geckodriver	INFO	Listening on 127.0.0.1:56693
+1713826168592	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56694" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileGpjwae"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713826169408	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713826169621	Marionette	INFO	Listening on port 56699
+WebDriver BiDi listening on ws://127.0.0.1:56694
+Read port: 56699
+1713826169919	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56694/devtools/browser/396e8431-eeb6-4448-bd0f-ea24dbc05c9e
+JavaScript warning: https://info.betway.co.za/x2o4QEqNLVaOG2yE?ab5f1e54dc716d9b=zjYHOYlLDpQkl0hRlHw3vDGN7umqCQaPVAGgvgS02hiXg9UpX3SXIJ5l8YR7TJa919orhbpi863TYYdOKvCEQdQbXUwTPoIGIRLm_gIWxic3WPi00dtjDz7dloUBJ-DBPcOE42VBv4m-EMpGKb7PlLmXViz4WHyIEgkAYOQIvFx8aPTed-lYzNcB_mTT3VxHssr2SZ0yYIodvyi1qEEM_3rW6Og7PmqYYh5Y&jb=36312e2668716f753d55616e666d7571266273673f55696c646d757b273030313026687362753d4469726d666d7a266a736035466b7067646f70253a32333236, line 1102: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713826199444	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js, line 1: Script terminated by timeout at:
+eb@https://livechat-betway.connexone.co.uk/static/chatWindow.d4bdfdb7.js:1:422362
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript error: , line 0: uncaught exception: Handshake Reply Failed
+JavaScript error: , line 0: uncaught exception: Handshake Reply Failed
+1713831525118	geckodriver	INFO	Listening on 127.0.0.1:65501
+1713831525621	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65502" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilejt6tT1"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713831526331	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713831526492	Marionette	INFO	Listening on port 65509
+WebDriver BiDi listening on ws://127.0.0.1:65502
+Read port: 65509
+1713831526760	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:65502/devtools/browser/6c002ee9-96d8-45ad-be9f-e8315dbce6e2
+JavaScript warning: https://info.betway.co.za/9peeCfHkJpYlpWs4?cd7d6b9ce32a2504=MiqKqNcD29RZF93dXHRV-jzNTSnrN3MHpik39kPMMQCspvceLvh1uM3VIulzwVJfTfyK2Yg8L0B3wIrQsXMzV0iKnUveRt4gE4qOrMm25KLZXV-kvvZbMftNLDN4461LB04k7NKwkOK4B5IVDrKxpwWF8A337S91QpSi9CAQRWE97Os1axGGdUCwBJ4g6PieRkSyOiCSsl-rbtsb39GKqJTScRLp4zKvRDsP&jb=3631262668736f753f55696c666f7773266273673d5f696c666d777325303233302e687362753544697265666d78266a71603d446b7265666f70253a30393236, line 264: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1713831556361	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript error: , line 0: NotFoundError: Could not move source file(C:\Users\letenok\AppData\Local\Temp\rust_mozprofilejt6tT1\bookmarkbackups\bookmarks-2024-04-23.jsonlz4) because it does not exist
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1299, line 1: SyntaxError: redeclaration of const baseUrl
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript error: https://www.clarity.ms/s/0.7.31/clarity.js, line 2: TypeError: $r is null
+1713837147470	geckodriver	INFO	Listening on 127.0.0.1:64274
+1713837147977	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64275" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofileoRKksL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713837148456	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713837148588	Marionette	INFO	Listening on port 64283
+WebDriver BiDi listening on ws://127.0.0.1:64275
+Read port: 64283
+1713837148769	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64275/devtools/browser/bc5aa428-8928-4f00-acbf-2352ec8ef01e
+console.error: services.settings: 
+  main/partitioning-exempt-urls Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  main/query-stripping Signature failed  TypeError: NetworkError: Network request failed
+console.error: services.settings: 
+  main/fingerprinting-protection-overrides Signature failed  TypeError: NetworkError: Network request failed
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+console.error: (new NetworkError("Network error: TypeError: NetworkError: Network request failed", "resource://services-settings/RemoteSettingsClient.sys.mjs", 107))
+1713837172534	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1713837179091	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1713837347884	geckodriver	INFO	Listening on 127.0.0.1:64326
+1713837348419	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64327" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\letenok\\AppData\\Local\\Temp\\rust_mozprofilefzWR2L"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1713837349052	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1713837349190	Marionette	INFO	Listening on port 64338
+WebDriver BiDi listening on ws://127.0.0.1:64327
+Read port: 64338
+1713837349386	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64327/devtools/browser/923556bb-b469-44be-b19c-a01a97467076
+1713837379886	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+JavaScript error: https://cdn2.betway.co.za/bundles/om.js?v=1299, line 12: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/homePage.js?v=1299, line 1: ReferenceError: jQuery is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/marketGrouping.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 186: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/language.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 260: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/account.js?v=1299, line 337: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 878: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 1225: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 1415: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 1681: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 1710: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 2409: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/sportsfilteroptions.js?v=1299, line 1: uncaught exception: bootstrap-datetimepicker requires jQuery to be loaded first
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 2618: TypeError: global is undefined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 2737: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/mybets.js?v=1299, line 9: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/mybetslip.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/buildABetBundle.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 2880: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/om.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/om.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3219: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3241: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3393: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3578: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3587: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3692: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 3966: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 4403: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 4622: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5079: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5160: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/jqueryui.js?v=1299, line 1: ReferenceError: jQuery is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5488: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5500: ReferenceError: $ is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5653: ReferenceError: _ is not defined
+JavaScript error: https://www.betway.co.za/Scripts/components/PartialViewScriptLoader.js?ver=4, line 4: ReferenceError: jQuery is not defined
+JavaScript error: https://www.betway.co.za/sport/soccer/arg/primera_b#, line 5786: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/always-active.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/liveinplay.js?v=1299, line 1: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn2.betway.co.za/bundles/account.js?v=1299, line 43: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 39: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/tutorials.js, line 34: ReferenceError: $ is not defined
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript warning: https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js, line 1: Script terminated by timeout at:
+Xb@https://livechat-betway.connexone.co.uk/static/chatWindow.72876cfe.js:1:421965
+
+JavaScript error: https://www.clarity.ms/s/0.7.31/clarity.js, line 2: TypeError: $r is null
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+JavaScript error: https://cdn.betwayafrica.com/BWA/toastMessages.js?v=1, line 11: TypeError: e.data is null
+1713841961901	Marionette	INFO	Stopped listening on port 64338
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

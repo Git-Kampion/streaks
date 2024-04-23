@@ -12,9 +12,9 @@ def getInfo(parm):
 def btParse(ftype,Ttype,team):
  match ftype:
     case "Away2ndHalfWins":
-      res = getOdds(Ttype,ftype,team)
+      res = getOdds(Ttype,"secHalvAwayWin",team)
     case "AwayHalftimeFailToWin":
-       a = 1 
+      res = getOdds(Ttype,"firstHalvHomeDraw",team)
     case "AwayHalfWins":
        a = 1 
     case "AwayHalftimeFailToWin":
@@ -98,9 +98,9 @@ def btParse(ftype,Ttype,team):
     case "AwayFullTimeOver4":
        a = 1
     case "Home2ndHalfWins":
-       a = 1
+       res = getOdds(Ttype,"secHalvHomeWin",team)
     case "Home2ndHalfFailToWin":
-       a = 1
+       res = getOdds(Ttype,"secHalvAwayDraw",team)
     case "HomeHalfTimeWins":
        a = 1
     case "HomeHalftimeFailToWin":
@@ -181,20 +181,42 @@ def btParse(ftype,Ttype,team):
        a = 1
     case "HomeFixtureUnder3Goal":
        a = 1
+
+def getTeamSheet():
+  file = open("identity.txt", "r")
+  content = file.read().split("\n")
+  data = [content]
+  return data
+
 def getOdds(HomeAway,sqlparm,TeamName):
-    teamQuery = ""
+    teamQuery = HomeAway + " = ?"
+    count = 0
+    ds = getTeamSheet();
+    tuples = []
     if len(TeamName) > 1:
        for t in TeamName:
-          teamQuery =  t + " " + teamQuery 
+         for k in ds[0]:
+          if t in k:
+             BetEplindex = ds[0].index(k)
+             st = ds[0][BetEplindex]
+             
+             #teamQuery = teamQuery +  str(st).split("=")[1].strip()
+             tuples.append(str(st).split("=")[1].strip())
+             count = count + 1
+             if count != len(TeamName):
+               teamQuery = teamQuery + "  or " + HomeAway + " = ?"
+             break; 
     else:
        teamQuery = TeamName[0]
     conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\odds.accdb')
     cursor = conn.cursor()
-    insert_stmt2 = "select "+sqlparm+ " from EplBetOdds Where " +HomeAway+ "= " + TeamName 
-    data = ("Chelsea")
-    cursor.execute(insert_stmt2)
+   # insert_stmt2 = "select "+sqlparm+ " from EplBetOdds Where " +HomeAway+ "= ?  +HomeAway+ "= ?""   
+    insert_stmt2 = "select "+sqlparm+ ", "+HomeAway+" from EplBetOdds Where " + teamQuery 
+    
+    data = (tuples)
+    cursor.execute(insert_stmt2,data)
     sql_data = pd.DataFrame(cursor.fetchall())
-
+    a = 0
 v = pd.ExcelFile('streaks.xlsx')
 
 sheetNames = v.sheet_names
@@ -205,4 +227,7 @@ for sn in sheetNames:
    xl = v.parse(sn)
    teams = xl.iloc[:,0].values
    Ttype = sn[:4]
-   btParse(sn,Ttype,teams)
+   if Ttype == "Home":
+    btParse(sn,"HTeam",teams)
+   else:
+    btParse(sn,"ATeam",teams)

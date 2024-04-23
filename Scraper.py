@@ -73,7 +73,7 @@ for lnk in content:
               _flag1 = False
               while _flag:
                   try:
-                      time.sleep(5)
+                     
                       lmb = browser.find_element(By.ID,"loadMoreButton").click()
                       _flag = True
                       time.sleep(5)
