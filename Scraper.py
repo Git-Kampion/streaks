@@ -120,8 +120,9 @@ for lnk in content:
                     OUres =  BtOr.OverUndeBreakdown(elem)
                   case "Match Result (1X2)":
                     res =  BtOr.MatchResbreakDown(elem)
-                    homeTeam = elem[0]
-                    awayTeam = elem[4]
+                    aas = eventName.split(" v ")
+                    homeTeam = aas[0].strip()
+                    awayTeam = aas[1].strip()
                   case "Both Teams To Score":
                     BTSRes =  BtOr.BothTSBreakDown(elem)            
                   case "Double Chance":

@@ -440,7 +440,7 @@ class BtOr:
                     count = 0            
         return highestMatch
     
-    def FixOverUnders(t,data,betype,ht):
+    def FixOverUnders(t,data,betype,ht,half):
         countO = 0
         countOv1 = 0
         countOv2 = 0
@@ -459,13 +459,30 @@ class BtOr:
         overs = []
         unders = []
         for r in data:
-            if betype == "k":
-             Hcon = int(r[ht])
-             Acon = int(r[ht + 1])
+            Hcon = int(r[ht])
+            Acon = int(r[ht + 1])
+            HomFrstHlf = int(r[ht + 2])
+            AwaFrstHlf = int(r[ht + 3])
+            AwaSecHlf = 0
+            HomSecHlf = 0
+            if Hcon == HomFrstHlf:
+                  HomSecHlf = 0
             else:
-             Hcon = int(r[ht - 1])
-             Acon = int(r[ht])
-            FullScore = Hcon + Acon
+                  HomSecHlf = Hcon - HomFrstHlf
+              
+            if Acon == AwaFrstHlf:
+                  AwaSecHlf = 0
+            else:
+                  AwaSecHlf = Acon - AwaFrstHlf
+             
+          
+            if half == "sec":
+             FullScore = HomSecHlf + AwaSecHlf
+            if half == "first":
+             FullScore = HomFrstHlf + AwaFrstHlf
+            if half == "over":
+             FullScore = Hcon + Acon
+            
             
             if FullScore == 0:
                 under0 = under0 + 1
@@ -546,23 +563,44 @@ class BtOr:
         arr = ([overs,unders])
         return arr
 
-    def Bts(t,data,betype,ht):
+    def Bts(t,data,betype,ht,way):
         
        count = 0
        notCount = 0
        arr = ([],[])
        for r in data:
-            if betype == "k":
+           
              Hcon = int(r[ht])
              Acon = int(r[ht + 1])
-            else:
-             Hcon = int(r[ht - 1])
-             Acon = int(r[ht])
+             HFirstHalf = int(r[ht + 2])
+             AFirstHalf = int(r[ht + 3])
+             HomSecHlf = 0
+             awaSecHlf = 0
+             if Hcon == HFirstHalf:
+                HomSecHlf = 0
+             else:
+                HomSecHlf = Hcon - HFirstHalf
 
-            if Hcon > 0 and Acon > 0:
-                count = count +1
-            else:
-                notCount = notCount+1
+             if Acon == AFirstHalf:
+                awaSecHlf = 0
+             else:
+                awaSecHlf = Acon - AFirstHalf
+
+             if way == "over":            
+              if Hcon > 0 and Acon > 0:
+                  count = count +1
+              else:
+                  notCount = notCount+1
+             if way == "first":            
+              if HFirstHalf > 0 and AFirstHalf > 0:
+                  count = count +1
+              else:
+                  notCount = notCount+1
+             if way == "sec":            
+              if HomSecHlf > 0 and awaSecHlf > 0:
+                    count = count +1
+              else:
+                    notCount = notCount+1
        arr = ([count,notCount])
        return arr
     
@@ -824,6 +862,7 @@ class BtOr:
         Homefrstunder5 = 0
         Homefrstunder6 = 0
 
+        HomefrstOverZ = 0
         HomefrstOver1 = 0
         HomefrstOver2 = 0
         HomefrstOver3 = 0
@@ -1330,6 +1369,7 @@ class BtOr:
         FrstHalfAunders.append(Frstunder1)        
         FrstHalfAunders.append(Frstunder2)   
 
+                
         FrstHalfHovers.append(HomefrstOver1)        
         FrstHalfHovers.append(HomefrstOver2)        
         FrstHalfHovers.append(HomefrstOver3)    
@@ -1404,30 +1444,84 @@ class BtOr:
         AwayConcedFirstHunder.append(AwayFrstConcedUnder4)         
         
        
-
+                #0      #1        #2              #3            #4            #5                #6                  #7                    #8                      #9                     #10                       #11                  #12                     #13            #14          #15             #16             #17                                                                                                    
         arr = ([overs,unders,FrstHalfAovers,FrstHalfAunders,SecHalfAovers,SecHalfAUnders,AwayConcedSecHovers,AwayConcedFirstHovers,AwayConcedSecHunder,AwayConcedFirstHunder,HomeFailConcedFirstHovers,HomeConcedFirstHovers,HomeFailConcedSecHovers,HomeConcedSecHovers,SecHalfHovers,SecHalfHUnders,FrstHalfHunders,FrstHalfHovers])
         return arr
     
     
     def ConcededWholeSeaon(t,data,betype,ht):
         count = 0
+        count2 = 0
+        count3 = 0
+        count4 = 0
+        count5 = 0
+        Notcount = 0
+        Notcount2 = 0
+        Notcount3 = 0
+        Notcount4 = 0
+        Notcount5 = 0
+        
         highestMatch = 0
-               
+           
+        
         for r in data:
-            if r[ht] >= 1:
-                count = count + 1          
-        return count
+            r = int(r[ht]) 
+            match r:
+              case 0:
+                Notcount = Notcount + 1                
+                Notcount2 = Notcount2 + 1
+                Notcount3 = Notcount3 + 1
+                Notcount4 = Notcount4 + 1
+                Notcount5 = Notcount5 + 1
+              case 1:
+                count = count + 1                
+                Notcount2 = Notcount2 + 1
+                Notcount3 = Notcount3 + 1
+                Notcount4 = Notcount4 + 1
+                Notcount5 = Notcount5 + 1
+              case 2:
+                count = count + 1
+                count2 = count2 + 1
+                Notcount3 = Notcount3 + 1
+                Notcount4 = Notcount4 + 1
+                Notcount5 = Notcount5 + 1
+              case 3:
+                count = count + 1
+                count2 = count2 + 1
+                count3 = count3 + 1            
+                Notcount4 = Notcount4 + 1
+                Notcount5 = Notcount5 + 1
+              case 4:
+                count = count + 1
+                count2 = count2 + 1
+                count3 = count3 + 1            
+                count4 = count4 + 1                            
+                Notcount5 = Notcount5 + 1
+              case 5:
+                count = count + 1
+                count2 = count2 + 1
+                count3 = count3 + 1            
+                count4 = count4 + 1                            
+                count5 = count5 + 1
+
+
+        arr = [count,Notcount,count2,Notcount2,count3,Notcount3,count4,Notcount4,count5,Notcount5]       
+        return arr
 
     def MatchRes(t,data,betype,ht):
       HomeWinCount = 0
       AwayWinCount = 0
       HomeFailToWin = 0
       AwayFailTowin = 0
+      HomeLose = 0
 
       HomeFlvWinCount = 0
       AwayFlvWinCount = 0
-      HomeFlvFailToWin = 0
+      HomeFlvLose = 0
       AwayFlvFailTowin = 0
+      HomeFailToLose = 0
+      HomeFlvFailToLose = 0
+      HomeSecFailToLose = 0
 
       HomeSecFlvWinCount = 0
       AwaySecFlvWinCount = 0
@@ -1460,36 +1554,43 @@ class BtOr:
         if Hcon > Acon:
            HomeWinCount = HomeWinCount + 1
            AwayFailTowin = AwayFailTowin + 1
+           HomeFailToLose= HomeFailToLose + 1
         if Acon > Hcon:
            AwayWinCount = AwayWinCount + 1
            HomeFailToWin = HomeFailToWin + 1
+           HomeLose = HomeLose + 1
+           
         if Hcon == Acon:
            AwayFailTowin = AwayFailTowin + 1
            HomeFailToWin = HomeFailToWin + 1
+           HomeFailToLose= HomeFailToLose + 1
       
         if HomFrstHlf > AFrstHlf:
            HomeFlvWinCount = HomeFlvWinCount + 1
            AwayFlvFailTowin = AwayFlvFailTowin + 1
+           HomeFlvFailToLose = HomeFlvFailToLose + 1  
         if AFrstHlf > HomFrstHlf:
            AwayFlvWinCount = AwayFlvWinCount + 1
-           HomeFlvFailToWin = HomeFlvFailToWin + 1
+           HomeFlvLose = HomeFlvLose + 1
         if HomFrstHlf == AFrstHlf:
            AwayFlvFailTowin = AwayFlvFailTowin + 1
-           HomeFlvFailToWin = HomeFlvFailToWin + 1  
+           HomeFlvFailToLose = HomeFlvFailToLose + 1  
 
         if HomeSecHlf > AwSecHlf:
            HomeSecFlvWinCount = HomeSecFlvWinCount + 1
            AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
+           HomeSecFailToLose = HomeSecFailToLose + 1
         if AwSecHlf > HomeSecHlf:
            AwaySecFlvWinCount = AwaySecFlvWinCount + 1
            HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1
         if HomeSecHlf == AwSecHlf:
            AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
-           HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1  
+           #HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1 
+           HomeSecFailToLose = HomeSecFailToLose + 1 
 
 
-
-      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvFailToWin,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin])  
+                #1            #2            #3            #4          #5                #6                  #7            #8            #9                 #10               #11                 #12              #13                 #14              #15            #16
+      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvLose,HomeFlvFailToLose,HomeSecFailToLose,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin,HomeFailToLose,HomeLose])  
       return arr
     
     def Dc(Title,body):

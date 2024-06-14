@@ -1,0 +1,32 @@
+import pandas as pd
+import time
+import pyodbc
+
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\odds.accdb')
+cursor = conn.cursor()
+ # insert_stmt2 = "select "+sqlparm+ " from EplBetOdds Where " +HomeAway+ "= ?  +HomeAway+ "= ?"" 
+sqlparm = "MatchResHome"
+insert_stmt2 = "select HTeam,ATeam,"+sqlparm+ " from EplBetOdds"  
+data = []
+cursor.execute(insert_stmt2)
+sql_data = pd.DataFrame(cursor.fetchall())
+columns = sql_data.columns
+offering = 0.10
+out = ""
+for each in sql_data.values:
+    asds = 0
+    AteamName = each[0][0]
+    HteamName = each[0][1]
+    convertedValue = ""
+    out = ""
+    for ch in each[0]:
+     asds += 1
+     if asds == 3 :
+      try:
+       if float(ch) > offering:
+        convertedValue = convertedValue + " "+ str(ch)
+      except:
+        convertedValue = convertedValue + " "+ 1.00
+    out = AteamName + " " + HteamName + " " + convertedValue
+    data.append(out)
+     
