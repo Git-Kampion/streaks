@@ -39,6 +39,46 @@ HomeFFOvs3= ([],[],[],[],[])
 
 ConceedFSoutcome = ([],[],[],[],[])
 ConceedFSoutcomeOne = ([],[],[],[],[])
+ConceedFSoutcomeTwo= ([],[],[],[],[])
+
+ScoreFSoutcome = ([],[],[],[],[])
+ScoreFSoutcomeOne = ([],[],[],[],[])
+ScoreFSoutcomeTwo = ([],[],[],[],[])
+
+ScoreFSoutcomeAny = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOutput = ([],[],[],[],[])
+
+FirstHalfAcionSecondHalfOverUnderZ = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderZOne = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderZTwo = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderZThree = ([],[],[],[],[])
+
+FirstHalfAwayWinSecondHalfLose= ([],[],[],[],[])
+FirstHalfAwayWinSecondHalfHomeWindraw= ([],[],[],[],[])
+FirstHalfAwayWinSecondHalfHomeScore= ([],[],[],[],[])
+
+FirstHAwayWinSecHAwayScore1= ([],[],[],[],[])
+FirstHAwayWinSecHAwayScore2= ([],[],[],[],[])
+FirstHAwayWinSecHAwayScore3= ([],[],[],[],[])
+
+FirstHAwayWinSecHHomeScore1= ([],[],[],[],[])
+FirstHAwayWinSecHHomeScore2= ([],[],[],[],[])
+FirstHAwayWinSecHHomeScore3= ([],[],[],[],[])
+
+FirstHalfAcionSecondHalfOverUnderO = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderOOne = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderOTwo = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderOThree = ([],[],[],[],[])
+
+FirstHalfAcionSecondHalfOverUnderT = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTOne = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTTwo = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTThree = ([],[],[],[],[])
+
+FirstHalfAcionSecondHalfOverUnderTT = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTTOne = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTTTwo = ([],[],[],[],[])
+FirstHalfAcionSecondHalfOverUnderTTThree = ([],[],[],[],[])
 
 HomeallBTS = ([],[],[],[],[])
 HomeFrstHBTS = ([],[],[],[],[])
@@ -211,747 +251,238 @@ def awayFilter(data):
       occurence = 0
    else:
      rfdA = BtOr.refindedDatam(t,data,4)
-     HWinLose = BtOr.MatchRes(t,rfdA,"b",6)
-     AwOvers = BtOr.OverUnderSeaon(t,rfdA,"b",6)
-     HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"over")
-     HHalfimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"first")
-     HsecHaTimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"sec")
-     hFBTS  = BtOr.Bts(t,rfdA,"b",5,"over")
-     hfirstBTS = BtOr.Bts(t,rfdA,"b",5,"first")
-     hSecndBTS = BtOr.Bts(t,rfdA,"b",5,"sec")
-     HmeConceedFulltime = BtOr.ConcededWholeSeaon(t,rfdA,"b",5)
-     ConceedXnumFrstHalf = SlPA.ConceedSecondLayerPerceptron(t,rfdA,"k",5)
+    # HWinLose = BtOr.MatchRes(t,rfdA,"b",6)
+     #AwOvers = BtOr.OverUnderSeaon(t,rfdA,"b",6)
+    # HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"over")
+    # HHalfimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"first")
+     #HsecHaTimeOver = BtOr.FixOverUnders(t,rfdA,"b",5,"sec")
+    # hFBTS  = BtOr.Bts(t,rfdA,"b",5,"over")
+    # hfirstBTS = BtOr.Bts(t,rfdA,"b",5,"first")
+    # hSecndBTS = BtOr.Bts(t,rfdA,"b",5,"sec")
+    # HmeConceedFulltime = BtOr.ConcededWholeSeaon(t,rfdA,"b",5)
+    # ConceedXnumFrstHalf = SlPA.ConceedSecondLayerPerceptron(t,rfdA,"k",5)
+    # ScoreXnumFrstHalf = SlPA.ConceedSecondLayerPerceptron(t,rfdA,"b",8)
+     ScoreFrstHalf = SlPA.ScoreFirstHConceedSecondLayerPerceptron(t,rfdA,"b",8)
+     ActionOutpFrstHalf = SlPA.HaltimeFultimeActionOutput(t,rfdA,"b",8)
+     ActionOutpFrstHalfOverUnder = SlPA.HaltimeFultimeActionOutputOverUnder(t,rfdA,"b",8)
+     FirstHalfTrailSecOutput = SlPA.FirstHalfWinSecHalfOut(t,rfdA,"b",8)
 
      #hBTS = BtOr.Bts(t,rfdA,"k",5)
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Home Over Zero Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[14] :          
+          FirstHAwayWinSecHHomeScore1[0].append(str(FirstHalfTrailSecOutput[14])+ "/" +str(FirstHalfTrailSecOutput[15]))
+          FirstHAwayWinSecHHomeScore1[1].append(len(rfdA))
+          FirstHAwayWinSecHHomeScore1[2].append(t)
+          FirstHAwayWinSecHHomeScore1[3].append("FirstHAwayWinSecHHomeScore1")
+          FirstHAwayWinSecHHomeScore1[4].append("AwayGamesPlayed")
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Home Over One Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[14] :          
+          FirstHAwayWinSecHHomeScore2[0].append(str(FirstHalfTrailSecOutput[16])+ "/" +str(FirstHalfTrailSecOutput[17]))
+          FirstHAwayWinSecHHomeScore2[1].append(len(rfdA))
+          FirstHAwayWinSecHHomeScore2[2].append(t)
+          FirstHAwayWinSecHHomeScore2[3].append("FirstHAwayWinSecHHomeScore2")
+          FirstHAwayWinSecHHomeScore2[4].append("AwayGamesPlayed")
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Home Over Two Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[14] :          
+          FirstHAwayWinSecHHomeScore3[0].append(str(FirstHalfTrailSecOutput[18])+ "/" +str(FirstHalfTrailSecOutput[19]))
+          FirstHAwayWinSecHHomeScore3[1].append(len(rfdA))
+          FirstHAwayWinSecHHomeScore3[2].append(t)
+          FirstHAwayWinSecHHomeScore3[3].append("FirstHAwayWinSecHHomeScore3")
+          FirstHAwayWinSecHHomeScore3[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Away Over Zero Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[6] :          
+          FirstHAwayWinSecHAwayScore1[0].append(str(FirstHalfTrailSecOutput[6])+ "/" +str(FirstHalfTrailSecOutput[7]))
+          FirstHAwayWinSecHAwayScore1[1].append(len(rfdA))
+          FirstHAwayWinSecHAwayScore1[2].append(t)
+          FirstHAwayWinSecHAwayScore1[3].append("FirstHAwayWinSecHAwayScore1")
+          FirstHAwayWinSecHAwayScore1[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Away Over one Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[8] :          
+          FirstHAwayWinSecHAwayScore2[0].append(str(FirstHalfTrailSecOutput[8])+ "/" +str(FirstHalfTrailSecOutput[9]))
+          FirstHAwayWinSecHAwayScore2[1].append(len(rfdA))
+          FirstHAwayWinSecHAwayScore2[2].append(t)
+          FirstHAwayWinSecHAwayScore2[3].append("FirstHAwayWinSecHAwayScore2")
+          FirstHAwayWinSecHAwayScore2[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Away Over Two Sechnd HAlf
+     if len(rfdA) - FirstHalfTrailSecOutput[10] :          
+          FirstHAwayWinSecHAwayScore3[0].append(str(FirstHalfTrailSecOutput[10])+ "/" +str(FirstHalfTrailSecOutput[11]))
+          FirstHAwayWinSecHAwayScore3[1].append(len(rfdA))
+          FirstHAwayWinSecHAwayScore3[2].append(t)
+          FirstHAwayWinSecHAwayScore3[3].append("FirstHAwayWinSecHAwayScore3")
+          FirstHAwayWinSecHAwayScore3[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Home score
+     if len(rfdA) - FirstHalfTrailSecOutput[4] :          
+          FirstHalfAwayWinSecondHalfHomeScore[0].append(str(FirstHalfTrailSecOutput[4])+ "/" +str(FirstHalfTrailSecOutput[5]))
+          FirstHalfAwayWinSecondHalfHomeScore[1].append(len(rfdA))
+          FirstHalfAwayWinSecondHalfHomeScore[2].append(t)
+          FirstHalfAwayWinSecondHalfHomeScore[3].append("FirstHAwayWinSecHHomeScore")
+          FirstHalfAwayWinSecondHalfHomeScore[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: Away leading Halftime//Home WinDraw vs AwayDraw
+     if len(rfdA) - FirstHalfTrailSecOutput[2] :          
+          FirstHalfAwayWinSecondHalfHomeWindraw[0].append(str(FirstHalfTrailSecOutput[2])+ "/" +str(FirstHalfTrailSecOutput[3]))
+          FirstHalfAwayWinSecondHalfHomeWindraw[1].append(len(rfdA))
+          FirstHalfAwayWinSecondHalfHomeWindraw[2].append(t)
+          FirstHalfAwayWinSecondHalfHomeWindraw[3].append("FirstHalfAwayWinSecHalfHomeWD")
+          FirstHalfAwayWinSecondHalfHomeWindraw[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Winning,Second Half output: lost while leading Halftime
+     if len(rfdA) - FirstHalfTrailSecOutput[0] :          
+          FirstHalfAwayWinSecondHalfLose[0].append(str(FirstHalfTrailSecOutput[0])+ "/" +str(FirstHalfTrailSecOutput[1]))
+          FirstHalfAwayWinSecondHalfLose[1].append(len(rfdA))
+          FirstHalfAwayWinSecondHalfLose[2].append(t)
+          FirstHalfAwayWinSecondHalfLose[3].append("FirstHalfAwayWinSecHalfLose")
+          FirstHalfAwayWinSecondHalfLose[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Zero:Zero First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[0] :          
+          FirstHalfAcionSecondHalfOverUnderZ[0].append(str(ActionOutpFrstHalfOverUnder[0])+ "/" +str(ActionOutpFrstHalfOverUnder[5]))
+          FirstHalfAcionSecondHalfOverUnderZ[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderZ[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderZ[3].append("FirstHalfUnderZeroSecOverZero")
+          FirstHalfAcionSecondHalfOverUnderZ[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Zero:One First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[10] :          
+          FirstHalfAcionSecondHalfOverUnderZOne[0].append(str(ActionOutpFrstHalfOverUnder[10])+ "/" +str(ActionOutpFrstHalfOverUnder[15]))
+          FirstHalfAcionSecondHalfOverUnderZOne[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderZOne[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderZOne[3].append("FirstHalfOverZeroSecOverOne")
+          FirstHalfAcionSecondHalfOverUnderZOne[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Zero:Two First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[20] :          
+          FirstHalfAcionSecondHalfOverUnderZTwo[0].append(str(ActionOutpFrstHalfOverUnder[20])+ "/" +str(ActionOutpFrstHalfOverUnder[25]))
+          FirstHalfAcionSecondHalfOverUnderZTwo[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderZTwo[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderZTwo[3].append("FirstHalfOverZeroSecOverTwo")
+          FirstHalfAcionSecondHalfOverUnderZTwo[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Zero:Three First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[2] :          
+          FirstHalfAcionSecondHalfOverUnderZThree[0].append(str(ActionOutpFrstHalfOverUnder[30])+ "/" +str(ActionOutpFrstHalfOverUnder[35]))
+          FirstHalfAcionSecondHalfOverUnderZThree[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderZThree[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderZThree[3].append("FirstHalfOverZeroSecOverThree")
+          FirstHalfAcionSecondHalfOverUnderZThree[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over One:Zero First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[1] :          
+          FirstHalfAcionSecondHalfOverUnderO[0].append(str(ActionOutpFrstHalfOverUnder[1])+ "/" +str(ActionOutpFrstHalfOverUnder[6]))
+          FirstHalfAcionSecondHalfOverUnderO[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderO[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderO[3].append("FirstHalfOverOneSecUnderZero")
+          FirstHalfAcionSecondHalfOverUnderO[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over One:One First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[11] :          
+          FirstHalfAcionSecondHalfOverUnderOOne[0].append(str(ActionOutpFrstHalfOverUnder[11])+ "/" +str(ActionOutpFrstHalfOverUnder[16]))
+          FirstHalfAcionSecondHalfOverUnderOOne[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderOOne[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderOOne[3].append("FirstHalfOverOneSecOverOne")
+          FirstHalfAcionSecondHalfOverUnderOOne[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over One:Two First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[21] :          
+          FirstHalfAcionSecondHalfOverUnderOTwo[0].append(str(ActionOutpFrstHalfOverUnder[21])+ "/" +str(ActionOutpFrstHalfOverUnder[26]))
+          FirstHalfAcionSecondHalfOverUnderOTwo[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderOTwo[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderOTwo[3].append("FirstHalfOverOneSecOverTwo")
+          FirstHalfAcionSecondHalfOverUnderOTwo[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over One:Three First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[31] :          
+          FirstHalfAcionSecondHalfOverUnderOThree[0].append(str(ActionOutpFrstHalfOverUnder[31])+ "/" +str(ActionOutpFrstHalfOverUnder[36]))
+          FirstHalfAcionSecondHalfOverUnderOThree[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderOThree[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderOThree[3].append("FirstHalfOverOneSecOverThree")
+          FirstHalfAcionSecondHalfOverUnderOThree[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Two:Zero First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[2] :          
+          FirstHalfAcionSecondHalfOverUnderT[0].append(str(ActionOutpFrstHalfOverUnder[2])+ "/" +str(ActionOutpFrstHalfOverUnder[7]))
+          FirstHalfAcionSecondHalfOverUnderT[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderT[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderT[3].append("FirstHalfOverTwoSecUnderZero")
+          FirstHalfAcionSecondHalfOverUnderT[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Two:One First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[12] :          
+          FirstHalfAcionSecondHalfOverUnderTOne[0].append(str(ActionOutpFrstHalfOverUnder[12])+ "/" +str(ActionOutpFrstHalfOverUnder[17]))
+          FirstHalfAcionSecondHalfOverUnderTOne[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTOne[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTOne[3].append("FirstHalfOverTwoSecOverOne")
+          FirstHalfAcionSecondHalfOverUnderTOne[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Two:Two First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[22] :          
+          FirstHalfAcionSecondHalfOverUnderTTwo[0].append(str(ActionOutpFrstHalfOverUnder[22])+ "/" +str(ActionOutpFrstHalfOverUnder[27]))
+          FirstHalfAcionSecondHalfOverUnderTTwo[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTTwo[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTTwo[3].append("FirstHalfOverTwoSecOverTwo")
+          FirstHalfAcionSecondHalfOverUnderTTwo[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Two:Three First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[32] :          
+          FirstHalfAcionSecondHalfOverUnderTThree[0].append(str(ActionOutpFrstHalfOverUnder[32])+ "/" +str(ActionOutpFrstHalfOverUnder[37]))
+          FirstHalfAcionSecondHalfOverUnderTThree[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTThree[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTThree[3].append("FirstHalfOverTwoSecOverThree")
+          FirstHalfAcionSecondHalfOverUnderTThree[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Three:Zero First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[3] :          
+          FirstHalfAcionSecondHalfOverUnderTT[0].append(str(ActionOutpFrstHalfOverUnder[3])+ "/" +str(ActionOutpFrstHalfOverUnder[8]))
+          FirstHalfAcionSecondHalfOverUnderTT[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTT[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTT[3].append("FirstHalfOverThreeSecUnderZero")
+          FirstHalfAcionSecondHalfOverUnderTT[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Three:One First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[13] :          
+          FirstHalfAcionSecondHalfOverUnderTTOne[0].append(str(ActionOutpFrstHalfOverUnder[13])+ "/" +str(ActionOutpFrstHalfOverUnder[18]))
+          FirstHalfAcionSecondHalfOverUnderTTOne[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTTOne[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTTOne[3].append("FirstHalfOverTwoSecOverOne")
+          FirstHalfAcionSecondHalfOverUnderTTOne[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Three:Two First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[23] :          
+          FirstHalfAcionSecondHalfOverUnderTTTwo[0].append(str(ActionOutpFrstHalfOverUnder[23])+ "/" +str(ActionOutpFrstHalfOverUnder[28]))
+          FirstHalfAcionSecondHalfOverUnderTTTwo[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTTTwo[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTTTwo[3].append("FirstHalfOverThreeSecOverTwo")
+          FirstHalfAcionSecondHalfOverUnderTTTwo[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: Over Three:Three First Half Goal /second Half Output over/under
+     if len(rfdA) - ActionOutpFrstHalfOverUnder[33] :          
+          FirstHalfAcionSecondHalfOverUnderTTThree[0].append(str(ActionOutpFrstHalfOverUnder[33])+ "/" +str(ActionOutpFrstHalfOverUnder[38]))
+          FirstHalfAcionSecondHalfOverUnderTTThree[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOverUnderTTThree[2].append(t)
+          FirstHalfAcionSecondHalfOverUnderTTThree[3].append("FirstHalfOverThreeSecOverThree")
+          FirstHalfAcionSecondHalfOverUnderTTThree[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away HalftimeAction Fulltime output: First Half Goal , /second Half Output
+     if len(rfdA) - ActionOutpFrstHalf[0] :          
+          FirstHalfAcionSecondHalfOutput[0].append(str(ActionOutpFrstHalf[0])+ "/" +str(ActionOutpFrstHalf[1]))
+          FirstHalfAcionSecondHalfOutput[1].append(len(rfdA))
+          FirstHalfAcionSecondHalfOutput[2].append(t)
+          FirstHalfAcionSecondHalfOutput[3].append("FirstHalfGoalFulltimeOverUnder")
+          FirstHalfAcionSecondHalfOutput[4].append("AwayGamesPlayed")
 
 #=====================================================================================================#
-#Away Conceed Zero First Half/Second Half out
-     if len(rfdA) - ConceedXnumFrstHalf[0] :          
-          ConceedFSoutcome[0].append(str(ConceedXnumFrstHalf[0])+ "/" +str(ConceedXnumFrstHalf[5]))
-          ConceedFSoutcome[1].append(len(rfdA))
-          ConceedFSoutcome[2].append(t)
-          ConceedFSoutcome[3].append("AwayConceedZeroFirstHSecHOut")
-          ConceedFSoutcome[4].append("AwayGamesPlayed")
-#=====================================================================================================#
-#Away Conceed One First Half/Second Half out
-     if len(rfdA) - ConceedXnumFrstHalf[0] :          
-          ConceedFSoutcomeOne[0].append(str(ConceedXnumFrstHalf[1])+ "/" +str(ConceedXnumFrstHalf[5]))
-          ConceedFSoutcomeOne[1].append(len(rfdA))
-          ConceedFSoutcomeOne[2].append(t)
-          ConceedFSoutcomeOne[3].append("AwayConceedOneFirstHSecHOut")
-          ConceedFSoutcomeOne[4].append("AwayGamesPlayed")
-#=====================================================================================================#
-#Away Fix fulltime over 0.5
-     if len(rfdA) - HfullTimeOver[0][0] :          
-          HomefullOver1[0].append(str(HfullTimeOver[0][0])+ "/" +str(HfullTimeOver[1][0]))
-          HomefullOver1[1].append(len(rfdA))
-          HomefullOver1[2].append(t)
-          HomefullOver1[3].append("AwayFixtureFulltimeOverZ")
-          HomefullOver1[4].append("AwayGamesPlayed")
-#Away Fix fulltime over 1.5
-     if len(rfdA) - HfullTimeOver[0][1] :          
-          HomefullOver2[0].append(str(HfullTimeOver[0][1])+ "/" +str(HfullTimeOver[1][1]))
-          HomefullOver2[1].append(len(rfdA))
-          HomefullOver2[2].append(t)
-          HomefullOver2[3].append("AwayFixtureFulltimeOver1")
-          HomefullOver2[4].append("AwayGamesPlayed")
-#Home Fix fulltime over 2.5
-     if len(rfdA) - HfullTimeOver[0][2] :          
-          HomefullOver3[0].append(str(HfullTimeOver[0][2])+ "/" +str(HfullTimeOver[1][2]))
-          HomefullOver3[1].append(len(rfdA))
-          HomefullOver3[2].append(t)
-          HomefullOver3[3].append("AwayFixtureFulltimeOver2")
-          HomefullOver3[4].append("AwayGamesPlayed")
-
-#Away Fix  fulltime over 3.5
-     if len(rfdA) - HfullTimeOver[0][3] :          
-          HomefullOver4[0].append(str(HfullTimeOver[0][3])+ "/" +str(HfullTimeOver[1][3]))
-          HomefullOver4[1].append(len(rfdA))
-          HomefullOver4[2].append(t)
-          HomefullOver4[3].append("AwayFixtureFulltimeOver3")
-          HomefullOver4[4].append("AwayGamesPlayed")
-#Away Fix  fulltime over 4.5
-     if len(rfdA) - HfullTimeOver[0][4] :          
-          HomefullOver5[0].append(str(HfullTimeOver[0][4])+ "/" +str(HfullTimeOver[1][4]))
-          HomefullOver5[1].append(len(rfdA))
-          HomefullOver5[2].append(t)
-          HomefullOver5[3].append("AwayFixtureFulltimeOver4")
-          HomefullOver5[4].append("AwayGamesPlayed")
-
-#=============================================================================#
-#Away wins
-     if len(rfdA) - HWinLose[0]:          
-          HWins[0].append(str(HWinLose[0]) + "/" + str(HWinLose[15]))
-          HWins[1].append(len(rfdA))
-          HWins[2].append(t)
-          HWins[3].append("AwayFulltimeWins")
-          HWins[4].append("AwayGamesPlayed")
-#=============================================================================#
-#Away Faulure to Lose/Win Draw
-     if len(rfdA) - HWinLose[3] :          
-          HWinsDraw[0].append(str(HWinLose[3]) + "/" + str(HWinLose[0]))
-          HWinsDraw[1].append(len(rfdA))
-          HWinsDraw[2].append(t)
-          HWinsDraw[3].append("AwayFulltimeWinDraw")
-          HWinsDraw[4].append("AwayGamesPlayed") 
-#========================================================================#
-#Away halftime wins   
-     if len(rfdA) - HWinLose[6] :          
-          HHalftimeWins[0].append(str(HWinLose[6])+ "/" +str(HWinLose[4]))
-          HHalftimeWins[1].append(len(rfdA))
-          HHalftimeWins[2].append(t)
-          HHalftimeWins[3].append("AwayHalfTimeWins")
-          HHalftimeWins[4].append("AwayGamesPlayed") 
-#========================================================================#
-#Away halftime  Win Draw/Faulure to Lose
-     if len(rfdA) - HWinLose[16] :          
-          HHWinsDraw[0].append(str(HWinLose[16]) + "/" + str(HWinLose[4]))
-          HHWinsDraw[1].append(len(rfdA))
-          HHWinsDraw[2].append(t)
-          HHWinsDraw[3].append("AwayHalftimeWinDraw")
-          HHWinsDraw[4].append("AwayGamesPlayed") 
-#========================================================================#
-#Away Secondhalf Win Draw/Faulure to Lose
-     if len(rfdA) - HWinLose[13] :          
-          HSWinsDraw[0].append(str(HWinLose[13]) + "/" + str(HWinLose[10]))
-          HSWinsDraw[1].append(len(rfdA))
-          HSWinsDraw[2].append(t)
-          HSWinsDraw[3].append("AwaySecondHalfWinDraw")
-          HSWinsDraw[4].append("AwayGamesPlayed") 
-#========================================================================#
-#Away Secondhalf Win 
-     if len(rfdA) - HWinLose[12] :          
-          H2ndHWins[0].append(str(HWinLose[12])+ "/" +str(HWinLose[10]))
-          H2ndHWins[1].append(len(rfdA))
-          H2ndHWins[2].append(t)
-          H2ndHWins[3].append("AwaySecondHalfWin")
-          H2ndHWins[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away First Half over 0.5
-     if len(rfdA) - AwOvers[2][0]:          
-          HomeHalftimeOverZ[0].append(str(AwOvers[2][0])+ "/" +str(AwOvers[3][0]))
-          HomeHalftimeOverZ[1].append(len(rfdA))
-          HomeHalftimeOverZ[2].append(t)
-          HomeHalftimeOverZ[3].append("AwayFirstHalfOverZ")
-          HomeHalftimeOverZ[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away First Half over 1.5
-     if len(rfdA) - AwOvers[2][1]:          
-          HomefrstOver1[0].append(str(AwOvers[2][1])+ "/" +str(AwOvers[3][1]))
-          HomefrstOver1[1].append(len(rfdA))
-          HomefrstOver1[2].append(t)
-          HomefrstOver1[3].append("AwayFirstHalfOver1")
-          HomefrstOver1[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away First Half over 2.5
-     if len(rfdA) - AwOvers[2][2] :          
-          HomefrstOver2[0].append(str(AwOvers[2][2])+ "/" + str(AwOvers[3][2]))
-          HomefrstOver2[1].append(len(rfdA))
-          HomefrstOver2[2].append(t)
-          HomefrstOver2[3].append("AwayFirstHalfOver2")
-          HomefrstOver2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half over 0.5
-     if len(rfdA) - AwOvers[4][0]:          
-          HomeSOvs[0].append(str(AwOvers[4][0])+ "/" +str(AwOvers[5][0]))
-          HomeSOvs[1].append(len(rfdA))
-          HomeSOvs[2].append(t)
-          HomeSOvs[3].append("AwaySecHalfOverZ")
-          HomeSOvs[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half over 1.5
-     if len(rfdA) - AwOvers[4][1] :          
-          HomeSOvs1[0].append(str(AwOvers[4][1])+ "/" +str(AwOvers[5][1]))
-          HomeSOvs1[1].append(len(rfdA))
-          HomeSOvs1[2].append(t)
-          HomeSOvs1[3].append("AwaySecHalfOver1")
-          HomeSOvs1[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half over 2.5
-     if len(rfdA) - AwOvers[4][2]:          
-          HomeSOvs2[0].append(str(AwOvers[4][2]) + "/" + str(AwOvers[5][2]))
-          HomeSOvs2[1].append(len(rfdA))
-          HomeSOvs2[2].append(t)
-          HomeSOvs2[3].append("AwaySecHalfOver2")
-          HomeSOvs2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away First Half Fixture over 0.5
-     if len(rfdA) - HHalfimeOver[0][0]:          
-          HomeFFOvs[0].append(str(HHalfimeOver[0][0]) + "/" +str(HHalfimeOver[1][0]))
-          HomeFFOvs[1].append(len(rfdA))
-          HomeFFOvs[2].append(t)
-          HomeFFOvs[3].append("AwayFixtureFirstHlfOverZ")
-          HomeFFOvs[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away First Half Fixture over 1.5
-     if len(rfdA) - HHalfimeOver[0][1]:          
-          HomeFFOvs2[0].append(str(HHalfimeOver[0][1]) + "/" + str(HHalfimeOver[1][1]))
-          HomeFFOvs2[1].append(len(rfdA))
-          HomeFFOvs2[2].append(t)
-          HomeFFOvs2[3].append("AwayFixtureFirstHalfOver1")
-          HomeFFOvs2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away First Half Fixture over 2.5
-     if len(rfdA) - HHalfimeOver[0][2]:          
-          HomeFFOvs3[0].append(str(HHalfimeOver[0][2]) + "/" + str(HHalfimeOver[1][2]))
-          HomeFFOvs3[1].append(len(rfdA))
-          HomeFFOvs3[2].append(t)
-          HomeFFOvs3[3].append("AwayFixtureFirstHalfOver2" )
-          HomeFFOvs3[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half Fixture over 0.5
-     if len(rfdA) - HsecHaTimeOver[0][0] :          
-          HomeSFOvs[0].append(str(HsecHaTimeOver[0][0]) + "/" + str(HsecHaTimeOver[1][0]))
-          HomeSFOvs[1].append(len(rfdA))
-          HomeSFOvs[2].append(t)
-          HomeSFOvs[3].append("AwayFixtureSecondHalfOverZ")
-          HomeSFOvs[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half Fixture over 1.5
-     if len(rfdA) - HsecHaTimeOver[0][1] :          
-          HomeSFOvs2[0].append(str(HsecHaTimeOver[0][1]) + "/" + str(HsecHaTimeOver[1][1]))
-          HomeSFOvs2[1].append(len(rfdA))
-          HomeSFOvs2[2].append(t)
-          HomeSFOvs2[3].append("AwayFixtureSecondHalfOver1")
-          HomeSFOvs2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half Fixture over 2.5
-     if len(rfdA) - HsecHaTimeOver[0][2] :          
-          HomeSFOvs3[0].append(str(HsecHaTimeOver[0][2])  + "/" + str(HsecHaTimeOver[1][2]))
-          HomeSFOvs3[1].append(len(rfdA))
-          HomeSFOvs3[2].append(t)
-          HomeSFOvs3[3].append("AwayFixtureSecondHalfOver2")
-          HomeSFOvs3[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Overall Fixture BTS
-     if len(rfdA) - hFBTS[0] :          
-          HomeallBTS[0].append(str(hFBTS[0]) + "/" + str(hFBTS[1]))
-          HomeallBTS[1].append(len(rfdA))
-          HomeallBTS[2].append(t)
-          HomeallBTS[3].append("AwayFixtureBTS")
-          HomeallBTS[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away First Half BTS
-     if len(rfdA) - hfirstBTS[0] :          
-          HomeFrstHBTS[0].append(str(hfirstBTS[0]) + "/" + str(hfirstBTS[1]))
-          HomeFrstHBTS[1].append(len(rfdA))
-          HomeFrstHBTS[2].append(t)
-          HomeFrstHBTS[3].append("AwayFirstHalfBTS")
-          HomeFrstHBTS[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Second Half BTS
-     if len(rfdA) - hSecndBTS[0] :          
-          HomeSecndHBTS[0].append(str(hSecndBTS[0]) + "/" + str(hSecndBTS[1]))
-          HomeSecndHBTS[1].append(len(rfdA))
-          HomeSecndHBTS[2].append(t)
-          HomeSecndHBTS[3].append("AwaySecondHalfBTS")
-          HomeSecndHBTS[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed 1 Fulltime
-     if len(rfdA) - HmeConceedFulltime[0] :          
-          HomeFConceedOvs[0].append(str(HmeConceedFulltime[0]) + "/" + str(HmeConceedFulltime[1]))
-          HomeFConceedOvs[1].append(len(rfdA))
-          HomeFConceedOvs[2].append(t)
-          HomeFConceedOvs[3].append("AwayConceedFulltime1")
-          HomeFConceedOvs[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed 2 Fulltime
-     if len(rfdA) - HmeConceedFulltime[2] :          
-          HomeFConceedOvs2[0].append(str(HmeConceedFulltime[2]) + "/" + str(HmeConceedFulltime[3]))
-          HomeFConceedOvs2[1].append(len(rfdA))
-          HomeFConceedOvs2[2].append(t)
-          HomeFConceedOvs2[3].append("AwayConceedFulltime2")
-          HomeFConceedOvs2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed 3 Fulltime
-     if len(rfdA) - HmeConceedFulltime[4] :          
-          HomeFConceedOvs3[0].append(str(HmeConceedFulltime[4]) + "/" + str(HmeConceedFulltime[5]))
-          HomeFConceedOvs3[1].append(len(rfdA))
-          HomeFConceedOvs3[2].append(t)
-          HomeFConceedOvs3[3].append("AwayConceedFulltime3")
-          HomeFConceedOvs3[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed 4 Fulltime
-     if len(rfdA) - HmeConceedFulltime[6] :          
-          HomeFConceedOvs4[0].append(str(HmeConceedFulltime[6]) + "/" + str(HmeConceedFulltime[7]))
-          HomeFConceedOvs4[1].append(len(rfdA))
-          HomeFConceedOvs4[2].append(t)
-          HomeFConceedOvs4[3].append("AwayConceedFulltime4")
-          HomeFConceedOvs4[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed 5 Fulltime
-     if len(rfdA) - HmeConceedFulltime[8] :          
-          HomeFConceedOvs5[0].append(str(HmeConceedFulltime[8]) + "/" + str(HmeConceedFulltime[9]))
-          HomeFConceedOvs5[1].append(len(rfdA))
-          HomeFConceedOvs5[2].append(t)
-          HomeFConceedOvs5[3].append("AwayConceedFulltime5")
-          HomeFConceedOvs5[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 1 
-     if len(rfdA) - AwOvers[18][0] :          
-          HomeFixOver1[0].append(str(AwOvers[18][0]) + "/" + str(AwOvers[19][0]))
-          HomeFixOver1[1].append(len(rfdA))
-          HomeFixOver1[2].append(t)
-          HomeFixOver1[3].append("AwayOverZero")
-          HomeFixOver1[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 2 
-     if len(rfdA) - AwOvers[18][1] :          
-          HomeFixOver2[0].append(str(AwOvers[18][1]) + "/" + str(AwOvers[19][1]))
-          HomeFixOver2[1].append(len(rfdA))
-          HomeFixOver2[2].append(t)
-          HomeFixOver2[3].append("AwayOver1")
-          HomeFixOver2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 3 
-     if len(rfdA) - AwOvers[18][2] :          
-          HomeFixOver3[0].append(str(AwOvers[18][2]) + "/" + str(AwOvers[19][2]))
-          HomeFixOver3[1].append(len(rfdA))
-          HomeFixOver3[2].append(t)
-          HomeFixOver3[3].append("AwayOver2")
-          HomeFixOver3[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 4 
-     if len(rfdA) - AwOvers[18][3] :          
-          HomeFixOver4[0].append(str(AwOvers[18][3]) + "/" + str(AwOvers[19][3]))
-          HomeFixOver4[1].append(len(rfdA))
-          HomeFixOver4[2].append(t)
-          HomeFixOver4[3].append("AwayOver3")
-          HomeFixOver4[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 5 
-     if len(rfdA) - AwOvers[18][4] :          
-          HomeFixOver5[0].append(str(AwOvers[18][4]) + "/" + str(AwOvers[19][4]))
-          HomeFixOver5[1].append(len(rfdA))
-          HomeFixOver5[2].append(t)
-          HomeFixOver5[3].append("AwayOver4")
-          HomeFixOver5[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed First Half over 0.5
-     if len(rfdA) - AwOvers[17][0]:          
-          HomeHalftimeConceedOverZ[0].append(str(AwOvers[17][0])+ "/" +str(AwOvers[16][0]))
-          HomeHalftimeConceedOverZ[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ[2].append(t)
-          HomeHalftimeConceedOverZ[3].append("AwayFirstHalfConceedOverZ")
-          HomeHalftimeConceedOverZ[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed First Half over 1.5
-     if len(rfdA) - AwOvers[17][1]:          
-          HomeHalftimeConceedOverZ2[0].append(str(AwOvers[17][1])+ "/" +str(AwOvers[16][1]))
-          HomeHalftimeConceedOverZ2[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ2[2].append(t)
-          HomeHalftimeConceedOverZ2[3].append("AwayFirstHalfConceedOver1")
-          HomeHalftimeConceedOverZ2[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed First Half over 2.5
-     if len(rfdA) - AwOvers[17][2]:          
-          HomeHalftimeConceedOverZ3[0].append(str(AwOvers[17][2])+ "/" +str(AwOvers[16][2]))
-          HomeHalftimeConceedOverZ3[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ3[2].append(t)
-          HomeHalftimeConceedOverZ3[3].append("AwayFirstHalfConceedOver2")
-          HomeHalftimeConceedOverZ3[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 0.5
-     if len(rfdA) - AwOvers[14][0]:          
-          HomeSectimeConceedOverZ[0].append(str(AwOvers[14][0])+ "/" +str(AwOvers[15][0]))
-          HomeSectimeConceedOverZ[1].append(len(rfdA))
-          HomeSectimeConceedOverZ[2].append(t)
-          HomeSectimeConceedOverZ[3].append("AwaySecondHalfConceedOverZ")
-          HomeSectimeConceedOverZ[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 1.5
-     if len(rfdA) - AwOvers[14][1]:          
-          HomeSectimeConceedOverZ2[0].append(str(AwOvers[14][1])+ "/" +str(AwOvers[15][1]))
-          HomeSectimeConceedOverZ2[1].append(len(rfdA))
-          HomeSectimeConceedOverZ2[2].append(t)
-          HomeSectimeConceedOverZ2[3].append("AwaySecondHalfConceedOver1")
-          HomeSectimeConceedOverZ2[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 2.5
-     if len(rfdA) - AwOvers[14][2]:          
-          HomeSectimeConceedOverZ3[0].append(str(AwOvers[14][2])+ "/" +str(AwOvers[15][2]))
-          HomeSectimeConceedOverZ3[1].append(len(rfdA))
-          HomeSectimeConceedOverZ3[2].append(t)
-          HomeSectimeConceedOverZ3[3].append("AwaySecondHalfConceedOver2")
-          HomeSectimeConceedOverZ3[4].append("AwayGamesPlayed") 
-
-
-
-#=====================================================================================================#
-#Info=(FullTimeOvers,FullTimeOvers2,FullTimeOvers3,FullTimeOvers4,Bts,AwyOvs,AwyOvs1,AwyOvs2,AwyUnder3,AwySUnder,AwySUnder1,AwySUnder2,AwyUnder4,AwyUnder5,AwyFUnder,AwyFUnder1,AwyFUnder2,AwyFOvs,AwyFOvs1,AwyFOvs2,AwySOvs2,AwySOvs1,AwySOvs,AwySConceedOvs,AwyFConceedOvs,AwyFConceedOvs3,AwyFConceedOvs2,a2ndHWins,a2ndHFailureWins,aHalftimeWins,aFuilureToHalfWins,aWins,aFuilureToWins,AwyFirstfailtToConceedOvs,AwyFirstfailtToConceedOvs2,AwyFirstfailtToConceedOvs3,AwySfailtToConceedOvs3)
-#awayFilter(sql_data)
-#createReport(Info,pd)
-
-     
-
-def homeFilter(data):
-  for ee in sql_data[0]:
-   if ee[3] in teams:
-    t = ee[3]
-   else:
-    teams.append(ee[3])
-
-  for w in teams:
-   t = w
-   occurence = 0
-   if t in Hteam:
-      occurence = 0
-   else:
-     rfdA = BtOr.refindedDatam(t,data,3)
-     HWinLose = BtOr.MatchRes(t,rfdA,"k",5)
-     AwOvers = BtOr.OverUnderSeaon(t,rfdA,"k",5)
-     HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5,"over")
-     HHalfimeOver = BtOr.FixOverUnders(t,rfdA,"k",5,"first")
-     HsecHaTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5,"sec")
-     hFBTS  = BtOr.Bts(t,rfdA,"k",5,"over")
-     hfirstBTS = BtOr.Bts(t,rfdA,"k",5,"first")
-     hSecndBTS = BtOr.Bts(t,rfdA,"k",5,"sec")
-     HmeConceedFulltime = BtOr.ConcededWholeSeaon(t,rfdA,"k",6)
-     ConceedXnumFrstHalf = SlPA.ConceedSecondLayerPerceptron(t,rfdA,"k",5)
-     #hBTS = BtOr.Bts(t,rfdA,"k",5)
-
-
-
-#=====================================================================================================#
-#Home Fix fulltime over 0.5
-     if len(rfdA) - HfullTimeOver[0][0] :          
-          HomefullOver1[0].append(str(HfullTimeOver[0][0])+ "/" +str(HfullTimeOver[1][0]))
-          HomefullOver1[1].append(len(rfdA))
-          HomefullOver1[2].append(t)
-          HomefullOver1[3].append("HomeFixtureFulltimeOverZ")
-          HomefullOver1[4].append("HomeGamesPlayed")
-#Home Fix fulltime over 1.5
-     if len(rfdA) - HfullTimeOver[0][1] :          
-          HomefullOver2[0].append(str(HfullTimeOver[0][1])+ "/" +str(HfullTimeOver[1][1]))
-          HomefullOver2[1].append(len(rfdA))
-          HomefullOver2[2].append(t)
-          HomefullOver2[3].append("HomeFixtureFulltimeOver1")
-          HomefullOver2[4].append("HomeGamesPlayed")
-
-#Home Fix fulltime over 2.5
-     if len(rfdA) - HfullTimeOver[0][2] :          
-          HomefullOver3[0].append(str(HfullTimeOver[0][2])+ "/" +str(HfullTimeOver[1][2]))
-          HomefullOver3[1].append(len(rfdA))
-          HomefullOver3[2].append(t)
-          HomefullOver3[3].append("HomeFixtureFulltimeOver2")
-          HomefullOver3[4].append("HomeGamesPlayed")
-
-#Home Fix  fulltime over 3.5
-     if len(rfdA) - HfullTimeOver[0][3] :          
-          HomefullOver4[0].append(str(HfullTimeOver[0][3])+ "/" +str(HfullTimeOver[1][3]))
-          HomefullOver4[1].append(len(rfdA))
-          HomefullOver4[2].append(t)
-          HomefullOver4[3].append("HomeFixtureFulltimeOver3")
-          HomefullOver4[4].append("HomeGamesPlayed")
-#Home Fix  fulltime over 4.5
-     if len(rfdA) - HfullTimeOver[0][3] :          
-          HomefullOver5[0].append(str(HfullTimeOver[0][4])+ "/" +str(HfullTimeOver[1][4]))
-          HomefullOver5[1].append(len(rfdA))
-          HomefullOver5[2].append(t)
-          HomefullOver5[3].append("HomeFixtureFulltimeOver4")
-          HomefullOver5[4].append("HomeGamesPlayed")
-#=============================================================================#
-#Home wins
-     if len(rfdA) - HWinLose[0]:          
-          HWins[0].append(str(HWinLose[0]) + "/" + str(HWinLose[15]))
-          HWins[1].append(len(rfdA))
-          HWins[2].append(t)
-          HWins[3].append("HomeFulltimeWins")
-          HWins[4].append("HomeGamesPlayed")
-
-
-#=============================================================================#
-#Home Faulure to Lose/Win Draw
-     if len(rfdA) - HWinLose[12] :          
-          HWinsDraw[0].append(str(HWinLose[14]) + "/" + str(HWinLose[2]))
-          HWinsDraw[1].append(len(rfdA))
-          HWinsDraw[2].append(t)
-          HWinsDraw[3].append("HomeFulltimeWinDraw")
-          HWinsDraw[4].append("HomeGamesPlayed")    
-
-#========================================================================#
-#Home halftime wins
-     if len(rfdA) - HWinLose[4] :          
-          HHalftimeWins[0].append(str(HWinLose[4])+ "/" +str(HWinLose[7]))
-          HHalftimeWins[1].append(len(rfdA))
-          HHalftimeWins[2].append(t)
-          HHalftimeWins[3].append("HomeHalfTimeWins")
-          HHalftimeWins[4].append("HomeGamesPlayed")
-
-#========================================================================#
-#Home halftime  Win Draw/Faulure to Lose
-     if len(rfdA) - HWinLose[8] :          
-          HHWinsDraw[0].append(str(HWinLose[8]) + "/" + str(HWinLose[6]))
-          HHWinsDraw[1].append(len(rfdA))
-          HHWinsDraw[2].append(t)
-          HHWinsDraw[3].append("HomeHalftimeWinDraw")
-          HHWinsDraw[4].append("HomeGamesPlayed") 
-#========================================================================#
-#Home Secondhalf Win Draw/Faulure to Lose
-     if len(rfdA) - HWinLose[10] :          
-          HSWinsDraw[0].append(str(HWinLose[10]) + "/" + str(HWinLose[14]))
-          HSWinsDraw[1].append(len(rfdA))
-          HSWinsDraw[2].append(t)
-          HSWinsDraw[3].append("HomeSecondHalfWinDraw")
-          HSWinsDraw[4].append("HomeGamesPlayed") 
-#========================================================================#
-#Home Secondhalf Win 
-     if len(rfdA) - HWinLose[10] :          
-          H2ndHWins[0].append(str(HWinLose[11])+ "/" +str(HWinLose[14]))
-          H2ndHWins[1].append(len(rfdA))
-          H2ndHWins[2].append(t)
-          H2ndHWins[3].append("HomeSecondHalfWin")
-          H2ndHWins[4].append("HomeGamesPlayed") 
-
-
-#===============================================================================#
-#Home First Half over 0.5
-     if len(rfdA) - AwOvers[17][0]:          
-          HomeHalftimeOverZ[0].append(str(AwOvers[17][0])+ "/" +str(AwOvers[16][0]))
-          HomeHalftimeOverZ[1].append(len(rfdA))
-          HomeHalftimeOverZ[2].append(t)
-          HomeHalftimeOverZ[3].append("HomeFirstHalfOverZ")
-          HomeHalftimeOverZ[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half over 1.5
-     if len(rfdA) - AwOvers[17][1]:          
-          HomefrstOver1[0].append(str(AwOvers[17][1])+ "/" +str(AwOvers[16][1]))
-          HomefrstOver1[1].append(len(rfdA))
-          HomefrstOver1[2].append(t)
-          HomefrstOver1[3].append("HomeFirstHalfOver1")
-          HomefrstOver1[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half over 2.5
-     if len(rfdA) - AwOvers[17][2] :          
-          HomefrstOver2[0].append(str(AwOvers[17][2])+ "/" + str(AwOvers[16][2]))
-          HomefrstOver2[1].append(len(rfdA))
-          HomefrstOver2[2].append(t)
-          HomefrstOver2[3].append("HomeFirstHalfOver2")
-          HomefrstOver2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half over 0.5
-     if len(rfdA) - AwOvers[14][0]:          
-          HomeSOvs[0].append(str(AwOvers[14][0])+ "/" +str(AwOvers[15][0]))
-          HomeSOvs[1].append(len(rfdA))
-          HomeSOvs[2].append(t)
-          HomeSOvs[3].append("HomeSecHalfOverZ")
-          HomeSOvs[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half over 1.5
-     if len(rfdA) - AwOvers[14][1] :          
-          HomeSOvs1[0].append(str(AwOvers[14][1])+ "/" +str(AwOvers[15][1]))
-          HomeSOvs1[1].append(len(rfdA))
-          HomeSOvs1[2].append(t)
-          HomeSOvs1[3].append("HomeSecHalfOver1")
-          HomeSOvs1[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half over 2.5
-     if len(rfdA) - AwOvers[14][2]:          
-          HomeSOvs2[0].append(str(AwOvers[14][2]) + "/" + str(AwOvers[15][2]))
-          HomeSOvs2[1].append(len(rfdA))
-          HomeSOvs2[2].append(t)
-          HomeSOvs2[3].append("HomeSecHalfOver2")
-          HomeSOvs2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half Fixture over 0.5
-     if len(rfdA) - HHalfimeOver[0][0]:          
-          HomeFFOvs[0].append(str(HHalfimeOver[0][0]) + "/" +str(HHalfimeOver[1][0]))
-          HomeFFOvs[1].append(len(rfdA))
-          HomeFFOvs[2].append(t)
-          HomeFFOvs[3].append("HomeFixtureFirstHalfOverZ")
-          HomeFFOvs[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half Fixture over 1.5
-     if len(rfdA) - HHalfimeOver[0][1]:          
-          HomeFFOvs2[0].append(str(HHalfimeOver[0][1]) + "/" + str(HHalfimeOver[1][1]))
-          HomeFFOvs2[1].append(len(rfdA))
-          HomeFFOvs2[2].append(t)
-          HomeFFOvs2[3].append("HomeFixtureFirstHalfOver1")
-          HomeFFOvs2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half Fixture over 2.5
-     if len(rfdA) - HHalfimeOver[0][2]:          
-          HomeFFOvs3[0].append(str(HHalfimeOver[0][2]) + "/" + str(HHalfimeOver[1][2]))
-          HomeFFOvs3[1].append(len(rfdA))
-          HomeFFOvs3[2].append(t)
-          HomeFFOvs3[3].append("HomeFixtureFirstHalfOver2" )
-          HomeFFOvs3[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half Fixture over 0.5
-     if len(rfdA) - HsecHaTimeOver[0][0] :          
-          HomeSFOvs[0].append(str(HsecHaTimeOver[0][0]) + "/" + str(HsecHaTimeOver[1][0]))
-          HomeSFOvs[1].append(len(rfdA))
-          HomeSFOvs[2].append(t)
-          HomeSFOvs[3].append("HomeFixtureSecondHalfOverZ")
-          HomeSFOvs[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half Fixture over 1.5
-     if len(rfdA) - HsecHaTimeOver[0][1] :          
-          HomeSFOvs2[0].append(str(HsecHaTimeOver[0][1]) + "/" + str(HsecHaTimeOver[1][1]))
-          HomeSFOvs2[1].append(len(rfdA))
-          HomeSFOvs2[2].append(t)
-          HomeSFOvs2[3].append("HomeFixtureSecondHalfOver1")
-          HomeSFOvs2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half Fixture over 2.5
-     if len(rfdA) - HsecHaTimeOver[0][2] :          
-          HomeSFOvs3[0].append(str(HsecHaTimeOver[0][2])  + "/" + str(HsecHaTimeOver[1][2]))
-          HomeSFOvs3[1].append(len(rfdA))
-          HomeSFOvs3[2].append(t)
-          HomeSFOvs3[3].append("HomeFixtureSecondHalfOver2")
-          HomeSFOvs3[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Overall Fixture BTS
-     if len(rfdA) - hFBTS[0] :          
-          HomeallBTS[0].append(str(hFBTS[0]) + "/" + str(hFBTS[1]))
-          HomeallBTS[1].append(len(rfdA))
-          HomeallBTS[2].append(t)
-          HomeallBTS[3].append("HomeFixtureBTS")
-          HomeallBTS[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home First Half BTS
-     if len(rfdA) - hfirstBTS[0] :          
-          HomeFrstHBTS[0].append(str(hfirstBTS[0]) + "/" + str(hfirstBTS[1]))
-          HomeFrstHBTS[1].append(len(rfdA))
-          HomeFrstHBTS[2].append(t)
-          HomeFrstHBTS[3].append("HomeFirstHalfBTS")
-          HomeFrstHBTS[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Second Half BTS
-     if len(rfdA) - hSecndBTS[0] :          
-          HomeSecndHBTS[0].append(str(hSecndBTS[0]) + "/" + str(hSecndBTS[1]))
-          HomeSecndHBTS[1].append(len(rfdA))
-          HomeSecndHBTS[2].append(t)
-          HomeSecndHBTS[3].append("HomeSecondHalfBTS")
-          HomeSecndHBTS[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed 1 Fulltime
-     if len(rfdA) - HmeConceedFulltime[0] :          
-          HomeFConceedOvs[0].append(str(HmeConceedFulltime[0]) + "/" + str(HmeConceedFulltime[1]))
-          HomeFConceedOvs[1].append(len(rfdA))
-          HomeFConceedOvs[2].append(t)
-          HomeFConceedOvs[3].append("HomeConceedFulltime1")
-          HomeFConceedOvs[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed 2 Fulltime
-     if len(rfdA) - HmeConceedFulltime[2] :          
-          HomeFConceedOvs2[0].append(str(HmeConceedFulltime[2]) + "/" + str(HmeConceedFulltime[3]))
-          HomeFConceedOvs2[1].append(len(rfdA))
-          HomeFConceedOvs2[2].append(t)
-          HomeFConceedOvs2[3].append("HomeConceedFulltime2")
-          HomeFConceedOvs2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed 3 Fulltime
-     if len(rfdA) - HmeConceedFulltime[4] :          
-          HomeFConceedOvs3[0].append(str(HmeConceedFulltime[4]) + "/" + str(HmeConceedFulltime[5]))
-          HomeFConceedOvs3[1].append(len(rfdA))
-          HomeFConceedOvs3[2].append(t)
-          HomeFConceedOvs3[3].append("HomeConceedFulltime3")
-          HomeFConceedOvs3[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed 4 Fulltime
-     if len(rfdA) - HmeConceedFulltime[6] :          
-          HomeFConceedOvs4[0].append(str(HmeConceedFulltime[6]) + "/" + str(HmeConceedFulltime[7]))
-          HomeFConceedOvs4[1].append(len(rfdA))
-          HomeFConceedOvs4[2].append(t)
-          HomeFConceedOvs4[3].append("HomeConceedFulltime4")
-          HomeFConceedOvs4[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed 5 Fulltime
-     if len(rfdA) - HmeConceedFulltime[8] :          
-          HomeFConceedOvs5[0].append(str(HmeConceedFulltime[8]) + "/" + str(HmeConceedFulltime[9]))
-          HomeFConceedOvs5[1].append(len(rfdA))
-          HomeFConceedOvs5[2].append(t)
-          HomeFConceedOvs5[3].append("HomeConceedFulltime5")
-          HomeFConceedOvs5[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Score 1 
-     if len(rfdA) - AwOvers[0][0] :          
-          HomeFixOver1[0].append(str(AwOvers[0][0]) + "/" + str(AwOvers[1][0]))
-          HomeFixOver1[1].append(len(rfdA))
-          HomeFixOver1[2].append(t)
-          HomeFixOver1[3].append("HomeOverZero")
-          HomeFixOver1[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Score 2 
-     if len(rfdA) - AwOvers[0][1] :          
-          HomeFixOver2[0].append(str(AwOvers[0][1]) + "/" + str(AwOvers[1][1]))
-          HomeFixOver2[1].append(len(rfdA))
-          HomeFixOver2[2].append(t)
-          HomeFixOver2[3].append("HomeOver1")
-          HomeFixOver2[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Score 3 
-     if len(rfdA) - AwOvers[0][2] :          
-          HomeFixOver3[0].append(str(AwOvers[0][2]) + "/" + str(AwOvers[1][2]))
-          HomeFixOver3[1].append(len(rfdA))
-          HomeFixOver3[2].append(t)
-          HomeFixOver3[3].append("HomeOver2")
-          HomeFixOver3[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Score 4 
-     if len(rfdA) - AwOvers[0][3] :          
-          HomeFixOver4[0].append(str(AwOvers[0][3]) + "/" + str(AwOvers[1][3]))
-          HomeFixOver4[1].append(len(rfdA))
-          HomeFixOver4[2].append(t)
-          HomeFixOver4[3].append("HomeOver3")
-          HomeFixOver4[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Score 5 
-     if len(rfdA) - AwOvers[0][3] :          
-          HomeFixOver5[0].append(str(AwOvers[0][4]) + "/" + str(AwOvers[1][4]))
-          HomeFixOver5[1].append(len(rfdA))
-          HomeFixOver5[2].append(t)
-          HomeFixOver5[3].append("HomeOver4")
-          HomeFixOver5[4].append("HomeGamesPlayed")
-#===============================================================================#
-#Home Conceed First Half over 0.5
-     if len(rfdA) - AwOvers[2][0]:          
-          HomeHalftimeConceedOverZ[0].append(str(AwOvers[2][0])+ "/" +str(AwOvers[3][0]))
-          HomeHalftimeConceedOverZ[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ[2].append(t)
-          HomeHalftimeConceedOverZ[3].append("HomeFirstHalfConceedOverZ")
-          HomeHalftimeConceedOverZ[4].append("HomeGamesPlayed") 
-#===============================================================================#
-#Home Conceed First Half over 1.5
-     if len(rfdA) - AwOvers[2][1]:          
-          HomeHalftimeConceedOverZ2[0].append(str(AwOvers[2][1])+ "/" +str(AwOvers[3][1]))
-          HomeHalftimeConceedOverZ2[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ2[2].append(t)
-          HomeHalftimeConceedOverZ2[3].append("HomeFirstHalfConceedOver1")
-          HomeHalftimeConceedOverZ2[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Home Conceed First Half over 2.5
-     if len(rfdA) - AwOvers[2][2]:          
-          HomeHalftimeConceedOverZ3[0].append(str(AwOvers[2][2])+ "/" +str(AwOvers[3][2]))
-          HomeHalftimeConceedOverZ3[1].append(len(rfdA))
-          HomeHalftimeConceedOverZ3[2].append(t)
-          HomeHalftimeConceedOverZ3[3].append("HomeFirstHalfConceedOver2")
-          HomeHalftimeConceedOverZ3[4].append("HomeGamesPlayed") 
-#===============================================================================#
-#Home Conceed Second Half over 0.5
-     if len(rfdA) - AwOvers[4][0]:          
-          HomeSectimeConceedOverZ[0].append(str(AwOvers[4][0])+ "/" +str(AwOvers[5][0]))
-          HomeSectimeConceedOverZ[1].append(len(rfdA))
-          HomeSectimeConceedOverZ[2].append(t)
-          HomeSectimeConceedOverZ[3].append("HomeSecondHalfConceedOverZ")
-          HomeSectimeConceedOverZ[4].append("HomeGamesPlayed") 
-#===============================================================================#
-#Home Conceed Second Half over 1.5
-     if len(rfdA) - AwOvers[4][1]:          
-          HomeSectimeConceedOverZ2[0].append(str(AwOvers[4][1])+ "/" +str(AwOvers[5][1]))
-          HomeSectimeConceedOverZ2[1].append(len(rfdA))
-          HomeSectimeConceedOverZ2[2].append(t)
-          HomeSectimeConceedOverZ2[3].append("HomeSecondHalfConceedOver1")
-          HomeSectimeConceedOverZ2[4].append("HomeGamesPlayed") 
-#===============================================================================#
-#Home Conceed Second Half over 2.5
-     if len(rfdA) - AwOvers[4][2]:          
-          HomeSectimeConceedOverZ3[0].append(str(AwOvers[4][2])+ "/" +str(AwOvers[5][2]))
-          HomeSectimeConceedOverZ3[1].append(len(rfdA))
-          HomeSectimeConceedOverZ3[2].append(t)
-          HomeSectimeConceedOverZ3[3].append("HomeSecondHalfConceedOver2")
-          HomeSectimeConceedOverZ3[4].append("HomeGamesPlayed") 
+#Away Scores  First Half/Fulltime Home output "Away Conceed"
+     if len(rfdA) - ScoreFrstHalf[0] :          
+          ScoreFSoutcomeAny[0].append(str(ScoreFrstHalf[0])+ "/" +str(ScoreFrstHalf[1]))
+          ScoreFSoutcomeAny[1].append(len(rfdA))
+          ScoreFSoutcomeAny[2].append(t)
+          ScoreFSoutcomeAny[3].append("AwayScoreFirstHSecHOut")
+          ScoreFSoutcomeAny[4].append("AwayGamesPlayed")
 
 
 
@@ -959,9 +490,9 @@ def homeFilter(data):
 #homeFilter(sql_data)
 awayFilter(sql_data)
           #1             #2        #3             #4           #5           #6                 #7              #8                 #9             #10               #11         #12            #13            #14         #15      #16      #17       #18            #19       #20       #21          #22              #23            #24        #25      #26       #27       #28         #29       #30       #31         #32        #33       #34         #35          #36                 #37                     #38                       #39                      #40                        #41                    #42                                                                              
-#Info=(HomeFixOver1,HomeFixOver2,HomeFixOver3,HomeFixOver4,HomeFixOver5,HomeFConceedOvs,HomeFConceedOvs2,HomeFConceedOvs3,HomeFConceedOvs4,HomeFConceedOvs5,HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw,HHalftimeWins,HHWinsDraw,HSWinsDraw,H2ndHWins,HomeHalftimeOverZ,HomefrstOver1,HomefrstOver2,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeFFOvs2,HomeFFOvs3,HomeFFOvs,HomeSFOvs,HomeSFOvs2,HomeSFOvs3,HomeallBTS,HomeFrstHBTS,HomeSecndHBTS,HomeHalftimeConceedOverZ,HomeHalftimeConceedOverZ2,HomeHalftimeConceedOverZ3,HomeSectimeConceedOverZ3,HomeSectimeConceedOverZ2,HomeSectimeConceedOverZ)
-                      #1                #2
-SecLayerInfor = (ConceedFSoutcome,ConceedFSoutcomeOne)
+#Info=(HomeFixOver1,HomeFixOver2,HomeFixOver3,HomeFixOver4,HomeFixOver5,HomeFConceedOvs,HomeFConceedOvs2,HomeFConceedOvs3,HomeFConceedOvs4,HomeFConceedOvs5,HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw,HHalftimeWins,HHWinsDraw,HSWinsDraw,H2ndHWins,HomeHalftimeOverZ,HomefrstOver1,HomefrstOver2,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeFFOvs2,HomeFFOvs3,HomeFFOvs,HomeSFOvs,HomeSFOvs2,HomeSFOvs3,HomeallBTS,HomeFrstHBTS,HomeSecndHBTS,HomeHalftimeConceedOverZ,HomeHalftimeConceedOverZ2,HomeHalftimeConceedOverZ3,HomeSectimeConceedOverZ3,HomeSectimeConceedOverZ2,HomeSectimeConceedOverZ, ConceedFSoutcome,ConceedFSoutcomeOne,ConceedFSoutcomeTwo, ScoreFSoutcome, ScoreFSoutcomeTwo, ScoreFSoutcomeOne,)
+                      
+SecLayerInfor = (ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderZ,FirstHalfAcionSecondHalfOverUnderZOne,FirstHalfAcionSecondHalfOverUnderZTwo,FirstHalfAcionSecondHalfOverUnderZThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHalfAwayWinSecondHalfHomeScore,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3)
 createReport(SecLayerInfor,pd)
 
 
