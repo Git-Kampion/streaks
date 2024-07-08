@@ -1,4 +1,11 @@
 class SlPA:
+ 
+ def ConceedHomeXNumOutcomeAwayOverUnder(t,data,betype,ht):
+      Ucount = 0
+      count = 0
+      for r in data:
+         c =  int(r[ht - 1])  
+         v = int(r[ht])  
  def FirstHalfWinSecHalfOut(t,data,betype,ht): 
     homeSecWin = 0
     homeSecWindraw = 0
