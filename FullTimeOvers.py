@@ -33,9 +33,6 @@ AwySConceedOvs= ([],[],[],[],[])
 AwySConceedOvs2= ([],[],[],[],[])
 AwySConceedOvs3= ([],[],[],[],[])
 
-HomeFFOvs = ([],[],[],[],[])
-HomeFFOvs2= ([],[],[],[],[])
-HomeFFOvs3= ([],[],[],[],[])
 
 ConceedFSoutcome = ([],[],[],[],[])
 ConceedFSoutcomeOne = ([],[],[],[],[])
@@ -80,13 +77,7 @@ FirstHalfAcionSecondHalfOverUnderTTOne = ([],[],[],[],[])
 FirstHalfAcionSecondHalfOverUnderTTTwo = ([],[],[],[],[])
 FirstHalfAcionSecondHalfOverUnderTTThree = ([],[],[],[],[])
 
-HomeallBTS = ([],[],[],[],[])
-HomeFrstHBTS = ([],[],[],[],[])
-HomeSecndHBTS = ([],[],[],[],[])
 
-HomeSConceedOvs = ([],[],[],[],[])
-HomeSConceedOvs2= ([],[],[],[],[])
-HomeSConceedOvs3= ([],[],[],[],[])
 
 AwyFirstfailtToConceedOvs= ([],[],[],[],[])
 AwyFirstfailtToConceedOvs2= ([],[],[],[],[])
@@ -96,15 +87,7 @@ AwySfailtToConceedOvs= ([],[],[],[],[])
 AwySfailtToConceedOvs2= ([],[],[],[],[])
 AwySfailtToConceedOvs3= ([],[],[],[],[])
 
-HomeSfailtToConceedOvs= ([],[],[],[],[])
-HomeSfailtToConceedOvs2= ([],[],[],[],[])
-HomeSfailtToConceedOvs3= ([],[],[],[],[])
 
-HomeFConceedOvs = ([],[],[],[],[])
-HomeFConceedOvs2 = ([],[],[],[],[])
-HomeFConceedOvs3 = ([],[],[],[],[])
-HomeFConceedOvs4 = ([],[],[],[],[])
-HomeFConceedOvs5 = ([],[],[],[],[])
 
 AwyFConceedOvs = ([],[],[],[],[])
 AwyFConceedOvs2 = ([],[],[],[],[])
@@ -123,48 +106,14 @@ AwySOvs= ([],[],[],[],[])
 AwySOvs1= ([],[],[],[],[])
 AwySOvs2= ([],[],[],[],[])
 
-HomeSOvs= ([],[],[],[],[])
-HomeSOvs1= ([],[],[],[],[])
-HomeSOvs2= ([],[],[],[],[])
 
-HomeSFOvs3 = ([],[],[],[],[])
-HomeSFOvs2 = ([],[],[],[],[])
-HomeSFOvs = ([],[],[],[],[])
 
-HomeFrstunder = ([],[],[],[],[])
-HomeFrstunder1= ([],[],[],[],[])
-HomeFrstunder2= ([],[],[],[],[])
 
-HomeHalftimeOverZ = ([],[],[],[],[])
-HomefrstOver1 = ([],[],[],[],[])
-HomefrstOver2= ([],[],[],[],[])
-HomefrstOver3= ([],[],[],[],[])
 
-HomefullOver1 = ([],[],[],[],[])
-HomefullOver2= ([],[],[],[],[])
-HomefullOver3= ([],[],[],[],[])
-HomefullOver4= ([],[],[],[],[])
-HomefullOver5 = ([],[],[],[],[])
 
-HomefullUnder1 = ([],[],[],[],[])
-HomefullUnder2= ([],[],[],[],[])
-HomefullUnder3= ([],[],[],[],[])
-HomefullUnder4= ([],[],[],[],[])
 
-HomeFixUnder1 = ([],[],[],[],[])
-HomeFixUnder2= ([],[],[],[],[])
-HomeFixUnder3= ([],[],[],[],[])
-HomeFixUnder4= ([],[],[],[],[])
 
-HomeFixOver1 = ([],[],[],[],[])
-HomeFixOver2= ([],[],[],[],[])
-HomeFixOver3= ([],[],[],[],[])
-HomeFixOver4= ([],[],[],[],[])
-HomeFixOver5= ([],[],[],[],[])
 
-HomeSunder= ([],[],[],[],[])
-HomeSunder1= ([],[],[],[],[])
-HomeSunder2= ([],[],[],[],[])
 
 AwySUnder= ([],[],[],[],[])
 AwySUnder1= ([],[],[],[],[])
@@ -192,13 +141,13 @@ AwyOvs2= ([],[],[],[],[])
 Bts= ([],[],[],[],[])
 aWins= ([],[],[],[],[])
 a2ndHWins= ([],[],[],[],[])
-H2ndHWins = ([],[],[],[],[])
+
 H2ndHLose = ([],[],[],[],[])
-HSWinsDraw= ([],[],[],[],[])
-HWins = ([],[],[],[],[])
+
+
 HLose = ([],[],[],[],[])
-HWinsDraw = ([],[],[],[],[])
-HHWinsDraw = ([],[],[],[],[])
+
+
 a2ndHFailureWins= ([],[],[],[],[])
 H2ndHFailureWins = ([],[],[],[],[])
 aHalftimeWins= ([],[],[],[],[])
@@ -208,13 +157,7 @@ HHalftimeLose = ([],[],[],[],[])
 HFuilureToWins = ([],[],[],[],[])
 HHalftimeWins = ([],[],[],[],[])
 
-HomeHalftimeConceedOverZ = ([],[],[],[],[])
-HomeHalftimeConceedOverZ2 = ([],[],[],[],[])
-HomeHalftimeConceedOverZ3 = ([],[],[],[],[])
 
-HomeSectimeConceedOverZ = ([],[],[],[],[])
-HomeSectimeConceedOverZ2 = ([],[],[],[],[])
-HomeSectimeConceedOverZ3 = ([],[],[],[],[])
 
 FullTimeOvers= ([],[],[],[],[])
 FullTimeOvers2= ([],[],[],[],[])
@@ -486,14 +429,43 @@ def awayFilter(data):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
   
+
 #homeFilter(sql_data)
-awayFilter(sql_data)
+#awayFilter(sql_data)
           #1             #2        #3             #4           #5           #6                 #7              #8                 #9             #10               #11         #12            #13            #14         #15      #16      #17       #18            #19       #20       #21          #22              #23            #24        #25      #26       #27       #28         #29       #30       #31         #32        #33       #34         #35          #36                 #37                     #38                       #39                      #40                        #41                    #42                                                                              
 #Info=(HomeFixOver1,HomeFixOver2,HomeFixOver3,HomeFixOver4,HomeFixOver5,HomeFConceedOvs,HomeFConceedOvs2,HomeFConceedOvs3,HomeFConceedOvs4,HomeFConceedOvs5,HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw,HHalftimeWins,HHWinsDraw,HSWinsDraw,H2ndHWins,HomeHalftimeOverZ,HomefrstOver1,HomefrstOver2,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeFFOvs2,HomeFFOvs3,HomeFFOvs,HomeSFOvs,HomeSFOvs2,HomeSFOvs3,HomeallBTS,HomeFrstHBTS,HomeSecndHBTS,HomeHalftimeConceedOverZ,HomeHalftimeConceedOverZ2,HomeHalftimeConceedOverZ3,HomeSectimeConceedOverZ3,HomeSectimeConceedOverZ2,HomeSectimeConceedOverZ, ConceedFSoutcome,ConceedFSoutcomeOne,ConceedFSoutcomeTwo, ScoreFSoutcome, ScoreFSoutcomeTwo, ScoreFSoutcomeOne,)
                       
-SecLayerInfor = (ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderZ,FirstHalfAcionSecondHalfOverUnderZOne,FirstHalfAcionSecondHalfOverUnderZTwo,FirstHalfAcionSecondHalfOverUnderZThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHalfAwayWinSecondHalfHomeScore,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3)
-createReport(SecLayerInfor,pd)
+#SecLayerInfor = (ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderZ,FirstHalfAcionSecondHalfOverUnderZOne,FirstHalfAcionSecondHalfOverUnderZTwo,FirstHalfAcionSecondHalfOverUnderZThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHalfAwayWinSecondHalfHomeScore,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3)
+#createReport(Info,pd)
 
 
 

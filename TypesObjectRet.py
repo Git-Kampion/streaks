@@ -1538,6 +1538,7 @@ class BtOr:
       HomeFailToLose = 0
       HomeFlvFailToLose = 0
       HomeSecFailToLose = 0
+      AwaySecFailToLose = 0
 
       HomeSecFlvWinCount = 0
       AwaySecFlvWinCount = 0
@@ -1604,14 +1605,16 @@ class BtOr:
         if AwSecHlf > HomeSecHlf:
            AwaySecFlvWinCount = AwaySecFlvWinCount + 1
            HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1
+           AwaySecFailToLose = AwaySecFailToLose + 1 
         if HomeSecHlf == AwSecHlf:
-           AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
-           HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1 
+           #AwaySecFlvFailTowin = AwaySecFlvFailTowin + 1
+           #HomeSecFlvFailToWin = HomeSecFlvFailToWin + 1 
            HomeSecFailToLose = HomeSecFailToLose + 1 
+           AwaySecFailToLose = AwaySecFailToLose + 1 
 
 
-                #1            #2            #3            #4          #5                #6                  #7            #8            #9                 #10               #11                 #12              #13                 #14              #15            #16     #17
-      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvLose,HomeFlvFailToLose,HomeSecFailToLose,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin,HomeFailToLose,HomeLose,AwayFlvFailToLose])  
+                #1            #2            #3            #4          #5                #6                  #7            #8            #9                 #10               #11                 #12              #13                 #14              #15            #16        #17              #18
+      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvLose,HomeFlvFailToLose,HomeSecFailToLose,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin,HomeFailToLose,HomeLose,AwayFlvFailToLose,AwaySecFailToLose])  
       return arr
     
     def Dc(Title,body):
