@@ -450,7 +450,7 @@ def awayFilter(data):
           FirstHalfAcionSecondHalfOverUnderTTOne[2].append(t)
           FirstHalfAcionSecondHalfOverUnderTTOne[3].append("FirstHalfOverTwoSecOverOne")
           FirstHalfAcionSecondHalfOverUnderTTOne[4].append("AwayGamesPlayed")
-#=====================================================================================================#
+#====================================================================`6=================================#
 #Away HalftimeAction Fulltime output: Over Three:Two First Half Goal /second Half Output over/under
      if len(rfdA) - ActionOutpFrstHalfOverUnder[23] :          
           FirstHalfAcionSecondHalfOverUnderTTTwo[0].append(str(ActionOutpFrstHalfOverUnder[23])+ "/" +str(ActionOutpFrstHalfOverUnder[28]))
@@ -494,6 +494,18 @@ awayFilter(sql_data)
                       
 SecLayerInfor = (ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderZ,FirstHalfAcionSecondHalfOverUnderZOne,FirstHalfAcionSecondHalfOverUnderZTwo,FirstHalfAcionSecondHalfOverUnderZThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHalfAwayWinSecondHalfHomeScore,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3)
 createReport(SecLayerInfor,pd)
+
+
+#================================Duplicate
+#=====================================================================================================#
+#Home HalftimeAction Winning,Second Half output: Home leading Halftime//Away score
+     #if len(rfdA) - FirstHalfTrailSecOutput[4] :          
+     FirstHalfAwayWinSecondHalfHomeScore[0].append(str(FirstHalfTrailSecOutput[22])+ "/" +str(FirstHalfTrailSecOutput[23]))
+     FirstHalfAwayWinSecondHalfHomeScore[1].append(len(rfdA))
+     FirstHalfAwayWinSecondHalfHomeScore[2].append(t)
+     FirstHalfAwayWinSecondHalfHomeScore[3].append("FirstHHomeWinSecHAwayScore")
+     FirstHalfAwayWinSecondHalfHomeScore[4].append("HomeGamesPlayed")
+
 
 
 

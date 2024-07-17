@@ -21,6 +21,8 @@ class SlPA:
     underovr4 = 0
     Ucount = 0
     count = 0
+    AUcount = 0
+    Acount = 0
 
     Hcountovr1 = 0
     Hcountovr2 = 0
@@ -33,13 +35,22 @@ class SlPA:
     HUcount = 0
     Hcount = 0
     for r in data:
-         
-         c =  int(r[ht - 1])  
-         v = int(r[ht])  
-         secH  =  int(r[ht -3]) - int(r[ht - 1]) 
-         secA  =   int(r[ht - 2]) - int(r[ht ])
-         FullH  =  int(r[ht -3]) 
-         FullA  =   int(r[ht -2]) 
+         if betype == "b":
+            c =  int(r[ht - 1])  
+            v = int(r[ht])  
+            secH  =  int(r[ht -3]) - int(r[ht - 1]) 
+            secA  =   int(r[ht - 2]) - int(r[ht ])
+            FullH  =  int(r[ht -3]) 
+            FullA  =   int(r[ht -2])
+            
+         if betype == "k":
+            c =  int(r[ht + 3])  
+            v = int(r[ht+2])  
+            secH  =  int(r[ht ]) - int(r[ht +2]) 
+            secA  =   int(r[ht +1]) - int(r[ht +3])
+            FullH  =  int(r[ht]) 
+            FullA  =   int(r[ht +1])  
+              
          if v > c:
              if FullH > FullA:
                 homeSecWin = homeSecWin + 1
@@ -50,10 +61,15 @@ class SlPA:
              if FullA > FullH:
                 awaySecWin = awaySecWin + 1
                 awaySecWindraw = awaySecWindraw+1
-             if secH > c:
+             if secH > 0:
                 count = count + 1
              else:
-                 Ucount = Ucount + 1
+                 Ucount = Ucount + 1 
+             if secA > 0:
+                Acount = Acount + 1
+             else:
+                 AUcount = AUcount + 1
+         
              match secA:
                 case 0:
                   underovr1 = underovr1 + 1
@@ -106,7 +122,7 @@ class SlPA:
                   Hcountovr2 = Hcountovr2 + 1
                   Hcountovr3 = Hcountovr3 + 1
                   Hcountovr4 = Hcountovr4 + 1   
-    arr = [homeSecWin,awaySecWin,homeSecWindraw,awaySecWindraw,count,Ucount,countovr1,underovr1,countovr2,underovr2,countovr3,underovr3,countovr4,underovr4,Hcountovr1,Hunderovr1,Hcountovr2,Hunderovr2,Hcountovr3,Hunderovr3,Hcountovr4,Hunderovr4]
+    arr = [homeSecWin,awaySecWin,homeSecWindraw,awaySecWindraw,count,Ucount,countovr1,underovr1,countovr2,underovr2,countovr3,underovr3,countovr4,underovr4,Hcountovr1,Hunderovr1,Hcountovr2,Hunderovr2,Hcountovr3,Hunderovr3,Hcountovr4,Hunderovr4,Acount,AUcount]
     return arr
 
  def HaltimeFultimeActionOutputOverUnder(t,data,betype,ht): 
@@ -169,12 +185,17 @@ class SlPA:
            
         
         for r in data:
-         
-            c = int(r[ht])  + int(r[ht - 1])   
-            
-            secH  =  int(r[ht -3]) - int(r[ht - 1]) 
-            secA  =   int(r[ht - 2]) - int(r[ht ])
+            if betype == "b":
+               c = int(r[ht])  + int(r[ht - 1])   
+               
+               secH  =  int(r[ht -3]) - int(r[ht - 1]) 
+               secA  =   int(r[ht - 2]) - int(r[ht ])
 
+            if betype == "k":
+               c = int(r[ht+2])  + int(r[ht + 3])   
+            
+               secH  =  int(r[ht ]) - int(r[ht + 2]) 
+               secA  =   int(r[ht + 1]) - int(r[ht +3 ])
             v = secH + secA
             #v = int(r[ht]) 
             if v > 4:
@@ -352,8 +373,13 @@ class SlPA:
         Notcount = 0
 
         for r in data:
-            c =  int(r[ht - 3])
-            v = int(r[ht]) 
+            if betype == "b":
+               c =  int(r[ht - 3])
+               v = int(r[ht]) 
+
+            if betype == "k":
+               c =  int(r[ht + 1]) - int(r[ht + 3])
+               v = int(r[ht + 2]) 
             if v > 0:
                if c > 0:
                   count = count + 1
@@ -369,14 +395,20 @@ class SlPA:
         Notcount = 0
 
         for r in data:
+           if betype == "b":
             c =  int(r[ht - 1])
             v = int(r[ht]) 
             d =  int(r[ht - 3]) - int(r[ht - 1])
             f = int(r[ht - 2]) - int(r[ht]) 
-            if v > 0 or c > 0 :
-               if d > 0 or f > 0:
+           if betype == "k":
+            c =  int(r[ht + 3])
+            v = int(r[ht+2]) 
+            d = int(r[ht + 1]) -  int(r[ht + 3])
+            f = int(r[ht ]) - int(r[ht+2]) 
+           if v > 0 or c > 0 :
+            if d > 0 or f > 0:
                   count = count + 1
-               else:
+            else:
                   Notcount = Notcount + 1
               
                 
@@ -449,7 +481,13 @@ class SlPA:
           if betype == "b":
             c = int(r[ht -3]) - int(r[ht - 1]) 
             v = int(r[ht]) 
-            match  v:
+          if betype == "c":
+            c = int(r[ht+1])  - int(r[ht + 3])   
+            v = int(r[ht+3]) 
+          if betype == "d":
+            c = int(r[ht +1]) - int(r[ht + 3]) 
+            v = int(r[ht+2]) 
+          match  v:
               case 0:
                 match c:
                  case 0:

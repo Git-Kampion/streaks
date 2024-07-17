@@ -23,13 +23,14 @@ Completed Anyalyis-------
           ScoreFSoutcomeTwo[2].append(t)
           ScoreFSoutcomeTwo[3].append("AwayScoreTwoFirstHSecHOut")
           ScoreFSoutcomeTwo[4].append("AwayGamesPlayed")
+
 #=====================================================================================================#
 #Away Conceed Zero First Half/Second Half out Home output "Away Conceed"
      if len(rfdA) - ConceedXnumFrstHalf[0] :          
           ConceedFSoutcome[0].append(str(ConceedXnumFrstHalf[0])+ "/" +str(ConceedXnumFrstHalf[5]))
           ConceedFSoutcome[1].append(len(rfdA))
           ConceedFSoutcome[2].append(t)
-          ConceedFSoutcome[3].append("AwayConceedZeroFirstHSecHOut")
+          ConceedFSoutcome[3].append("HomeConceedZeroFirstHSecHOut")
           ConceedFSoutcome[4].append("AwayGamesPlayed")
 #=====================================================================================================#
 #Away Conceed One First Half/Second Half out Home output "Away Conceed"

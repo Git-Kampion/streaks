@@ -23,7 +23,8 @@ Ateams = []
 Ateam = []
 Hteam = []
 numOfGames = []
-
+ 
+ 
 
 
 def createReport(data1,pd):
