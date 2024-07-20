@@ -4,6 +4,7 @@ import pandas as pd
 import sqlalchemy
 import matplotlib.pyplot as plt 
 import numpy as np
+from multiLayerPerceptron import mlp
 import seaborn as sb
 from SecLPAnylaysis import SlPA
 
@@ -11,7 +12,7 @@ from SecLPAnylaysis import SlPA
 conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
 cursor = conn.cursor()
 
-insert_stmt2 = "select * from epl"
+insert_stmt2 = "select * from epl order by Round ASC"
 #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
 data = ("Chelsea")
 cursor.execute(insert_stmt2)
@@ -126,6 +127,76 @@ FirstHAwayWinSecHAwayScore1= ([],[],[],[],[])
 FirstHAwayWinSecHHomeScore1= ([],[],[],[],[])
 FirstHAwayWinSecHHomeScore2= ([],[],[],[],[])
 FirstHAwayWinSecHHomeScore3= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv2= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv3= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv4= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv5 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv6 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv7= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv8= ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv9 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv10 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv11 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv12 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv13 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv14 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv15 = ([],[],[],[],[])
+awayConceedOvUvHomeConceedOvUv16 = ([],[],[],[],[])
+
+awayScorOvUvHomeConceedOvUv = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv2= ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv3= ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv4= ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv5 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv6 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv7= ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv8= ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv9 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv10 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv11 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv12 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv13 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv14 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv15 = ([],[],[],[],[])
+awayScorOvUvHomeConceedOvUv16 = ([],[],[],[],[])
+
+awayScorOvUvHomeScorOvUv = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv2= ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv3= ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv4= ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv5 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv6 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv7= ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv8= ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv9 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv10 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv11 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv12 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv13 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv14 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv15 = ([],[],[],[],[])
+awayScorOvUvHomeScorOvUv16 = ([],[],[],[],[])
+
+awayConHomeConceed = ([],[],[],[],[])
+awayConHomeConceed2= ([],[],[],[],[])
+awayConHomeConceed3= ([],[],[],[],[])
+awayConHomeConceed4= ([],[],[],[],[])
+awayConHomeConceed5 = ([],[],[],[],[])
+awayConHomeConceed6 = ([],[],[],[],[])
+awayConHomeConceed7= ([],[],[],[],[])
+awayConHomeConceed8= ([],[],[],[],[])
+awayConHomeConceed9 = ([],[],[],[],[])
+awayConHomeConceed10 = ([],[],[],[],[])
+awayConHomeConceed11 = ([],[],[],[],[])
+awayConHomeConceed12 = ([],[],[],[],[])
+awayConHomeConceed13 = ([],[],[],[],[])
+awayConHomeConceed14 = ([],[],[],[],[])
+awayConHomeConceed15 = ([],[],[],[],[])
+awayConHomeConceed16 = ([],[],[],[],[])
+
+9
+
 
 def createReport(data1,pd):
  
@@ -175,8 +246,539 @@ def homeFilter(data):
      ActionOutpFrstHalf = SlPA.HaltimeFultimeActionOutput(t,rfdA,"k",5)
      ActionOutpFrstHalfOverUnder = SlPA.HaltimeFultimeActionOutputOverUnder(t,rfdA,"k",5)
      FirstHalfTrailSecOutput = SlPA.FirstHalfWinSecHalfOut(t,rfdA,"k",5)
+     teamScOneAwayOneHome = mlp.aFHFsc(t,data,"k",5)
+     awayTConGoHomeFull = mlp.aConHFsc(t,data,"k",5)
+     awayTScorGoHomeFull = mlp.aScorHFsc(t,data,"k",5)
+     awayTScorGoHomeScor = mlp.aScorHScor(t,data,"k",5)
+     awayTConGoHomeCon = mlp.aConHCon(t,data,"k",5)
      #hBTS = BtOr.Bts(t,rfdA,"k",5)
+#================================================================================================================
+# Team A/Away Conceed Fulltime 1 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed[0].append(str(awayTConGoHomeCon[0]) + "/" + str(awayTConGoHomeCon[1]))
+     awayConHomeConceed[1].append(len(rfdA))
+     awayConHomeConceed[2].append(t)        
+     awayConHomeConceed[3].append("TACConc1TeamHConcFull1+")
+     awayConHomeConceed[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed2[0].append(str(awayTConGoHomeCon[2]) + "/" + str(awayTConGoHomeCon[3]))
+     awayConHomeConceed2[1].append(len(rfdA))
+     awayConHomeConceed2[2].append(t)       
+     awayConHomeConceed2[3].append("TACConc1TeamHConcFull2+")
+     awayConHomeConceed2[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed3[0].append(str(awayTConGoHomeCon[4]) + "/" + str(awayTConGoHomeCon[5]))
+     awayConHomeConceed3[1].append(len(rfdA))
+     awayConHomeConceed3[2].append(t)       
+     awayConHomeConceed3[3].append("TACConc1TeamHConcFull3+")
+     awayConHomeConceed3[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed4[0].append(str(awayTConGoHomeCon[6]) + "/" + str(awayTConGoHomeCon[7]))
+     awayConHomeConceed4[1].append(len(rfdA))
+     awayConHomeConceed4[2].append(t)       
+     awayConHomeConceed4[3].append("TACConc1TeamHConcFull4+")
+     awayConHomeConceed4[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 2 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed5[0].append(str(awayTConGoHomeCon[8]) + "/" + str(awayTConGoHomeCon[9]))
+     awayConHomeConceed5[1].append(len(rfdA))
+     awayConHomeConceed5[2].append(t)        
+     awayConHomeConceed5[3].append("TACConc2TeamHConcFull1+")
+     awayConHomeConceed5[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed6[0].append(str(awayTConGoHomeCon[10]) + "/" + str(awayTConGoHomeCon[11]))
+     awayConHomeConceed6[1].append(len(rfdA))
+     awayConHomeConceed6[2].append(t)       
+     awayConHomeConceed6[3].append("TACConc2TeamHConcFull2+")
+     awayConHomeConceed6[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed7[0].append(str(awayTConGoHomeCon[12]) + "/" + str(awayTConGoHomeCon[13]))
+     awayConHomeConceed7[1].append(len(rfdA))
+     awayConHomeConceed7[2].append(t)       
+     awayConHomeConceed7[3].append("TACConc2TeamHConcFull3+")
+     awayConHomeConceed7[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed8[0].append(str(awayTConGoHomeCon[14]) + "/" + str(awayTConGoHomeCon[15]))
+     awayConHomeConceed8[1].append(len(rfdA))
+     awayConHomeConceed8[2].append(t)       
+     awayConHomeConceed8[3].append("TACConc2TeamHConcFull4+")
+     awayConHomeConceed8[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 3 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed9[0].append(str(awayTConGoHomeCon[16]) + "/" + str(awayTConGoHomeCon[17]))
+     awayConHomeConceed9[1].append(len(rfdA))
+     awayConHomeConceed9[2].append(t)        
+     awayConHomeConceed9[3].append("TACConc3TeamHConcFull1+")
+     awayConHomeConceed9[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed10[0].append(str(awayTConGoHomeCon[18]) + "/" + str(awayTConGoHomeCon[19]))
+     awayConHomeConceed10[1].append(len(rfdA))
+     awayConHomeConceed10[2].append(t)       
+     awayConHomeConceed10[3].append("TACConc3TeamHConcFull2+")
+     awayConHomeConceed10[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed11[0].append(str(awayTConGoHomeCon[20]) + "/" + str(awayTConGoHomeCon[21]))
+     awayConHomeConceed11[1].append(len(rfdA))
+     awayConHomeConceed11[2].append(t)       
+     awayConHomeConceed11[3].append("TACConc3TeamHConcFull3+")
+     awayConHomeConceed11[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed12[0].append(str(awayTConGoHomeCon[22]) + "/" + str(awayTConGoHomeCon[23]))
+     awayConHomeConceed12[1].append(len(rfdA))
+     awayConHomeConceed12[2].append(t)       
+     awayConHomeConceed12[3].append("TACConc3TeamHConcFull4+")
+     awayConHomeConceed12[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 4 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed13[0].append(str(awayTConGoHomeCon[24]) + "/" + str(awayTConGoHomeCon[25]))
+     awayConHomeConceed13[1].append(len(rfdA))
+     awayConHomeConceed13[2].append(t)        
+     awayConHomeConceed13[3].append("TACConc4TeamHConcFull1+")
+     awayConHomeConceed13[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed14[0].append(str(awayTConGoHomeCon[26]) + "/" + str(awayTConGoHomeCon[27]))
+     awayConHomeConceed14[1].append(len(rfdA))
+     awayConHomeConceed14[2].append(t)       
+     awayConHomeConceed14[3].append("TACConc4TeamHConcFull2+")
+     awayConHomeConceed14[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed15[0].append(str(awayTConGoHomeCon[28]) + "/" + str(awayTConGoHomeCon[29]))
+     awayConHomeConceed15[1].append(len(rfdA))
+     awayConHomeConceed15[2].append(t)       
+     awayConHomeConceed15[3].append("TACConc4TeamHConcFull3+")
+     awayConHomeConceed15[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed16[0].append(str(awayTConGoHomeCon[30]) + "/" + str(awayTConGoHomeCon[31]))
+     awayConHomeConceed16[1].append(len(rfdA))
+     awayConHomeConceed16[2].append(t)       
+     awayConHomeConceed16[3].append("TACConc4TeamHConcFull4+")
+     awayConHomeConceed16[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 3 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed13[0].append(str(awayTConGoHomeCon[24]) + "/" + str(awayTConGoHomeCon[25]))
+     awayConHomeConceed13[1].append(len(rfdA))
+     awayConHomeConceed13[2].append(t)        
+     awayConHomeConceed13[3].append("TACConc3TeamHConcFull1+")
+     awayConHomeConceed13[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed14[0].append(str(awayTConGoHomeCon[26]) + "/" + str(awayTConGoHomeCon[27]))
+     awayConHomeConceed14[1].append(len(rfdA))
+     awayConHomeConceed14[2].append(t)       
+     awayConHomeConceed14[3].append("TACConc3TeamHConcFull2+")
+     awayConHomeConceed14[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed15[0].append(str(awayTConGoHomeCon[28]) + "/" + str(awayTConGoHomeCon[29]))
+     awayConHomeConceed15[1].append(len(rfdA))
+     awayConHomeConceed15[2].append(t)       
+     awayConHomeConceed15[3].append("TACConc3TeamHConcFull3+")
+     awayConHomeConceed15[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed16[0].append(str(awayTConGoHomeCon[30]) + "/" + str(awayTConGoHomeCon[31]))
+     awayConHomeConceed16[1].append(len(rfdA))
+     awayConHomeConceed16[2].append(t)       
+     awayConHomeConceed16[3].append("TACConc3TeamHConcFull4+")
+     awayConHomeConceed16[4].append("HomeGamesPatt")
+ #================================================================================================================
+# Team A/Away Score Fulltime 1 Goal, Team A goes home Score Fulltime 1 Goal     
+     awayScorOvUvHomeScorOvUv[0].append(str(awayTScorGoHomeScor[0]) + "/" + str(awayTScorGoHomeScor[1]))
+     awayScorOvUvHomeScorOvUv[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv[2].append(t)        
+     awayScorOvUvHomeScorOvUv[3].append("TACScor1TeamHScoreFull1+")
+     awayScorOvUvHomeScorOvUv[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes home Score Fulltime 2 Goal       
+     awayScorOvUvHomeScorOvUv2[0].append(str(awayTScorGoHomeScor[2]) + "/" + str(awayTScorGoHomeScor[3]))
+     awayScorOvUvHomeScorOvUv2[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv2[2].append(t)       
+     awayScorOvUvHomeScorOvUv2[3].append("TACScor1TeamHScoreFull2+")
+     awayScorOvUvHomeScorOvUv2[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes home Score Fulltime 3 Goal       
+     awayScorOvUvHomeScorOvUv3[0].append(str(awayTScorGoHomeScor[4]) + "/" + str(awayTScorGoHomeScor[5]))
+     awayScorOvUvHomeScorOvUv3[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv3[2].append(t)       
+     awayScorOvUvHomeScorOvUv3[3].append("TACScor1TeamHScoreFull3+")
+     awayScorOvUvHomeScorOvUv3[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes Score Fulltime 4 Goal       
+     awayScorOvUvHomeScorOvUv4[0].append(str(awayTScorGoHomeScor[6]) + "/" + str(awayTScorGoHomeScor[7]))
+     awayScorOvUvHomeScorOvUv4[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv4[2].append(t)       
+     awayScorOvUvHomeScorOvUv4[3].append("TACScor1TeamHScoreFull4+")
+     awayScorOvUvHomeScorOvUv4[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 2 Goal, Team A goes home Score Fulltime 1 Goal     
+     awayScorOvUvHomeScorOvUv5[0].append(str(awayTScorGoHomeScor[8]) + "/" + str(awayTScorGoHomeScor[9]))
+     awayScorOvUvHomeScorOvUv5[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv5[2].append(t)        
+     awayScorOvUvHomeScorOvUv5[3].append("TACScor2TeamHScoreFull1+")
+     awayScorOvUvHomeScorOvUv5[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes home Score Fulltime 2 Goal       
+     awayScorOvUvHomeScorOvUv6[0].append(str(awayTScorGoHomeScor[10]) + "/" + str(awayTScorGoHomeScor[11]))
+     awayScorOvUvHomeScorOvUv6[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv6[2].append(t)       
+     awayScorOvUvHomeScorOvUv6[3].append("TACScor2TeamHScoreFull2+")
+     awayScorOvUvHomeScorOvUv6[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes home Score Fulltime 3 Goal       
+     awayScorOvUvHomeScorOvUv7[0].append(str(awayTScorGoHomeScor[12]) + "/" + str(awayTScorGoHomeScor[13]))
+     awayScorOvUvHomeScorOvUv7[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv7[2].append(t)       
+     awayScorOvUvHomeScorOvUv7[3].append("TACScor2TeamHScoreFull3+")
+     awayScorOvUvHomeScorOvUv7[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes Score Fulltime 4 Goal       
+     awayScorOvUvHomeScorOvUv8[0].append(str(awayTScorGoHomeScor[14]) + "/" + str(awayTScorGoHomeScor[15]))
+     awayScorOvUvHomeScorOvUv8[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv8[2].append(t)       
+     awayScorOvUvHomeScorOvUv8[3].append("TACScor2TeamHScoreFull4+")
+     awayScorOvUvHomeScorOvUv8[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 3 Goal, Team A goes home Score Fulltime 1 Goal     
+     awayScorOvUvHomeScorOvUv9[0].append(str(awayTScorGoHomeScor[16]) + "/" + str(awayTScorGoHomeScor[17]))
+     awayScorOvUvHomeScorOvUv9[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv9[2].append(t)        
+     awayScorOvUvHomeScorOvUv9[3].append("TACScor3TeamHScoreFull1+")
+     awayScorOvUvHomeScorOvUv9[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes home Score Fulltime 2 Goal       
+     awayScorOvUvHomeScorOvUv10[0].append(str(awayTScorGoHomeScor[18]) + "/" + str(awayTScorGoHomeScor[19]))
+     awayScorOvUvHomeScorOvUv10[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv10[2].append(t)       
+     awayScorOvUvHomeScorOvUv10[3].append("TACScor3TeamHScoreFull2+")
+     awayScorOvUvHomeScorOvUv10[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes home Score Fulltime 3 Goal       
+     awayScorOvUvHomeScorOvUv11[0].append(str(awayTScorGoHomeScor[20]) + "/" + str(awayTScorGoHomeScor[21]))
+     awayScorOvUvHomeScorOvUv11[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv11[2].append(t)       
+     awayScorOvUvHomeScorOvUv11[3].append("TACScor3TeamHScoreFull3+")
+     awayScorOvUvHomeScorOvUv11[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes Score Fulltime 4 Goal       
+     awayScorOvUvHomeScorOvUv12[0].append(str(awayTScorGoHomeScor[22]) + "/" + str(awayTScorGoHomeScor[23]))
+     awayScorOvUvHomeScorOvUv12[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv12[2].append(t)       
+     awayScorOvUvHomeScorOvUv12[3].append("TACScor3TeamHScoreFull4+")
+     awayScorOvUvHomeScorOvUv12[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 4 Goal, Team A goes home Score Fulltime 1 Goal     
+     awayScorOvUvHomeScorOvUv13[0].append(str(awayTScorGoHomeScor[24]) + "/" + str(awayTScorGoHomeScor[25]))
+     awayScorOvUvHomeScorOvUv13[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv13[2].append(t)        
+     awayScorOvUvHomeScorOvUv13[3].append("TACScor4TeamHScoreFull1+")
+     awayScorOvUvHomeScorOvUv13[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes home Score Fulltime 2 Goal       
+     awayScorOvUvHomeScorOvUv14[0].append(str(awayTScorGoHomeScor[26]) + "/" + str(awayTScorGoHomeScor[27]))
+     awayScorOvUvHomeScorOvUv14[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv14[2].append(t)       
+     awayScorOvUvHomeScorOvUv14[3].append("TACScor4TeamHScoreFull2+")
+     awayScorOvUvHomeScorOvUv14[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes home Score Fulltime 3 Goal       
+     awayScorOvUvHomeScorOvUv15[0].append(str(awayTScorGoHomeScor[28]) + "/" + str(awayTScorGoHomeScor[29]))
+     awayScorOvUvHomeScorOvUv15[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv15[2].append(t)       
+     awayScorOvUvHomeScorOvUv15[3].append("TACScor4TeamHScoreFull3+")
+     awayScorOvUvHomeScorOvUv15[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes Score Fulltime 4 Goal       
+     awayScorOvUvHomeScorOvUv16[0].append(str(awayTScorGoHomeScor[30]) + "/" + str(awayTScorGoHomeScor[31]))
+     awayScorOvUvHomeScorOvUv16[1].append(len(rfdA))
+     awayScorOvUvHomeScorOvUv16[2].append(t)       
+     awayScorOvUvHomeScorOvUv16[3].append("TACScor4TeamHScoreFull4+")
+     awayScorOvUvHomeScorOvUv16[4].append("HomeGamesPatt")
+     #================================================================================================================
+# Team A/Away Score Fulltime 1 Goal, Team A goes home Fulltime Res     
+     awayScorOvUvHomeConceedOvUv[0].append(str(awayTScorGoHomeFull[0]) + "/" + str(awayTScorGoHomeFull[1]))
+     awayScorOvUvHomeConceedOvUv[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv[2].append(t)        
+     awayScorOvUvHomeConceedOvUv[3].append("TACScor1TeamHFullTimeRes1+")
+     awayScorOvUvHomeConceedOvUv[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv2[0].append(str(awayTScorGoHomeFull[2]) + "/" + str(awayTScorGoHomeFull[3]))
+     awayScorOvUvHomeConceedOvUv2[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv2[2].append(t)       
+     awayScorOvUvHomeConceedOvUv2[3].append("TACScor1TeamHFullTimeRes2+")
+     awayScorOvUvHomeConceedOvUv2[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv3[0].append(str(awayTScorGoHomeFull[4]) + "/" + str(awayTScorGoHomeFull[5]))
+     awayScorOvUvHomeConceedOvUv3[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv3[2].append(t)       
+     awayScorOvUvHomeConceedOvUv3[3].append("TACScor1TeamHFullTimeRes3+")
+     awayScorOvUvHomeConceedOvUv3[4].append("HomeGamesPatt")
+# Team A/Away Score 1 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv4[0].append(str(awayTScorGoHomeFull[6]) + "/" + str(awayTScorGoHomeFull[7]))
+     awayScorOvUvHomeConceedOvUv4[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv4[2].append(t)       
+     awayScorOvUvHomeConceedOvUv4[3].append("TACScor1TeamHFullTimeRes4+")
+     awayScorOvUvHomeConceedOvUv4[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 2 Goal, Team A goes home Fulltime Res     
+     awayScorOvUvHomeConceedOvUv5[0].append(str(awayTScorGoHomeFull[8]) + "/" + str(awayTScorGoHomeFull[9]))
+     awayScorOvUvHomeConceedOvUv5[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv5[2].append(t)        
+     awayScorOvUvHomeConceedOvUv5[3].append("TACScor2TeamHFullTimeRes1+")
+     awayScorOvUvHomeConceedOvUv5[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv6[0].append(str(awayTScorGoHomeFull[10]) + "/" + str(awayTScorGoHomeFull[11]))
+     awayScorOvUvHomeConceedOvUv6[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv6[2].append(t)       
+     awayScorOvUvHomeConceedOvUv6[3].append("TACScor2TeamHFullTimeRes2+")
+     awayScorOvUvHomeConceedOvUv6[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv7[0].append(str(awayTScorGoHomeFull[12]) + "/" + str(awayTScorGoHomeFull[13]))
+     awayScorOvUvHomeConceedOvUv7[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv7[2].append(t)       
+     awayScorOvUvHomeConceedOvUv7[3].append("TACScor2TeamHFullTimeRes3+")
+     awayScorOvUvHomeConceedOvUv7[4].append("HomeGamesPatt")
+# Team A/Away Score 2 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv8[0].append(str(awayTScorGoHomeFull[14]) + "/" + str(awayTScorGoHomeFull[15]))
+     awayScorOvUvHomeConceedOvUv8[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv8[2].append(t)       
+     awayScorOvUvHomeConceedOvUv8[3].append("TACScor2TeamHFullTimeRes4+")
+     awayScorOvUvHomeConceedOvUv8[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 3 Goal, Team A goes home Fulltime Res     
+     awayScorOvUvHomeConceedOvUv9[0].append(str(awayTScorGoHomeFull[16]) + "/" + str(awayTScorGoHomeFull[17]))
+     awayScorOvUvHomeConceedOvUv9[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv9[2].append(t)        
+     awayScorOvUvHomeConceedOvUv9[3].append("TACScor3TeamHFullTimeRes1+")
+     awayScorOvUvHomeConceedOvUv9[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv10[0].append(str(awayTScorGoHomeFull[18]) + "/" + str(awayTScorGoHomeFull[19]))
+     awayScorOvUvHomeConceedOvUv10[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv10[2].append(t)       
+     awayScorOvUvHomeConceedOvUv10[3].append("TACScor3TeamHFullTimeRes2+")
+     awayScorOvUvHomeConceedOvUv10[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv11[0].append(str(awayTScorGoHomeFull[20]) + "/" + str(awayTScorGoHomeFull[21]))
+     awayScorOvUvHomeConceedOvUv11[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv11[2].append(t)       
+     awayScorOvUvHomeConceedOvUv11[3].append("TACScor3TeamHFullTimeRes3+")
+     awayScorOvUvHomeConceedOvUv11[4].append("HomeGamesPatt")
+# Team A/Away Score 3 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv12[0].append(str(awayTScorGoHomeFull[22]) + "/" + str(awayTScorGoHomeFull[23]))
+     awayScorOvUvHomeConceedOvUv12[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv12[2].append(t)       
+     awayScorOvUvHomeConceedOvUv12[3].append("TACScor3TeamHFullTimeRes4+")
+     awayScorOvUvHomeConceedOvUv12[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Score Fulltime 4 Goal, Team A goes home Fulltime Res     
+     awayScorOvUvHomeConceedOvUv13[0].append(str(awayTScorGoHomeFull[24]) + "/" + str(awayTScorGoHomeFull[25]))
+     awayScorOvUvHomeConceedOvUv13[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv13[2].append(t)        
+     awayScorOvUvHomeConceedOvUv13[3].append("TACScor4TeamHFullTimeRes1+")
+     awayScorOvUvHomeConceedOvUv13[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv14[0].append(str(awayTScorGoHomeFull[26]) + "/" + str(awayTScorGoHomeFull[27]))
+     awayScorOvUvHomeConceedOvUv14[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv14[2].append(t)       
+     awayScorOvUvHomeConceedOvUv14[3].append("TACScor4TeamHFullTimeRes2+")
+     awayScorOvUvHomeConceedOvUv14[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv15[0].append(str(awayTScorGoHomeFull[28]) + "/" + str(awayTScorGoHomeFull[29]))
+     awayScorOvUvHomeConceedOvUv15[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv15[2].append(t)       
+     awayScorOvUvHomeConceedOvUv15[3].append("TACScor4TeamHFullTimeRes3+")
+     awayScorOvUvHomeConceedOvUv15[4].append("HomeGamesPatt")
+# Team A/Away Score 4 Goal, Team A goes home Fulltime Res       
+     awayScorOvUvHomeConceedOvUv16[0].append(str(awayTScorGoHomeFull[30]) + "/" + str(awayTScorGoHomeFull[31]))
+     awayScorOvUvHomeConceedOvUv16[1].append(len(rfdA))
+     awayScorOvUvHomeConceedOvUv16[2].append(t)       
+     awayScorOvUvHomeConceedOvUv16[3].append("TACScor4TeamHFullTimeRes4+")
+     awayScorOvUvHomeConceedOvUv16[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 1 Goal, Team A goes home Fulltime Res     
+     awayConOvUvHomeConceedOvUv[0].append(str(awayTConGoHomeFull[0]) + "/" + str(awayTConGoHomeFull[1]))
+     awayConOvUvHomeConceedOvUv[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv[2].append(t)        
+     awayConOvUvHomeConceedOvUv[3].append("TACon1TeamHFullTimeRes1+")
+     awayConOvUvHomeConceedOvUv[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv2[0].append(str(awayTConGoHomeFull[2]) + "/" + str(awayTConGoHomeFull[3]))
+     awayConOvUvHomeConceedOvUv2[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv2[2].append(t)       
+     awayConOvUvHomeConceedOvUv2[3].append("TACon1TeamHFullTimeRes2+")
+     awayConOvUvHomeConceedOvUv2[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv3[0].append(str(awayTConGoHomeFull[4]) + "/" + str(awayTConGoHomeFull[5]))
+     awayConOvUvHomeConceedOvUv3[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv3[2].append(t)       
+     awayConOvUvHomeConceedOvUv3[3].append("TACon1TeamHFullTimeRes3+")
+     awayConOvUvHomeConceedOvUv3[4].append("HomeGamesPatt")
+# Team A/Away Conceed 1 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv4[0].append(str(awayTConGoHomeFull[6]) + "/" + str(awayTConGoHomeFull[7]))
+     awayConOvUvHomeConceedOvUv4[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv4[2].append(t)       
+     awayConOvUvHomeConceedOvUv4[3].append("TACon1TeamHFullTimeRes4+")
+     awayConOvUvHomeConceedOvUv4[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 2 Goal, Team A goes home Fulltime Res     
+     awayConOvUvHomeConceedOvUv5[0].append(str(awayTConGoHomeFull[8]) + "/" + str(awayTConGoHomeFull[9]))
+     awayConOvUvHomeConceedOvUv5[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv5[2].append(t)        
+     awayConOvUvHomeConceedOvUv5[3].append("TACon2TeamHFullTimeRes1+")
+     awayConOvUvHomeConceedOvUv5[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv6[0].append(str(awayTConGoHomeFull[10]) + "/" + str(awayTConGoHomeFull[11]))
+     awayConOvUvHomeConceedOvUv6[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv6[2].append(t)       
+     awayConOvUvHomeConceedOvUv6[3].append("TACon2TeamHFullTimeRes2+")
+     awayConOvUvHomeConceedOvUv6[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv7[0].append(str(awayTConGoHomeFull[12]) + "/" + str(awayTConGoHomeFull[13]))
+     awayConOvUvHomeConceedOvUv7[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv7[2].append(t)       
+     awayConOvUvHomeConceedOvUv7[3].append("TACon2TeamHFullTimeRes3+")
+     awayConOvUvHomeConceedOvUv7[4].append("HomeGamesPatt")
+# Team A/Away Conceed 2 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv8[0].append(str(awayTConGoHomeFull[14]) + "/" + str(awayTConGoHomeFull[15]))
+     awayConOvUvHomeConceedOvUv8[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv8[2].append(t)       
+     awayConOvUvHomeConceedOvUv8[3].append("TACon2TeamHFullTimeRes4+")
+     awayConOvUvHomeConceedOvUv8[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 3 Goal, Team A goes home Fulltime Res     
+     awayConOvUvHomeConceedOvUv9[0].append(str(awayTConGoHomeFull[16]) + "/" + str(awayTConGoHomeFull[17]))
+     awayConOvUvHomeConceedOvUv9[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv9[2].append(t)        
+     awayConOvUvHomeConceedOvUv9[3].append("TACon3TeamHFullTimeRes1+")
+     awayConOvUvHomeConceedOvUv9[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv10[0].append(str(awayTConGoHomeFull[18]) + "/" + str(awayTConGoHomeFull[19]))
+     awayConOvUvHomeConceedOvUv10[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv10[2].append(t)       
+     awayConOvUvHomeConceedOvUv10[3].append("TACon3TeamHFullTimeRes2+")
+     awayConOvUvHomeConceedOvUv10[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv11[0].append(str(awayTConGoHomeFull[20]) + "/" + str(awayTConGoHomeFull[21]))
+     awayConOvUvHomeConceedOvUv11[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv11[2].append(t)       
+     awayConOvUvHomeConceedOvUv11[3].append("TACon3TeamHFullTimeRes3+")
+     awayConOvUvHomeConceedOvUv11[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv12[0].append(str(awayTConGoHomeFull[22]) + "/" + str(awayTConGoHomeFull[23]))
+     awayConOvUvHomeConceedOvUv12[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv12[2].append(t)       
+     awayConOvUvHomeConceedOvUv12[3].append("TACon3TeamHFullTimeRes4+")
+     awayConOvUvHomeConceedOvUv12[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Conceed Fulltime 4 Goal, Team A goes home Fulltime Res     
+     awayConOvUvHomeConceedOvUv13[0].append(str(awayTConGoHomeFull[24]) + "/" + str(awayTConGoHomeFull[25]))
+     awayConOvUvHomeConceedOvUv13[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv13[2].append(t)        
+     awayConOvUvHomeConceedOvUv13[3].append("TACon4TeamHFullTimeRes1+")
+     awayConOvUvHomeConceedOvUv13[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv14[0].append(str(awayTConGoHomeFull[26]) + "/" + str(awayTConGoHomeFull[27]))
+     awayConOvUvHomeConceedOvUv14[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv14[2].append(t)       
+     awayConOvUvHomeConceedOvUv14[3].append("TACon4TeamHFullTimeRes2+")
+     awayConOvUvHomeConceedOvUv14[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv15[0].append(str(awayTConGoHomeFull[28]) + "/" + str(awayTConGoHomeFull[29]))
+     awayConOvUvHomeConceedOvUv15[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv15[2].append(t)       
+     awayConOvUvHomeConceedOvUv15[3].append("TACon4TeamHFullTimeRes3+")
+     awayConOvUvHomeConceedOvUv15[4].append("HomeGamesPatt")
+# Team A/Away Conceed 4 Goal, Team A goes home Fulltime Res       
+     awayConOvUvHomeConceedOvUv16[0].append(str(awayTConGoHomeFull[30]) + "/" + str(awayTConGoHomeFull[31]))
+     awayConOvUvHomeConceedOvUv16[1].append(len(rfdA))
+     awayConOvUvHomeConceedOvUv16[2].append(t)       
+     awayConOvUvHomeConceedOvUv16[3].append("TACon4TeamHFullTimeRes4+")
+     awayConOvUvHomeConceedOvUv16[4].append("HomeGamesPatt")
+#================================================================================================================
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv[0].append(str(teamScOneAwayOneHome[0]) + "/" + str(teamScOneAwayOneHome[1]))
+     awayConceedOvUvHomeConceedOvUv[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv[2].append(t)        
+     awayConceedOvUvHomeConceedOvUv[3].append("TAFTTeamHFullTimeRes1+")
+     awayConceedOvUvHomeConceedOvUv[4].append("HomeGamesPlayed")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv2[0].append(str(teamScOneAwayOneHome[2]) + "/" + str(teamScOneAwayOneHome[3]))
+     awayConceedOvUvHomeConceedOvUv2[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv2[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv2[3].append("TAFT1TeamHFullTimeRes2+")
+     awayConceedOvUvHomeConceedOvUv2[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv3[0].append(str(teamScOneAwayOneHome[4]) + "/" + str(teamScOneAwayOneHome[5]))
+     awayConceedOvUvHomeConceedOvUv3[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv3[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv3[3].append("TAFT1TeamHFullTimeRes3+")
+     awayConceedOvUvHomeConceedOvUv3[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv4[0].append(str(teamScOneAwayOneHome[6]) + "/" + str(teamScOneAwayOneHome[7]))
+     awayConceedOvUvHomeConceedOvUv4[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv4[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv4[3].append("TAFT1TeamHFullTimeRes4+")
+     awayConceedOvUvHomeConceedOvUv4[4].append("HomeGamesPatt")
+#============================================================================================
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv5[0].append(str(teamScOneAwayOneHome[8]) + "/" + str(teamScOneAwayOneHome[9]))
+     awayConceedOvUvHomeConceedOvUv5[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv5[2].append(t)         
+     awayConceedOvUvHomeConceedOvUv5[3].append("TAFT2TeamHFullTimeRes1+")
+     awayConceedOvUvHomeConceedOvUv5[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res        
+     awayConceedOvUvHomeConceedOvUv6[0].append(str(teamScOneAwayOneHome[10]) + "/" + str(teamScOneAwayOneHome[11]))
+     awayConceedOvUvHomeConceedOvUv6[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv6[2].append(t)         
+     awayConceedOvUvHomeConceedOvUv6[3].append("TAFT2TeamHFullTimeRes2+")
+     awayConceedOvUvHomeConceedOvUv6[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv7[0].append(str(teamScOneAwayOneHome[12]) + "/" + str(teamScOneAwayOneHome[13]))
+     awayConceedOvUvHomeConceedOvUv7[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv7[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv7[3].append("TAFT2TeamHFullTimeRes3+")
+     awayConceedOvUvHomeConceedOvUv7[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res        
+     awayConceedOvUvHomeConceedOvUv8[0].append(str(teamScOneAwayOneHome[14]) + "/" + str(teamScOneAwayOneHome[15]))
+     awayConceedOvUvHomeConceedOvUv8[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv8[2].append(t)         
+     awayConceedOvUvHomeConceedOvUv8[3].append("TAFT2TeamHFullTimeRes4+")
+     awayConceedOvUvHomeConceedOvUv8[4].append("HomeGamesPatt")
+     #============================================================================================
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv9[0].append(str(teamScOneAwayOneHome[16]) + "/" + str(teamScOneAwayOneHome[17]))
+     awayConceedOvUvHomeConceedOvUv9[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv9[2].append(t)        
+     awayConceedOvUvHomeConceedOvUv9[3].append("TAFT3TeamHFullTimeRes1+")
+     awayConceedOvUvHomeConceedOvUv9[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv10[0].append(str(teamScOneAwayOneHome[18]) + "/" + str(teamScOneAwayOneHome[19]))
+     awayConceedOvUvHomeConceedOvUv10[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv10[2].append(t)        
+     awayConceedOvUvHomeConceedOvUv10[3].append("TAFT3TeamHFullTimeRes2+")
+     awayConceedOvUvHomeConceedOvUv10[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res   
+     awayConceedOvUvHomeConceedOvUv11[0].append(str(teamScOneAwayOneHome[20]) + "/" + str(teamScOneAwayOneHome[21]))    
+     awayConceedOvUvHomeConceedOvUv11[1].append(len(rfdA))   
+     awayConceedOvUvHomeConceedOvUv11[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv11[3].append("TAFT3TeamHFullTimeRes3+")
+     awayConceedOvUvHomeConceedOvUv11[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res        
+     awayConceedOvUvHomeConceedOvUv12[0].append(str(teamScOneAwayOneHome[22]) + "/" + str(teamScOneAwayOneHome[23])) 
+     awayConceedOvUvHomeConceedOvUv12[1].append(len(rfdA)) 
+     awayConceedOvUvHomeConceedOvUv12[2].append(t)         
+     awayConceedOvUvHomeConceedOvUv12[3].append("TAFT3TeamHFullTimeRes4+")
+     awayConceedOvUvHomeConceedOvUv12[4].append("HomeGamesPatt")
+#============================================================================================
+# Team A/Away Fulltime 4 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv13[0].append(str(teamScOneAwayOneHome[24]) + "/" + str(teamScOneAwayOneHome[25]))
+     awayConceedOvUvHomeConceedOvUv13[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv13[2].append(t)        
+     awayConceedOvUvHomeConceedOvUv13[3].append("TAFT4TeamHFullTimeRes1+")
+     awayConceedOvUvHomeConceedOvUv13[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 4 Goal, Team A goes home Fulltime Res       
+     awayConceedOvUvHomeConceedOvUv14[0].append(str(teamScOneAwayOneHome[26]) + "/" + str(teamScOneAwayOneHome[27]))
+     awayConceedOvUvHomeConceedOvUv14[1].append(len(rfdA))
+     awayConceedOvUvHomeConceedOvUv14[2].append(t)        
+     awayConceedOvUvHomeConceedOvUv14[3].append("TAFT4TeamHFullTimeRes2+")
+     awayConceedOvUvHomeConceedOvUv14[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 4 Goal, Team A goes home Fulltime Res   
+     awayConceedOvUvHomeConceedOvUv15[0].append(str(teamScOneAwayOneHome[28]) + "/" + str(teamScOneAwayOneHome[29]))    
+     awayConceedOvUvHomeConceedOvUv15[1].append(len(rfdA))   
+     awayConceedOvUvHomeConceedOvUv15[2].append(t)       
+     awayConceedOvUvHomeConceedOvUv15[3].append("TAFT4TeamHFullTimeRes3+")
+     awayConceedOvUvHomeConceedOvUv15[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 4 Goal, Team A goes home Fulltime Res        
+     awayConceedOvUvHomeConceedOvUv16[0].append(str(teamScOneAwayOneHome[30]) + "/" + str(teamScOneAwayOneHome[31])) 
+     awayConceedOvUvHomeConceedOvUv16[1].append(len(rfdA)) 
+     awayConceedOvUvHomeConceedOvUv16[2].append(t)         
+     awayConceedOvUvHomeConceedOvUv16[3].append("TAFT4TeamHFullTimeRes4+")
+     awayConceedOvUvHomeConceedOvUv16[4].append("HomeGamesPatt")
 #=====================================================================================================#
+
 #Home HalftimeAction Winning,Second Half output: Home leading Halftime//Away Over Zero Sechnd HAlf
      #if len(rfdA) - FirstHalfTrailSecOutput[14] :          
      FirstHAwayWinSecHHomeScore1[0].append(str(FirstHalfTrailSecOutput[6])+ "/" +str(FirstHalfTrailSecOutput[7]))
@@ -766,9 +1368,9 @@ def homeFilter(data):
 
 
 homeFilter(sql_data)
-          #1             #2          #3           #4           #5               #6             #7             #8                #9               #10            #11          #12           #13             #14          #15       #16     #17        #18          #19         #20       #21           #22            #23           #24         #25       #26        #27      #28         #29        #30       #31      #32        #33        #34           #35          #36               #37                      #38                     #39                      #40                        #41                         #42                #43                #44                  #45           #46               #47               #47               #48                  #49                                    #50                                #51                                     #52                                     #53                                #54                                #55                                     #56                                     #57                                #58                                     #59                                #60                                    #61                                 #62                                #63                                     #64                           #65                      #66                           #67                           #68                      #69
-#Info=(HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw)
-Info=(HomeFixOver1,HomeFixOver2,HomeFixOver3,HomeFixOver4,HomeFixOver5,HomeFConceedOvs,HomeFConceedOvs2,HomeFConceedOvs3,HomeFConceedOvs4,HomeFConceedOvs5,HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw,HHalftimeWins,HHWinsDraw,HSWinsDraw,H2ndHWins,HomeHalftimeOverZ,HomefrstOver1,HomefrstOver2,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeFFOvs2,HomeFFOvs3,HomeFFOvs,HomeSFOvs,HomeSFOvs2,HomeSFOvs3,HomeallBTS,HomeFrstHBTS,HomeSecndHBTS,HomeHalftimeConceedOverZ,HomeHalftimeConceedOverZ2,HomeHalftimeConceedOverZ3,HomeSectimeConceedOverZ3,HomeSectimeConceedOverZ2,HomeSectimeConceedOverZ,ConceedFSoutcomeOne,ConceedFSoutcomeTwo,ConceedFSoutcome,ScoreFSoutcome,ScoreFSoutcomeOne,ScoreFSoutcomeTwo,ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderT,FirstHalfAcionSecondHalfOverUnderTOne,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHalfAwayWinSecondHalfHomeScore,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3)
+          #1             #2          #3           #4           #5               #6             #7             #8                #9               #10            #11          #12           #13             #14          #15       #16     #17        #18          #19         #20       #21           #22            #23           #24         #25       #26        #27      #28         #29        #30       #31      #32        #33        #34           #35          #36               #37                      #38                     #39                      #40                        #41                         #42                #43                #44                  #45           #46               #47               #47               #48                  #49                                    #50                                #51                                     #52                                     #53                                #54                                #55                                     #56                                     #57                                #58                                     #59                                #60                                    #61                                 #62                                #63                                     #64                           #65                      #66                           #67                           #68                      #69                   #70                              #71                           #72                                #73                           #74                           #75                                #76                                #77                           #78                           #79                                #80                                #81                            #82                               #83                            #84                               #85                            #86                       #87                           #88                      89                          90                            91                              92                     93                       94                            95                            96                            97                            98                           99                             100                       101                          102                        103                              104                      105                           106                      107                           108                           109                           110                           111                           112                           113                           114                           115                           116                           117                           118                      119                      120                      121                           122                      123                       124                          125                   126                         127                      128                           129                      130                         131                        132                      133                                    
+
+Info=(HomeFixOver1,HomeFixOver2,HomeFixOver3,HomeFixOver4,HomeFixOver5,HomeFConceedOvs,HomeFConceedOvs2,HomeFConceedOvs3,HomeFConceedOvs4,HomeFConceedOvs5,HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullOver5,HWins,HWinsDraw,HHalftimeWins,HHWinsDraw,HSWinsDraw,H2ndHWins,HomeHalftimeOverZ,HomefrstOver1,HomefrstOver2,HomeSOvs,HomeSOvs1,HomeSOvs2,HomeFFOvs2,HomeFFOvs3,HomeFFOvs,HomeSFOvs,HomeSFOvs2,HomeSFOvs3,HomeallBTS,HomeFrstHBTS,HomeSecndHBTS,HomeHalftimeConceedOverZ,HomeHalftimeConceedOverZ2,HomeHalftimeConceedOverZ3,HomeSectimeConceedOverZ3,HomeSectimeConceedOverZ2,HomeSectimeConceedOverZ,ConceedFSoutcomeOne,ConceedFSoutcomeTwo,ConceedFSoutcome,ScoreFSoutcome,ScoreFSoutcomeOne,ScoreFSoutcomeTwo,ScoreFSoutcomeAny,FirstHalfAcionSecondHalfOutput,FirstHalfAcionSecondHalfOverUnderTTThree,FirstHalfAcionSecondHalfOverUnderTTTwo,FirstHalfAcionSecondHalfOverUnderTTOne,FirstHalfAcionSecondHalfOverUnderTT,FirstHalfAcionSecondHalfOverUnderT,FirstHalfAcionSecondHalfOverUnderTOne,FirstHalfAcionSecondHalfOverUnderTTwo,FirstHalfAcionSecondHalfOverUnderTThree,FirstHalfAcionSecondHalfOverUnderO,FirstHalfAcionSecondHalfOverUnderOOne,FirstHalfAcionSecondHalfOverUnderOTwo,FirstHalfAcionSecondHalfOverUnderOThree,FirstHalfAwayWinSecondHalfLose,FirstHalfAwayWinSecondHalfHomeWindraw,FirstHAwayWinSecHAwayScore3,FirstHAwayWinSecHAwayScore1,FirstHAwayWinSecHAwayScore2,FirstHAwayWinSecHHomeScore1,FirstHAwayWinSecHHomeScore2,FirstHAwayWinSecHHomeScore3,awayConceedOvUvHomeConceedOvUv,awayConceedOvUvHomeConceedOvUv8,awayConceedOvUvHomeConceedOvUv7,awayConceedOvUvHomeConceedOvUv6,awayConceedOvUvHomeConceedOvUv5,awayConceedOvUvHomeConceedOvUv4,awayConceedOvUvHomeConceedOvUv3,awayConceedOvUvHomeConceedOvUv2,awayConceedOvUvHomeConceedOvUv9,awayConceedOvUvHomeConceedOvUv10,awayConceedOvUvHomeConceedOvUv11,awayConceedOvUvHomeConceedOvUv12,awayConceedOvUvHomeConceedOvUv13,awayConceedOvUvHomeConceedOvUv14,awayConceedOvUvHomeConceedOvUv15,awayConceedOvUvHomeConceedOvUv16,awayConOvUvHomeConceedOvUv,awayConOvUvHomeConceedOvUv2,awayConOvUvHomeConceedOvUv3,awayConOvUvHomeConceedOvUv4,awayConOvUvHomeConceedOvUv5,awayConOvUvHomeConceedOvUv6,awayConOvUvHomeConceedOvUv7,awayConOvUvHomeConceedOvUv8,awayConOvUvHomeConceedOvUv9,awayConOvUvHomeConceedOvUv10,awayConOvUvHomeConceedOvUv11,awayConOvUvHomeConceedOvUv12,awayConOvUvHomeConceedOvUv13,awayConOvUvHomeConceedOvUv14,awayConOvUvHomeConceedOvUv15,awayConOvUvHomeConceedOvUv16,awayScorOvUvHomeConceedOvUv,awayScorOvUvHomeConceedOvUv2,awayScorOvUvHomeConceedOvUv3,awayScorOvUvHomeConceedOvUv4,awayScorOvUvHomeConceedOvUv5,awayScorOvUvHomeConceedOvUv6,awayScorOvUvHomeConceedOvUv7,awayScorOvUvHomeConceedOvUv8,awayScorOvUvHomeConceedOvUv9,awayScorOvUvHomeConceedOvUv10,awayScorOvUvHomeConceedOvUv11,awayScorOvUvHomeConceedOvUv12,awayScorOvUvHomeConceedOvUv13,awayScorOvUvHomeConceedOvUv14,awayScorOvUvHomeConceedOvUv15,awayScorOvUvHomeConceedOvUv16,awayScorOvUvHomeScorOvUv,awayScorOvUvHomeScorOvUv2,awayScorOvUvHomeScorOvUv3,awayScorOvUvHomeScorOvUv4,awayScorOvUvHomeScorOvUv5,awayScorOvUvHomeScorOvUv6,awayScorOvUvHomeScorOvUv7,awayScorOvUvHomeScorOvUv8,awayScorOvUvHomeScorOvUv9,awayScorOvUvHomeScorOvUv10,awayScorOvUvHomeScorOvUv11,awayScorOvUvHomeScorOvUv12,awayScorOvUvHomeScorOvUv13,awayScorOvUvHomeScorOvUv14,awayScorOvUvHomeScorOvUv15,awayScorOvUvHomeScorOvUv16)
 
 createReport(Info,pd)
  

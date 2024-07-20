@@ -1,0 +1,482 @@
+awayConceedOvUvHomeConceedOvUv = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv2 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv3 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv4 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv5 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv6 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv7 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv8 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv9 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv10 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv11 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv12 = ([],[],[],[],[])
+  awayConceedOvUvHomeConceedOvUv13 = ([],[],[],[],[])
+
+
+
+  overs = ([],[],[],[],[])
+  unders = ([],[],[],[],[])
+
+  Aunders = ([],[],[],[],[])
+  Aovers = ([],[],[],[],[])
+
+  ATTovers = ([],[],[],[],[])
+  ATTunders = ([],[],[],[],[])
+
+  ATTTovers = ([],[],[],[],[])
+  ATTTunders = ([],[],[],[],[])
+
+  ATTTTovers = ([],[],[],[],[])
+  ATTTTunders = ([],[],[],[],[])
+
+  ATovers = ([],[],[],[],[])
+  ATunders = ([],[],[],[],[])
+  Ateams = []
+
+  for ee in sql_data[0]:
+
+   countovr1 = 0
+   countovr2 = 0
+   countovr3 = 0
+   countovr4 = 0
+   underovr1 = 0
+   underovr2 = 0
+   underovr3 = 0
+   underovr4 = 0
+
+
+   HNunderovr1 = 0
+   HNunderovr2 = 0
+   HNunderovr3 = 0
+   HNunderovr4 = 0
+   HNexcountovr1 = 0
+   HNexcountovr2 = 0
+   HNexcountovr3 = 0
+   HNexcountovr4 = 0
+
+   HNTunderovr1 = 0
+   HNTunderovr2 = 0
+   HNTunderovr3 = 0
+   HNTunderovr4 = 0
+   HNTexcountovr1 = 0
+   HNTexcountovr2 = 0
+   HNTexcountovr3 = 0
+   HNTexcountovr4 = 0
+
+   HNTTunderovr1 = 0
+   HNTTunderovr2 = 0
+   HNTTunderovr3 = 0
+   HNTTunderovr4 = 0
+   HNTTexcountovr1 = 0
+   HNTTexcountovr2 = 0
+   HNTTexcountovr3 = 0
+   HNTTexcountovr4 = 0
+
+   HNTTTunderovr1 = 0
+   HNTTTunderovr2 = 0
+   HNTTTunderovr3 = 0
+   HNTTTunderovr4 = 0
+   HNTTTexcountovr1 = 0
+   HNTTTexcountovr2 = 0
+   HNTTTexcountovr3 = 0
+   HNTTTexcountovr4 = 0
+
+   HNTTTTunderovr1 = 0
+   HNTTTTunderovr2 = 0
+   HNTTTTunderovr3 = 0
+   HNTTTTunderovr4 = 0
+   HNTTTTexcountovr1 = 0
+   HNTTTTexcountovr2 = 0
+   HNTTTTexcountovr3 = 0
+   HNTTTTexcountovr4 = 0
+
+
+   index = 0
+   indx = True
+   indxFound = False
+   
+   if ee[4] not in Ateams:
+    teamFound = True
+    Ateams.append(ee[4])
+    t = ee[4]
+    if t == "Chelsea":
+        a = 0
+    for ec in sql_data[0]:
+     if index == ec[0] or indx == True:
+       index = ec[0]
+       indx = True
+       if ec[4] == t: 
+        sw = int(ec[5])
+        if int(ec[5]) > 4:
+           sw = 4            
+        match sw:
+                case 0:
+                    underovr1 += 1
+                    underovr2 += 1
+                    underovr3 += 1
+                    underovr4 += 1
+                case 1:
+                    countovr1 += 1
+                    underovr2 += 1
+                    underovr3 += 1
+                    underovr4 += 1
+                case 2:
+                    countovr1 += 1
+                    countovr2 += 1
+                    underovr3 += 1
+                    underovr4 += 1
+                case 3:
+                    countovr1 += 1
+                    countovr2 += 1
+                    countovr3 += 1
+                    underovr4+= 1
+                case 4:
+                    countovr1 += 1
+                    countovr2 += 1
+                    countovr3 += 1
+                    countovr4 += 1
+       
+        for bb in sql_data[0]:
+         if index == bb[0]:
+            indxFound = True
+         if bb[3] == t and indxFound == True: 
+            index = bb[0]  
+            indx = False
+            ll = int(bb[5])
+            es = int(ec[5])
+            ed = int(ec[6])
+            ef = int(bb[6])
+            fws = int(bb[7])
+            fes = int(bb[8])
+            if int(bb[5]) > 4:
+                ll = 4
+            if int(ec[5]) > 4:
+                es = 4
+            if int(ec[6]) > 4:
+                ed = 4
+            if int(bb[6]) > 4:
+                ef = 4
+            if int(bb[7]) > 4:
+                fws = 4
+            if int(bb[8]) > 4:
+                fes = 4
+            
+            #c = ll  - fws
+            #a = ef  - fes  
+            ws = ll + ef  
+            aws = ed + es  
+            if ws > 5:
+                ws = 5
+            if aws > 5:
+                aws = 5
+            match aws:
+              case 0:
+                  a = 0
+              case 1:
+               match ws:
+                case 0:                    
+                        HNunderovr1 += 1
+                        HNunderovr2 += 1
+                        HNunderovr3 += 1
+                        HNunderovr4 += 1
+                case 1:
+                    
+                        HNexcountovr1 += 1
+                        HNunderovr2 += 1
+                        HNunderovr3 += 1
+                        HNunderovr4 += 1
+                case 2:
+                   
+                        HNexcountovr1 += 1
+                        HNexcountovr2 += 1
+                        HNunderovr3 += 1
+                        HNunderovr4 += 1
+                case 3:
+                  
+                    HNexcountovr1 += 1
+                    HNexcountovr2 += 1
+                    HNexcountovr3 += 1
+                    HNunderovr4+= 1
+                case 4:
+                 
+                    HNexcountovr1 += 1
+                    HNexcountovr2 += 1
+                    HNexcountovr3 += 1
+                    HNexcountovr4 += 1
+              case 2:
+               match ws:
+                case 0:                    
+                        HNTunderovr1 += 1
+                        HNTunderovr2 += 1
+                        HNTunderovr3 += 1
+                        HNTunderovr4 += 1
+                case 1:
+                        HNTexcountovr1 += 1
+                        HNTunderovr2 += 1
+                        HNTunderovr3 += 1
+                        HNTunderovr4 += 1
+                case 2:
+                        HNTexcountovr1 += 1
+                        HNTexcountovr2 += 1
+                        HNTunderovr3 += 1
+                        HNTunderovr4 += 1
+                case 3:
+                        HNTexcountovr1 += 1
+                        HNTexcountovr2 += 1
+                        HNTexcountovr3 += 1
+                        HNTunderovr4+= 1
+                case 4:
+                        HNTexcountovr1 += 1
+                        HNTexcountovr2 += 1
+                        HNTexcountovr3 += 1
+                        HNTexcountovr4 += 1  
+              case 3:
+               match ws:
+                case 0:                    
+                        HNTTunderovr1 += 1
+                        HNTTunderovr2 += 1
+                        HNTTunderovr3 += 1
+                        HNTTunderovr4 += 1
+                case 1:
+                        HNTTexcountovr1 += 1
+                        HNTTunderovr2 += 1
+                        HNTTunderovr3 += 1
+                        HNTTunderovr4 += 1
+                case 2:
+                        HNTTexcountovr1 += 1
+                        HNTTexcountovr2 += 1
+                        HNTTunderovr3 += 1
+                        HNTTunderovr4 += 1
+                case 3:
+                        HNTTexcountovr1 += 1
+                        HNTTexcountovr2 += 1
+                        HNTTexcountovr3 += 1
+                        HNTTunderovr4+= 1
+                case 4:
+                        HNTTexcountovr1 += 1
+                        HNTTexcountovr2 += 1
+                        HNTTexcountovr3 += 1
+                        HNTTexcountovr4 += 1  
+              case 4:
+               match ws:
+                case 0:                    
+                        HNTTTunderovr1 += 1
+                        HNTTTunderovr2 += 1
+                        HNTTTunderovr3 += 1
+                        HNTTTunderovr4 += 1
+                case 1:
+                        HNTTTexcountovr1 += 1
+                        HNTTTunderovr2 += 1
+                        HNTTTunderovr3 += 1
+                        HNTTTunderovr4 += 1
+                case 2:
+                        HNTTTexcountovr1 += 1
+                        HNTTTexcountovr2 += 1
+                        HNTTTunderovr3 += 1
+                        HNTTTunderovr4 += 1
+                case 3:
+                        HNTTTexcountovr1 += 1
+                        HNTTTexcountovr2 += 1
+                        HNTTTexcountovr3 += 1
+                        HNTTTunderovr4+= 1
+                case 4:
+                        HNTTTexcountovr1 += 1
+                        HNTTTexcountovr2 += 1
+                        HNTTTexcountovr3 += 1
+                        HNTTTexcountovr4 += 1  
+              case 5:
+               match ws:
+                case 0:                    
+                        HNTTTTunderovr1 += 1
+                        HNTTTTunderovr2 += 1
+                        HNTTTTunderovr3 += 1
+                        HNTTTTunderovr4 += 1
+                case 1:
+                        HNTTTTexcountovr1 += 1
+                        HNTTTTunderovr2 += 1
+                        HNTTTTunderovr3 += 1
+                        HNTTTTunderovr4 += 1
+                case 2:
+                        HNTTTTexcountovr1 += 1
+                        HNTTTTexcountovr2 += 1
+                        HNTTTTunderovr3 += 1
+                        HNTTTTunderovr4 += 1
+                case 3:
+                        HNTTTTexcountovr1 += 1
+                        HNTTTTexcountovr2 += 1
+                        HNTTTTexcountovr3 += 1
+                        HNTTTTunderovr4+= 1
+                case 4:
+                        HNTTTTexcountovr1 += 1
+                        HNTTTTexcountovr2 += 1
+                        HNTTTTexcountovr3 += 1
+                        HNTTTTexcountovr4 += 1  
+            
+            indxFound = False         
+            break
+   if teamFound == True:
+    overs[0].append(t) 
+    overs[1].append(countovr1)               
+    overs[2].append(countovr2)         
+    overs[3].append(countovr3)         
+    overs[4].append(countovr4) 
+
+    unders[0].append(t) 
+    unders[1].append(underovr1)                
+    unders[2].append(underovr2)         
+    unders[3].append(underovr3)         
+    unders[4].append(underovr4) 
+
+    Aunders[0].append(t)  
+    Aunders[1].append(HNunderovr1)                
+    Aunders[2].append(HNunderovr2)         
+    Aunders[3].append(HNunderovr3)         
+    Aunders[4].append(HNunderovr4)
+
+    Aovers[0].append(t) 
+    Aovers[1].append(HNexcountovr1)           
+    Aovers[2].append(HNexcountovr2)         
+    Aovers[3].append(HNexcountovr3)         
+    Aovers[4].append(HNexcountovr4) 
+
+    ATovers[0].append(t) 
+    ATovers[1].append(HNTexcountovr1)           
+    ATovers[2].append(HNTexcountovr2)         
+    ATovers[3].append(HNTexcountovr3)         
+    ATovers[4].append(HNTexcountovr4) 
+
+    ATunders[0].append(t)  
+    ATunders[1].append(HNTunderovr1)                
+    ATunders[2].append(HNTunderovr2)         
+    ATunders[3].append(HNTunderovr3)         
+    ATunders[4].append(HNTunderovr4)
+
+    ATTovers[0].append(t) 
+    ATTovers[1].append(HNTTexcountovr1)           
+    ATTovers[2].append(HNTTexcountovr2)         
+    ATTovers[3].append(HNTTexcountovr3)         
+    ATTovers[4].append(HNTTexcountovr4) 
+
+    ATTunders[0].append(t)  
+    ATTunders[1].append(HNTTTunderovr1)                
+    ATTunders[2].append(HNTTTunderovr2)         
+    ATTunders[3].append(HNTTTunderovr3)         
+    ATTunders[4].append(HNTTTunderovr4)
+
+    ATTTovers[0].append(t) 
+    ATTTovers[1].append(HNTTTexcountovr1)           
+    ATTTovers[2].append(HNTTTexcountovr2)         
+    ATTTovers[3].append(HNTTTexcountovr3)         
+    ATTTovers[4].append(HNTTTexcountovr4) 
+
+    ATTTunders[0].append(t)  
+    ATTTunders[1].append(HNTTTunderovr1)                
+    ATTTunders[2].append(HNTTTunderovr2)         
+    ATTTunders[3].append(HNTTTunderovr3)         
+    ATTTunders[4].append(HNTTTunderovr4)
+
+    ATTTTovers[0].append(t) 
+    ATTTTovers[1].append(HNTTTexcountovr1)           
+    ATTTTovers[2].append(HNTTTexcountovr2)         
+    ATTTTovers[3].append(HNTTTexcountovr3)         
+    ATTTTovers[4].append(HNTTTexcountovr4) 
+
+    ATTTTunders[0].append(t)  
+    ATTTTunders[1].append(HNTTTunderovr1)                
+    ATTTTunders[2].append(HNTTTunderovr2)         
+    ATTTTunders[3].append(HNTTTunderovr3)         
+    ATTTTunders[4].append(HNTTTunderovr4)
+    teamFound = False
+
+  arr = (Aovers,Aunders,ATovers,ATunders,ATTovers,ATTunders,ATTTovers,ATTTunders,ATTTTovers,ATTTTunders)
+  inn = 0
+  bb = False
+  for t in arr:
+    if bb == True:
+        break;
+    aa = len(t[0])
+    for e in t[0]:
+        b =  e
+        c =  t[1][inn]
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv[0].append(str(t[1][inn]) + "/" + str(arr[1][1][inn]))
+        awayConceedOvUvHomeConceedOvUv[1].append(str(t[1][inn]) + "/" + str(arr[1][1][inn]))
+        awayConceedOvUvHomeConceedOvUv[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv[3].append("TAFTTeamHFullTimeRes1+")
+        awayConceedOvUvHomeConceedOvUv[4].append("AwayGamesPatt")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv2[0].append(str(t[2][inn]) + "/" + str(arr[1][2][inn]))
+        awayConceedOvUvHomeConceedOvUv2[1].append(str(t[2][inn]) + "/" + str(arr[1][2][inn]))
+        awayConceedOvUvHomeConceedOvUv2[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv2[3].append("TAFT1TeamHFullTimeRes2+")
+        awayConceedOvUvHomeConceedOvUv2[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv3[0].append(str(t[3][inn]) + "/" + str(arr[1][3][inn]))
+        awayConceedOvUvHomeConceedOvUv3[1].append(str(t[3][inn]) + "/" + str(arr[1][3][inn]))
+        awayConceedOvUvHomeConceedOvUv3[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv3[3].append("TAFT1TeamHFullTimeRes3+")
+        awayConceedOvUvHomeConceedOvUv3[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 1 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv4[0].append(str(t[4][inn]) + "/" + str(arr[1][4][inn]))
+        awayConceedOvUvHomeConceedOvUv4[1].append(str(t[4][inn]) + "/" + str(arr[1][4][inn]))
+        awayConceedOvUvHomeConceedOvUv4[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv4[3].append("TAFT1TeamHFullTimeRes4+")
+        awayConceedOvUvHomeConceedOvUv4[4].append("HomeGamesPatt")
+#============================================================================================
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv5[0].append(str(arr[2][1][inn]) + "/" + str(arr[3][1][inn]))
+        awayConceedOvUvHomeConceedOvUv5[1].append(str(arr[2][1][inn]) + "/" + str(arr[3][1][inn]))
+        awayConceedOvUvHomeConceedOvUv5[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv5[3].append("TAFT2TeamHFullTimeRes1+")
+        awayConceedOvUvHomeConceedOvUv5[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res        
+        awayConceedOvUvHomeConceedOvUv6[0].append(str(arr[2][2][inn]) + "/" + str(arr[3][2][inn]))
+        awayConceedOvUvHomeConceedOvUv6[1].append(str(arr[2][2][inn]) + "/" + str(arr[3][2][inn]))
+        awayConceedOvUvHomeConceedOvUv6[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv6[3].append("TAFT2TeamHFullTimeRes2+")
+        awayConceedOvUvHomeConceedOvUv6[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv7[0].append(str(arr[2][3][inn]) + "/" + str(arr[3][3][inn]))
+        awayConceedOvUvHomeConceedOvUv7[1].append(str(arr[2][3][inn]) + "/" + str(arr[3][3][inn]))
+        awayConceedOvUvHomeConceedOvUv7[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv7[3].append("TAFT2TeamHFullTimeRes3+")
+        awayConceedOvUvHomeConceedOvUv7[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 2 Goal, Team A goes home Fulltime Res        
+        awayConceedOvUvHomeConceedOvUv8[0].append(str(arr[2][4][inn]) + "/" + str(arr[3][4][inn]))
+        awayConceedOvUvHomeConceedOvUv8[1].append(str(arr[2][4][inn]) + "/" + str(arr[3][4][inn]))
+        awayConceedOvUvHomeConceedOvUv8[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv8[3].append("TAFT2TeamHFullTimeRes4+")
+        awayConceedOvUvHomeConceedOvUv8[4].append("HomeGamesPatt")
+#============================================================================================
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv9[0].append(str(arr[4][1][inn]) + "/" + str(arr[5][1][inn]))
+        awayConceedOvUvHomeConceedOvUv9[1].append(str(arr[4][1][inn]) + "/" + str(arr[5][1][inn]))
+        awayConceedOvUvHomeConceedOvUv9[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv9[3].append("TAFT3TeamHFullTimeRes1+")
+        awayConceedOvUvHomeConceedOvUv9[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res       
+        awayConceedOvUvHomeConceedOvUv10[0].append(str(arr[4][2][inn]) + "/" + str(arr[5][2][inn]))
+        awayConceedOvUvHomeConceedOvUv10[1].append(str(arr[4][2][inn]) + "/" + str(arr[5][2][inn]))
+        awayConceedOvUvHomeConceedOvUv10[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv10[3].append("TAFT3TeamHFullTimeRes2+")
+        awayConceedOvUvHomeConceedOvUv10[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res   
+        awayConceedOvUvHomeConceedOvUv11[0].append(str(arr[4][3][inn]) + "/" + str(arr[5][3][inn]))     
+        awayConceedOvUvHomeConceedOvUv11[1].append(str(arr[4][3][inn]) + "/" + str(arr[5][3][inn]))     
+        awayConceedOvUvHomeConceedOvUv11[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv11[3].append("TAFT3TeamHFullTimeRes3+")
+        awayConceedOvUvHomeConceedOvUv11[4].append("HomeGamesPatt")
+# Team A/Away Fulltime 3 Goal, Team A goes home Fulltime Res        
+        awayConceedOvUvHomeConceedOvUv12[0].append(str(arr[4][4][inn]) + "/" + str(arr[5][4][inn]))
+        awayConceedOvUvHomeConceedOvUv12[1].append(str(arr[4][4][inn]) + "/" + str(arr[5][4][inn]))
+        awayConceedOvUvHomeConceedOvUv12[2].append(str(t[0][inn]))         
+        awayConceedOvUvHomeConceedOvUv12[3].append("TAFT3TeamHFullTimeRes4+")
+        awayConceedOvUvHomeConceedOvUv12[4].append("HomeGamesPatt")
+
+
+        inn += 1
+        if aa == inn:
+           bb = True
+           break;
+   
+    mulLayerInfor = (awayConceedOvUvHomeConceedOvUv,awayConceedOvUvHomeConceedOvUv2,awayConceedOvUvHomeConceedOvUv3,awayConceedOvUvHomeConceedOvUv4,awayConceedOvUvHomeConceedOvUv5,awayConceedOvUvHomeConceedOvUv6,awayConceedOvUvHomeConceedOvUv7,awayConceedOvUvHomeConceedOvUv8,awayConceedOvUvHomeConceedOvUv9,awayConceedOvUvHomeConceedOvUv10,awayConceedOvUvHomeConceedOvUv11,awayConceedOvUvHomeConceedOvUv12)
