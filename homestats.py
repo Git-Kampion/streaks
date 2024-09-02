@@ -12,7 +12,7 @@ from SecLPAnylaysis import SlPA
 conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
 cursor = conn.cursor()
 
-insert_stmt2 = "select * from epl order by Round ASC"
+insert_stmt2 = "select * from  order by Round ASC"
 #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
 data = ("Chelsea")
 cursor.execute(insert_stmt2)
@@ -195,7 +195,26 @@ awayConHomeConceed14 = ([],[],[],[],[])
 awayConHomeConceed15 = ([],[],[],[],[])
 awayConHomeConceed16 = ([],[],[],[],[])
 
-9
+awayConOvUvHomeConceedOvUv = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv2= ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv3= ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv4= ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv5 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv6 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv7= ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv8= ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv9 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv10 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv11 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv12 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv13 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv14 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv15 = ([],[],[],[],[])
+awayConOvUvHomeConceedOvUv16 = ([],[],[],[],[])
+
+
+
+
 
 
 def createReport(data1,pd):
@@ -252,6 +271,31 @@ def homeFilter(data):
      awayTScorGoHomeScor = mlp.aScorHScor(t,data,"k",5)
      awayTConGoHomeCon = mlp.aConHCon(t,data,"k",5)
      #hBTS = BtOr.Bts(t,rfdA,"k",5)
+#================================================================================================================
+# Team A/Away Conceed Fulltime 3 Goal, Team A goes home Conceed Fulltime 1 Goal     
+     awayConHomeConceed13[0].append(str(awayTConGoHomeCon[24]) + "/" + str(awayTConGoHomeCon[25]))
+     awayConHomeConceed13[1].append(len(rfdA))
+     awayConHomeConceed13[2].append(t)        
+     awayConHomeConceed13[3].append("TACConc3TeamHConcFull1+")
+     awayConHomeConceed13[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 2 Goal       
+     awayConHomeConceed14[0].append(str(awayTConGoHomeCon[26]) + "/" + str(awayTConGoHomeCon[27]))
+     awayConHomeConceed14[1].append(len(rfdA))
+     awayConHomeConceed14[2].append(t)       
+     awayConHomeConceed14[3].append("TACConc3TeamHConcFull2+")
+     awayConHomeConceed14[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 3 Goal       
+     awayConHomeConceed15[0].append(str(awayTConGoHomeCon[28]) + "/" + str(awayTConGoHomeCon[29]))
+     awayConHomeConceed15[1].append(len(rfdA))
+     awayConHomeConceed15[2].append(t)       
+     awayConHomeConceed15[3].append("TACConc3TeamHConcFull3+")
+     awayConHomeConceed15[4].append("HomeGamesPatt")
+# Team A/Away Conceed 3 Goal, Team A goes Conceed Fulltime 4 Goal       
+     awayConHomeConceed16[0].append(str(awayTConGoHomeCon[30]) + "/" + str(awayTConGoHomeCon[31]))
+     awayConHomeConceed16[1].append(len(rfdA))
+     awayConHomeConceed16[2].append(t)       
+     awayConHomeConceed16[3].append("TACConc3TeamHConcFull4+")
+     awayConHomeConceed16[4].append("HomeGamesPatt")
 #================================================================================================================
 # Team A/Away Conceed Fulltime 1 Goal, Team A goes home Conceed Fulltime 1 Goal     
      awayConHomeConceed[0].append(str(awayTConGoHomeCon[0]) + "/" + str(awayTConGoHomeCon[1]))
@@ -352,31 +396,7 @@ def homeFilter(data):
      awayConHomeConceed16[2].append(t)       
      awayConHomeConceed16[3].append("TACConc4TeamHConcFull4+")
      awayConHomeConceed16[4].append("HomeGamesPatt")
-#================================================================================================================
-# Team A/Away Conceed Fulltime 3 Goal, Team A goes home Conceed Fulltime 1 Goal     
-     awayConHomeConceed13[0].append(str(awayTConGoHomeCon[24]) + "/" + str(awayTConGoHomeCon[25]))
-     awayConHomeConceed13[1].append(len(rfdA))
-     awayConHomeConceed13[2].append(t)        
-     awayConHomeConceed13[3].append("TACConc3TeamHConcFull1+")
-     awayConHomeConceed13[4].append("HomeGamesPatt")
-# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 2 Goal       
-     awayConHomeConceed14[0].append(str(awayTConGoHomeCon[26]) + "/" + str(awayTConGoHomeCon[27]))
-     awayConHomeConceed14[1].append(len(rfdA))
-     awayConHomeConceed14[2].append(t)       
-     awayConHomeConceed14[3].append("TACConc3TeamHConcFull2+")
-     awayConHomeConceed14[4].append("HomeGamesPatt")
-# Team A/Away Conceed 3 Goal, Team A goes home Conceed Fulltime 3 Goal       
-     awayConHomeConceed15[0].append(str(awayTConGoHomeCon[28]) + "/" + str(awayTConGoHomeCon[29]))
-     awayConHomeConceed15[1].append(len(rfdA))
-     awayConHomeConceed15[2].append(t)       
-     awayConHomeConceed15[3].append("TACConc3TeamHConcFull3+")
-     awayConHomeConceed15[4].append("HomeGamesPatt")
-# Team A/Away Conceed 3 Goal, Team A goes Conceed Fulltime 4 Goal       
-     awayConHomeConceed16[0].append(str(awayTConGoHomeCon[30]) + "/" + str(awayTConGoHomeCon[31]))
-     awayConHomeConceed16[1].append(len(rfdA))
-     awayConHomeConceed16[2].append(t)       
-     awayConHomeConceed16[3].append("TACConc3TeamHConcFull4+")
-     awayConHomeConceed16[4].append("HomeGamesPatt")
+
  #================================================================================================================
 # Team A/Away Score Fulltime 1 Goal, Team A goes home Score Fulltime 1 Goal     
      awayScorOvUvHomeScorOvUv[0].append(str(awayTScorGoHomeScor[0]) + "/" + str(awayTScorGoHomeScor[1]))
