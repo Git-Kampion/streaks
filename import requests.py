@@ -60,7 +60,7 @@ for lnk in content:
   matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
   
   homeaway2ndHScore = ([],[])
-
+  soccerList = []
 
   for bele in matchesPopUps:
     elem = bele.click()
@@ -69,86 +69,62 @@ for lnk in content:
     success = False
     time.sleep(12)
     
-    kjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
-    if "PLAY" not in kjj and "GROUP" not in kjj:
+    bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
+    ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
+    dt = ull[0].split(" ")[0]
+    Hteam = ull[1].replace(" ", "")
+    Ateam = ull[6].replace(" ", "")
+    
+    
+    if "PLAY" not in bjj and "GROUP" not in bjj and "FINAL" not in bjj:
       while success != True:
         try:
           kjj = browser.find_element(By.CLASS_NAME,"smv__verticalSections").text.split()
           success = True
         except:
           success = False
-        home2ndHScore = ""
-        away2ndHScore = ""
+        #home2ndHScore = ""
+        #away2ndHScore = ""
+        home1stHScore = ""
+        away1stHScore = ""
         ndFound = False
         ndfoundSec = False
         SecHalfDash = False
+        try:
+         wjj = bjj.index("ROUND")
+         round = bjj[wjj:].split(" ")[1]
+        except:
+          round = "1"
+        home2ndHScore = ull[2]
+        away2ndHScore = ull[4]
         for id in kjj:
             if id == "1ST":
               ndFound = True
             else:
               if ndFound == True and id != "HALF":
-                  home2ndHScore = id
+                  #home2ndHScore = id
+                  #away2ndHScore = kjj[kjj.index("1ST") + 4]
+                  home1stHScore = id
+                  away1stHScore = kjj[kjj.index("1ST") + 4]
                   ndFound = False
                   #SecHalfDash = True
-              if ndFound == False and id == "-":
-                  SecHalfDash = True
-              else:
-                if SecHalfDash == True:
-                  away2ndHScore = id
-                  SecHalfDash = False
-                  break;
-      homeaway2ndHScore[0].append(home2ndHScore)
-      homeaway2ndHScore[1].append(away2ndHScore)
-      
+            if id == "2ND":
+              ndfoundSec = True
+            else:
+              if ndfoundSec == True and id != "HALF":
+                  #home1stHScore = id
+                  #away1stHScore = kjj[kjj.index("2ND") + 4]
+                  ndfoundSec = False
+                  #SecHalfDash = True
+              
+      #homeaway2ndHScore[0].append(home2ndHScore)
+      #homeaway2ndHScore[1].append(away2ndHScore)
+      soccerList.append(round + " " + dt + " " + Hteam + " " + Ateam + " "  + home2ndHScore + " " +  away2ndHScore + " " + home1stHScore  + " " + away1stHScore  )  
     firstWindow = browser.window_handles[0]
     browser.close()
     browser.switch_to.window(firstWindow)
     
 
-  matches = browser.find_elements(By.ID, "live-table") 
-    #rounds = browser.find_elements(By.CLASS_NAME, "event__round") 
-  soccerList = []
-  ffiter = 0;
-  rounds = matches[0].text.split("ROUND")
-  for elem in rounds:
-      matchRound = 0;
-      firstIter = 0;
-      
-      soccerMAtch = "";
-      skipLeagueNAme = False
-      flag = False;
-      
-
-      if lnk.split(" ")[1] in elem:
-          skipLeagueNAme = 0
-      else:
-        
-            sdsc = elem.splitlines()
-            for matcd in sdsc:
-              if matchRound == 0:
-                matchRound = matcd.strip()           
-              else:
-                if matchRound != 0:
-                        dateTime= matcd.strip().split(" ")
-                        if len(dateTime) > 1:
-                          matcd = dateTime[0] + dateTime[1]
-                        if firstIter == 2 and matcd.isdigit() :
-                          redcardsDetected = 0
-                          #firstIter = firstIter + 1 
-                        else:
-                          soccerMAtch = soccerMAtch + " " + matcd
-                          firstIter = firstIter + 1
-                        
-                if firstIter == 5:
-                      if soccerMAtch != "":
-                        soccerList.append(matchRound  + soccerMAtch + " " + homeaway2ndHScore[0][ffiter] + " " +homeaway2ndHScore[1][ffiter])
-                        ffiter += 1
-                        soccerMAtch = "";
-                        firstIter =0;
-                
-              
-          #soccerList.append(matchRound + " " + soccerMAtch.strip())   
-    
   if len(soccerList) > 0:
 
       conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb;')

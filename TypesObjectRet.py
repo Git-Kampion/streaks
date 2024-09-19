@@ -935,6 +935,18 @@ class BtOr:
                 else:
                     ASecHlf = Acon - AFrstHlf
             
+            if HomFrstHlf > 4:
+               HomFrstHlf = 4
+            if HomSecHlf > 4:
+               HomSecHlf = 4
+            if Acon > 4:
+              Acon = 4
+            if Hcon > 4:
+              Hcon = 4 
+            if AFrstHlf > 4:
+              AFrstHlf = 4 
+            if ASecHlf > 4:
+              ASecHlf = 4 
             match HomFrstHlf:
               case 0:  
                 AwayFrstConcedUnder0 = AwayFrstConcedUnder0 + 1     
