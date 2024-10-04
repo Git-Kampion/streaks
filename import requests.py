@@ -1,12 +1,13 @@
 import time
 import pyodbc
+import pandas as pd
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, TimeoutException, WebDriverException
 
-
+ 
 # Launch Chrome browser in headless mode
 options = webdriver.FirefoxOptions()
 #options.add_argument("headless")
@@ -18,6 +19,9 @@ content = file.read().split("\n")
 conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
 cookiRan = False
 cursor = conn.cursor()
+
+
+
 for lnk in content:
  linnk = lnk.split(" ")[0]
  if linnk != "#" and linnk != " ":
@@ -57,72 +61,78 @@ for lnk in content:
         _flag = False
   time.sleep(10)	  
   
+  matchRounds = browser.find_elements(By.CLASS_NAME,"event__round")
+  
   matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
+  
   
   homeaway2ndHScore = ([],[])
   soccerList = []
-
-  for bele in matchesPopUps:
-    elem = bele.click()
-    secWindow = browser.window_handles[1]
-    browser.switch_to.window(secWindow)
-    success = False
-    time.sleep(12)
-    
-    bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
-    ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
-    dt = ull[0].split(" ")[0]
-    Hteam = ull[1].replace(" ", "")
-    Ateam = ull[6].replace(" ", "")
-    
-    
-    if "PLAY" not in bjj and "GROUP" not in bjj and "FINAL" not in bjj:
-      while success != True:
-        try:
-          kjj = browser.find_element(By.CLASS_NAME,"smv__verticalSections").text.split()
-          success = True
-        except:
-          success = False
-        #home2ndHScore = ""
-        #away2ndHScore = ""
-        home1stHScore = ""
-        away1stHScore = ""
-        ndFound = False
-        ndfoundSec = False
-        SecHalfDash = False
-        try:
-         wjj = bjj.index("ROUND")
-         round = bjj[wjj:].split(" ")[1]
-        except:
-          round = "1"
-        home2ndHScore = ull[2]
-        away2ndHScore = ull[4]
-        for id in kjj:
-            if id == "1ST":
-              ndFound = True
-            else:
-              if ndFound == True and id != "HALF":
-                  #home2ndHScore = id
-                  #away2ndHScore = kjj[kjj.index("1ST") + 4]
-                  home1stHScore = id
-                  away1stHScore = kjj[kjj.index("1ST") + 4]
-                  ndFound = False
-                  #SecHalfDash = True
-            if id == "2ND":
-              ndfoundSec = True
-            else:
-              if ndfoundSec == True and id != "HALF":
-                  #home1stHScore = id
-                  #away1stHScore = kjj[kjj.index("2ND") + 4]
-                  ndfoundSec = False
-                  #SecHalfDash = True
-              
-      #homeaway2ndHScore[0].append(home2ndHScore)
-      #homeaway2ndHScore[1].append(away2ndHScore)
-      soccerList.append(round + " " + dt + " " + Hteam + " " + Ateam + " "  + home2ndHScore + " " +  away2ndHScore + " " + home1stHScore  + " " + away1stHScore  )  
-    firstWindow = browser.window_handles[0]
-    browser.close()
-    browser.switch_to.window(firstWindow)
+  for eachh in matchRounds:
+   yrd = eachh.text.split[1]
+   if int(yrd) > 13:
+    for bele in matchesPopUps:
+      elem = bele.click()
+      secWindow = browser.window_handles[1]
+      browser.switch_to.window(secWindow)
+      success = False
+      time.sleep(12)
+      
+      bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
+      ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
+      dt = ull[0].split(" ")[0]
+      Hteam = ull[1].replace(" ", "")
+      Ateam = ull[6].replace(" ", "")
+      try:
+          wjj = bjj.index("ROUND")
+          round = bjj[wjj:].split(" ")[1]   
+          round2 = int(round)
+      except:
+            round = "1"
+      
+      if "PLAY" not in bjj and "GROUP" not in bjj and "FINAL" not in bjj :
+        while success != True:
+          try:
+            kjj = browser.find_element(By.CLASS_NAME,"smv__verticalSections").text.split()
+            success = True
+          except:
+            success = False
+          #home2ndHScore = ""
+          #away2ndHScore = ""
+          home1stHScore = ""
+          away1stHScore = ""
+          ndFound = False
+          ndfoundSec = False
+          SecHalfDash = False
+          
+          home2ndHScore = ull[2]
+          away2ndHScore = ull[4]
+          for id in kjj:
+              if id == "1ST":
+                ndFound = True
+              else:
+                if ndFound == True and id != "HALF":
+                    #home2ndHScore = id
+                    #away2ndHScore = kjj[kjj.index("1ST") + 4]
+                    home1stHScore = id
+                    away1stHScore = kjj[kjj.index("1ST") + 4]
+                    ndFound = False
+                    #SecHalfDash = True
+              if id == "2ND":
+                ndfoundSec = True
+              else:
+                if ndfoundSec == True and id != "HALF":
+                    #home1stHScore = id
+                    #away1stHScore = kjj[kjj.index("2ND") + 4]
+                    ndfoundSec = False
+                    #SecHalfDash = True
+                
+        #homeaway2ndHScore[0].append(home2ndHScore)
+        #homeaway2ndHScore[1].append(away2ndHScore)
+        soccerList.append(round + " " + dt + " " + Hteam + " " + Ateam + " "  + home2ndHScore + " " +  away2ndHScore + " " + home1stHScore  + " " + away1stHScore  )  
+      firstWindow = browser.window_handles[0]
+      browser.close()
+      browser.switch_to.window(firstWindow)
     
 
   if len(soccerList) > 0:
@@ -158,7 +168,7 @@ for lnk in content:
 
     #cursor.execute('Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ()')+ " " + specRound[3] + " " + specRound[4] + " " + specRound[5] + " " + specRound[6] + " " + specRound[7]
       
-    
+ 
 
 
     #browser.close() print(elem.text)
