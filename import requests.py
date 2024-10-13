@@ -61,17 +61,17 @@ for lnk in content:
         _flag = False
   time.sleep(10)	  
   
-  matchRounds = browser.find_elements(By.CLASS_NAME,"event__round")
+  #matchRounds = browser.find_elements(By.CLASS_NAME,"event__round")
   
+  #
   matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
   
   
   homeaway2ndHScore = ([],[])
   soccerList = []
-  for eachh in matchRounds:
-   yrd = eachh.text.split[1]
-   if int(yrd) > 13:
-    for bele in matchesPopUps:
+ 
+    #matchesPopUps = eachh.find_elements(By.TAG_NAME, 'div') 
+  for bele in matchesPopUps:
       elem = bele.click()
       secWindow = browser.window_handles[1]
       browser.switch_to.window(secWindow)
@@ -154,7 +154,11 @@ for lnk in content:
           else:
               insert_stmt = "INSERT INTO "+lnk.split(" ")[2]+"(Round,Tframe,home,away,hgoal,agoal,hhgoal,ahgoal) VALUES (?,?, ?, ?, ?,?, ?, ?)"
               data = (polstriped[0],polstriped[1],polstriped[2],polstriped[3],polstriped[4],polstriped[5],polstriped[6],polstriped[7])
-          cursor.execute(insert_stmt, data)
+          try:
+             cursor.execute(insert_stmt, data)
+          except:
+              data = (polstriped[0],polstriped[1],polstriped[3],polstriped[4],polstriped[5],polstriped[6],'0','0')
+             
           cursor.commit()
           countdown =  countdown - 1
           if countdown == 0:

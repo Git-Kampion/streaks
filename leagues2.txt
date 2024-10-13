@@ -1,5 +1,10 @@
-https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA ArgentiProf2024 
-# https://www.flashscore.com/football/netherlands/eredivisie/results/ NETHERLANDS EredevisieEerste 
+# https://www.flashscore.com/football/belgium/jupiler-pro-league/results/ BELGIUM belgiumJpl
+# https://www.flashscore.com/football/germany/bundesliga/results/ GERMANY BundasLiga24
+# https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga24
+# https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl24
+# https://www.flashscore.com/football/netherlands/tweede-divisie/results/ NETHERLANDS EredevisieTwede -------
+# https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA ArgentiProf2024 
+https://www.flashscore.com/football/netherlands/eredivisie/results/ NETHERLANDS EersteEredevisie24 
 # https://www.flashscore.com/football/switzerland/challenge-league/results/ SWITZERLAND SwissChalleng
 # https://www.flashscore.com/football/myanmar/national-league/results/ MYANMAR MyanmarNatLeag
 # https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem
@@ -17,7 +22,7 @@ https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA A
 # https://www.flashscore.com/football/paraguay/primera-division/results/ PARAGUAY ParaguayPrem
 # https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem
 # https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA
-# https://www.flashscore.com/football/germany/2-bundesliga/results/ GERMANY BundesLiga2Germ 
+# https://www.flashscore.com/football/germany/2-bundesliga/results/ GERMANY BundasLiga24 
 # https://www.flashscore.com/football/romania/liga-1/results/ ROMANIA RomaniA
 # https://www.flashscore.com/football/ukraine/persha-liga/results/ UKRAINE UkrainePresha
 # https://www.flashscore.com/football/poland/ekstraklasa/results/ POLAND PolandA  
@@ -55,32 +60,31 @@ https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA A
 # https://www.flashscore.com/football/brazil/serie-b/results/ BRAZIL BrazilB 
 # https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandDiv1
 # https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta
-# https://www.flashscore.com/football/czech-republic/chance-liga-2023-2024/results/ CZECH CzechA
+# https://www.flashscore.com/football/czech-republic/chance-liga/results/ CZECH CzechA24
 # https://www.flashscore.com/football/italy/serie-b/results/ ITALY serieBB 
 # https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl 
-# https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip23 
+# https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip24 
 # https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua1 
 # https://www.flashscore.com/football/england/league-two-2023-2024/results/ ENGLAND EngLeagua2
 # https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga 
-# https://www.flashscore.com/football/italy/serie-a/results/ ITALY SerieA 
+# https://www.flashscore.com/football/italy/serie-a/results/ ITALY SerieA24 
 # https://www.flashscore.com/football/germany/bundesliga/results/ GERMANY BundasLiga 
 # https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga2 
 # https://www.flashscore.com/football/germany/3-liga/results/ GERMANY Bundes3 
-# https://www.flashscore.com/football/france/ligue-1/results/ FRANCE Ligue1Fr -------Bookmaak------
+# https://www.flashscore.com/football/france/ligue-1/results/ FRANCE Ligue1Fr24 
 # https://www.flashscore.com/football/france/ligue-2/results/ FRANCE Ligue2Fr 
 # https://www.flashscore.com/football/france/national/results/ FRANCE Ligue1FrNat 
 # https://www.flashscore.com/football/portugal/liga-portugal/results/ PORTUGAL portLeag 
 # https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag2 
-# https://www.flashscore.com/football/netherlands/eredivisie-2023-2024/results/ NETHERLANDS Eredevisie 
+# https://www.flashscore.com/football/netherlands/eredivisie/results/ NETHERLANDS Eredevisie24 
 # https://www.flashscore.com/football/netherlands/eerste-divisie/results/ NETHERLANDS Eredevisie2 
 # https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY TurkNew1 
-# https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk1 
-# https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk2 
+# https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk22024 
 # https://www.flashscore.com/football/usa/mls/results/ USA Usa 
 # https://www.flashscore.com/football/argentina/primera-b/results/ ARGENTINA ArgentiL1 
-# https://www.flashscore.com/football/austria/bundesliga-2023-2024/results/ AUSTRIA 2023Austria 
-# https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria2 
-# https://www.flashscore.com/football/belgium/jupiler-pro-league-2023-2024/results/ BELGIUM belgiumJPL 
+# https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria 
+https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria2 
+# https://www.flashscore.com/football/belgium/jupiler-pro-league/results/ BELGIUM belgiumJpl 
 # https://www.flashscore.com/football/belgium/challenger-pro-league/results/ BELGIUM Belgium1 
 # https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA 
 # https://www.flashscore.com/football/croatia/hnl-2023-2024/results/ CROATIA CroatiaA 11111
@@ -88,7 +92,7 @@ https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA A
 # https://www.flashscore.com/football/cyprus/cyta-championship/results/ CYPRUS CyprusA  
 # https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA 11111
 # https://www.flashscore.com/football/finland/veikkausliiga/results/ FINLAND FinlandA 
-# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA  
+# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA24  
 # https://www.flashscore.com/football/israel/ligat-ha-al/results/ ISRAEL IsraelA 
 # https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanA 
 # https://www.flashscore.com/football/norway/eliteserien/results/ NORWAY NorwayA 
@@ -96,6 +100,6 @@ https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA A
 # https://www.flashscore.com/football/poland/ekstraklasa/results/ POLAND PolandA  
 # https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA 
 # https://www.flashscore.com/football/slovakia/nike-liga/results/ SLOVAKIA SlovakiaA 
-# https://www.flashscore.com/football/switzerland/super-league/results/ SWITZERLAND SwitzerA 
+# https://www.flashscore.com/football/switzerland/super-league/results/ SWITZERLAND SwitzerA24 
 # https://www.flashscore.com/football/switzerland/challenge-league/results/ SWITZERLAND SwitzerB 
 # https://www.flashscore.com/football/south-africa/premier-league/results/ SOUTH psl 

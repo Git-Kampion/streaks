@@ -1546,6 +1546,7 @@ class BtOr:
       AwayFlvWinCount = 0
       HomeFlvLose = 0
       AwayFlvFailToLose = 0
+      HomeFlvFailToWin = 0
       AwayFlvFailTowin = 0
       HomeFailToLose = 0
       HomeFlvFailToLose = 0
@@ -1597,16 +1598,19 @@ class BtOr:
         if HomFrstHlf > AFrstHlf:
            HomeFlvWinCount = HomeFlvWinCount + 1
            AwayFlvFailTowin = AwayFlvFailTowin + 1
+           
            HomeFlvFailToLose = HomeFlvFailToLose + 1  
 
         if AFrstHlf > HomFrstHlf:
            AwayFlvWinCount = AwayFlvWinCount + 1
            HomeFlvLose = HomeFlvLose + 1
            AwayFlvFailToLose = AwayFlvFailToLose + 1
+           HomeFlvFailToWin = HomeFlvFailToWin + 1
            
         if HomFrstHlf == AFrstHlf:
            AwayFlvFailTowin = AwayFlvFailTowin + 1
            HomeFlvFailToLose = HomeFlvFailToLose + 1
+           HomeFlvFailToWin = HomeFlvFailToWin + 1
            AwayFlvFailToLose = AwayFlvFailToLose + 1
 
 
@@ -1625,8 +1629,8 @@ class BtOr:
            AwaySecFailToLose = AwaySecFailToLose + 1 
 
 
-                #1            #2            #3            #4          #5                #6                  #7            #8            #9                 #10               #11                 #12              #13                 #14              #15            #16        #17              #18
-      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvLose,HomeFlvFailToLose,HomeSecFailToLose,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin,HomeFailToLose,HomeLose,AwayFlvFailToLose,AwaySecFailToLose])  
+                #1            #2            #3            #4          #5                #6                  #7            #8            #9                 #10               #11                 #12              #13                 #14              #15            #16        #17              #18               #19
+      arr = ([HomeWinCount,AwayFailTowin,AwayWinCount,HomeFailToWin,HomeFlvWinCount,AwayFlvFailTowin,AwayFlvWinCount,HomeFlvLose,HomeFlvFailToLose,HomeSecFailToLose,HomeSecFlvWinCount,AwaySecFlvFailTowin,AwaySecFlvWinCount,HomeSecFlvFailToWin,HomeFailToLose,HomeLose,AwayFlvFailToLose,AwaySecFailToLose,HomeFlvFailToWin])  
       return arr
     
     def Dc(Title,body):
