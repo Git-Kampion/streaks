@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout with Dropdowns</title>
+    <style>
+        /* Basic reset */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Container for the two columns */
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Style for the left column */
+        .left-column {
+            flex: 1;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: relative; /* Necessary for positioning dropdown */
+        }
+
+        /* Style for the right column */
+        .right-column {
+            flex: 1;
+            background-color: #e0e0e0;
+            padding: 20px;
+            position: relative; /* Necessary for positioning dropdown */
+        }
+
+        /* Dropdown button style */
+        .dropdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .dropdown button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown button:hover {
+            background-color: #45a049;
+        }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 5px;
+            top: 50px; /* Position it below the button */
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown menu when the button is clicked */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Add responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .left-column, .right-column {
+                flex: none;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* Adjust dropdown position for mobile */
+            .dropdown {
+                top: auto;
+                right: auto;
+                left: 20px;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Two Column Layout</h1>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h2>Left Column</h2>
+            <p>This is the content of the left column. It can contain text, images, or anything else you want.</p>
+
+            <!-- Dropdown button in left column -->
+            <div class="dropdown">
+                <button>Dropdown (Left)</button>
+                <div class="dropdown-content">
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="right-column">
+            <h2>Right Column</h2>
+            <p>This is the content of the right column. You can add additional content, like text or media, here as well.</p>
+
+            <!-- Dropdown button in right column -->
+            <div class="dropdown">
+                <button>Dropdown (Right)</button>
+                <div class="dropdown-content">
+                    <a href="#">Item A</a>
+                    <a href="#">Item B</a>
+                    <a href="#">Item C</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

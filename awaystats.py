@@ -1,18 +1,19 @@
 import pyodbc
 from TypesObjectRet import BtOr
 import pandas as pd
-import sqlalchemy
-import matplotlib.pyplot as plt 
+#import sqlalchemy
+#import matplotlib.pyplot as plt 
 import numpy as np
 from multiLayerPerceptron import mlp
-import seaborn as sb
+#import seaborn as sb
 from SecLPAnylaysis import SlPA
 
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb')
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
 cursor = conn.cursor()
-
-insert_stmt2 = "select * from ScotlandA24 UNION select * from SwitzerA24 UNION select * from Turk24 UNION select * from Turk22024 UNION select * from SerieA24 UNION select * from SerbiaA UNION select * from SaudiPrem UNION select * from RomaniA UNION select * from PolandB UNION select * from PolandA UNION select * from Ligue2Fr UNION select * from Ligue1FrNat UNION select * from Ligue1Fr24 UNION select * from Laliga24 UNION select * from GreeceA24 UNION select * from Eredevisie24 UNION select * from EplChampionShip24 UNION select * from Epl24 UNION select * from DenmarkB UNION select * from DenmarkA UNION select * from CzechB UNION select * from CzechA24 UNION select * from BundasLiga24 UNION select * from Bundas2Liga24 UNION select * from BulgariaPrem UNION select * from Austria order by Round ASC"
+insert_stmt2 = "select * from Laliga225"
+#insert_stmt2 = "select * from ScotlandA24 UNION select * from SwitzerA24 UNION select * from Turk24 UNION select * from Turk22024 UNION select * from SerieA24 UNION select * from SerbiaA UNION select * from SaudiPrem UNION select * from RomaniA UNION select * from PolandB UNION select * from PolandA UNION select * from Ligue2Fr UNION select * from Ligue1FrNat UNION select * from Ligue1Fr24 UNION select * from Laliga24 UNION select * from GreeceA24 UNION select * from Eredevisie24 UNION select * from EplChampionShip24 UNION select * from Epl24 UNION select * from DenmarkB UNION select * from DenmarkA UNION select * from CzechB UNION select * from CzechA24 UNION select * from BundasLiga24 UNION select * from Bundas2Liga24 UNION select * from BulgariaPrem UNION select * from Austria order by Round ASC"
 #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
 data = ("Chelsea")
 cursor.execute(insert_stmt2)

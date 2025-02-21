@@ -10,15 +10,27 @@ from selenium.common.exceptions import ElementClickInterceptedException, Element
  
 # Launch Chrome browser in headless mode
 options = webdriver.FirefoxOptions()
+
 #options.add_argument("headless")
 browser = webdriver.Firefox(options=options)
-
+def dataLookUp(ScotlandA24,matchUpsCount):
+ conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb;')
+ cursor = conn.cursor()
+ insert_stmt2 = "select * from " + ScotlandA24 + " order by Round ASC"
+ cursor.execute(insert_stmt2 )
+ sql_data = pd.DataFrame(cursor.fetchall())
+ try:
+  dataNum  = len(sql_data[0])
+ except:
+     dataNum  = 0
+ countNum = matchUpsCount - dataNum 
+ return countNum
 # Load web page
 file = open("leagues2.txt", "r")
 content = file.read().split("\n")
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb')
 cookiRan = False
-cursor = conn.cursor()
+#cursor = conn.cursor()
 
 
 
@@ -48,7 +60,7 @@ for lnk in content:
     findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
     cookiRan = True
     findCookie.click()
-    time.sleep(10)
+    time.sleep(5)
 
  
   _flag = True
@@ -59,7 +71,7 @@ for lnk in content:
         _flag = True
       except(NoSuchElementException):
         _flag = False
-  time.sleep(10)	  
+  time.sleep(5)	  
   
   #matchRounds = browser.find_elements(By.CLASS_NAME,"event__round")
   
@@ -69,14 +81,17 @@ for lnk in content:
   
   homeaway2ndHScore = ([],[])
   soccerList = []
- 
+  iteloop = dataLookUp(lnk.split()[2],len( matchesPopUps))
+  countUps = 0
     #matchesPopUps = eachh.find_elements(By.TAG_NAME, 'div') 
   for bele in matchesPopUps:
+    if countUps < iteloop:
+      countUps = countUps +1
       elem = bele.click()
       secWindow = browser.window_handles[1]
       browser.switch_to.window(secWindow)
       success = False
-      time.sleep(12)
+      time.sleep(7)
       
       bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
       ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
@@ -116,6 +131,9 @@ for lnk in content:
                     #away2ndHScore = kjj[kjj.index("1ST") + 4]
                     home1stHScore = id
                     away1stHScore = kjj[kjj.index("1ST") + 4]
+                    if home1stHScore == '' and away1stHScore == '':
+                       home1stHScore = 0
+                       away1stHScore = 0
                     ndFound = False
                     #SecHalfDash = True
               if id == "2ND":
@@ -137,7 +155,7 @@ for lnk in content:
 
   if len(soccerList) > 0:
 
-      conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb;')
+      conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb;')
       cursor = conn.cursor()
             #cursor.execute("Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ('38','2023-04-01','Arsenal','Watford','4','3')")
       countdown = len(soccerList)
@@ -169,8 +187,6 @@ for lnk in content:
     #print(rounds[2])
 
 
-
-    #cursor.execute('Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ()')+ " " + specRound[3] + " " + specRound[4] + " " + specRound[5] + " " + specRound[6] + " " + specRound[7]
       
  
 

@@ -2,7 +2,9 @@
 import pandas as pd
 class BtOr:
    
-       
+    
+
+         
     def removeEmptyPAnels(pamels):
       newMelem = []
       for melem in pamels:
@@ -440,6 +442,139 @@ class BtOr:
                     count = 0            
         return highestMatch
     
+    def StreaksOverUnder(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+       
+
+       hozB = False
+       hozNB = False
+       overs = []
+       unders = []
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if r[3] == "AustriaVienna":
+         iin = 0
+        if Hcon > 0:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon == 0:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+           #OverFirst = True
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    
+    def StreaksOverUnder1(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       overs = []
+       unders = []
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 1:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 1:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+
+        
     def FixOverUnders(t,data,betype,ht,half):
         countO = 0
         countOv1 = 0
