@@ -1,20 +1,20 @@
 import pyodbc
 from TypesObjectRet import BtOr
 import pandas as pd
-#import sqlalchemy
-#import matplotlib.pyplot as plt 
+
 import numpy as np
 from multiLayerPerceptron import mlp
-#import seaborn as sb
+
 from SecLPAnylaysis import SlPA
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb')
 
-#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb')
 cursor = conn.cursor()
-insert_stmt2 = "select * from Laliga225"
-#insert_stmt2 = "select * from ScotlandA24 UNION select * from SwitzerA24 UNION select * from Turk24 UNION select * from Turk22024 UNION select * from SerieA24 UNION select * from SerbiaA UNION select * from SaudiPrem UNION select * from RomaniA UNION select * from PolandB UNION select * from PolandA UNION select * from Ligue2Fr UNION select * from Ligue1FrNat UNION select * from Ligue1Fr24 UNION select * from Laliga24 UNION select * from GreeceA24 UNION select * from Eredevisie24 UNION select * from EplChampionShip24 UNION select * from Epl24 UNION select * from DenmarkB UNION select * from DenmarkA UNION select * from CzechB UNION select * from CzechA24 UNION select * from BundasLiga24 UNION select * from Bundas2Liga24 UNION select * from BulgariaPrem UNION select * from Austria order by Round ASC"
-#insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
+
+#insert_stmt2 = "select * from Laliga225 UNION select * from CzechB25 UNION select * from CzechA25 UNION select * from EredevisieTwede25 UNION select * from Eredevisie25 UNION select * from EersteEredevisie25 UNION select * from JordanPrem25 UNION select * from MyanmarNatLeag25 UNION select * from TanzaniaPrem25 UNION select * from SwissChalleng25 UNION select * from SwitzerA25 UNION select * from QaterPrem25 UNION select * from UkrainePresha25 UNION select * from UkraineA25 UNION select * from serieBB25 UNION select * from Ligue2Fr25 UNION select * from Ligue1FrNat25 UNION select * from Ligue1Fr25 UNION select * from BundasLiga25 UNION select * from Bundas2Liga25 UNION select * from Bundes325 UNION select * from Laliga25 UNION select * from Laliga225 UNION select * from Epl25 UNION select * from MalaysiaPrem25 UNION select * from BulgariaPrem25 "
+insert_stmt2 = "select * from Laliga225" 
+#insert_stmt2 = "select * from IranPrem25 UNION select * from SaudiPrem25 UNION select * from PolandA25 UNION select * from PolandB25 UNION select * from SerbiaA25 UNION select * from DenmarkA25 UNION select * from DenmarkB25 UNION select * from RwandaPrem25 UNION select * from IndonesiaPrem25 UNION select * from ArgentitTorneo25 UNION select * from EplChampionShip25 UNION select * from EngLeagua125 UNION select * from EngLeagua225 UNION select * from SerieA25 UNION select * from portLeag25 UNION select * from portLeag225 UNION select * from Turk25 UNION select * from Turk225 UNION select * from Austria125 UNION select * from Austria225 UNION select * from IsraelB UNION select * from IsraelA UNION select * from ScotlandA25 UNION select * from pslA2025 UNION select * from GreeceA25 UNION select * from CroatiaA25 UNION select * from CroatiaB25"
+#select * from JapanA25 UNION select * from JapanB25 UNION select * from PeruA25 UNION select * from SingPorePrem25 UNION select * from ColombiaPrem25 UNION select * from LatviaPrem25 UNION select * from CSuper25 UNION select * from irelandPrem25 UNION select * from AlgeriaA25
 data = ("Chelsea")
 cursor.execute(insert_stmt2)
 sql_data = pd.DataFrame(cursor.fetchall())
@@ -32,6 +32,7 @@ HomefullOver2= ([],[],[],[],[])
 HomefullOver3= ([],[],[],[],[])
 HomefullOver4= ([],[],[],[],[])
 HomefullOver5 = ([],[],[],[],[])
+
 HWins = ([],[],[],[],[])
 HHWinsDraw = ([],[],[],[],[])
 HWinsDraw = ([],[],[],[],[])
@@ -251,22 +252,58 @@ def homeFilter(data):
       occurence = 0
    else:
      rfdA = BtOr.refindedDatam(t,data,4)
-     HWinLose = BtOr.MatchRes(t,rfdA,"t",6)
-     AwOvers = BtOr.OverUnderSeaon(t,rfdA,"t",6)
-     HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"t",5,"over")
-     HHalfimeOver = BtOr.FixOverUnders(t,rfdA,"k",5,"first")
-     HsecHaTimeOver = BtOr.FixOverUnders(t,rfdA,"k",5,"sec")
-     hFBTS  = BtOr.Bts(t,rfdA,"k",5,"over")
-     hfirstBTS = BtOr.Bts(t,rfdA,"k",5,"first")
-     hSecndBTS = BtOr.Bts(t,rfdA,"k",5,"sec")
+     #streaksOver = BtOr.StreaksOverUnder(t,rfdA,"k",5,"over")
+     HWinLose = BtOr.MatchRes(t,rfdA,"T",6)
+     AwOvers = BtOr.OverUnderSeaon(t,rfdA,"T",6)
+     HfullTimeOver = BtOr.FixOverUnders(t,rfdA,"T",6,"over")
+     HHalfimeOver = BtOr.FixOverUnders(t,rfdA,"T",6,"first")
+     HsecHaTimeOver = BtOr.FixOverUnders(t,rfdA,"T",6,"sec")
+     hFBTS  = BtOr.Bts(t,rfdA,"T",6,"over")
+     hfirstBTS = BtOr.Bts(t,rfdA,"T",6,"first")
+     hSecndBTS = BtOr.Bts(t,rfdA,"T",6,"sec")
      HmeConceedFulltime = BtOr.ConcededWholeSeaon(t,rfdA,"k",5)
-     #hBTS = BtOr.Bts(t,rfdA,"k",5)
-
-
+     
+     
+#=====================================================================================================#
+#Away Fix fulltime over 0.5
+            
+     HomefullOver1[0].append(str(HfullTimeOver[0][0])+ "/" +str(HfullTimeOver[1][0]))
+     HomefullOver1[1].append(len(rfdA))
+     HomefullOver1[2].append(t)
+     HomefullOver1[3].append("AwayFixtureFulltimeOverZ")
+     HomefullOver1[4].append("AwayGamesPlayed")
+#Away Fix fulltime over 1.5
+           
+     HomefullOver2[0].append(str(HfullTimeOver[0][1])+ "/" +str(HfullTimeOver[1][1]))
+     HomefullOver2[1].append(len(rfdA))
+     HomefullOver2[2].append(t)
+     HomefullOver2[3].append("AwayFixtureFulltimeOver1")
+     HomefullOver2[4].append("AwayGamesPlayed")
+#Away Fix fulltime over 2.5
+          
+     HomefullOver3[0].append(str(HfullTimeOver[0][2])+ "/" +str(HfullTimeOver[1][2]))
+     HomefullOver3[1].append(len(rfdA))
+     HomefullOver3[2].append(t)
+     HomefullOver3[3].append("AwayFixtureFulltimeOver2")
+     HomefullOver3[4].append("AwayGamesPlayed")    
+#Away Fix  fulltime over 3.5
+           
+     HomefullOver4[0].append(str(HfullTimeOver[0][3])+ "/" +str(HfullTimeOver[1][3]))
+     HomefullOver4[1].append(len(rfdA))
+     HomefullOver4[2].append(t)
+     HomefullOver4[3].append("AwayFixtureFulltimeOver3")
+     HomefullOver4[4].append("AwayGamesPlayed")
+#Away Fix  fulltime over 4.5
+            
+     HomefullOver5[0].append(str(HfullTimeOver[0][4])+ "/" +str(HfullTimeOver[1][4]))
+     HomefullOver5[1].append(len(rfdA))
+     HomefullOver5[2].append(t)
+     HomefullOver5[3].append("AwayFixtureFulltimeOver4")
+     HomefullOver5[4].append("AwayGamesPlayed") 
 #=============================================================================#
 #Away wins
              
-     HWins[0].append(str(HWinLose[2]) + "/" + str(HWinLose[16]))
+     HWins[0].append(str(HWinLose[0]) + "/" + str(HWinLose[15]))
      HWins[1].append(len(rfdA))
      HWins[2].append(t)
      HWins[3].append("AwayFulltimeWins")
@@ -274,219 +311,94 @@ def homeFilter(data):
 #=============================================================================#
 #Away Faulure to Lose/Win Draw
             
-     HWinsDraw[0].append(str(HWinLose[3]) + "/" + str(HWinLose[0]))
+     HWinsDraw[0].append(str(HWinLose[14]) + "/" + str(HWinLose[2]))
      HWinsDraw[1].append(len(rfdA))
      HWinsDraw[2].append(t)
      HWinsDraw[3].append("AwayFulltimeWinDraw")
      HWinsDraw[4].append("AwayGamesPlayed")   
 #========================================================================#
 #Away halftime wins
-            
-     HHalftimeWins[0].append(str(HWinLose[6])+ "/" +str(HWinLose[4]))
+          
+     HHalftimeWins[0].append(str(HWinLose[4])+ "/" +str(HWinLose[7]))
      HHalftimeWins[1].append(len(rfdA))
      HHalftimeWins[2].append(t)
      HHalftimeWins[3].append("AwayHalfTimeWins")
      HHalftimeWins[4].append("AwayGamesPlayed") 
 #========================================================================#
 #Away halftime  Win Draw/Faulure to Lose
-              
-     HHWinsDraw[0].append(str(HWinLose[4]) + "/" + str(HWinLose[18]))
+            
+     HHWinsDraw[0].append(str(HWinLose[8]) + "/" + str(HWinLose[6]))
      HHWinsDraw[1].append(len(rfdA))
      HHWinsDraw[2].append(t)
      HHWinsDraw[3].append("AwayHalftimeWinDraw")
      HHWinsDraw[4].append("AwayGamesPlayed")
 #========================================================================#
 #Away Secondhalf Win Draw/Faulure to Lose
-               
-     HSWinsDraw[0].append(str(HWinLose[18]) + "/" + str(HWinLose[15]))
+           
+     HSWinsDraw[0].append(str(HWinLose[9]) + "/" + str(HWinLose[13]))
      HSWinsDraw[1].append(len(rfdA))
      HSWinsDraw[2].append(t)
      HSWinsDraw[3].append("AwaySecondHalfWinDraw")
      HSWinsDraw[4].append("AwayGamesPlayed") 
 #========================================================================#
 #Away Secondhalf Win 
-               
-     H2ndHWins[0].append(str(HWinLose[12])+ "/" +str(HWinLose[11]))
+          
+     H2ndHWins[0].append(str(HWinLose[10])+ "/" +str(HWinLose[13]))
      H2ndHWins[1].append(len(rfdA))
      H2ndHWins[2].append(t)
      H2ndHWins[3].append("AwaySecondHalfWin")
      H2ndHWins[4].append("AwayGamesPlayed") 
 #===============================================================================#
 #Away First Half over 0.5
-               
-     HomeHalftimeOverZ[0].append(str(AwOvers[2][0])+ "/" +str(AwOvers[3][0]))
+            
+     HomeHalftimeOverZ[0].append(str(AwOvers[17][0])+ "/" +str(AwOvers[16][0]))
      HomeHalftimeOverZ[1].append(len(rfdA))
      HomeHalftimeOverZ[2].append(t)
      HomeHalftimeOverZ[3].append("AwayFirstHalfOverZ")
      HomeHalftimeOverZ[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away First Half over 1.5
-               
-     HomefrstOver1[0].append(str(AwOvers[2][1])+ "/" +str(AwOvers[3][1]))
+           
+     HomefrstOver1[0].append(str(AwOvers[17][1])+ "/" +str(AwOvers[16][1]))
      HomefrstOver1[1].append(len(rfdA))
      HomefrstOver1[2].append(t)
      HomefrstOver1[3].append("AwayFirstHalfOver1")
      HomefrstOver1[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away First Half over 2.5
-              
-     HomefrstOver2[0].append(str(AwOvers[2][2])+ "/" + str(AwOvers[3][2]))
+            
+     HomefrstOver2[0].append(str(AwOvers[17][2])+ "/" + str(AwOvers[16][2]))
      HomefrstOver2[1].append(len(rfdA))
      HomefrstOver2[2].append(t)
      HomefrstOver2[3].append("AwayFirstHalfOver2")
      HomefrstOver2[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half over 0.5
-              
-     HomeSOvs[0].append(str(AwOvers[4][0])+ "/" +str(AwOvers[5][0]))
+          
+     HomeSOvs[0].append(str(AwOvers[14][0])+ "/" +str(AwOvers[15][0]))
      HomeSOvs[1].append(len(rfdA))
      HomeSOvs[2].append(t)
      HomeSOvs[3].append("AwaySecHalfOverZ")
      HomeSOvs[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half over 1.5
-               
-     HomeSOvs1[0].append(str(AwOvers[4][1])+ "/" +str(AwOvers[5][1]))
+             
+     HomeSOvs1[0].append(str(AwOvers[14][1])+ "/" +str(AwOvers[15][1]))
      HomeSOvs1[1].append(len(rfdA))
      HomeSOvs1[2].append(t)
      HomeSOvs1[3].append("AwaySecHalfOver1")
      HomeSOvs1[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half over 2.5
-               
-     HomeSOvs2[0].append(str(AwOvers[4][2]) + "/" + str(AwOvers[5][2]))
+            
+     HomeSOvs2[0].append(str(AwOvers[14][2]) + "/" + str(AwOvers[15][2]))
      HomeSOvs2[1].append(len(rfdA))
      HomeSOvs2[2].append(t)
      HomeSOvs2[3].append("AwaySecHalfOver2")
      HomeSOvs2[4].append("AwayGamesPlayed")
 #===============================================================================#
-#Away Score 1 
-               
-     HomeFixOver1[0].append(str(AwOvers[18][0]) + "/" + str(AwOvers[19][0]))
-     HomeFixOver1[1].append(len(rfdA))
-     HomeFixOver1[2].append(t)
-     HomeFixOver1[3].append("AwayOverZero")
-     HomeFixOver1[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 2 
-               
-     HomeFixOver2[0].append(str(AwOvers[18][1]) + "/" + str(AwOvers[19][1]))
-     HomeFixOver2[1].append(len(rfdA))
-     HomeFixOver2[2].append(t)
-     HomeFixOver2[3].append("AwayOver1")
-     HomeFixOver2[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 3 
-               
-     HomeFixOver3[0].append(str(AwOvers[18][2]) + "/" + str(AwOvers[19][2]))
-     HomeFixOver3[1].append(len(rfdA))
-     HomeFixOver3[2].append(t)
-     HomeFixOver3[3].append("AwayOver2")
-     HomeFixOver3[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 4 
-              
-     HomeFixOver4[0].append(str(AwOvers[18][3]) + "/" + str(AwOvers[19][3]))
-     HomeFixOver4[1].append(len(rfdA))
-     HomeFixOver4[2].append(t)
-     HomeFixOver4[3].append("AwayOver3")
-     HomeFixOver4[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Score 5 
-              
-     HomeFixOver5[0].append(str(AwOvers[18][4]) + "/" + str(AwOvers[19][4]))
-     HomeFixOver5[1].append(len(rfdA))
-     HomeFixOver5[2].append(t)
-     HomeFixOver5[3].append("AwayOver4")
-     HomeFixOver5[4].append("AwayGamesPlayed")
-#===============================================================================#
-#Away Conceed First Half over 0.5
-               
-     HomeHalftimeConceedOverZ[0].append(str(AwOvers[17][0])+ "/" +str(AwOvers[16][0]))
-     HomeHalftimeConceedOverZ[1].append(len(rfdA))
-     HomeHalftimeConceedOverZ[2].append(t)
-     HomeHalftimeConceedOverZ[3].append("AwayFirstHalfConceedOverZ")
-     HomeHalftimeConceedOverZ[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed First Half over 1.5
-             
-     HomeHalftimeConceedOverZ2[0].append(str(AwOvers[17][1])+ "/" +str(AwOvers[16][1]))
-     HomeHalftimeConceedOverZ2[1].append(len(rfdA))
-     HomeHalftimeConceedOverZ2[2].append(t)
-     HomeHalftimeConceedOverZ2[3].append("AwayFirstHalfConceedOver1")
-     HomeHalftimeConceedOverZ2[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed First Half over 2.5
-               
-     HomeHalftimeConceedOverZ3[0].append(str(AwOvers[17][2])+ "/" +str(AwOvers[16][2]))
-     HomeHalftimeConceedOverZ3[1].append(len(rfdA))
-     HomeHalftimeConceedOverZ3[2].append(t)
-     HomeHalftimeConceedOverZ3[3].append("AwayFirstHalfConceedOver2")
-     HomeHalftimeConceedOverZ3[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 0.5
-              
-     HomeSectimeConceedOverZ[0].append(str(AwOvers[14][0])+ "/" +str(AwOvers[15][0]))
-     HomeSectimeConceedOverZ[1].append(len(rfdA))
-     HomeSectimeConceedOverZ[2].append(t)
-     HomeSectimeConceedOverZ[3].append("AwaySecondHalfConceedOverZ")
-     HomeSectimeConceedOverZ[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 1.5
-            
-     HomeSectimeConceedOverZ2[0].append(str(AwOvers[14][1])+ "/" +str(AwOvers[15][1]))
-     HomeSectimeConceedOverZ2[1].append(len(rfdA))
-     HomeSectimeConceedOverZ2[2].append(t)
-     HomeSectimeConceedOverZ2[3].append("AwaySecondHalfConceedOver1")
-     HomeSectimeConceedOverZ2[4].append("AwayGamesPlayed") 
-#===============================================================================#
-#Away Conceed Second Half over 2.5
-             
-     HomeSectimeConceedOverZ3[0].append(str(AwOvers[14][2])+ "/" +str(AwOvers[15][2]))
-     HomeSectimeConceedOverZ3[1].append(len(rfdA))
-     HomeSectimeConceedOverZ3[2].append(t)
-     HomeSectimeConceedOverZ3[3].append("AwaySecondHalfConceedOver2")
-     HomeSectimeConceedOverZ3[4].append("AwayGamesPlayed") 
-#=====================================================================================================#
-#Away Fix fulltime over 0.5
-               
-     HomefullOver1[0].append(str(HfullTimeOver[0][0])+ "/" +str(HfullTimeOver[1][0]))
-     HomefullOver1[1].append(len(rfdA))
-     HomefullOver1[2].append(t)
-     HomefullOver1[3].append("AwayFixtureFulltimeOverZ")
-     HomefullOver1[4].append("AwayGamesPlayed")
-#Away Fix fulltime over 1.5
-               
-     HomefullOver2[0].append(str(HfullTimeOver[0][1])+ "/" +str(HfullTimeOver[1][1]))
-     HomefullOver2[1].append(len(rfdA))
-     HomefullOver2[2].append(t)
-     HomefullOver2[3].append("AwayFixtureFulltimeOver1")
-     HomefullOver2[4].append("AwayGamesPlayed")
-#Away Fix fulltime over 2.5
-              
-     HomefullOver3[0].append(str(HfullTimeOver[0][2])+ "/" +str(HfullTimeOver[1][2]))
-     HomefullOver3[1].append(len(rfdA))
-     HomefullOver3[2].append(t)
-     HomefullOver3[3].append("AwayFixtureFulltimeOver2")
-     HomefullOver3[4].append("AwayGamesPlayed")    
-#Away Fix  fulltime over 3.5
-          
-     HomefullOver4[0].append(str(HfullTimeOver[0][3])+ "/" +str(HfullTimeOver[1][3]))
-     HomefullOver4[1].append(len(rfdA))
-     HomefullOver4[2].append(t)
-     HomefullOver4[3].append("AwayFixtureFulltimeOver3")
-     HomefullOver4[4].append("AwayGamesPlayed")
-#Away Fix  fulltime over 4.5
-           
-     HomefullOver5[0].append(str(HfullTimeOver[0][4])+ "/" +str(HfullTimeOver[1][4]))
-     HomefullOver5[1].append(len(rfdA))
-     HomefullOver5[2].append(t)
-     HomefullOver5[3].append("AwayFixtureFulltimeOver4")
-     HomefullOver5[4].append("AwayGamesPlayed") 
-
-#===============================================================================#
 #Away First Half Fixture over 0.5
-              
+            
      HomeFFOvs[0].append(str(HHalfimeOver[0][0]) + "/" +str(HHalfimeOver[1][0]))
      HomeFFOvs[1].append(len(rfdA))
      HomeFFOvs[2].append(t)
@@ -494,7 +406,7 @@ def homeFilter(data):
      HomeFFOvs[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away First Half Fixture over 1.5
-              
+            
      HomeFFOvs2[0].append(str(HHalfimeOver[0][1]) + "/" + str(HHalfimeOver[1][1]))
      HomeFFOvs2[1].append(len(rfdA))
      HomeFFOvs2[2].append(t)
@@ -502,7 +414,7 @@ def homeFilter(data):
      HomeFFOvs2[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away First Half Fixture over 2.5
-              
+           
      HomeFFOvs3[0].append(str(HHalfimeOver[0][2]) + "/" + str(HHalfimeOver[1][2]))
      HomeFFOvs3[1].append(len(rfdA))
      HomeFFOvs3[2].append(t)
@@ -510,7 +422,7 @@ def homeFilter(data):
      HomeFFOvs3[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half Fixture over 0.5
-               
+             
      HomeSFOvs[0].append(str(HsecHaTimeOver[0][0]) + "/" + str(HsecHaTimeOver[1][0]))
      HomeSFOvs[1].append(len(rfdA))
      HomeSFOvs[2].append(t)
@@ -518,7 +430,7 @@ def homeFilter(data):
      HomeSFOvs[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half Fixture over 1.5
-               
+             
      HomeSFOvs2[0].append(str(HsecHaTimeOver[0][1]) + "/" + str(HsecHaTimeOver[1][1]))
      HomeSFOvs2[1].append(len(rfdA))
      HomeSFOvs2[2].append(t)
@@ -526,13 +438,15 @@ def homeFilter(data):
      HomeSFOvs2[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Second Half Fixture over 2.5
+           
      HomeSFOvs3[0].append(str(HsecHaTimeOver[0][2])  + "/" + str(HsecHaTimeOver[1][2]))
      HomeSFOvs3[1].append(len(rfdA))
      HomeSFOvs3[2].append(t)
      HomeSFOvs3[3].append("AwayFixtureSecondHalfOver2")
      HomeSFOvs3[4].append("AwayGamesPlayed")
 #===============================================================================#
-#Away Overall Fixture BTS    
+#Away Overall Fixture BTS
+            
      HomeallBTS[0].append(str(hFBTS[0]) + "/" + str(hFBTS[1]))
      HomeallBTS[1].append(len(rfdA))
      HomeallBTS[2].append(t)
@@ -554,10 +468,9 @@ def homeFilter(data):
      HomeSecndHBTS[2].append(t)
      HomeSecndHBTS[3].append("AwaySecondHalfBTS")
      HomeSecndHBTS[4].append("AwayGamesPlayed")
-
 #===============================================================================#
 #Away Conceed 1 Fulltime
-             
+          
      HomeFConceedOvs[0].append(str(HmeConceedFulltime[0]) + "/" + str(HmeConceedFulltime[1]))
      HomeFConceedOvs[1].append(len(rfdA))
      HomeFConceedOvs[2].append(t)
@@ -565,7 +478,7 @@ def homeFilter(data):
      HomeFConceedOvs[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Conceed 2 Fulltime
-         
+             
      HomeFConceedOvs2[0].append(str(HmeConceedFulltime[2]) + "/" + str(HmeConceedFulltime[3]))
      HomeFConceedOvs2[1].append(len(rfdA))
      HomeFConceedOvs2[2].append(t)
@@ -573,7 +486,7 @@ def homeFilter(data):
      HomeFConceedOvs2[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Conceed 3 Fulltime
-               
+           
      HomeFConceedOvs3[0].append(str(HmeConceedFulltime[4]) + "/" + str(HmeConceedFulltime[5]))
      HomeFConceedOvs3[1].append(len(rfdA))
      HomeFConceedOvs3[2].append(t)
@@ -581,7 +494,7 @@ def homeFilter(data):
      HomeFConceedOvs3[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Conceed 4 Fulltime
-             
+            
      HomeFConceedOvs4[0].append(str(HmeConceedFulltime[6]) + "/" + str(HmeConceedFulltime[7]))
      HomeFConceedOvs4[1].append(len(rfdA))
      HomeFConceedOvs4[2].append(t)
@@ -589,13 +502,100 @@ def homeFilter(data):
      HomeFConceedOvs4[4].append("AwayGamesPlayed")
 #===============================================================================#
 #Away Conceed 5 Fulltime
-               
+           
      HomeFConceedOvs5[0].append(str(HmeConceedFulltime[8]) + "/" + str(HmeConceedFulltime[9]))
      HomeFConceedOvs5[1].append(len(rfdA))
      HomeFConceedOvs5[2].append(t)
      HomeFConceedOvs5[3].append("AwayConceedFulltime5")
      HomeFConceedOvs5[4].append("AwayGamesPlayed")
-
+#===============================================================================#
+#Away Score 1 
+           
+     HomeFixOver1[0].append(str(AwOvers[0][0]) + "/" + str(AwOvers[1][0]))
+     HomeFixOver1[1].append(len(rfdA))
+     HomeFixOver1[2].append(t)
+     HomeFixOver1[3].append("AwayOverZero")
+     HomeFixOver1[4].append("AwayGamesPlayed")
+#===============================================================================#
+#Away Score 2 
+              
+     HomeFixOver2[0].append(str(AwOvers[0][1]) + "/" + str(AwOvers[1][1]))
+     HomeFixOver2[1].append(len(rfdA))
+     HomeFixOver2[2].append(t)
+     HomeFixOver2[3].append("AwayOver1")
+     HomeFixOver2[4].append("AwayGamesPlayed")
+#===============================================================================#
+#Away Score 3 
+              
+     HomeFixOver3[0].append(str(AwOvers[0][2]) + "/" + str(AwOvers[1][2]))
+     HomeFixOver3[1].append(len(rfdA))
+     HomeFixOver3[2].append(t)
+     HomeFixOver3[3].append("AwayOver2")
+     HomeFixOver3[4].append("AwayGamesPlayed")
+#===============================================================================#
+#Away Score 4 
+            
+     HomeFixOver4[0].append(str(AwOvers[0][3]) + "/" + str(AwOvers[1][3]))
+     HomeFixOver4[1].append(len(rfdA))
+     HomeFixOver4[2].append(t)
+     HomeFixOver4[3].append("AwayOver3")
+     HomeFixOver4[4].append("AwayGamesPlayed")
+#===============================================================================#
+#Away Score 5 
+              
+     HomeFixOver5[0].append(str(AwOvers[0][4]) + "/" + str(AwOvers[1][4]))
+     HomeFixOver5[1].append(len(rfdA))
+     HomeFixOver5[2].append(t)
+     HomeFixOver5[3].append("AwayOver4")
+     HomeFixOver5[4].append("AwayGamesPlayed")
+#===============================================================================#
+#Away Conceed First Half over 0.5
+             
+     HomeHalftimeConceedOverZ[0].append(str(AwOvers[2][0])+ "/" +str(AwOvers[3][0]))
+     HomeHalftimeConceedOverZ[1].append(len(rfdA))
+     HomeHalftimeConceedOverZ[2].append(t)
+     HomeHalftimeConceedOverZ[3].append("AwayFirstHalfConceedOverZ")
+     HomeHalftimeConceedOverZ[4].append("AwayGamesPlayed") 
+#===============================================================================#
+#Away Conceed First Half over 1.5
+              
+     HomeHalftimeConceedOverZ2[0].append(str(AwOvers[2][1])+ "/" +str(AwOvers[3][1]))
+     HomeHalftimeConceedOverZ2[1].append(len(rfdA))
+     HomeHalftimeConceedOverZ2[2].append(t)
+     HomeHalftimeConceedOverZ2[3].append("AwayFirstHalfConceedOver1")
+     HomeHalftimeConceedOverZ2[4].append("AwayGamesPlayed") 
+#===============================================================================#
+#Away Conceed First Half over 2.5
+               
+     HomeHalftimeConceedOverZ3[0].append(str(AwOvers[2][2])+ "/" +str(AwOvers[3][2]))
+     HomeHalftimeConceedOverZ3[1].append(len(rfdA))
+     HomeHalftimeConceedOverZ3[2].append(t)
+     HomeHalftimeConceedOverZ3[3].append("AwayFirstHalfConceedOver2")
+     HomeHalftimeConceedOverZ3[4].append("AwayGamesPlayed") 
+#===============================================================================#
+#Away Conceed Second Half over 0.5
+              
+     HomeSectimeConceedOverZ[0].append(str(AwOvers[4][0])+ "/" +str(AwOvers[5][0]))
+     HomeSectimeConceedOverZ[1].append(len(rfdA))
+     HomeSectimeConceedOverZ[2].append(t)
+     HomeSectimeConceedOverZ[3].append("AwaySecondHalfConceedOverZ")
+     HomeSectimeConceedOverZ[4].append("AwayGamesPlayed") 
+#===============================================================================#
+#Away Conceed Second Half over 1.5
+              
+     HomeSectimeConceedOverZ2[0].append(str(AwOvers[4][1])+ "/" +str(AwOvers[5][1]))
+     HomeSectimeConceedOverZ2[1].append(len(rfdA))
+     HomeSectimeConceedOverZ2[2].append(t)
+     HomeSectimeConceedOverZ2[3].append("AwaySecondHalfConceedOver1")
+     HomeSectimeConceedOverZ2[4].append("AwayeGamesPlayed") 
+#===============================================================================#
+#Away Conceed Second Half over 2.5
+              
+     HomeSectimeConceedOverZ3[0].append(str(AwOvers[4][2])+ "/" +str(AwOvers[5][2]))
+     HomeSectimeConceedOverZ3[1].append(len(rfdA))
+     HomeSectimeConceedOverZ3[2].append(t)
+     HomeSectimeConceedOverZ3[3].append("AwaySecondHalfConceedOver2")
+     HomeSectimeConceedOverZ3[4].append("AwayGamesPlayed") 
 
 
 homeFilter(sql_data)

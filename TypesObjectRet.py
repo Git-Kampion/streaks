@@ -446,12 +446,10 @@ class BtOr:
        homeoverZ = 0
        homeoverZNot = 0
 
-       
-
        hozB = False
        hozNB = False
-       overs = []
-       unders = []
+       
+      
 
        oversBuild = ""
        undersBuild = ""
@@ -517,8 +515,7 @@ class BtOr:
 
        hozB = False
        hozNB = False
-       overs = []
-       unders = []
+       
 
        oversBuild = ""
        undersBuild = ""
@@ -573,8 +570,1326 @@ class BtOr:
        if underFirst == True:
         arr = ([undersBuild,oversBuild])
        return arr
+    def StreaksOverUnder2(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
 
+
+       hozB = False
+       hozNB = False
+       
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 2:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 2:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+  
+    def StreaksOverUnder3(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 3:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 3:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksConceed1(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+     
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 0:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 0:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr    
+    
+    def StreaksConceed2(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 1:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 1:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    
+    def StreaksConceed3(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 2:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 2:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    
+    def StreaksConceed3(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+     
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 2:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 2:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksConceed4(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht])
+        if Hcon > 3:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= 3:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullOver0(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+       
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) + int(r[ht + 1])
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullWinLose(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) 
+        Acon = int(r[ht + 1])
+        if Hcon > Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullWinDraw(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) 
+        Acon = int(r[ht + 1])
+        if Hcon >= Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon < Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullLoseDraw(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) 
+        Acon = int(r[ht + 1])
+        if Hcon <= Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon > Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullHalfWin(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht + 2]) 
+        Acon = int(r[ht + 3])
+        if Hcon > Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFullHalfWinD(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht + 2]) 
+        Acon = int(r[ht + 3])
+        if Hcon >= Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon < Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeSeconHalfWinD(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) -  int(r[ht + 2]) 
+        Acon = int(r[ht + 1]) - int(r[ht + 3])
+        if Hcon >= Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon < Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeSeconHalfWin(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) -  int(r[ht + 2]) 
+        Acon = int(r[ht + 1]) - int(r[ht + 3])
+        if Hcon > Acon:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= Acon:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFirstHalf(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht + 2]) 
         
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksFixHomeFirstHalfOvZ(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon =  int(r[ht + 2]) + int(r[ht + 3]) 
+             
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksFixHomeSecondHalfOvZ(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht ]) - int(r[ht + 2]) 
+        Acon = int(r[ht + 1 ]) -  int(r[ht + 3]) 
+        Hcon = Hcon + Acon      
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeSecHalf(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) -  int(r[ht + 2]) 
+       
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeFirstHalfConceed1(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht]) 
+       
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
+    def StreaksHomeSecondHalfConceed1(t,data,betype,ht,half):
+       homeoverZ = 0
+       homeoverZNot = 0
+
+
+       hozB = False
+       hozNB = False
+      
+
+       oversBuild = ""
+       undersBuild = ""
+
+       OverFirst = False
+       underFirst = False
+
+       for r in data:
+        Hcon = int(r[ht - 2]) - int(r[ht]) 
+         
+       
+        if Hcon > half:
+          hozB = False
+          homeoverZ = homeoverZ + 1
+          if OverFirst == False and underFirst == False:
+           OverFirst = True
+        else:
+          hozB = True
+          
+        if Hcon <= half:
+          hozNB = False
+          homeoverZNot = homeoverZNot + 1
+          if OverFirst == False:
+           underFirst = True
+        else:
+          hozNB = True
+
+        if hozB == True and homeoverZ > 0 :
+         ###overs.append("R" + str(homeoverZ)) 
+         oversBuild = oversBuild + "R" + str(homeoverZ)
+         hozB = False
+         homeoverZ = 0
+         
+        if hozNB == True and homeoverZNot > 0:
+         ###overs.append("R" + str(homeoverZ)) 
+         undersBuild = undersBuild + "T" + str(homeoverZNot)
+         #unders.append("T" + str(homeoverZNot)) 
+         hozNB = False
+         homeoverZNot = 0
+         
+       if homeoverZ > 0:
+          #overs.append("R" + str(homeoverZ))
+          oversBuild = oversBuild + "R" + str(homeoverZ)
+       else:
+         #unders.append("T" + str(homeoverZNot))  
+         undersBuild = undersBuild + "T" + str(homeoverZNot)  
+       
+       if undersBuild == '':
+         undersBuild = 'T0'
+       if oversBuild == '':
+         oversBuild = 'R0'
+       if OverFirst == True:
+        arr = ([oversBuild,undersBuild])
+       if underFirst == True:
+        arr = ([undersBuild,oversBuild])
+       return arr
     def FixOverUnders(t,data,betype,ht,half):
         countO = 0
         countOv1 = 0
@@ -594,10 +1909,16 @@ class BtOr:
         overs = []
         unders = []
         for r in data:
-            Hcon = int(r[ht])
-            Acon = int(r[ht + 1])
-            HomFrstHlf = int(r[ht + 2])
-            AwaFrstHlf = int(r[ht + 3])
+            if  betype == "k":
+              Hcon = int(r[ht])
+              Acon = int(r[ht + 1])
+              HomFrstHlf = int(r[ht + 2])
+              AwaFrstHlf = int(r[ht + 3])
+            else:
+              Hcon = int(r[ht-1])
+              Acon = int(r[ht])
+              HomFrstHlf = int(r[ht + 1])
+              AwaFrstHlf = int(r[ht + 2])
             AwaSecHlf = 0
             HomSecHlf = 0
             if Hcon == HomFrstHlf:
@@ -704,11 +2025,16 @@ class BtOr:
        notCount = 0
        arr = ([],[])
        for r in data:
-           
-             Hcon = int(r[ht])
-             Acon = int(r[ht + 1])
-             HFirstHalf = int(r[ht + 2])
-             AFirstHalf = int(r[ht + 3])
+             if betype == "k":
+              Hcon = int(r[ht])
+              Acon = int(r[ht + 1])
+              HFirstHalf = int(r[ht + 2])
+              AFirstHalf = int(r[ht + 3])
+             else:
+               Hcon = int(r[ht-1])
+               Acon = int(r[ht ])
+               HFirstHalf = int(r[ht + 1])
+               AFirstHalf = int(r[ht + 2])
              HomSecHlf = 0
              awaSecHlf = 0
              if Hcon == HFirstHalf:
@@ -1055,15 +2381,15 @@ class BtOr:
                 else:
                     ASecHlf = Acon - AFrstHlf       
             else:
-                Hcon = int(r[ht - 1])
-                HomFrstHlf = int(r[ht + 1]) 
+                Hcon = int(r[ht ])
+                HomFrstHlf = int(r[ht + 2]) 
                 if Hcon == HomFrstHlf:
                   HomSecHlf = 0
                 else:
                   HomSecHlf = Hcon - HomFrstHlf
 
-                Acon = int(r[ht])
-                AFrstHlf = int(r[ht + 2])
+                Acon = int(r[ht-1])
+                AFrstHlf = int(r[ht + 1])
 
                 if Acon == AFrstHlf:
                   ASecHlf = 0
@@ -1709,11 +3035,11 @@ class BtOr:
              AFrstHlf = int(r[ht + 3])
              AwSecHlf = Acon - AFrstHlf
         else:
-             Hcon = int(r[ht - 1])
-             HomFrstHlf = int(r[ht +1])
+             Hcon = int(r[ht ])
+             HomFrstHlf = int(r[ht +2])
              HomeSecHlf = Hcon - HomFrstHlf
-             Acon = int(r[ht])
-             AFrstHlf = int(r[ht + 2])
+             Acon = int(r[ht-1])
+             AFrstHlf = int(r[ht + 1])
              AwSecHlf = Acon - AFrstHlf
 
         if Hcon > Acon:

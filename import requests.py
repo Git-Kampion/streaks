@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, TimeoutException, WebDriverException
-
+from selenium.webdriver.common.keys import Keys
  
 # Launch Chrome browser in headless mode
 options = webdriver.FirefoxOptions()
@@ -76,7 +76,7 @@ for lnk in content:
   #matchRounds = browser.find_elements(By.CLASS_NAME,"event__round")
   
   #
-  matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match") 
+  matchesPopUps = browser.find_elements(By.CLASS_NAME, "eventRowLink") 
   
   
   homeaway2ndHScore = ([],[])
@@ -87,13 +87,21 @@ for lnk in content:
   for bele in matchesPopUps:
     if countUps < iteloop:
       countUps = countUps +1
-      elem = bele.click()
-      secWindow = browser.window_handles[1]
-      browser.switch_to.window(secWindow)
-      success = False
-      time.sleep(7)
+      href = bele.get_attribute("href")
       
-      bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text
+      #elem = bele.click()
+      if href:
+        browser.execute_script(f"window.open('{href}', '_blank');")
+        time.sleep(5)
+      browser.switch_to.window(browser.window_handles[-1])
+      #secWindow = browser.window_handles[0]
+      #browser.switch_to.window(secWindow)
+      success = False
+      #time.sleep(7)
+      
+      #bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text --- Previously is the class name that contains the Round number was tournamentHeaderDescription
+      bjj = browser.find_elements(By.CLASS_NAME,"wcl-breadcrumbItem_CiWQ7")
+      bjj = bjj[0].text + " " + bjj[1].text + " " + bjj[2].text
       ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
       dt = ull[0].split(" ")[0]
       Hteam = ull[1].replace(" ", "")
