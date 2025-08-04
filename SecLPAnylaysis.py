@@ -369,7 +369,27 @@ class SlPA:
  
  def ScoreFirstHConceedSecondLayerPerceptron(t,data,betype,ht):
         count = 0
-      
+        Notcount = 0
+
+        for r in data:
+            if betype == "b":
+               c =  int(r[ht - 3])
+               v = int(r[ht]) 
+
+            if betype == "k":
+               c =  int(r[ht + 1]) - int(r[ht + 3])
+               v = int(r[ht + 2]) 
+            if v > 0:
+               if c > 0:
+                  count = count + 1
+               else:
+                  Notcount = Notcount + 1
+              
+                
+        arr = [count,Notcount]       
+        return arr
+ def BenchmarkGoals(t,data,betype,ht):
+        count = 0
         Notcount = 0
 
         for r in data:

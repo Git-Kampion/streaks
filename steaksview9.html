@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football Stats Viewer with Stat Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="date"], input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            min-width: 200px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .filter-hint {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .fixture-container {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stats-box {
+            flex: 1;
+        }
+
+        .stats-title {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .scrollable-table {
+            max-height: 185px;
+            overflow-y: auto;
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .no-fixtures {
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #fffacd;
+        }
+
+        @media (max-width: 768px) {
+            .stats-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Football Team Statistics</h1>
+
+    <div class="control-panel">
+        <div class="search-group">
+            <input type="date" id="datePicker">
+            <input type="text" id="teamSearch" placeholder="Search teams...">
+            <button id="searchBtn">Search</button>
+            <button id="clearSearch">Clear</button>
+        </div>
+
+        <div class="search-group">
+            <input type="text" id="statFilter" placeholder="Filter stats (e.g. /T0)">
+            <span class="filter-hint">Use /T0, /R5 etc. to filter specific stats</span>
+        </div>
+    </div>
+
+    <div id="fixtureList">
+        <p class="no-fixtures">No date selected</p>
+    </div>
+
+    <script>// Data variables
+        let fixtures = [];
+        let homeStats = [];
+        let awayStats = [];
+        let currentDisplayedFixtures = [];
+
+        // Load all data files
+        async function loadData() {
+            try {
+                const responses = await Promise.all([
+                    fetch('fixtures.json'),
+                    fetch('home_stats.json'),
+                    fetch('away_stats.json')
+                ]);
+
+                fixtures = await responses[0].json();
+                homeStats = await responses[1].json();
+                awayStats = await responses[2].json();
+
+                console.log('Data loaded successfully');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showError('Error loading data. Please check console.');
+            }
+        }
+
+        // Find team stats with case-insensitive matching
+        function findTeamStats(teamName, statsArray) {
+            const lowerName = teamName.toLowerCase();
+            return statsArray.find(team => team.Team.toLowerCase() === lowerName);
+        }
+
+        // Filter stats rows based on stat filter
+        function filterStatRows(rows, statFilter) {
+            if (!statFilter) return rows;
+
+            return rows.filter(row => {
+                const value = row.querySelector('td:nth-child(2)').textContent;
+                return value.includes(statFilter);
+            });
+        }
+
+        // Generate stats table with filtering
+        function generateStatsTable(teamStat, type, statFilter = '') {
+            if (!teamStat) {
+                return `<div class="no-data">No ${type} stats available</div>`;
+            }
+
+            // Create table with all stats
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            thead.innerHTML = `
+                <tr>
+                    <th>Statistic</th>
+                    <th>Value</th>
+                </tr>
+            `;
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+
+            // Add team name row
+            const teamRow = document.createElement('tr');
+            teamRow.innerHTML = `
+                <td>Team</td>
+                <td><strong>${teamStat.Team}</strong></td>
+            `;
+            tbody.appendChild(teamRow);
+
+            // Add all other stats
+            Object.entries(teamStat).forEach(([key, value]) => {
+                if (key === 'Team') return;
+
+                const row = document.createElement('tr');
+                const formattedKey = key.replace(/([A-Z])/g, ' $1').trim();
+                row.innerHTML = `
+                    <td>${formattedKey}</td>
+                    <td>${value}</td>
+                `;
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+
+            // Apply stat filter if provided
+            if (statFilter) {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                rows.forEach(row => row.style.display = 'none');
+
+                const matchingRows = filterStatRows(rows, statFilter);
+                matchingRows.forEach(row => {
+                    row.style.display = '';
+                    row.classList.add('highlight');
+                });
+
+                // Always show team name row
+                teamRow.style.display = '';
+                teamRow.classList.remove('highlight');
+            }
+
+            return table;
+        }
+
+        // Display fixtures with filters
+        function displayFixtures(date, teamFilter = '', statFilter = '') {
+            const fixtureList = document.getElementById('fixtureList');
+
+            // Filter by date
+            let filteredFixtures = fixtures.filter(f => f.date === date);
+
+            // Apply team filter if provided
+            if (teamFilter) {
+                const searchTerm = teamFilter.toLowerCase();
+                filteredFixtures = filteredFixtures.filter(f =>
+                    f.home.toLowerCase().includes(searchTerm) ||
+                    f.away.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            currentDisplayedFixtures = filteredFixtures;
+
+            if (filteredFixtures.length === 0) {
+                const message = teamFilter
+                    ? `No fixtures found for ${date} matching "${teamFilter}"`
+                    : `No fixtures found for ${date}`;
+                fixtureList.innerHTML = `<p class="no-fixtures">${message}</p>`;
+                return;
+            }
+
+            // Generate HTML for each fixture
+            fixtureList.innerHTML = filteredFixtures.map(fixture => {
+                const homeTeam = findTeamStats(fixture.home, homeStats);
+                const awayTeam = findTeamStats(fixture.away, awayStats);
+
+                const homeTable = generateStatsTable(homeTeam, 'home', statFilter);
+                const awayTable = generateStatsTable(awayTeam, 'away', statFilter);
+
+                return `
+                    <div class="fixture-container">
+                        <div class="fixture-header">
+                            <div class="team-name">${fixture.home}</div>
+                            <div class="vs">vs</div>
+                            <div class="team-name">${fixture.away}</div>
+                        </div>
+                        <div class="stats-container">
+                            <div class="stats-box">
+                                <div class="stats-title">Home Team Stats</div>
+                                <div class="stats-table-container">
+                                    <div class="scrollable-table"></div>
+                                </div>
+                            </div>
+                            <div class="stats-box">
+                                <div class="stats-title">Away Team Stats</div>
+                                <div class="stats-table-container">
+                                    <div class="scrollable-table"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Add the tables after the containers exist in DOM
+            setTimeout(() => {
+                document.querySelectorAll('.fixture-container').forEach((container, index) => {
+                    const fixture = filteredFixtures[index];
+                    const homeTeam = findTeamStats(fixture.home, homeStats);
+                    const awayTeam = findTeamStats(fixture.away, awayStats);
+
+                    const homeTable = generateStatsTable(homeTeam, 'home', statFilter);
+                    const awayTable = generateStatsTable(awayTeam, 'away', statFilter);
+
+                    container.querySelector('.stats-box:first-child .scrollable-table').appendChild(homeTable);
+                    container.querySelector('.stats-box:last-child .scrollable-table').appendChild(awayTable);
+                });
+            }, 0);
+        }
+
+        // Event listeners
+        document.getElementById('datePicker').addEventListener('change', function() {
+            const statFilter = document.getElementById('statFilter').value.trim();
+            displayFixtures(this.value, '', statFilter);
+        });
+
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const date = document.getElementById('datePicker').value;
+            const teamFilter = document.getElementById('teamSearch').value.trim();
+            const statFilter = document.getElementById('statFilter').value.trim();
+
+            if (!date) {
+                alert('Please select a date first');
+                return;
+            }
+            displayFixtures(date, teamFilter, statFilter);
+        });
+
+        document.getElementById('clearSearch').addEventListener('click', function() {
+            document.getElementById('teamSearch').value = '';
+            document.getElementById('statFilter').value = '';
+            const date = document.getElementById('datePicker').value;
+            if (date) displayFixtures(date);
+        });
+
+        document.getElementById('statFilter').addEventListener('input', function() {
+            const date = document.getElementById('datePicker').value;
+            const teamFilter = document.getElementById('teamSearch').value.trim();
+            const statFilter = this.value.trim();
+
+            if (date) {
+                displayFixtures(date, teamFilter, statFilter);
+            }
+        });
+
+        // Initialize
+        window.addEventListener('load', async () => {
+            await loadData();
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('datePicker').value = today;
+            displayFixtures(today);
+        });</script>
+</body>
+</html>

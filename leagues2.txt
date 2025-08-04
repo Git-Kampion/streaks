@@ -1,7 +1,6 @@
 # https://www.flashscore.com/football/jordan/premier-league/results/ JORDAN JordanPrem25
 # https://www.flashscore.com/football/myanmar/national-league/results/ MYANMAR MyanmarNatLeag25
 # https://www.flashscore.com/football/tanzania/ligi-kuu-bara/results/ TANZANIA TanzaniaPrem25
-# https://www.flashscore.com/football/romania/liga-1/results/ ROMANIA RomaniA
 # https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
 # https://www.flashscore.com/football/czech-republic/chance-liga-2024-2025/results/ CZECH CzechA25
 # https://www.flashscore.com/football/czech-republic/chnl-2024-2025/results/ CZECH CzechB25
@@ -36,11 +35,24 @@
 # https://www.flashscore.com/football/denmark/1st-division-2024-2025/results/ DENMARK DenmarkB25
 # https://www.flashscore.com/football/rwanda/premier-league/results/ RWANDA RwandaPrem25
 # https://www.flashscore.com/football/indonesia/liga-1/results/ INDONESIA IndonesiaPrem25
-https://www.flashscore.com/football/argentina/torneo-betano-2024/results/ ARGENTINA ArgentitTorneo25
-https://www.flashscore.com/football/england/championship-2024-2025/results/ ENGLAND EplChampionShip25 
-https://www.flashscore.com/football/england/league-one-2024-2025/results/ ENGLAND EngLeagua125 
-https://www.flashscore.com/football/england/league-two-2024-2025/results/ ENGLAND EngLeagua225
-https://www.flashscore.com/football/italy/serie-a-2024-2025/results/ ITALY SerieA25     
+# https://www.flashscore.com/football/norway/eliteserien/results/ NORWAY NorwayA25
+# https://www.flashscore.com/football/ireland/premier-division/results/ IRELAND irelandPrem25
+# https://www.flashscore.com/football/ireland/division-1/results/ IRELAND IrelandA25
+# https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandDiv125IrelandA25
+# https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta25
+# https://www.flashscore.com/football/estonia/meistriliiga/results/ ESTONIA EstoniaPrem25
+# https://www.flashscore.com/football/estonia/esiliiga/results/ BRAZIL EstoniaPremB25
+# https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
+# https://www.flashscore.com/football/argentina/torneo-betano-2024/results/ ARGENTINA ArgentitTorneo25
+# https://www.flashscore.com/football/england/championship-2024-2025/results/ ENGLAND EplChampionShip25 
+# https://www.flashscore.com/football/england/league-one-2024-2025/results/ ENGLAND EngLeagua125 
+# https://www.flashscore.com/football/england/league-two-2024-2025/results/ ENGLAND EngLeagua225
+# https://www.flashscore.com/football/italy/serie-a-2024-2025/results/ ITALY SerieA25  
+# https://www.flashscore.com/football/romania/superliga-2024-2025/results/ ROMANIA RomaniA25 
+# https://www.flashscore.com/football/slovakia/2-liga-2024-2025/results/ SLOVAKIA SlovakiaB25
+https://www.flashscore.com/football/norway/obos-ligaen/results/ NORWAY NorwayB25  
+# https://www.flashscore.com/football/peru/liga-1-2024/results/ PERU PeruA25 
+# https://www.flashscore.com/football/china/super-league/results/ CHINA CSuper25 
 # https://www.flashscore.com/football/portugal/liga-portugal/results/ PORTUGAL portLeag25
 # https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
 # https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
@@ -52,29 +64,25 @@ https://www.flashscore.com/football/italy/serie-a-2024-2025/results/ ITALY Serie
 # https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA25
 # https://www.flashscore.com/football/slovakia/nike-liga/results/ SLOVAKIA SlovakiaA
 # https://www.flashscore.com/football/south-africa/premier-league/results/ SOUTH pslA2025 
-# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25  
-# https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA24 
+# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
 # https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
 # https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
 # https://www.flashscore.com/football/cyprus/cyta-championship/results/ CYPRUS CyprusA  
 # https://www.flashscore.com/football/finland/veikkausliiga/results/ FINLAND FinlandA 
 # https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25 
-# https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25 
-# https://www.flashscore.com/football/norway/eliteserien-2024/results/ NORWAY NorwayA24 
+# https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25  
 # https://www.flashscore.com/football/peru/liga-1/results/ PERU PeruA25   
 # https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem25
 # https://www.flashscore.com/football/uzbekistan/super-league/results/ UZBEKISTAN UzbekistanPrem
 # https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem25
 # https://www.flashscore.com/football/latvia/virsliga/results/ LATVIA LatviaPrem25 
-# https://www.flashscore.com/football/sweden/allsvenskan-2024/results/ SWEDEN SwedenA24
-# https://www.flashscore.com/football/china/super-league/results/ CHINA CSuper25
-# https://www.flashscore.com/football/ireland/premier-division/results/ IRELAND irelandPrem25
+# https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
+# https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
 # https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
 # https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA 
 # https://www.flashscore.com/football/finland/veikkausliiga/results/ FINLAND FinlandViks 
 # https://www.flashscore.com/football/finland/ykkosliiga/results/ FINLAND FinlandYK
 # https://www.flashscore.com/football/finland/ykkonen/results/ FINLAND FinlandYkK
-# https://www.flashscore.com/football/estonia/meistriliiga/results/ ESTONIA EstoniaPrem
 # https://www.flashscore.com/football/cyprus/division-2-2023-2024/results/ CYPRUS CyprusB2023----------
 # https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
 # https://www.flashscore.com/football/slovakia/2-liga/results/ SLOVAKIA SlovakiaB--------
@@ -90,8 +98,6 @@ https://www.flashscore.com/football/italy/serie-a-2024-2025/results/ ITALY Serie
 # https://www.flashscore.com/football/argentina/primera-nacional/results/ ARGENTINA ArgentiNacional
 # https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA 
 # https://www.flashscore.com/football/brazil/serie-b/results/ BRAZIL BrazilB 
-# https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandDiv1
-# https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta
 # https://www.flashscore.com/football/usa/mls/results/ USA Usa 
 # https://www.flashscore.com/football/argentina/primera-b/results/ ARGENTINA ArgentiL1
 

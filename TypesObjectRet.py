@@ -1085,8 +1085,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht]) 
-        Acon = int(r[ht + 1])
+        if betype == "k":
+          Hcon = int(r[ht]) 
+          Acon = int(r[ht + 1])
+        else:
+          Hcon = int(r[ht]) 
+          Acon = int(r[ht - 1])
         if Hcon > Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1148,8 +1152,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht]) 
-        Acon = int(r[ht + 1])
+        if betype == "k":
+          Hcon = int(r[ht]) 
+          Acon = int(r[ht + 1])
+        else:
+          Hcon = int(r[ht]) 
+          Acon = int(r[ht - 1])
         if Hcon >= Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1211,9 +1219,13 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht]) 
-        Acon = int(r[ht + 1])
-        if Hcon <= Acon:
+        if betype == "k":
+          Hcon = int(r[ht]) 
+          Acon = int(r[ht + 1])
+        else:
+          Hcon = int(r[ht- 1] ) 
+          Acon = int(r[ht])
+        if Hcon > Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
           if OverFirst == False and underFirst == False:
@@ -1221,7 +1233,7 @@ class BtOr:
         else:
           hozB = True
           
-        if Hcon > Acon:
+        if Hcon <= Acon:
           hozNB = False
           homeoverZNot = homeoverZNot + 1
           if OverFirst == False:
@@ -1274,8 +1286,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht + 2]) 
-        Acon = int(r[ht + 3])
+        if betype == "k":
+          Hcon = int(r[ht + 2]) 
+          Acon = int(r[ht + 3])
+        else:
+          Hcon = int(r[ht + 2]) 
+          Acon = int(r[ht + 1])
         if Hcon > Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1337,8 +1353,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht + 2]) 
-        Acon = int(r[ht + 3])
+        if betype == "k":
+          Hcon = int(r[ht + 2]) 
+          Acon = int(r[ht + 3])
+        else:
+          Hcon = int(r[ht + 2]) 
+          Acon = int(r[ht + 1])
         if Hcon >= Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1400,8 +1420,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht]) -  int(r[ht + 2]) 
-        Acon = int(r[ht + 1]) - int(r[ht + 3])
+        if betype == "k":
+          Hcon = int(r[ht]) -  int(r[ht + 2]) 
+          Acon = int(r[ht + 1]) - int(r[ht + 3])
+        else:
+          Hcon = int(r[ht]) -  int(r[ht + 2]) 
+          Acon = int(r[ht - 1]) - int(r[ht + 1])
         if Hcon >= Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1463,8 +1487,12 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht]) -  int(r[ht + 2]) 
-        Acon = int(r[ht + 1]) - int(r[ht + 3])
+        if betype == "k":
+          Hcon = int(r[ht]) -  int(r[ht + 2]) 
+          Acon = int(r[ht + 1]) - int(r[ht + 3])
+        else:
+          Hcon = int(r[ht]) -  int(r[ht + 2]) 
+          Acon = int(r[ht - 1]) - int(r[ht + 1])
         if Hcon > Acon:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1526,6 +1554,7 @@ class BtOr:
        underFirst = False
 
        for r in data:
+        
         Hcon = int(r[ht + 2]) 
         
         if Hcon > half:
@@ -1589,8 +1618,11 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon =  int(r[ht + 2]) + int(r[ht + 3]) 
-             
+        if betype == "k":
+          Hcon =  int(r[ht + 2]) + int(r[ht + 3]) 
+        else:
+          Hcon =  int(r[ht + 1]) + int(r[ht + 2]) 
+
         if Hcon > half:
           hozB = False
           homeoverZ = homeoverZ + 1
@@ -1652,9 +1684,14 @@ class BtOr:
        underFirst = False
 
        for r in data:
-        Hcon = int(r[ht ]) - int(r[ht + 2]) 
-        Acon = int(r[ht + 1 ]) -  int(r[ht + 3]) 
-        Hcon = Hcon + Acon      
+        if betype == "k":
+          Hcon = int(r[ht ]) - int(r[ht + 2]) 
+          Acon = int(r[ht + 1 ]) -  int(r[ht + 3]) 
+          Hcon = Hcon + Acon 
+        else:
+          Hcon = int(r[ht ]) - int(r[ht + 2]) 
+          Acon = int(r[ht - 1 ]) -  int(r[ht + 1]) 
+          Hcon = Hcon + Acon   
         if Hcon > half:
           hozB = False
           homeoverZ = homeoverZ + 1

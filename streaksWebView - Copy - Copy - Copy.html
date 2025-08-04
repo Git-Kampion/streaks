@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreaksAway Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .section {
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        select, input[type="text"] {
+            margin-right: 10px;
+            padding: 5px;
+        }
+
+        .hot-streaks-button {
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+            .hot-streaks-button:hover {
+                background-color: #e34e2d;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h2>Section 1 - Team Statistics</h2>
+        <input type="file" id="upload1" accept=".xlsx, .xls" />
+        <br><br>
+        <input type="text" id="searchInput1" placeholder="Search Team" oninput="applySearchFilter('1')" />
+        <input type="text" id="filterInput1" placeholder="Enter filter value (e.g. /R1)" />
+        <button class="hot-streaks-button" onclick="applyCustomFilter2('1')">HotStreaks</button>
+        <label for="columnSelect1" id="columnLabel1">Select column to display:</label>
+        <select id="columnSelect1"></select>
+
+        <table id="dataTable1">
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>GamesPlayed</th>
+                    <th id="extraHeader1"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody1"></tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Section 2 - Team Statistics</h2>
+        <input type="file" id="upload2" accept=".xlsx, .xls" />
+        <br><br>
+        <input type="text" id="filterInput2" placeholder="Enter filter value (e.g. /R1)" />
+        <button class="hot-streaks-button" onclick="applyCustomFilter('2')">HotStreaks</button>
+        <label for="columnSelect2" id="columnLabel2">Select column to display:</label>
+        <select id="columnSelect2"></select>
+
+        <table id="dataTable2">
+            <thead>
+                <tr>
+                    <th>Team</th>
+                    <th>GamesPlayed</th>
+                    <th id="extraHeader2"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody2"></tbody>
+        </table>
+    </div>
+
+    <script src="xlsx.full.min.js"></script>
+    <script>
+        const dataStore = {};
+        const columnSelect = document.getElementById("columnSelect");
+        const filterInput = document.getElementById("filterInput");
+        const hhh = document.getElementById("lblInp");
+
+        document.getElementById("upload1").addEventListener("change", e => handleFile(e, '1'));
+        document.getElementById("upload2").addEventListener("change", e => handleFile(e, '2'));
+
+        function handleFile(event, id) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const sheet = workbook.Sheets[workbook.SheetNames[0]];
+                const json = XLSX.utils.sheet_to_json(sheet);
+
+                dataStore[id] = json;
+                populateDropdownAndRender(json, id);
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+
+        function populateDropdownAndRender(data, id) {
+            const select = document.getElementById("columnSelect" + id);
+            select.innerHTML = "";
+            const extraColumns = Object.keys(data[0]).filter(col => col !== "Team" && col !== "GamesPlayed");
+
+            extraColumns.forEach(col => {
+                const option = document.createElement("option");
+                option.value = col;
+                option.textContent = col;
+                select.appendChild(option);
+            });
+
+            select.addEventListener("change", () => {
+                renderTable(data, select.value, id);
+            });
+
+            const defaultColumn = "AwayOverZ";
+            if (extraColumns.includes(defaultColumn)) {
+                select.value = defaultColumn;
+                renderTable(data, defaultColumn, id);
+            }
+        }
+
+        function renderTable(data, selectedCol, id) {
+            const tbody = document.getElementById("tableBody" + id);
+            const header = document.getElementById("extraHeader" + id);
+            tbody.innerHTML = "";
+            header.textContent = selectedCol || "";
+
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+            <td>${row.Team || ""}</td>
+            <td>${row.GamesPlayed || ""}</td>
+            <td>${selectedCol ? row[selectedCol] || "" : ""}</td>
+          `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function applyCustomFilter(id) {
+            const selectedCol = columnSelect.value;
+            
+            const inputs = filterInput.value.split("+");
+            const data = dataStore[id];
+
+            //const inputs = ["/R0", "/R1"];
+            const filtered = data.filter(row => {
+                const value = row[selectedCol];
+
+                if (typeof value !== "string") return false;
+
+                return inputs.some(input => {
+                    // Ensure it ends exactly with /R0 or /R1 and nothing after it
+                    const index = value.lastIndexOf(input);
+                    //return index !== -1 && index + input.length === value.length;
+                    const endsWithExact = index !== -1 && index + input.length === value.length;
+
+                    // Check if value starts exactly with input (e.g. R1/)
+                    const startsWithExact = value.startsWith(input.replace("/", "") + "/");
+
+                    return endsWithExact || startsWithExact;
+
+                });
+            });
+            renderTable(filtered, selectedCol,id);
+        }
+        function applySearchFilter(id) {
+            const searhText = document.getElementById("");
+
+            const inputs = filterInput.value.split("+");
+            const data = dataStore[id];
+
+            //const inputs = ["/R0", "/R1"];
+            const filtered = data.filter(row => {
+                const value = row[selectedCol];
+
+                if (typeof value !== "string") return false;
+
+                return inputs.some(input => {
+                    // Ensure it ends exactly with /R0 or /R1 and nothing after it
+                    const index = value.lastIndexOf(input);
+                    //return index !== -1 && index + input.length === value.length;
+                    const endsWithExact = index !== -1 && index + input.length === value.length;
+
+                    // Check if value starts exactly with input (e.g. R1/)
+                    const startsWithExact = value.startsWith(input.replace("/", "") + "/");
+
+                    return endsWithExact || startsWithExact;
+
+                });
+            });
+            renderTable(filtered, selectedCol, id);
+        }
+    </script>
+</body>
+</html>

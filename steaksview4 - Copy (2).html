@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixtures Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>All Fixtures</h1>
+    <ul id="fixtures-list">Loading...</ul>
+
+    <script>
+        fetch('fixturesfetch.json')
+            .then(res => res.json())
+            .then(data => {
+                const list = document.getElementById('fixtures-list');
+                list.innerHTML = "";
+
+                data.forEach(fix => {
+                    const li = document.createElement("li");
+                    li.textContent = `Round ${fix.round}: ${fix.date} - ${fix.home} vs ${fix.away}`;
+                    list.appendChild(li);
+                });
+            })
+            .catch(err => {
+                document.getElementById("fixtures-list").innerHTML = "Failed to load fixtures.";
+                console.error(err);
+            });
+    </script>
+
+</body>
+</html>

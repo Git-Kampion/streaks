@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixtures by Date</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f2f2f2;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .center {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #fixtures-list {
+            margin-bottom: 30px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .teams-section {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .team-box {
+            flex: 1;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select Match Date</h1>
+    <div class="center">
+        <input type="date" id="match-date">
+    </div>
+
+    <h2>Fixtures</h2>
+    <ul id="fixtures-list">Loading...</ul>
+
+    <h2>Home vs Away Stats</h2>
+    <div class="teams-section">
+        <div class="team-box">
+            <h3>Home Team Stats</h3>
+            <table id="home-table">
+                <tr><th>Team</th><th>Games Played</th><th>HomeOverZ</th></tr>
+            </table>
+        </div>
+        <div class="team-box">
+            <h3>Away Team Stats</h3>
+            <table id="away-table">
+                <tr><th>Team</th><th>Games Played</th><th>HomeOverZ</th></tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let fixturesData = [];
+        let homeStats = [];
+        let awayStats = [];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Load data
+            Promise.all([
+                fetch('fixtures.json').then(res => res.json()),
+                fetch('home_stats.json').then(res => res.json()),
+                fetch('away_stats.json').then(res => res.json())
+            ]).then(([fixtures, home, away]) => {
+                fixturesData = fixtures;
+                homeStats = home;
+                awayStats = away;
+
+                const datePicker = document.getElementById("match-date");
+                datePicker.value = new Date().toISOString().split('T')[0];
+                updatePageForDate(datePicker.value);
+
+                datePicker.addEventListener("change", e => {
+                    updatePageForDate(e.target.value);
+                });
+            });
+
+            function updatePageForDate(selectedDate) {
+                // Update fixtures
+                const list = document.getElementById('fixtures-list');
+                list.innerHTML = '';
+
+                const todaysFixtures = fixturesData.filter(f => f.date === selectedDate);
+                if (todaysFixtures.length === 0) {
+                    list.innerHTML = "<li>No fixtures for selected date.</li>";
+                } else {
+                    todaysFixtures.forEach(fix => {
+                        const li = document.createElement('li');
+                        li.textContent = `Round ${fix.round}: ${fix.date} - ${fix.home} vs ${fix.away}`;
+                        list.appendChild(li);
+                    });
+                }
+
+                // Update home/away tables with teams from fixtures
+                const homeTeams = todaysFixtures.map(f => f.home);
+                const awayTeams = todaysFixtures.map(f => f.away);
+
+                populateTable("home-table", homeStats.filter(t => homeTeams.includes(t.team)));
+                populateTable("away-table", awayStats.filter(t => awayTeams.includes(t.team)));
+            }
+
+            function populateTable(tableId, data) {
+                const table = document.getElementById(tableId);
+                // Remove all rows except header
+                table.innerHTML = "<tr><th>Team</th><th>Games Played</th><th>HomeOverZ</th></tr>";
+                data.forEach(row => {
+                    const tr = document.createElement("tr");
+                    tr.innerHTML = `<td>${row.team}</td><td>${row.gamesPlayed}</td><td>${row.homeOverZ}</td>`;
+                    table.appendChild(tr);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
