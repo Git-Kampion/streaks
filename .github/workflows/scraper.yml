@@ -1,0 +1,44 @@
+name: Run Scraper on Windows
+
+on:
+  workflow_dispatch: # manual trigger
+  schedule:
+    - cron: "0 6 * * *"  # daily at 06:00 UTC
+
+jobs:
+  scrape:
+    runs-on: windows-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Firefox
+        run: choco install -y firefox
+
+      - name: Install GeckoDriver
+        run: choco install -y geckodriver
+
+      - name: Run scraper
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python scraper.py
+
+      - name: Upload Access DBs
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraped-database
+          path: |
+            db/2026.accdb
+            db/2022-23Base.accdb

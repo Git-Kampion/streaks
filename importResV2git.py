@@ -1,45 +1,50 @@
 import time
 import pyodbc
 import pandas as pd
+from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, NoSuchElementException, TimeoutException, WebDriverException
+from selenium.common.exceptions import (
+    ElementClickInterceptedException, ElementNotInteractableException,
+    NoSuchElementException, TimeoutException, WebDriverException
+)
 from selenium.webdriver.common.keys import Keys
- 
-# Launch Chrome browser in headless mode
-options = webdriver.FirefoxOptions()
+from selenium.webdriver.firefox.options import Options
 
-options.add_argument("headless")
+# --- Paths (relative to repo root) ---
+ROOT = Path(__file__).resolve().parent
+DB1 = ROOT / "db" / "2026.accdb"
+DB2 = ROOT / "db" / "2022-23Base.accdb"
+LEAGUES = ROOT / "leagues26.txt"
+
+# --- Firefox headless ---
+options = Options()
+options.headless = True  # (or) options.add_argument("-headless")
 browser = webdriver.Firefox(options=options)
-def dataLookUp(ScotlandA24,matchUpsCount):
- 
-  # Connect to database
-  conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2026.accdb')
-  cursor = conn.cursor()
 
-  # Select query
-  query = "SELECT * FROM " + ScotlandA24
+def dataLookUp(ScotlandA24, matchUpsCount):
+    # Connect to database (DB1)
+    conn = pyodbc.connect(
+        rf"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ={DB1}"
+    )
+    cursor = conn.cursor()
+    query = "SELECT * FROM " + ScotlandA24
+    cursor.execute(query)
+    sql_data = pd.DataFrame(cursor.fetchall())
+    try:
+        dataNum = len(sql_data[0])
+    except Exception:
+        dataNum = 0
+    cursor.close()
+    conn.close()
+    return dataNum
 
-  # Execute and fetch results
-  cursor.execute(query)
-  sql_data = pd.DataFrame(cursor.fetchall())
-  try:
-   dataNum  = len(sql_data[0])
-  except:
-     dataNum = 0
-  # Cleanup
-  cursor.close()
-  conn.close()
+# Load web page list
+with open(LEAGUES, "r", encoding="utf-8") as f:
+    content = f.read().split("\n")
 
-  return dataNum
-# Load web page
-file = open("leagues26.txt", "r")
-content = file.read().split("\n")
-#conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb')
-cookiRan = False
-#cursor = conn.cursor()
 
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb')
 cookiRan = False
@@ -67,11 +72,15 @@ for lnk in content:
   #loadFullFix = browser.find_elements(By.LINK_TEXT, "Show more mataches")
   time.sleep(10)
   #loadFullFix = browser.find_elements(By.CLASS_NAME, "event__more") 
-  if cookiRan == False:
-    findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
-    cookiRan = True
-    findCookie.click()
-    time.sleep(5)
+  if cookiRan is False:
+    try:
+        findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
+        findCookie.click()
+        cookiRan = True
+        time.sleep(5)
+    except NoSuchElementException:
+        pass
+
 
  
   _flag = True
@@ -165,10 +174,9 @@ for lnk in content:
                     #SecHalfDash = True
         dttyl = round + " " + dt + " " + Hteam + " " + Ateam + " "  + home2ndHScore + " " +  away2ndHScore + " " + home1stHScore  + " " + away1stHScore 
         if len(dttyl.split(" ")) > 0:
-          conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2026.accdb;')
+          conn = pyodbc.connect(rf"Driver={{Microsoft Access Driver (*.mdb, *.accdb)}};DBQ={DB2}")
           cursor = conn.cursor()
-                #cursor.execute("Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ('38','2023-04-01','Arsenal','Watford','4','3')")
-          
+           
           # home = ""
           # away = ""
           polstriped = dttyl.split(" ")

@@ -25,7 +25,7 @@
 # https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga25
 # https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
 # https://www.flashscore.com/football/england/premier-league-2024-2025/results/ ENGLAND Epl25
-https://www.flashscore.com/football/malaysia/super-league-2024-2025/results/ MALAYSIA MalaysiaPrem25
+# https://www.flashscore.com/football/malaysia/super-league-2024-2025/results/ MALAYSIA MalaysiaPrem25
 # https://www.flashscore.com/football/bulgaria/parva-liga-2024-2025/results/ BULGARIA BulgariaPrem25
 # https://www.flashscore.com/football/iran/persian-gulf-pro-league/results/ IRAN IranPrem25
 # https://www.flashscore.com/football/saudi-arabia/saudi-professional-league/results/ SAUDI SaudiPrem25
