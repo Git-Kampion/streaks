@@ -1,8 +1,20 @@
+                                                     100% Recurrent
+
+1. Overall Fixture Over/Under 0.5 - 5.5 [0.05 >= 0.10]
+
+2. Home/Away Over Z [0.10] ------ if N/A then Second Half Over Z [0.1]
+
+3. Home/Away Over/Under 2.5 [0.05 >= 0.10]
+
+4. Home/Away Over/Under 1st/Full 2.5 [0.02 >= 0.05]
+
+5. Newly Promoted Conceed 0.5/ Under 1st/Full 2.5 [0.03 >= 0.05]
+
 1. Uefa Champions Home over 0.5/1.5 0.1
 
 2. Away under 0.01/Home 0.01
 
-3. Newly Promoted Conceed 0.5
+
 
 4. Newly Regulated underOver 3.5/0.5 0.1
 

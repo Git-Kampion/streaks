@@ -1,89 +1,65 @@
 import json
 from datetime import datetime, timedelta
+from collections import defaultdict
 
-def analyze_fixtures(fixtures_data):
-    today = datetime.now().date()
+def parse_date(date_str):
+    """Parse date from different formats in the JSON"""
+    try:
+        if '.' in date_str and len(date_str.split('.')[0]) <= 2:
+            day, month = date_str.split('.')[:2]
+            return datetime(2025, int(month), int(day)).date()
+        elif '-' in date_str:
+            return datetime.strptime(date_str, "%Y-%m-%d").date()
+    except (ValueError, IndexError):
+        return None
+
+# Load fixtures data
+with open('fixturesAnlytics.json', 'r') as f:
+    fixtures = json.load(f)
+
+# Define date range (August 4-10, 2025)
+start_date = datetime(2025, 8, 4).date()
+end_date = datetime(2025, 8, 10).date()
+
+# Process fixtures
+daily_fixtures = defaultdict(list)
+total_fixtures = 0
+
+for fixture in fixtures:
+    date = parse_date(fixture['date'])
+    if date and start_date <= date <= end_date:
+        daily_fixtures[date].append(fixture)
+        total_fixtures += 1
+
+# Sort dates chronologically
+sorted_dates = sorted(daily_fixtures.keys())
+
+# Display header
+print(f"\nFixtures for Week of August 4-10, 2025 (Monday to Sunday)")
+print("=" * 70)
+print(f"{'Date':<15}{'Day':<12}{'Matches':<45}{'Count':<5}")
+print("-" * 70)
+
+# Display fixtures by day with counts
+for date in sorted_dates:
+    day_name = date.strftime('%A')
+    fixtures_list = daily_fixtures[date]
+    count = len(fixtures_list)
     
-    # Initialize counters
-    results = {
-        "total_fixtures": 0,
-        "fixtures_in_august_2025": 0,
-        "fixtures_left_from_today": 0,
-        "today": today.strftime("%Y-%m-%d"),
-        "weekly_counts": {
-            "Week 1 (Jul 28 - Aug 3)": 0,
-            "Week 2 (Aug 4 - Aug 10)": 0,
-            "Week 3 (Aug 11 - Aug 17)": 0,
-            "Week 4 (Aug 18 - Aug 24)": 0,
-            "Week 5 (Aug 25 - Aug 31)": 0
-        },
-        "upcoming_fixtures": []
-    }
+    # Display first fixture with date and count
+    first_fixture = fixtures_list[0]
+    print(f"{date.strftime('%Y-%m-%d'):<15}{day_name:<12}"
+          f"{first_fixture['home']} vs {first_fixture['away']:<30}"
+          f"{count:>3}")
+    
+    # Display remaining fixtures for the same day
+    for fixture in fixtures_list[1:]:
+        print(f"{' ' * 27}{fixture['home']} vs {fixture['away']}")
 
-    for fixture in fixtures_data:
-        # Parse date
-        date_str = fixture["date"]
-        if "-" in date_str:
-            fixture_date = datetime.strptime(date_str, "%Y-%m-%d").date()
-        else:
-            fixture_date = datetime.strptime(date_str, "%Y/%m/%d").date()
-        
-        results["total_fixtures"] += 1
-        
-        # August 2025 analysis
-        if fixture_date.month == 8 and fixture_date.year == 2025:
-            results["fixtures_in_august_2025"] += 1
-            
-            # Weekly count
-            day = fixture_date.day
-            if day <= 3:
-                week = "Week 1 (Jul 28 - Aug 3)"
-            elif day <= 10:
-                week = "Week 2 (Aug 4 - Aug 10)"
-            elif day <= 17:
-                week = "Week 3 (Aug 11 - Aug 17)"
-            elif day <= 24:
-                week = "Week 4 (Aug 18 - Aug 24)"
-            else:
-                week = "Week 5 (Aug 25 - Aug 31)"
-            
-            results["weekly_counts"][week] += 1
-            
-            # Upcoming fixtures
-            if fixture_date >= today:
-                results["fixtures_left_from_today"] += 1
-                results["upcoming_fixtures"].append({
-                    "date": date_str,
-                    "home": fixture["home"],
-                    "away": fixture["away"],
-                    "round": fixture["round"]
-                })
-
-    return results
-
-# Load the JSON data
-with open("fixtures.json", "r", encoding="utf-8") as file:
-    fixtures_data = json.load(file)
-
-# Get analysis results
-analysis = analyze_fixtures(fixtures_data)
-
-# Print summary
-print(f"Total fixtures: {analysis['total_fixtures']}")
-print(f"Fixtures in August 2025: {analysis['fixtures_in_august_2025']}")
-print(f"Fixtures left from today ({analysis['today']}) onwards: {analysis['fixtures_left_from_today']}\n")
-
-# Print weekly breakdown
-print("Weekly Breakdown for August 2025:")
-for week, count in analysis["weekly_counts"].items():
-    print(f"{week}: {count} fixtures")
-
-# Print upcoming fixtures if any
-'''
-if analysis["upcoming_fixtures"]:
-    print("\nUpcoming Fixtures:")
-    for fixture in analysis["upcoming_fixtures"]:
-        print(f"{fixture['date']} | {fixture['home']} vs {fixture['away']} (Round {fixture['round']})")
-else:
-    print("\nNo upcoming fixtures in August 2025.")
-    '''
+# Display totals
+print("=" * 70)
+print(f"{'DAILY TOTALS:':<27}", end="")
+for date in sorted_dates:
+    print(f"{date.strftime('%a')}: {len(daily_fixtures[date]):<3}", end=" ")
+print(f"\n{'WEEKLY TOTAL:':<27}{total_fixtures:>3} fixtures")
+print("=" * 70)

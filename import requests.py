@@ -85,7 +85,7 @@ for lnk in content:
   countUps = 0
     #matchesPopUps = eachh.find_elements(By.TAG_NAME, 'div') 
   for bele in matchesPopUps:
-    if countUps < iteloop:
+    if countUps > iteloop:
       countUps = countUps +1
       href = bele.get_attribute("href")
       
@@ -97,7 +97,7 @@ for lnk in content:
       #secWindow = browser.window_handles[0]
       #browser.switch_to.window(secWindow)
       success = False
-      #time.sleep(7)
+      time.sleep(5)
       
       #bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text --- Previously is the class name that contains the Round number was tournamentHeaderDescription
       bjj = browser.find_elements(By.CLASS_NAME,"wcl-breadcrumbItem_CiWQ7")

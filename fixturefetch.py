@@ -12,8 +12,14 @@ df = pd.read_excel(file_path, sheet_name=sheet_name)
 df_subset = df.iloc[:, :40]
 
 
+# Second DataFrame (second Excel file)
+df2 = pd.read_excel("Streakshominfo2.xlsx")
+df2_subset = df2.iloc[:, :40]  # match the same first 40 columns
+
+# Append (stack) them together
+df_combined = pd.concat([df_subset, df2_subset], ignore_index=True)
 # Convert to JSON
-json_data = df_subset.to_json(orient='records', indent=4)
+json_data = df_combined.to_json(orient='records', indent=4)
 
 # Save JSON to a file
 output_file = 'home_stats.json'

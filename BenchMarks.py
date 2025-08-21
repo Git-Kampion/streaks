@@ -26,7 +26,7 @@ Ateam = []
 Hteam = []
 numOfGames = []
 
-
+whoBeatT
 def createReport(data1,pd):
  
  #with pd.ExcelWriter('Homestreaks.xlsx') as writer:

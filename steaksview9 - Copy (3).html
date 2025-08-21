@@ -6,24 +6,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
-            display: flex;
-            gap: 20px;
-        }
-
-        .main-content {
-            flex: 3;
-        }
-
-        .sidebar {
-            flex: 1;
-            min-width: 250px;
-            position: sticky;
-            top: 20px;
-            align-self: flex-start;
         }
 
         .control-panel {
@@ -100,27 +86,7 @@
             max-height: 185px;
             overflow-y: auto;
             display: block;
-            border: 1px solid #ddd;
-            border-radius: 0 0 4px 4px;
         }
-
-            .scrollable-table::-webkit-scrollbar {
-                width: 8px;
-            }
-
-            .scrollable-table::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 4px;
-            }
-
-            .scrollable-table::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 4px;
-            }
-
-                .scrollable-table::-webkit-scrollbar-thumb:hover {
-                    background: #555;
-                }
 
         table {
             width: 100%;
@@ -236,88 +202,7 @@
             font-weight: bold;
         }
 
-        /* Time slots sidebar */
-        .time-slots-container {
-            background-color: #f5f5f5;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
-        }
-
-        .time-slot-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #333;
-            text-align: center;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .time-slots-list {
-            max-height: 70vh;
-            overflow-y: auto;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-            .time-slots-list::-webkit-scrollbar {
-                width: 8px;
-            }
-
-            .time-slots-list::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 4px;
-            }
-
-            .time-slots-list::-webkit-scrollbar-thumb {
-                background: #888;
-                border-radius: 4px;
-            }
-
-                .time-slots-list::-webkit-scrollbar-thumb:hover {
-                    background: #555;
-                }
-
-        .time-slot-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 8px 10px;
-            border-bottom: 1px solid #e0e0e0;
-            cursor: pointer;
-        }
-
-            .time-slot-item:hover {
-                background-color: #e9f7ef;
-            }
-
-            .time-slot-item.active {
-                background-color: #4CAF50;
-                color: white;
-            }
-
-        .time-slot-count {
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 10px;
-            padding: 2px 8px;
-            font-size: 12px;
-        }
-
-        .time-slot-item.active .time-slot-count {
-            background-color: white;
-            color: #4CAF50;
-        }
-
         @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-
-            .sidebar {
-                position: static;
-            }
-
             .stats-container, .modal-stats-container {
                 flex-direction: column;
             }
@@ -325,52 +210,41 @@
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <div class="time-slots-container">
-            <div class="time-slot-title">Fixture Times</div>
-            <div class="time-slots-list" id="timeSlotsList">
-                <p style="color: #666; text-align: center;">Select a date first</p>
-            </div>
+    <h1>Football Team Statistics</h1>
+
+    <div class="control-panel">
+        <div class="search-group">
+            <input type="date" id="datePicker">
+            <input type="text" id="teamSearch" placeholder="Search teams...">
+            <button id="searchBtn">Search</button>
+            <button id="clearSearch">Clear</button>
+        </div>
+
+        <div class="search-group">
+            <input type="text" id="statFilter" placeholder="Filter stats (e.g. /T0)">
+            <span class="filter-hint">Use /T0, /R5 etc. to filter specific stats</span>
         </div>
     </div>
 
-    <div class="main-content">
-        <h1>Football Team Statistics</h1>
+    <div id="fixtureList">
+        <p class="no-fixtures">No date selected</p>
+    </div>
 
-        <div class="control-panel">
-            <div class="search-group">
-                <input type="date" id="datePicker">
-                <input type="text" id="teamSearch" placeholder="Search teams...">
-                <button id="searchBtn">Search</button>
-                <button id="clearSearch">Clear</button>
+    <!-- Modal for full fixture details -->
+    <div id="fixtureModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalFixtureTitle"></h2>
             </div>
-
-            <div class="search-group">
-                <input type="text" id="statFilter" placeholder="Filter stats (e.g. /T0)">
-                <span class="filter-hint">Use /T0, /T1, /R0, /R1, T1 etc. to filter specific stats</span>
-            </div>
-        </div>
-
-        <div id="fixtureList">
-            <p class="no-fixtures">No date selected</p>
-        </div>
-
-        <!-- Modal for full fixture details -->
-        <div id="fixtureModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <div class="modal-header">
-                    <h2 id="modalFixtureTitle"></h2>
+            <div class="modal-stats-container">
+                <div class="modal-stats-box">
+                    <div class="stats-title">Home Team Stats</div>
+                    <div class="scrollable-table" id="modalHomeStats"></div>
                 </div>
-                <div class="modal-stats-container">
-                    <div class="modal-stats-box">
-                        <div class="stats-title">Home Team Stats</div>
-                        <div class="scrollable-table" id="modalHomeStats"></div>
-                    </div>
-                    <div class="modal-stats-box">
-                        <div class="stats-title">Away Team Stats</div>
-                        <div class="scrollable-table" id="modalAwayStats"></div>
-                    </div>
+                <div class="modal-stats-box">
+                    <div class="stats-title">Away Team Stats</div>
+                    <div class="scrollable-table" id="modalAwayStats"></div>
                 </div>
             </div>
         </div>
@@ -382,7 +256,6 @@
         let homeStats = [];
         let awayStats = [];
         let currentDisplayedFixtures = [];
-        let currentSelectedTime = null;
 
         // DOM elements
         const modal = document.getElementById('fixtureModal');
@@ -390,7 +263,6 @@
         const modalFixtureTitle = document.getElementById('modalFixtureTitle');
         const modalHomeStats = document.getElementById('modalHomeStats');
         const modalAwayStats = document.getElementById('modalAwayStats');
-        const timeSlotsList = document.getElementById('timeSlotsList');
 
         // Load all data files
         async function loadData() {
@@ -461,11 +333,11 @@
             const table = document.createElement('table');
             const thead = document.createElement('thead');
             thead.innerHTML = `
-                    <tr>
-                        <th>Statistic</th>
-                        <th>Value</th>
-                    </tr>
-                `;
+                        <tr>
+                            <th>Statistic</th>
+                            <th>Value</th>
+                        </tr>
+                    `;
             table.appendChild(thead);
 
             const tbody = document.createElement('tbody');
@@ -474,8 +346,8 @@
             if (!teamStat) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                        <td colspan="2" style="color: #999; text-align: center;">No stats available for this team</td>
-                    `;
+                            <td colspan="2" style="color: #999; text-align: center;">No stats available for this team</td>
+                        `;
                 tbody.appendChild(row);
                 table.appendChild(tbody);
                 return table;
@@ -484,9 +356,9 @@
             // Add team name row
             const teamRow = document.createElement('tr');
             teamRow.innerHTML = `
-                    <td>Team</td>
-                    <td><strong>${teamStat.Team}</strong></td>
-                `;
+                        <td>Team</td>
+                        <td><strong>${teamStat.Team}</strong></td>
+                    `;
             tbody.appendChild(teamRow);
 
             // Add all other stats
@@ -496,9 +368,9 @@
                 const row = document.createElement('tr');
                 const formattedKey = key.replace(/([A-Z])/g, ' $1').trim();
                 row.innerHTML = `
-                        <td>${formattedKey}</td>
-                        <td>${value}</td>
-                    `;
+                            <td>${formattedKey}</td>
+                            <td>${value}</td>
+                        `;
                 tbody.appendChild(row);
             });
 
@@ -523,95 +395,59 @@
             return table;
         }
 
-        // Helper function to extract time from date string
-        function extractTimeFromDate(dateStr) {
-            const parts = dateStr.split('-');
-            return parts.slice(3).join(':');
-        }
+        // Display fixtures with filters
+        function displayFixtures(date, teamFilter = '', statFilter = '') {
+            const fixtureList = document.getElementById('fixtureList');
+           
+            // Filter by date
+            let filteredFixtures = fixtures.filter(f => f.date.split('-').slice(0, 3).join('-') === date);
 
-        // Helper function to extract date part from date string
-        function extractDatePart(dateStr) {
-            const parts = dateStr.split('-');
-            return parts.slice(0, 3).join('-');
-        }
-
-        // Display time slots in sidebar
-        function displayTimeSlots(filteredFixtures) {
-            timeSlotsList.innerHTML = '';
-
-            // Group fixtures by time
-            const timeGroups = {};
-            filteredFixtures.forEach(fixture => {
-                const time = extractTimeFromDate(fixture.date);
-                if (!timeGroups[time]) {
-                    timeGroups[time] = 0;
-                }
-                timeGroups[time]++;
-            });
-
-            if (Object.keys(timeGroups).length === 0) {
-                timeSlotsList.innerHTML = '<p style="color: #666; text-align: center;">No fixtures for this date</p>';
-                return;
+            // Apply team filter if provided
+            if (teamFilter) {
+                const searchTerm = teamFilter.toLowerCase();
+                filteredFixtures = filteredFixtures.filter(f =>
+                    f.home.toLowerCase().includes(searchTerm) ||
+                    f.away.toLowerCase().includes(searchTerm) ||
+                    f.date.toLowerCase().includes(searchTerm)
+                );
             }
 
-            // Sort times chronologically
-            const sortedTimes = Object.keys(timeGroups).sort((a, b) => a.localeCompare(b));
-
-            // Create time slot items
-            sortedTimes.forEach(time => {
-                const count = timeGroups[time];
-                const timeSlotItem = document.createElement('div');
-                timeSlotItem.className = 'time-slot-item' + (currentSelectedTime === time ? ' active' : '');
-                timeSlotItem.innerHTML = `
-                        <span>${time}</span>
-                        <span class="time-slot-count">${count}</span>
-                    `;
-
-                // Add click handler to filter by this time
-                timeSlotItem.addEventListener('click', () => {
-                    currentSelectedTime = time;
-                    applyFilters();
-                });
-
-                timeSlotsList.appendChild(timeSlotItem);
-            });
-        }
-
-        // Update fixture display
-        function updateFixtureDisplay(filteredFixtures, statFilter = '') {
-            const fixtureList = document.getElementById('fixtureList');
+            currentDisplayedFixtures = filteredFixtures;
 
             if (filteredFixtures.length === 0) {
-                fixtureList.innerHTML = '<p class="no-fixtures">No fixtures found for the selected filters</p>';
+                const message = teamFilter
+                    ? `No fixtures found for ${date} matching "${teamFilter}"`
+                    : `No fixtures found for ${date}`;
+                fixtureList.innerHTML = `<p class="no-fixtures">${message}</p>`;
                 return;
             }
 
             // Generate HTML for each fixture
             fixtureList.innerHTML = filteredFixtures.map((fixture, index) => {
                 return `
-                        <div class="fixture-container" data-fixture-index="${index}">
-                            <div class="fixture-header">
-                                <div class="team-name">${fixture.home}</div>
-                                <div class="vs">${fixture.date}</div>
-                                <div class="team-name">${fixture.away}</div>
-                            </div>
-                            <div class="info-icon" title="View all stats">i</div>
-                            <div class="stats-container">
-                                <div class="stats-box">
-                                    <div class="stats-title">Home Team Stats</div>
-                                    <div class="stats-table-container">
-                                        <div class="scrollable-table"></div>
+                            <div class="fixture-container" data-fixture-index="${index}">
+                                <div class="fixture-header">
+                                    <div class="team-name">${fixture.home}</div>
+                                    <div class="vs">${fixture.date}</div>
+                                    <div class="team-name">${fixture.away}</div>
+                                </div>
+                                <div class="info-icon" title="View all stats">i</div>
+                                <div class="stats-container">
+                                    <div class="stats-box">
+                                        <div class="stats-title">Home Team Stats</div>
+                                        <div class="stats-table-container">
+                                            <div class="scrollable-table"></div>
+                                        </div>
+                                    </div>
+                                    <div class="stats-box">
+                                        <div class="stats-title">Away Team Stats</div>
+                                        <div class="stats-table-container">
+                                            <div class="scrollable-table"></div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="stats-box">
-                                    <div class="stats-title">Away Team Stats</div>
-                                    <div class="stats-table-container">
-                                        <div class="scrollable-table"></div>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                    `;
+                        `;
             }).join('');
 
             // Add the tables after the containers exist in DOM
@@ -633,49 +469,6 @@
                     });
                 });
             }, 0);
-        }
-
-        // Apply all filters (date, team, time, stats)
-        function applyFilters() {
-            const date = document.getElementById('datePicker').value;
-            const teamFilter = document.getElementById('teamSearch').value.trim();
-            const statFilter = document.getElementById('statFilter').value.trim();
-
-            if (!date) {
-                alert('Please select a date first');
-                return;
-            }
-
-            // Filter by date
-            let filteredFixtures = fixtures.filter(f => extractDatePart(f.date) === date);
-
-            // Store original filtered fixtures for time grouping
-            const originalFilteredFixtures = [...filteredFixtures];
-
-            // Apply team filter if provided
-            if (teamFilter) {
-                const searchTerm = teamFilter.toLowerCase();
-                filteredFixtures = filteredFixtures.filter(f =>
-                    f.home.toLowerCase().includes(searchTerm) ||
-                    f.away.toLowerCase().includes(searchTerm) ||
-                    f.date.toLowerCase().includes(searchTerm)
-                );
-            }
-
-            currentDisplayedFixtures = filteredFixtures;
-
-            // Display time slots based on original filter (before team search)
-            displayTimeSlots(originalFilteredFixtures);
-
-            // Apply time filter if selected
-            if (currentSelectedTime) {
-                filteredFixtures = filteredFixtures.filter(fixture => {
-                    return extractTimeFromDate(fixture.date) === currentSelectedTime;
-                });
-            }
-
-            // Update the displayed fixtures
-            updateFixtureDisplay(filteredFixtures, statFilter);
         }
 
         // Open modal with full fixture details
@@ -703,21 +496,38 @@
 
         // Event listeners
         document.getElementById('datePicker').addEventListener('change', function () {
-            currentSelectedTime = null;
-            applyFilters();
+            const statFilter = document.getElementById('statFilter').value.trim();
+            displayFixtures(this.value, '', statFilter);
         });
 
-        document.getElementById('searchBtn').addEventListener('click', applyFilters);
+        document.getElementById('searchBtn').addEventListener('click', function () {
+            const date = document.getElementById('datePicker').value;
+            const teamFilter = document.getElementById('teamSearch').value.trim();
+            const statFilter = document.getElementById('statFilter').value.trim();
+
+            if (!date) {
+                alert('Please select a date first');
+                return;
+            }
+            displayFixtures(date, teamFilter, statFilter);
+        });
 
         document.getElementById('clearSearch').addEventListener('click', function () {
             document.getElementById('teamSearch').value = '';
             document.getElementById('statFilter').value = '';
-            currentSelectedTime = null;
             const date = document.getElementById('datePicker').value;
-            if (date) applyFilters();
+            if (date) displayFixtures(date);
         });
 
-        document.getElementById('statFilter').addEventListener('input', applyFilters);
+        document.getElementById('statFilter').addEventListener('input', function () {
+            const date = document.getElementById('datePicker').value;
+            const teamFilter = document.getElementById('teamSearch').value.trim();
+            const statFilter = this.value.trim();
+
+            if (date) {
+                displayFixtures(date, teamFilter, statFilter);
+            }
+        });
 
         // Modal close events
         closeBtn.addEventListener('click', closeModal);
@@ -732,7 +542,7 @@
             await loadData();
             const today = new Date().toISOString().split('T')[0];
             document.getElementById('datePicker').value = today;
-            applyFilters();
+            displayFixtures(today);
         });
     </script>
 </body>

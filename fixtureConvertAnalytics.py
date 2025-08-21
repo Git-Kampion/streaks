@@ -20,11 +20,10 @@ cursor.execute(query)
 
 for row in cursor.fetchall():
     date_time = row.Tframe
-    date_part = date_time.split("-")[:3]
-    result = "-".join(date_part)
+   
     fixtures.append({
         "round": row.Round,
-        "date": str(result),
+        "date": str(date_time),
         "home": row.Home,
         "away": row.Away
     })
@@ -39,16 +38,15 @@ cursor.execute(query)
 
 for bow in cursor.fetchall():
     date_time = bow.Tframe
-    date_part = date_time.split("-")[:3]
-    result = "-".join(date_part)
+   
     fixtures.append({
         "round": bow.Round,
-        "date": str(result),
+        "date": str(date_time),
         "home": bow.Home,
         "away": bow.Away
     })
 # Save as JSON file
-with open("fixtures.json", "w", encoding="utf-8") as f:
+with open("fixturesAnlytics.json", "w", encoding="utf-8") as f:
     json.dump(fixtures, f, indent=2)
 
 conn.close()
