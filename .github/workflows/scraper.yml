@@ -19,20 +19,21 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Setup Chrome and ChromeDriver
-        uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: 'stable'
-
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install selenium pyodbc pandas
+          pip install -r requirements.txt
+
+      - name: Install Firefox
+        run: choco install -y firefox
+
+      - name: Install GeckoDriver
+        run: choco install -y geckodriver
 
       - name: Run scraper
         env:
           PYTHONUNBUFFERED: "1"
-        run: python analytics.py
+        run: python scraper.py
 
       - name: Upload Access DBs
         uses: actions/upload-artifact@v4
@@ -40,4 +41,4 @@ jobs:
           name: scraped-database
           path: |
             db/2026.accdb
-            db/2026.accdb
+            db/2022-23Base.accdb
