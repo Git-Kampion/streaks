@@ -1,5 +1,6 @@
 import time
 import pyodbc
+import os
 import pandas as pd
 from pathlib import Path
 from selenium import webdriver
@@ -12,6 +13,30 @@ from selenium.common.exceptions import (
 )
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
+
+# --- Paths (relative to repo root) ---
+ROOT = Path(__file__).resolve().parent
+DB1 = ROOT / "db" / "2026.accdb"
+DB2 = ROOT / "db" / "2022-23Base.accdb"
+LEAGUES = ROOT / "leagues26.txt"
+
+# DEBUG: Print all paths
+print(f"ROOT directory: {ROOT}")
+print(f"LEAGUES path: {LEAGUES}")
+print(f"LEAGUES exists: {LEAGUES.exists()}")
+print(f"Current working directory: {os.getcwd()}")
+
+# List all files in the ROOT directory
+print("Files in ROOT directory:")
+for file_path in ROOT.iterdir():
+    print(f"  {file_path.name}")
+
+# Exit if file doesn't exist (for debugging)
+if not LEAGUES.exists():
+    print("ERROR: leagues26.txt not found! Available files:")
+    for file_path in ROOT.iterdir():
+        print(f"  - {file_path.name}")
+    exit(1)
 
 # --- Paths (relative to repo root) ---
 ROOT = Path(__file__).resolve().parent
