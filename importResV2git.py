@@ -15,9 +15,9 @@ from selenium.webdriver.firefox.options import Options
 
 # --- Paths (relative to repo root) ---
 ROOT = Path(__file__).resolve().parent
-DB1 = ROOT / "db" / "2026.accdb"
-DB2 = ROOT / "db" / "2022-23Base.accdb"
-LEAGUES = ROOT / "leagues26.txt"
+DB1 = "2026.accdb"
+DB2 = "2026.accdb"
+LEAGUES = "leagues26.txt"
 
 # --- Firefox headless ---
 options = Options()
