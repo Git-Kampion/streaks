@@ -14,6 +14,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install Access Database Engine
+        run: |
+          $installerUrl = "https://download.microsoft.com/download/2/4/3/24375141-E08D-4803-AB0E-10F2E3A07AAA/AccessDatabaseEngine.exe"
+          $installerPath = "AccessDatabaseEngine.exe"
+          Invoke-WebRequest -Uri $installerUrl -OutFile $installerPath
+          Start-Process -FilePath $installerPath -ArgumentList "/quiet" -Wait
+          Remove-Item $installerPath
+          echo "Microsoft Access Database Engine installed"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -27,16 +36,17 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install selenium pandas webdriver-manager
+          pip install selenium pyodbc pandas webdriver-manager
 
       - name: Run scraper
         env:
           PYTHONUNBUFFERED: "1"
         run: python importResV2git.py
 
-      - name: Upload SQLite DB
+      - name: Upload Access DBs
         uses: actions/upload-artifact@v4
         with:
           name: scraped-database
           path: |
-            db/football.sqlite
+            db/2026.accdb
+            db/2026.accdb
