@@ -87,10 +87,10 @@ for lnk in content:
                 href = bele.get_attribute("href")
                 if href:
                     browser.execute_script(f"window.open('{href}', '_blank');")
-                    time.sleep(5)
+                    time.sleep(10)
                 browser.switch_to.window(browser.window_handles[-1])
                 success = False
-                time.sleep(5)
+                time.sleep(10)
 
                 bjj = browser.find_elements(By.CLASS_NAME,"wcl-breadcrumbItem_CiWQ7")
                 bjj = bjj[0].text + " " + bjj[1].text + " " + bjj[2].text
