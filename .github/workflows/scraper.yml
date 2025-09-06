@@ -6,7 +6,7 @@ on:
     - cron: "0 6 * * *"   # runs daily at 06:00 UTC
 
 permissions:
-  contents: write   # 👈 allow workflow to push changes
+  contents: write
 
 jobs:
   scrape:
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # 👈 ensures full history for pull/rebase
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -39,16 +39,17 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python importResV2git.py
 
-      - name: Commit and push DB
+      - name: Commit and push changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+          
           git add football.sqlite
-          git commit -m "Update football.sqlite from scraper run" || echo "No changes to commit"
-
-          # pull latest changes to avoid conflicts
-          git pull --rebase origin ${{ github.ref_name }} || true
-
-          # push changes back to the same branch
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }} HEAD:${{ github.ref_name }}
+          
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update football.sqlite from scraper run $(date '+%Y-%m-%d %H:%M:%S')"
+            git pull origin ${{ github.ref_name }} --rebase
+            git push origin HEAD:${{ github.ref_name }}
+          fi
