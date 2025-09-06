@@ -3,7 +3,10 @@ name: Run Scraper on Windows
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * *"   # runs daily at 06:00 UTC
+
+permissions:
+  contents: write   # 👈 allow workflow to push changes
 
 jobs:
   scrape:
@@ -13,6 +16,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # 👈 ensures full history for pull/rebase
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,11 +39,16 @@ jobs:
           PYTHONUNBUFFERED: "1"
         run: python importResV2git.py
 
-      # ⬇️ Commit DB directly to repo instead of uploading artifact
       - name: Commit and push DB
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add football.sqlite
           git commit -m "Update football.sqlite from scraper run" || echo "No changes to commit"
-          git push
+
+          # pull latest changes to avoid conflicts
+          git pull --rebase origin ${{ github.ref_name }} || true
+
+          # push changes back to the same branch
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }} HEAD:${{ github.ref_name }}
