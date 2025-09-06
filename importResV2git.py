@@ -48,8 +48,11 @@ cookiRan = False
 for lnk in content:
     linnk = lnk.split(" ")[0]
     if linnk != "#" and linnk != " ":
-        browser.get(linnk)
-
+        try:
+         browser.get(linnk)
+        except:
+            done = 0
+            break;
         # Wait until page fully loads
         def is_ready(browser):
             return browser.execute_script("return document.readyState === 'complete'")
