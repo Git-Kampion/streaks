@@ -9,7 +9,7 @@ conn = sqlite3.connect("football.sqlite")
 #print(tables)
 
 # View first rows of a table
-df = pd.read_sql_query("SELECT * FROM CzechA25 LIMIT 10;", conn)
+df = pd.read_sql_query("SELECT * FROM MyanmarNatLeag25 LIMIT 10;", conn)
 print(df)
 
 conn.close()
