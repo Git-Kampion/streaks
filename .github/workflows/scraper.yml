@@ -39,4 +39,4 @@ jobs:
         with:
           name: scraped-database
           path: |
-            db/football.sqlite
+            football.sqlite
