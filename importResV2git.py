@@ -21,7 +21,7 @@ LEAGUES = ROOT / "leagues26Res.txt"
 
 # --- Firefox headless ---
 options = Options()
-options.headless = True
+options.headless = False
 browser = webdriver.Firefox(options=options)
 
 def dataLookUp(ScotlandA24, matchUpsCount):
@@ -92,8 +92,9 @@ for lnk in content:
                 success = False
                 time.sleep(10)
 
-                bjj = browser.find_elements(By.CLASS_NAME,"wcl-breadcrumbItem_CiWQ7")
-                bjj = bjj[0].text + " " + bjj[1].text + " " + bjj[2].text
+                bjj = browser.find_element(By.CLASS_NAME, "detail__breadcrumbs")
+                list_items = bjj.find_elements(By.TAG_NAME, "li")
+                bjj = list_items[2].text
                 ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
                 dt = ull[0].split(" ")[0]
                 Hteam = ull[1].replace(" ", "")

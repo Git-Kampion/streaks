@@ -8,25 +8,138 @@ import numpy as np
 from SecLPAnylaysis import SlPA
 
 
-conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok\Documents\work\Flashscore\streaks\2022-23Base.accdb')
+conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb')
 cursor = conn.cursor()
 
-insert_stmt2 = "select home from serieBB Distinct"
+insert_stmt2 = "select Distinct home from EPL25"
 #insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
-data = ("Chelsea")
+#data = ("Chelsea")
 cursor.execute(insert_stmt2)
 sql_data = pd.DataFrame(cursor.fetchall())
+
+insert_stmt2 = "select * from EPL25 ORDER BY Tframe ASC"
+#insert_stmt2 = "select * from EPL UNION select * from belgiumJPL union select * from EngLeagua1 union select * from EngLeagua2 union select * from SeriaB union select * from EplChampionShip23"
+#data = ("Chelsea")
+cursor.execute(insert_stmt2)
+sql_data2 = pd.DataFrame(cursor.fetchall())
+
+conn.close()
 teamCount = 0
 halftomeGap = 2
 
+def HomeConceedAwayOutcome(sql_data,actP,actP2,actP3):
+ TeamsOutcome = []
 
-teams = []
-Ateams = []
-Ateam = []
-Hteam = []
-numOfGames = []
+ for tt in sql_data: 
+  HomeFixFound = False
+  Conceed3Under1AwayUnder3 = 0 
+  Conceed3Under1AwayOver3 = 0 
+  for tb in sql_data2[0]:
+  
+    if tb[3] == tt[0] and int(tb[5]) == actP3 and int(tb[6]) == actP:
+      HomeFixFound = True
+    if tb[4] == tt[0] and int(tb[6]) <= actP2 and HomeFixFound: 
+       Conceed3Under1AwayUnder3 = Conceed3Under1AwayUnder3 + 1
+       HomeFixFound = False
+    if tb[4] == tt[0] and int(tb[6]) >= actP2 and HomeFixFound:
+      Conceed3Under1AwayOver3 = Conceed3Under1AwayOver3 + 1
+      HomeFixFound = False
+  
+  TeamsOutcome.append(tt[0]+ " " +str(Conceed3Under1AwayUnder3) + " " +str(Conceed3Under1AwayOver3))
+ return TeamsOutcome
 
-whoBeatT
+
+
+#1. Home 0 Away 3, 2. Away Over/Under 3
+HomeConceed3ScoreZeroAwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],3,3,0)
+#1. Home 0 Away 3, 2. Away Over/Under 2
+HomeConceed3ScoreZeroAwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],3,2,0)
+#1. Home 0 Away 3, 2. Away Over/Under 1
+HomeConceed3ScoreZeroAwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],3,1,0)
+#=================================================================================================      
+#1. Home 1 Away 3, 2. Away Over/Under 3
+HomeConceed3Score1AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],3,3,1)
+#1. Home 1 Away 3, 2. Away Over/Under 2
+HomeConceed3Score1AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],3,2,1)
+#1. Home 1 Away 3, 2. Away Over/Under 1
+HomeConceed3Score1AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],3,1,1)
+#=================================================================================================      
+#1. Home 2 Away 3, 2. Away Over/Under 3
+HomeConceed3Score2AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],3,3,2)
+#1. Home 2 Away 3, 2. Away Over/Under 2
+HomeConceed3Score2AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],3,2,2)
+#1. Home 2 Away 3, 2. Away Over/Under 1
+HomeConceed3Score2AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],3,1,2)
+#=================================================================================================  #    
+#1. Home 3 Away 3, 2. Away Over/Under 3
+HomeConceed3Score3AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],3,3,3)
+#1. Home 3 Away 3, 2. Away Over/Under 2
+HomeConceed3Score3AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],3,2,3)
+#1. Home 3 Away 3, 2. Away Over/Under 1
+HomeConceed3Score3AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],3,1,3)
+#========================================================================================#
+#
+#
+#===========================================================================================#
+#1. Home 0 Away 2, 2. Away Over/Under 3
+HomeConceed2ScoreZeroAwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],2,3,0)
+#1. Home 0 Away 2, 2. Away Over/Under 2
+HomeConceed2ScoreZeroAwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],2,2,0)
+#1. Home 0 Away 2, 2. Away Over/Under 1
+HomeConceed2ScoreZeroAwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],2,1,0)
+#============================================================================================#
+#1. Home 1 Away 2, 2. Away Over/Under 3
+HomeConceed2Score1AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],2,3,1)
+#1. Home 1 Away 2, 2. Away Over/Under 2
+HomeConceed2Score1AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],2,2,1)
+#1. Home 1 Away 2, 2. Away Over/Under 1
+HomeConceed2Score1AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],2,1,1)   
+#=============================================================================================#  
+#1. Home 2 Away 2, 2. Away Over/Under 3
+HomeConceed2Score2AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],2,3,2)
+#1. Home 2 Away 2, 2. Away Over/Under 2
+HomeConceed2Score2AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],2,2,2)
+#1. Home 2 Away 2, 2. Away Over/Under 1
+HomeConceed2Score2AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],2,1,2)
+#=================================================================================================      
+#1. Home 3 Away 2, 2. Away Over/Under 3
+HomeConceed2Score3AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],2,3,3)
+#1. Home 3 Away 2, 2. Away Over/Under 2
+HomeConceed2Score3AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],2,2,3)
+#1. Home 3 Away 2, 2. Away Over/Under 1
+HomeConceed2Score3AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],2,1,3)
+#================================================================================================= 
+# 
+# 
+# ================================================================================================ 
+#1. Home 0 Away 1, 2. Away Over/Under 3
+HomeConceed1ScoreZeroAwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],1,3,0)
+#1. Home 0 Away 1, 2. Away Over/Under 2
+HomeConceed1ScoreZeroAwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],1,2,0)
+#1. Home 0 Away 1, 2. Away Over/Under 1
+HomeConceed1ScoreZeroAwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],1,1,0)
+#================================================================================================= 
+#1. Home 1 Away 1, 2. Away Over/Under 3
+HomeConceed1Score1AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],1,3,1)
+#1. Home 1 Away 1, 2. Away Over/Under 2
+HomeConceed1Score1AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],1,2,1)
+#1. Home 1 Away 1, 2. Away Over/Under 1
+HomeConceed1Score1AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],1,1,1) 
+#=================================================================================================      
+#1. Home 2 Away 1, 2. Away Over/Under 3
+HomeConceed1Score2AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],1,3,2)
+#1. Home 2 Away 1, 2. Away Over/Under 2
+HomeConceed1Score2AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],1,2,2)
+#1. Home 2 Away 1, 2. Away Over/Under 1
+HomeConceed1Score2AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],1,1,2)
+#=================================================================================================      
+#1. Home 3 Away 1, 2. Away Over/Under 3
+HomeConceed1Score3AwayUnder3Outcome = HomeConceedAwayOutcome(sql_data[0],1,3,3)
+#1. Home 3 Away 1, 2. Away Over/Under 2
+HomeConceed1Score3AwayUnder2Outcome = HomeConceedAwayOutcome(sql_data[0],1,2,3)
+#1. Home 3 Away 1, 2. Away Over/Under 1
+HomeConceed1Score3AwayUnder1Outcome = HomeConceedAwayOutcome(sql_data[0],1,1,3)
+
 def createReport(data1,pd):
  
  #with pd.ExcelWriter('Homestreaks.xlsx') as writer:
@@ -41,42 +154,6 @@ def createReport(data1,pd):
      except:
        g = ""
       
-def whoBeatT(tems,Tem,actP):
-      insert_stmt2 = "select * from serieBB25 Where away = " + Tem + " and hgoal = "+ actP + "Order By Tframe ASC"
-      data = ("Chelsea")
-      cursor.execute(insert_stmt2)
-      sql_data = pd.DataFrame(cursor.fetchall())
-      outcome = whobeatT2(tems,sql_data,"1")
-      return outcome
-
-def whobeatT2(tems,Tem,actP):
-      pcount = 0
-      ucount = 0
-      for easch in Tem:
-       for bea in tems:
-        insert_stmt2 = "select * from serieBB25 Where Home = " + easch + " AND away = " + bea + " and hgoal >= "+ actP 
-        data = ("Chelsea")
-        cursor.execute(insert_stmt2)
-        sql_data = pd.DataFrame(cursor.fetchall())
-       if len(sql_data) > 0:
-          pcount = pcount + 1
-       else:
-          ucount = ucount + 1 
-      return pcount + " " + ucount
-      
-
-
-def awayFilter(data,actP):
-  for ee in data[0]:
-      insert_stmt2 = "select * from serieBB25 Where home = " + ee[3] + " Order By Tframe ASC"
-      data = ("Chelsea")
-      cursor.execute(insert_stmt2)
-      sql_data = pd.DataFrame(cursor.fetchall())
-      step1Teams = []
-      for eash in sql_data[0]:
-        if eash[5] >= actP:
-         step1Teams.append(eash[4])
-      whoBeatT(step1Teams,ee[3],actP)
 
 
 

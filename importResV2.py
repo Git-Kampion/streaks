@@ -112,7 +112,7 @@ for lnk in content:
       time.sleep(5)
       
       #bjj = browser.find_element(By.CLASS_NAME,"tournamentHeaderDescription").text --- Previously is the class name that contains the Round number was tournamentHeaderDescription
-      bjj = browser.find_elements(By.CLASS_NAME,"wcl-breadcrumbItem_CiWQ7")
+      bjj = browser.find_element(By.CLASS_NAME,"wcl-overline_uwiIT wcl-scores-overline-03_KIU9F")
       bjj = bjj[0].text + " " + bjj[1].text + " " + bjj[2].text
       ull = browser.find_element(By.CLASS_NAME,"duelParticipant").text.split("\n")
       dt = ull[0].split(" ")[0]
