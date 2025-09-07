@@ -22,30 +22,30 @@
 # https://www.flashscore.com/football/germany/bundesliga/results/ GERMANY BundasLiga25
 # https://www.flashscore.com/football/germany/2-bundesliga/results/ GERMANY Bundas2Liga25
 # https://www.flashscore.com/football/germany/3-liga/results/ GERMANY Bundes325
-https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga25
-https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
-https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl25
-https://www.flashscore.com/football/malaysia/super-league/results/ MALAYSIA MalaysiaPrem25
-https://www.flashscore.com/football/bulgaria/efbet-league/results/ BULGARIA BulgariaPrem25
-https://www.flashscore.com/football/iran/persian-gulf-pro-league/results/ IRAN IranPrem25
-https://www.flashscore.com/football/saudi-arabia/saudi-professional-league/results/ SAUDI SaudiPrem25
-https://www.flashscore.com/football/poland/ekstraklasa/results/ POLAND PolandA25  
-https://www.flashscore.com/football/poland/division-1/results/ POLAND PolandB25
-https://www.flashscore.com/football/serbia/mozzart-bet-super-liga/results/ SERBIA SerbiaA25 
-https://www.flashscore.com/football/serbia/mozzart-bet-prva-liga/results/ SERBIA SerbiaB25
-https://www.flashscore.com/football/denmark/superliga/results/ DENMARK DenmarkA25
-https://www.flashscore.com/football/denmark/1st-division/results/ DENMARK DenmarkB25
+# https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga25
+# https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
+# https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl25
+# https://www.flashscore.com/football/malaysia/super-league/results/ MALAYSIA MalaysiaPrem25
+# https://www.flashscore.com/football/bulgaria/efbet-league/results/ BULGARIA BulgariaPrem25
+# https://www.flashscore.com/football/iran/persian-gulf-pro-league/results/ IRAN IranPrem25
+# https://www.flashscore.com/football/saudi-arabia/saudi-professional-league/results/ SAUDI SaudiPrem25
+# https://www.flashscore.com/football/poland/ekstraklasa/results/ POLAND PolandA25  
+# https://www.flashscore.com/football/poland/division-1/results/ POLAND PolandB25
+# https://www.flashscore.com/football/serbia/mozzart-bet-super-liga/results/ SERBIA SerbiaA25 
+# https://www.flashscore.com/football/serbia/mozzart-bet-prva-liga/results/ SERBIA SerbiaB25
+# https://www.flashscore.com/football/denmark/superliga/results/ DENMARK DenmarkA25
+# https://www.flashscore.com/football/denmark/1st-division/results/ DENMARK DenmarkB25
 # # https://www.flashscore.com/football/rwanda/premier-league/results/ RWANDA RwandaPrem25
-# https://www.flashscore.com/football/indonesia/super-league/results/ INDONESIA IndonesiaPrem25
-# https://www.flashscore.com/football/norway/eliteserien/results/ NORWAY NorwayA25
-# https://www.flashscore.com/football/norway/obos-ligaen/results/ NORWAY NorwayB25
-# https://www.flashscore.com/football/ireland/premier-division/results/ IRELAND irelandPrem25
-# https://www.flashscore.com/football/ireland/division-1/results/ IRELAND irelandB25
-# https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandDiv125
-# https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta25
-# https://www.flashscore.com/football/estonia/meistriliiga/results/ ESTONIA EstoniaPrem25
-# https://www.flashscore.com/football/estonia/esiliiga/results/ BRAZIL EstoniaPremB25
-# https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
+https://www.flashscore.com/football/indonesia/super-league/results/ INDONESIA IndonesiaPrem25
+https://www.flashscore.com/football/norway/eliteserien/results/ NORWAY NorwayA25
+https://www.flashscore.com/football/norway/obos-ligaen/results/ NORWAY NorwayB25
+https://www.flashscore.com/football/ireland/premier-division/results/ IRELAND irelandPrem25
+https://www.flashscore.com/football/ireland/division-1/results/ IRELAND irelandB25
+https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandDiv125
+https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta25
+https://www.flashscore.com/football/estonia/meistriliiga/results/ ESTONIA EstoniaPrem25
+https://www.flashscore.com/football/estonia/esiliiga/results/ BRAZIL EstoniaPremB25
+https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
 # https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA ArgentitTorneo25
 # https://www.flashscore.com/football/argentina/primera-nacional/results/ ARGENTINA ArgentiNacional25
 # https://www.flashscore.com/football/azerbaijan/premier-league/results/ AZERBAIJAN AzerBaijan2025
