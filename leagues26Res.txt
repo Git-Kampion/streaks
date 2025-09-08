@@ -48,8 +48,8 @@
 # https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
 # https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA ArgentitTorneo25 --Create Table
 # https://www.flashscore.com/football/argentina/primera-nacional/results/ ARGENTINA ArgentiNacional25
-https://www.flashscore.com/football/azerbaijan/premier-league/results/ AZERBAIJAN AzerBaijan2025
-# https://www.flashscore.com/football/bolivia/division-profesional/results/ BOLIVIA BoliviaPrem25 
+# https://www.flashscore.com/football/azerbaijan/premier-league/results/ AZERBAIJAN AzerBaijan2025
+https://www.flashscore.com/football/bolivia/division-profesional/results/ BOLIVIA BoliviaPrem25 
 # https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem25
 # https://www.flashscore.com/football/cyprus/cyprus-league/results/ CYPRUS CyprusA25
 # https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
