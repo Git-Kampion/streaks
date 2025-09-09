@@ -62,9 +62,9 @@
 # https://www.flashscore.com/football/peru/liga-1/results/ PERU PeruA25 
 # https://www.flashscore.com/football/china/super-league/results/ CHINA CSuper25
 # https://www.flashscore.com/football/portugal/liga-portugal/results/ PORTUGAL portLeag25
-https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
-# https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
-# https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk225  
+# https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
+https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
+https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk225  
 # https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria125 
 # https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria225 
 # https://www.flashscore.com/football/israel/leumit-league/results/ ISRAEL IsraelB25 
