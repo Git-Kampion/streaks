@@ -74,15 +74,15 @@
 # https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
 # https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
 # https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
-https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25
-https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25
-https://www.flashscore.com/football/south-korea/k-league-1/results/ SOUTH skleague125
-https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem25
-https://www.flashscore.com/football/latvia/virsliga/results/ LATVIA LatviaPrem25
-# https://www.flashscore.com/football/romania/liga-2/results/ ROMANIA RomaniB25
-# https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
-# https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
-# https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
+# https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25
+# https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25
+# https://www.flashscore.com/football/south-korea/k-league-1/results/ SOUTH skleague125
+# https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem25
+# https://www.flashscore.com/football/latvia/virsliga/results/ LATVIA LatviaPrem25
+https://www.flashscore.com/football/romania/liga-2/results/ ROMANIA RomaniB25
+https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
+https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
+https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
 # https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
 # https://www.flashscore.com/football/slovenia/2-snl/results/ SLOVENIA SloveniaB25
 
