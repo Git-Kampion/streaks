@@ -53,15 +53,15 @@
 # https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem25
 # https://www.flashscore.com/football/cyprus/cyprus-league/results/ CYPRUS CyprusA25
 # https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
-https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip25 
-https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua125 
-https://www.flashscore.com/football/england/league-two/results/ ENGLAND EngLeagua225
-https://www.flashscore.com/football/romania/superliga/results/ ROMANIA RomaniA25 
-# https://www.flashscore.com/football/slovakia/nike-liga/results/ SLOVAKIA SlovakiaAA25
-# https://www.flashscore.com/football/slovakia/2-liga/results/ SLOVAKIA SlovakiaB25
-# https://www.flashscore.com/football/peru/liga-1/results/ PERU PeruA25 
-# https://www.flashscore.com/football/china/super-league/results/ CHINA CSuper25
-# https://www.flashscore.com/football/portugal/liga-portugal/results/ PORTUGAL portLeag25
+# https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip25 
+# https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua125 
+# https://www.flashscore.com/football/england/league-two/results/ ENGLAND EngLeagua225
+# https://www.flashscore.com/football/romania/superliga/results/ ROMANIA RomaniA25 
+https://www.flashscore.com/football/slovakia/nike-liga/results/ SLOVAKIA SlovakiaAA25
+https://www.flashscore.com/football/slovakia/2-liga/results/ SLOVAKIA SlovakiaB25
+https://www.flashscore.com/football/peru/liga-1/results/ PERU PeruA25 
+https://www.flashscore.com/football/china/super-league/results/ CHINA CSuper25
+https://www.flashscore.com/football/portugal/liga-portugal/results/ PORTUGAL portLeag25
 # https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
 # https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
 # https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk225  
