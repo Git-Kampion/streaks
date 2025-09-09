@@ -65,15 +65,15 @@
 # https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
 # https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
 # https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk225  
-https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria125 
-https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria225 
-https://www.flashscore.com/football/israel/leumit-league/results/ ISRAEL IsraelB25 
-https://www.flashscore.com/football/israel/ligat-ha-al/results/ ISRAEL IsraelA25 
-# https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA25
-# https://www.flashscore.com/football/scotland/championship/results/ SCOTLAND ScotlandB25 
-# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
-# https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
-# https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
+# https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria125 
+# https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria225 
+# https://www.flashscore.com/football/israel/leumit-league/results/ ISRAEL IsraelB25 
+# https://www.flashscore.com/football/israel/ligat-ha-al/results/ ISRAEL IsraelA25 
+https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA25
+https://www.flashscore.com/football/scotland/championship/results/ SCOTLAND ScotlandB25 
+https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
+https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
+https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
 # https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25
 # https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25
 # https://www.flashscore.com/football/south-korea/k-league-1/results/ SOUTH skleague125
