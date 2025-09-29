@@ -81,20 +81,47 @@ def click_leagues_div(driver):
     """Click on the div containing 'Leagues' span"""
     try:
         # Wait for and click the Leagues div
-        time.sleep(10)
+        
         #leagues_div = driver.find_element(  By.XPATH,"//span[text()='Leagues']")
 
         wait = WebDriverWait(driver, 30)
-        #leagues_span = wait.until(EC.presence_of_element_located((By.XPATH, "//span[text()='Leagues']")))
+       
         leagues_span = wait.until(EC.presence_of_element_located((By.XPATH, "//span[text()='Old Site']")))
         driver.execute_script("arguments[0].scrollIntoView(true); arguments[0].click();", leagues_span)
         wait = WebDriverWait(driver, 30)
         #leagues_span = wait.until(EC.presence_of_element_located((By.XPATH, "//span[text()='img-responsive banner-img']")))
-        leagues_span = wait.until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'img-responsive banner-img')]")))
+        #leagues_span = wait.until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'img-responsive banner-img')]")))
+      
+        # Find the banner element
+        banner = WebDriverWait(driver, 10).until(
+            lambda driver: driver.find_element(By.CSS_SELECTOR, "img.img-responsive.banner-img")
+        )
+        
+        # Use JavaScript to click (bypasses element visibility issues)
+        driver.execute_script("arguments[0].click();", banner)
+        print("Banner clicked using JavaScript!")
 
-
+        league_element = WebDriverWait(driver, 10).until(
+        lambda driver: driver.find_element(By.CSS_SELECTOR, "div.league-filter-box.filtersBox")
+        )
+        
+        # Scroll to element first
+        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});", league_element)
+        print("✅ Element scrolled into view")
+        
+        # Wait a moment for scrolling to complete
+        import time
+        time.sleep(5)
+        
+        # Then click
+        league_element = WebDriverWait(driver, 10).until(
+        lambda driver: driver.find_element(By.CSS_SELECTOR, "div.league-filter-box.filtersBox")
+            )
+    
+    # Click immediately after finding
+        driver.execute_script("arguments[0].click();", league_element)
         # Scroll into view and click using JavaScript
-        driver.execute_script("arguments[0].scrollIntoView(true); arguments[0].click();", leagues_span)
+        #driver.execute_script("arguments[0].scrollIntoView(true); arguments[0].click();", leagues_span)
         print("Successfully clicked on Leagues div")
         return True
     except Exception as e:

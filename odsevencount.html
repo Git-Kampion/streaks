@@ -1,0 +1,188 @@
+<!--
+Python exporter (run once) -> writes tables.json that the HTML will load
+Save as export_sqlite_to_json.py and run in same folder as your football(1).sqlite
+
+```python
+import sqlite3, json
+conn = sqlite3.connect('football(1).sqlite')
+cur = conn.cursor()
+cur.execute("SELECT name FROM sqlite_master WHERE type='table';")
+tables = [r[0] for r in cur.fetchall()]
+all_tables = {}
+for t in tables:
+    cur.execute(f"SELECT * FROM '{t}';")
+    cols = [d[0] for d in cur.description]
+    rows = cur.fetchall()
+    all_tables[t] = {
+        'columns': cols,
+        'rows': rows
+    }
+with open('tables.json','w', encoding='utf-8') as f:
+    json.dump(all_tables, f, ensure_ascii=False)
+print('Wrote tables.json with', len(all_tables), 'tables')
+```
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SQLite Tables Viewer</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:18px}
+    .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+    .tab{padding:6px 10px;border-radius:8px;background:#efefef;cursor:pointer}
+    .tab.active{background:#333;color:#fff}
+    .controls{margin:8px 0;display:flex;gap:8px;align-items:center}
+    input[type=search]{padding:6px;border-radius:6px;border:1px solid #bbb}
+    table{border-collapse:collapse;width:100%;margin-top:8px}
+    th,td{padding:6px;border:1px solid #ddd;text-align:left;max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    .pager{margin-top:8px;display:flex;gap:8px;align-items:center}
+    button{padding:6px 10px;border-radius:6px;border:1px solid #bbb;background:white;cursor:pointer}
+    button:disabled{opacity:.4;cursor:not-allowed}
+    .small{font-size:0.9rem;color:#555}
+    pre{background:#f9f9f9;padding:8px;border-radius:6px;overflow:auto}
+  </style>
+</head>
+<body>
+  <h2>SQLite Tables Viewer</h2>
+  <div class="small">This page expects a local file <code>tables.json</code> exported from your SQLite DB (see top comment for Python exporter).</div>
+
+  <div id="tabs" class="tabs"></div>
+
+  <div class="controls">
+    <label>Search: <input id="search" type="search" placeholder="filter rows" /></label>
+    <label>Rows/page: <select id="pageSize"><option>10</option><option>25</option><option>50</option><option>100</option></select></label>
+    <button id="downloadCsv">Download CSV</button>
+    <button id="downloadJson">Download JSON</button>
+    <div style="margin-left:auto" id="tableInfo" class="small"></div>
+  </div>
+
+  <div id="tableWrap"></div>
+  <div class="pager">
+    <button id="prev">Prev</button>
+    <div id="pageStatus" class="small"></div>
+    <button id="next">Next</button>
+  </div>
+
+  <script>
+    let allTables = {};
+    let currentTable = null;
+    let filteredRows = [];
+    let page = 1;
+    const el = id => document.getElementById(id);
+
+    async function load() {
+      try {
+        const res = await fetch('tables.json');
+        if (!res.ok) throw new Error('tables.json not found - run the exporter');
+        allTables = await res.json();
+        buildTabs();
+        const names = Object.keys(allTables);
+        if (names.length) selectTable(names[0]);
+      } catch (err) {
+        document.getElementById('tableWrap').innerHTML = '<p style="color:crimson">Error loading tables.json. Run the Python exporter and place tables.json next to this HTML file.</p>' + '<pre>'+err.message+'</pre>';
+        console.error(err);
+      }
+    }
+
+    function buildTabs(){
+      const tabs = el('tabs'); tabs.innerHTML='';
+      Object.keys(allTables).forEach(name => {
+        const b = document.createElement('button'); b.className='tab'; b.textContent = name;
+        b.onclick = () => selectTable(name);
+        tabs.appendChild(b);
+      });
+    }
+
+    function selectTable(name){
+      currentTable = name;
+      page = 1;
+      document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.textContent===name));
+      const meta = allTables[name];
+      filteredRows = meta.rows.slice();
+      renderTable();
+    }
+
+    function renderTable(){
+      if(!currentTable) return;
+      const meta = allTables[currentTable];
+      const cols = meta.columns;
+      const pageSize = parseInt(el('pageSize').value,10);
+      const q = el('search').value.trim().toLowerCase();
+
+      // filter
+      if(q){
+        filteredRows = meta.rows.filter(r => r.some(c => String(c).toLowerCase().includes(q)));
+      } else filteredRows = meta.rows.slice();
+
+      const total = filteredRows.length;
+      const pages = Math.max(1, Math.ceil(total/pageSize));
+      if(page>pages) page=pages;
+      const start = (page-1)*pageSize;
+      const rows = filteredRows.slice(start, start+pageSize);
+
+      const wrap = el('tableWrap');
+      let html = '<table><thead><tr>' + cols.map(c=>`<th>${escapeHtml(c)}</th>`).join('') + '</tr></thead><tbody>';
+      html += rows.map(r => '<tr>' + r.map(c=>`<td>${escapeHtml(displayCell(c))}</td>`).join('') + '</tr>').join('') + '</tbody></table>';
+      wrap.innerHTML = html;
+
+      el('pageStatus').textContent = `Page ${page} / ${pages} — showing ${rows.length} of ${total} rows`;
+      el('tableInfo').textContent = `Table: ${currentTable} — columns: ${cols.length}`;
+      el('prev').disabled = page<=1; el('next').disabled = page>=pages;
+    }
+
+    function displayCell(v){
+      if (v === null) return '';
+      if (typeof v === 'object') return JSON.stringify(v);
+      return String(v);
+    }
+
+    function escapeHtml(s){
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // events
+    el('search').addEventListener('input', ()=>{ page=1; renderTable(); });
+    el('pageSize').addEventListener('change', ()=>{ page=1; renderTable(); });
+    el('prev').addEventListener('click', ()=>{ page=Math.max(1,page-1); renderTable(); });
+    el('next').addEventListener('click', ()=>{ page=page+1; renderTable(); });
+
+    el('downloadJson').addEventListener('click', ()=>{
+      if(!currentTable) return;
+      const blob = new Blob([JSON.stringify(allTables[currentTable],null,2)],{type:'application/json'});
+      downloadBlob(blob, currentTable + '.json');
+    });
+
+    el('downloadCsv').addEventListener('click', ()=>{
+      if(!currentTable) return;
+      const meta = allTables[currentTable];
+      const cols = meta.columns;
+      const rows = filteredRows; // use filtered full set (not paged)
+      const csv = [cols.map(escapeCsv).join(',')].concat(rows.map(r => r.map(escapeCsv).join(','))).join('\n');
+      const blob = new Blob([csv],{type:'text/csv'});
+      downloadBlob(blob, currentTable + '.csv');
+    });
+
+    function escapeCsv(cell){
+      if (cell === null) return '';
+      let s = String(cell);
+      if (s.includes('"')||s.includes(',')||s.includes('\n')) s = '"' + s.replace(/"/g,'""') + '"';
+      return s;
+    }
+
+    function downloadBlob(blob, filename){
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+
+    // start
+    load();
+  </script>
+</body>
+</html>
