@@ -11,7 +11,7 @@ permissions:
 jobs:
   scrape:
     runs-on: windows-latest
-    timeout-minutes: 60
+    timeout-minutes: 360
 
     steps:
       - name: Checkout repository

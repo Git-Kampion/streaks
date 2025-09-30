@@ -176,4 +176,4 @@ for lnk in content:
                 firstWindow = browser.window_handles[0]
                 browser.close()
                 browser.switch_to.window(firstWindow)    
-            countUps += 1
+            countUps -= 1
