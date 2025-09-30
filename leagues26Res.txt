@@ -83,8 +83,8 @@ https://www.flashscore.com/football/czech-republic/chance-liga/results/ CZECH Cz
 # https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
 # https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
 # https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
-https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
-https://www.flashscore.com/football/slovenia/2-snl/results/ SLOVENIA SloveniaB25
+# https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
+# https://www.flashscore.com/football/slovenia/2-snl/results/ SLOVENIA SloveniaB25
 
 
 
