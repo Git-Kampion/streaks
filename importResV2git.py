@@ -21,7 +21,7 @@ LEAGUES = ROOT / "leagues26Res.txt"
 
 # --- Firefox headless ---
 options = Options()
-options.headless = False
+options.headless = True
 browser = webdriver.Firefox(options=options)
 
 def dataLookUp(ScotlandA24, matchUpsCount):
@@ -83,17 +83,17 @@ for lnk in content:
 
         matchesPopUps = browser.find_elements(By.CLASS_NAME, "eventRowLink") 
         iteloop = dataLookUp(lnk.split()[2], len(matchesPopUps))
-        countUps = 0
+        countUps = len(matchesPopUps)
 
         for bele in matchesPopUps:
             if countUps > iteloop:
                 href = bele.get_attribute("href")
                 if href:
                     browser.execute_script(f"window.open('{href}', '_blank');")
-                    time.sleep(10)
+                    time.sleep(20)
                 browser.switch_to.window(browser.window_handles[-1])
                 success = False
-                time.sleep(10)
+                time.sleep(20)
 
                 bjj = browser.find_element(By.CLASS_NAME, "detail__breadcrumbs")
                 list_items = bjj.find_elements(By.TAG_NAME, "li")
