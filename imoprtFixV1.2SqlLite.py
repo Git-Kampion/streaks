@@ -54,7 +54,7 @@ for lnk in content:
             lambda b: b.execute_script("return document.readyState === 'complete'")
         )
 
-        time.sleep(5)
+        time.sleep(15)
 
         # Accept cookies once
         if cookiRan is False:
@@ -62,7 +62,7 @@ for lnk in content:
                 findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
                 findCookie.click()
                 cookiRan = True
-                time.sleep(3)
+                time.sleep(13)
             except NoSuchElementException:
                 pass
 
@@ -70,11 +70,11 @@ for lnk in content:
         while True:
             try:
                 browser.find_element(By.LINK_TEXT, "Show more matches").click()
-                time.sleep(5)
+                time.sleep(15)
             except NoSuchElementException:
                 break
 
-        time.sleep(2)
+        time.sleep(15)
         matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match")
 
         iteloop = dataLookUp(lnk.split()[2])
