@@ -109,12 +109,11 @@ for lnk in content:
   
   homeaway2ndHScore = ([],[])
 
-  iteloop = dataLookUp(lnk.split()[2],len( matchesPopUps))
+  #iteloop = dataLookUp(lnk.split()[2],len( matchesPopUps))
   countUps = 0
     #matchesPopUps = eachh.find_elements(By.TAG_NAME, 'div') 
   for bele in matchesPopUps:
-    
-    if countUps >= iteloop:
+   
       '''
       # href = bele.get_attribute("href")
       
@@ -177,7 +176,7 @@ for lnk in content:
           cursor.close()
           conn.close()  
       
-    countUps = countUps +1
+   
 
 
   

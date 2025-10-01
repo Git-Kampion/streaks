@@ -5,111 +5,119 @@ from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
-# --- Paths ---
+# Paths
 ROOT = Path(__file__).resolve().parent
 DB = ROOT / "footballFixtures.sqlite"
-LEAGUES = ROOT / "leagues2Fix.txt"   # text file with fixture URLs
+LEAGUES = ROOT / "leagues2Fix.txt"
 
-# --- Chrome headless ---
-chrome_options = Options()
-chrome_options.add_argument("--headless=new")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
+# Launch Chrome browser
+options = Options()
+# options.add_argument("--headless=new")  # Uncomment for headless
+browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-browser = webdriver.Chrome(options=chrome_options)
-
-def dataLookUp(table_name):
-    """Check how many rows already exist in a given table"""
+def dataLookUp(ScotlandA24, matchUpsCount):
     conn = sqlite3.connect(DB)
     cursor = conn.cursor()
     try:
-        query = f"SELECT COUNT(*) FROM {table_name}"
-        cursor.execute(query)
-        dataNum = cursor.fetchone()[0]
-    except Exception:
+        cursor.execute(f"SELECT * FROM {ScotlandA24}")
+        sql_data = cursor.fetchall()
+        dataNum = len(sql_data[0]) if sql_data else 0
+    except:
         dataNum = 0
     cursor.close()
     conn.close()
     return dataNum
 
-# --- Load leagues list ---
-with open(LEAGUES, "r", encoding="utf-8") as f:
-    content = f.read().split("\n")
+def dataLookUp2(tea, ScotlandA24):
+    conn = sqlite3.connect(DB)
+    cursor = conn.cursor()
+    try:
+        insert_stmt2 = f"SELECT * FROM {ScotlandA24} WHERE Home='{tea.split()[0]}' AND Away='{tea.split()[1]}'"
+        cursor.execute(insert_stmt2)
+        sql_data = cursor.fetchall()
+        dataNum = len(sql_data[0]) if sql_data else 0
+    except:
+        dataNum = 0
+    cursor.close()
+    conn.close()
+    return dataNum
+
+# Load leagues file
+with LEAGUES.open("r", encoding="utf-8") as file:
+    content = file.read().splitlines()
 
 cookiRan = False
 
 for lnk in content:
     linnk = lnk.split(" ")[0]
-    if linnk != "#" and linnk.strip() != "":
-        try:
-            browser.get(linnk)
-        except WebDriverException:
-            continue
+    if linnk not in ("#", " "):
+        browser.get(linnk)
+        WebDriverWait(browser, 30).until(lambda b: b.execute_script("return document.readyState === 'complete'"))
+        browser.maximize_window()
+        time.sleep(10)
 
-        # Wait for page
-        WebDriverWait(browser, 30).until(
-            lambda b: b.execute_script("return document.readyState === 'complete'")
-        )
-
-        time.sleep(15)
-
-        # Accept cookies once
-        if cookiRan is False:
+        if not cookiRan:
             try:
                 findCookie = browser.find_element(By.ID, "onetrust-accept-btn-handler")
                 findCookie.click()
                 cookiRan = True
-                time.sleep(13)
+                time.sleep(5)
             except NoSuchElementException:
                 pass
 
-        # Keep clicking "Show more matches"
-        while True:
+        _flag = True
+        while _flag:
             try:
-                browser.find_element(By.LINK_TEXT, "Show more matches").click()
-                time.sleep(15)
+                show_more = browser.find_element(By.LINK_TEXT, "Show more matches")
+                browser.execute_script("arguments[0].scrollIntoView(true);", show_more)
+                browser.execute_script("arguments[0].click();", show_more)
+                time.sleep(20)
             except NoSuchElementException:
-                break
+                _flag = False
+        time.sleep(5)
 
-        time.sleep(15)
         matchesPopUps = browser.find_elements(By.CLASS_NAME, "event__match")
 
-        iteloop = dataLookUp(lnk.split()[2])
-        countUps = 0
-
         for bele in matchesPopUps:
-            if countUps >= iteloop:
-                try:
-                    ull = bele.text.split("\n")
-                    dateTime = ull[0].split(" ")[0]
-                    mm = dateTime.split(".")
-                    fullDate = f"2025-{mm[1]}-{mm[0]} {ull[0].split(' ')[1]}"
+            ull = bele.text.split("\n")
+            dateTime = ull[0].split(" ")[0]
+            mm = dateTime.split(".")
+            fullDate = f"2025-{mm[1]}-{mm[0]}-{ull[0].split()[1]}"
 
-                    Hteam = ull[1].replace(" ", "")
-                    Ateam = ull[2].replace(" ", "")
-                    round_no = "0"
+            try:
+                Hteam = ull[1].replace(" ", "")
+            except:
+                Hteam = ull[1]
+            try:
+                Ateam = ull[2].replace(" ", "")
+            except:
+                Ateam = ull[2]
 
-                    conn = sqlite3.connect(DB)
-                    cursor = conn.cursor()
+            round_no = "0"
+            dttyl = f"{round_no} {fullDate} {Hteam} {Ateam}"
+            polstriped = dttyl.split(" ")
 
-                    insert_stmt = f"""
-                        INSERT INTO {lnk.split()[2]} (Round, Tframe, home, away)
-                        VALUES (?, ?, ?, ?)
-                    """
-                    data = (round_no, fullDate, Hteam, Ateam)
+            conn = sqlite3.connect(DB)
+            cursor = conn.cursor()
+            if "Penalty" in polstriped[2]:
+                insert_stmt = f"INSERT INTO {lnk.split()[2]} (Round,Tframe,home,away) VALUES (?, ?, ?, ?)"
+                data = (polstriped[0], polstriped[1], polstriped[3], "")
+            else:
+                insert_stmt = f"INSERT INTO {lnk.split()[2]} (Round,Tframe,home,away) VALUES (?, ?, ?, ?)"
+                data = (polstriped[0], polstriped[1], polstriped[2], polstriped[3])
+            try:
+                cursor.execute(insert_stmt, data)
+            except:
+                data = (polstriped[0], polstriped[1], polstriped[3], "")
+                cursor.execute(insert_stmt, data)
 
-                    try:
-                        cursor.execute(insert_stmt, data)
-                    except Exception as e:
-                        print(f"Insert failed: {e}")
+            conn.commit()
+            cursor.close()
+            conn.close()
 
-                    conn.commit()
-                    cursor.close()
-                    conn.close()
-                except Exception as e:
-                    print(f"Skipping match: {e}")
-
-            countUps += 1
+browser.quit()
