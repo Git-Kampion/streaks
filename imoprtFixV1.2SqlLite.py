@@ -10,8 +10,8 @@ from selenium.webdriver.chrome.options import Options
 
 # --- Paths ---
 ROOT = Path(__file__).resolve().parent
-DB = ROOT / "football.sqlite"
-LEAGUES = ROOT / "leagues26Fix.txt"   # text file with fixture URLs
+DB = ROOT / "footballFixtures.sqlite"
+LEAGUES = ROOT / "leagues2Fix.txt"   # text file with fixture URLs
 
 # --- Chrome headless ---
 chrome_options = Options()
