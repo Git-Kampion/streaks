@@ -8,7 +8,12 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.service import Service
+
+# Point to chromedriver path
+chrome_driver_path = "/usr/bin/chromedriver"  # or the path on your machine
+browser = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
+
 
 # Paths
 ROOT = Path(__file__).resolve().parent
