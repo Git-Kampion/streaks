@@ -15,9 +15,11 @@ LEAGUES = ROOT / "leagues2Fix.txt"
 
 # Chrome options
 options = Options()
-# options.add_argument("--headless=new")  # Uncomment for headless on GitHub Actions
+# options.add_argument("--headless=new")  # Uncomment for headless
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-gpu")
+options.add_argument("--window-size=1920,1080")
 
 # Path to ChromeDriver (adjust if needed)
 chrome_driver_path = "/usr/bin/chromedriver"  # GitHub Actions default path
