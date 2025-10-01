@@ -23,7 +23,7 @@
 # https://www.flashscore.com/football/netherlands/eredivisie/fixtures/ NETHERLANDS Eredevisie25
 # https://www.flashscore.com/football/portugal/liga-portugal/fixtures/ PORTUGAL Portugal25
 # https://www.flashscore.com/football/portugal/liga-portugal-2/fixtures/ PORTUGAL PortugalB25
-# https://www.flashscore.com/football/brazil/serie-a-betano/fixtures/ BRAZIL BrazilA25
+https://www.flashscore.com/football/brazil/serie-a-betano/fixtures/ BRAZIL BrazilA25
 # https://www.flashscore.com/football/china/super-league/fixtures/ CHINA CSuper25
 # https://www.flashscore.com/football/czech-republic/chance-liga/fixtures/ CZECH CzechA25
 # https://www.flashscore.com/football/czech-republic/chnl/fixtures/ CZECH CzechB25
@@ -42,23 +42,23 @@
 # https://www.flashscore.com/football/algeria/ligue-1/fixtures/ ALGERIA AlgeriaA25
 # https://www.flashscore.com/football/georgia/crystalbet-erovnuli-liga/fixtures/ GEORGIA GeorgiaA25
 # https://www.flashscore.com/football/england/league-one/fixtures/ England EngLeague125
-# https://www.flashscore.com/football/germany/bundesliga/fixtures/ GERMANY BundasLiga25 
+https://www.flashscore.com/football/germany/bundesliga/fixtures/ GERMANY BundasLiga25 
 # https://www.flashscore.com/football/bolivia/division-profesional/fixtures/ BOLIVIA BoliviaA25 
-# https://www.flashscore.com/football/austria/bundesliga/fixtures/ AUSTRIA Austria125 
-# https://www.flashscore.com/football/austria/2-liga/fixtures/ AUSTRIA Austria225
-# https://www.flashscore.com/football/belgium/jupiler-pro-league/fixtures/ BELGIUM belgiumJpl25
-# https://www.flashscore.com/football/belgium/challenger-pro-league/fixtures/ BELGIUM belgiumChall25
-# https://www.flashscore.com/football/bulgaria/parva-liga/fixtures/ BULGARIA BulgariaPrem25
+https://www.flashscore.com/football/austria/bundesliga/fixtures/ AUSTRIA Austria125 
+https://www.flashscore.com/football/austria/2-liga/fixtures/ AUSTRIA Austria225
+https://www.flashscore.com/football/belgium/jupiler-pro-league/fixtures/ BELGIUM belgiumJpl25
+https://www.flashscore.com/football/belgium/challenger-pro-league/fixtures/ BELGIUM belgiumChall25
+https://www.flashscore.com/football/bulgaria/parva-liga/fixtures/ BULGARIA BulgariaPrem25
 # https://www.flashscore.com/football/croatia/hnl/fixtures/ CROATIA CroatiaA25
 # https://www.flashscore.com/football/croatia/hnl/fixtures/ CROATIA CroatiaB25
-# https://www.flashscore.com/football/azerbaijan/premier-league/fixtures/ AZERBAIJAN AzerBaijan25
+https://www.flashscore.com/football/azerbaijan/premier-league/fixtures/ AZERBAIJAN AzerBaijan25
 # https://www.flashscore.com/football/denmark/superliga/fixtures/ DENMARK DenmarkA25
 # https://www.flashscore.com/football/denmark/1st-division/fixtures/ DENMARK DenmarkB25
 # https://www.flashscore.com/football/estonia/meistriliiga/fixtures/ ESTONIA EstoniaPrem25
 # https://www.flashscore.com/football/estonia/esiliiga/fixtures/ ESTONIA EstoniaB25
 # https://www.flashscore.com/football/netherlands/tweede-divisie/fixtures/ NETHERLANDS EredevisieTweede25
 # https://www.flashscore.com/football/netherlands/eredivisie/fixtures/ NETHERLANDS Eredevisie25
-# https://www.flashscore.com/football/germany/2-bundesliga/fixtures/ GERMANY Bundas2Liga25
+https://www.flashscore.com/football/germany/2-bundesliga/fixtures/ GERMANY Bundas2Liga25
 # https://www.flashscore.com/football/germany/3-liga/fixtures/ GERMANY Bundes325
 # https://www.flashscore.com/football/ireland/premier-division/fixtures/ IRELAND irelandPrem25
 # https://www.flashscore.com/football/jordan/premier-league/fixtures/ JORDAN JordanPrem25
