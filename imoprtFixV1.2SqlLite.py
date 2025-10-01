@@ -1,6 +1,5 @@
 import time
 import sqlite3
-import pandas as pd
 from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,22 +7,22 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-
-# Point to chromedriver path
-chrome_driver_path = "/usr/bin/chromedriver"  # or the path on your machine
-browser = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
-
 
 # Paths
 ROOT = Path(__file__).resolve().parent
 DB = ROOT / "footballFixtures.sqlite"
 LEAGUES = ROOT / "leagues2Fix.txt"
 
-# Launch Chrome browser
+# Chrome options
 options = Options()
-# options.add_argument("--headless=new")  # Uncomment for headless
-browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+# options.add_argument("--headless=new")  # Uncomment for headless on GitHub Actions
+options.add_argument("--no-sandbox")
+options.add_argument("--disable-dev-shm-usage")
+
+# Path to ChromeDriver (adjust if needed)
+chrome_driver_path = "/usr/bin/chromedriver"  # GitHub Actions default path
+
+browser = webdriver.Chrome(service=Service(chrome_driver_path), options=options)
 
 def dataLookUp(ScotlandA24, matchUpsCount):
     conn = sqlite3.connect(DB)
@@ -31,7 +30,7 @@ def dataLookUp(ScotlandA24, matchUpsCount):
     try:
         cursor.execute(f"SELECT * FROM {ScotlandA24}")
         sql_data = cursor.fetchall()
-        dataNum = len(sql_data[0]) if sql_data else 0
+        dataNum = len(sql_data) if sql_data else 0
     except:
         dataNum = 0
     cursor.close()
@@ -45,7 +44,7 @@ def dataLookUp2(tea, ScotlandA24):
         insert_stmt2 = f"SELECT * FROM {ScotlandA24} WHERE Home='{tea.split()[0]}' AND Away='{tea.split()[1]}'"
         cursor.execute(insert_stmt2)
         sql_data = cursor.fetchall()
-        dataNum = len(sql_data[0]) if sql_data else 0
+        dataNum = len(sql_data) if sql_data else 0
     except:
         dataNum = 0
     cursor.close()
