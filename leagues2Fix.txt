@@ -61,13 +61,11 @@ https://www.flashscore.com/football/south-korea/k-league-2/fixtures/ SOUTH skLea
 # https://www.flashscore.com/football/estonia/meistriliiga/fixtures/ ESTONIA EstoniaPrem25
 # https://www.flashscore.com/football/estonia/esiliiga/fixtures/ ESTONIA EstoniaB25
 # https://www.flashscore.com/football/netherlands/tweede-divisie/fixtures/ NETHERLANDS EredevisieTweede25
-# https://www.flashscore.com/football/netherlands/eredivisie/fixtures/ NETHERLANDS Eredevisie25
 # https://www.flashscore.com/football/germany/3-liga/fixtures/ GERMANY Bundes325
 # https://www.flashscore.com/football/ireland/premier-division/fixtures/ IRELAND irelandPrem25
 # https://www.flashscore.com/football/jordan/premier-league/fixtures/ JORDAN JordanPrem25
 # https://www.flashscore.com/football/ireland/division-1/fixtures/ ICELAND IrelandB25 
 # https://www.flashscore.com/football/iran/persian-gulf-pro-league/fixtures/ IRAN IranPrem25 
-# https://www.flashscore.com/football/jordan/premier-league/fixtures/ JORDAN JordanPrem25
 # https://www.flashscore.com/football/poland/ekstraklasa/fixtures/ POLAND PolandA25
 # https://www.flashscore.com/football/poland/division-1/fixtures/ POLAND PolandB25
 # https://www.flashscore.com/football/romania/superliga/fixtures/ ROMANIA RomaniA25
@@ -84,7 +82,7 @@ https://www.flashscore.com/football/south-korea/k-league-2/fixtures/ SOUTH skLea
 # https://www.flashscore.com/football/italy/serie-b/fixtures/ ITALY SerieBB25
 # https://www.flashscore.com/football/ukraine/premier-league/fixtures/ UKRAINE UkraineA25
 # https://www.flashscore.com/football/ukraine/persha-liga/fixtures/ UKRAINE UkrainePresha25
-https://www.flashscore.com/football/indonesia/super-league/fixtures/ INDONESIA IndonesiaA5
+# https://www.flashscore.com/football/indonesia/super-league/fixtures/ INDONESIA IndonesiaA5
 # https://www.flashscore.com/football/usa/mls/fixtures/ USA USA25
 
 

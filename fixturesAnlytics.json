@@ -19441,6 +19441,12 @@
   },
   {
     "round": "0",
+    "date": "2025-10-03-12:00",
+    "home": "ShonanBellmare",
+    "away": "Verdy"
+  },
+  {
+    "round": "0",
     "date": "2025-10-03-13:00",
     "home": "Inhulets",
     "away": "FenixMariupol"
@@ -19681,9 +19687,93 @@
   },
   {
     "round": "0",
+    "date": "2025-10-04-06:00",
+    "home": "ShimizuS-Pulse",
+    "away": "FCTokyo"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-06:30",
+    "home": "NagoyaGrampus",
+    "away": "CerezoOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "AlbirexNiigata",
+    "away": "Okayama"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "Chiba",
+    "away": "V-VarenNagasaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "FujiedaMYFC",
+    "away": "Toyama"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "GimpoFC",
+    "away": "AnsanGreeners"
+  },
+  {
+    "round": "0",
     "date": "2025-10-04-07:00",
     "home": "GwangjuFC",
     "away": "Daegu"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "HokkaidoConsadoleSapporo",
+    "away": "MontedioYamagata"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-07:00",
+    "home": "SuwonBluewings",
+    "away": "BucheonFC1995"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-08:00",
+    "home": "AvispaFukuoka",
+    "away": "YokohamaFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-08:00",
+    "home": "VegaltaSendai",
+    "away": "OmiyaArdija"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-09:00",
+    "home": "Kofu",
+    "away": "Iwata"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-09:00",
+    "home": "SanfrecceHiroshima",
+    "away": "Machida"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-09:30",
+    "home": "Asan",
+    "away": "Cheongju"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-09:30",
+    "home": "Hwaseong",
+    "away": "Incheon"
   },
   {
     "round": "0",
@@ -19729,9 +19819,21 @@
   },
   {
     "round": "0",
+    "date": "2025-10-04-10:00",
+    "home": "UrawaReds",
+    "away": "VisselKobe"
+  },
+  {
+    "round": "0",
     "date": "2025-10-04-10:30",
     "home": "FCChernihiv",
     "away": "PodillyaKhmelnytskyi"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-10:30",
+    "home": "KashiwaReysol",
+    "away": "YokohamaF.Marinos"
   },
   {
     "round": "0",
@@ -19744,6 +19846,12 @@
     "date": "2025-10-04-11:30",
     "home": "Corvinul",
     "away": "SteauaBucuresti"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-04-12:00",
+    "home": "Kyoto",
+    "away": "KawasakiFrontale"
   },
   {
     "round": "0",
@@ -20462,14 +20570,62 @@
   {
     "round": "0",
     "date": "2025-10-05-07:00",
+    "home": "Blaublitz",
+    "away": "OitaTrinita"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-07:00",
     "home": "GimcheonSangmu",
     "away": "UlsanHD"
   },
   {
     "round": "0",
     "date": "2025-10-05-07:00",
+    "home": "Jeonnam",
+    "away": "CheonanCity"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-07:00",
     "home": "Pohang",
     "away": "Daejeon"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-07:00",
+    "home": "RenofaYamaguchi",
+    "away": "SaganTosu"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-07:00",
+    "home": "Tokushima",
+    "away": "Imabari"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-08:00",
+    "home": "KashimaAntlers",
+    "away": "GambaOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-08:00",
+    "home": "Kumamoto",
+    "away": "Iwaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-09:00",
+    "home": "Ehime",
+    "away": "Mito"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-05-09:30",
+    "home": "Busan",
+    "away": "Gyeongnam"
   },
   {
     "round": "0",
@@ -21019,6 +21175,18 @@
   },
   {
     "round": "0",
+    "date": "2025-10-07-07:00",
+    "home": "SeoulE-Land",
+    "away": "Hwaseong"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-07-09:30",
+    "home": "Cheongju",
+    "away": "GimpoFC"
+  },
+  {
+    "round": "0",
     "date": "2025-10-07-19:00",
     "home": "FCASATg.Mures",
     "away": "GloriaBistrita"
@@ -21028,6 +21196,36 @@
     "date": "2025-10-07-19:30",
     "home": "Versailles",
     "away": "Villefranche"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-08-07:00",
+    "home": "CheonanCity",
+    "away": "Busan"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-08-07:00",
+    "home": "Gyeongnam",
+    "away": "Jeonnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-08-07:00",
+    "home": "Incheon",
+    "away": "SuwonBluewings"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-08-09:30",
+    "home": "AnsanGreeners",
+    "away": "Asan"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-08-09:30",
+    "home": "BucheonFC1995",
+    "away": "Seongnam"
   },
   {
     "round": "0",
@@ -21154,6 +21352,18 @@
     "date": "2025-10-10-20:45",
     "home": "UCDublin",
     "away": "Athlone"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-11-07:00",
+    "home": "GimpoFC",
+    "away": "SeoulE-Land"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-11-09:30",
+    "home": "Hwaseong",
+    "away": "Cheongju"
   },
   {
     "round": "0",
@@ -21310,6 +21520,36 @@
     "date": "2025-10-12-01:30",
     "home": "InterMiami",
     "away": "AtlantaUtd"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-12-07:00",
+    "home": "Busan",
+    "away": "BucheonFC1995"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-12-07:00",
+    "home": "Jeonnam",
+    "away": "AnsanGreeners"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-12-07:00",
+    "home": "SuwonBluewings",
+    "away": "CheonanCity"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-12-09:30",
+    "home": "Asan",
+    "away": "Gyeongnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-12-09:30",
+    "home": "Seongnam",
+    "away": "Incheon"
   },
   {
     "round": "0",
@@ -21484,6 +21724,18 @@
     "date": "2025-10-17-02:30",
     "home": "Vitoria",
     "away": "Bahia"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-17-12:00",
+    "home": "SanfrecceHiroshima",
+    "away": "FCTokyo"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-17-12:00",
+    "home": "VisselKobe",
+    "away": "KashimaAntlers"
   },
   {
     "round": "0",
@@ -21704,8 +21956,50 @@
   {
     "round": "0",
     "date": "2025-10-18-07:00",
+    "home": "GambaOsaka",
+    "away": "KashiwaReysol"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "Iwaki",
+    "away": "Ehime"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
     "home": "Jeonbuk",
     "away": "SuwonFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "KawasakiFrontale",
+    "away": "ShimizuS-Pulse"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "Machida",
+    "away": "AvispaFukuoka"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "Okayama",
+    "away": "CerezoOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "OmiyaArdija",
+    "away": "FujiedaMYFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "SaganTosu",
+    "away": "Blaublitz"
   },
   {
     "round": "0",
@@ -21718,6 +22012,24 @@
     "date": "2025-10-18-07:00",
     "home": "UlsanHD",
     "away": "GwangjuFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "Verdy",
+    "away": "AlbirexNiigata"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "YokohamaF.Marinos",
+    "away": "UrawaReds"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-07:00",
+    "home": "YokohamaFC",
+    "away": "NagoyaGrampus"
   },
   {
     "round": "0",
@@ -21764,6 +22076,12 @@
   {
     "round": "0",
     "date": "2025-10-18-10:00",
+    "home": "Iwata",
+    "away": "Tokushima"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-10:00",
     "home": "MetalulBuzau",
     "away": "CSCDumbravita"
   },
@@ -21784,6 +22102,12 @@
     "date": "2025-10-18-10:00",
     "home": "Tunari",
     "away": "Concordia"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-18-10:00",
+    "home": "V-VarenNagasaki",
+    "away": "Kofu"
   },
   {
     "round": "0",
@@ -22579,6 +22903,84 @@
   },
   {
     "round": "0",
+    "date": "2025-10-19-05:55",
+    "home": "Toyama",
+    "away": "HokkaidoConsadoleSapporo"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-06:00",
+    "home": "Imabari",
+    "away": "RenofaYamaguchi"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "AnsanGreeners",
+    "away": "Incheon"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "Asan",
+    "away": "GimpoFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "Gyeongnam",
+    "away": "Seongnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "MontedioYamagata",
+    "away": "Kumamoto"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "OitaTrinita",
+    "away": "VegaltaSendai"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-07:00",
+    "home": "SeoulE-Land",
+    "away": "Busan"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-08:00",
+    "home": "ShonanBellmare",
+    "away": "Kyoto"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-09:00",
+    "home": "Mito",
+    "away": "Chiba"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-09:30",
+    "home": "BucheonFC1995",
+    "away": "CheonanCity"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-09:30",
+    "home": "Cheongju",
+    "away": "Jeonnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-19-09:30",
+    "home": "Hwaseong",
+    "away": "SuwonBluewings"
+  },
+  {
+    "round": "0",
     "date": "2025-10-19-10:30",
     "home": "Malzenice",
     "away": "ZilinaB"
@@ -23341,6 +23743,90 @@
   },
   {
     "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "FCTokyo",
+    "away": "Okayama"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "FujiedaMYFC",
+    "away": "Kofu"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "KashiwaReysol",
+    "away": "YokohamaFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "Kyoto",
+    "away": "KashimaAntlers"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "NagoyaGrampus",
+    "away": "GambaOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "Seongnam",
+    "away": "Hwaseong"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "ShimizuS-Pulse",
+    "away": "Verdy"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "SuwonBluewings",
+    "away": "Jeonnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "UrawaReds",
+    "away": "Machida"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-07:00",
+    "home": "YokohamaF.Marinos",
+    "away": "SanfrecceHiroshima"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-08:00",
+    "home": "CerezoOsaka",
+    "away": "KawasakiFrontale"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-09:30",
+    "home": "Busan",
+    "away": "GimpoFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-09:30",
+    "home": "CheonanCity",
+    "away": "AnsanGreeners"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-09:30",
+    "home": "Cheongju",
+    "away": "BucheonFC1995"
+  },
+  {
+    "round": "0",
     "date": "2025-10-25-10:00",
     "home": "ChindiaTargoviste",
     "away": "FCVoluntari"
@@ -23404,6 +23890,12 @@
     "date": "2025-10-25-10:00",
     "home": "SepsiSf.Gheorghe",
     "away": "GloriaBistrita"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-25-10:00",
+    "home": "V-VarenNagasaki",
+    "away": "Imabari"
   },
   {
     "round": "0",
@@ -24142,6 +24634,78 @@
     "date": "2025-10-26-02:30",
     "home": "SaoPaulo",
     "away": "Bahia"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-06:00",
+    "home": "HokkaidoConsadoleSapporo",
+    "away": "Mito"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-06:00",
+    "home": "MontedioYamagata",
+    "away": "OmiyaArdija"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-06:05",
+    "home": "Tokushima",
+    "away": "Iwaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "AlbirexNiigata",
+    "away": "VisselKobe"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "Blaublitz",
+    "away": "Chiba"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "Incheon",
+    "away": "Gyeongnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "Kumamoto",
+    "away": "OitaTrinita"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "RenofaYamaguchi",
+    "away": "Toyama"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:00",
+    "home": "VegaltaSendai",
+    "away": "SaganTosu"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-07:40",
+    "home": "AvispaFukuoka",
+    "away": "ShonanBellmare"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-09:00",
+    "home": "Ehime",
+    "away": "Iwata"
+  },
+  {
+    "round": "0",
+    "date": "2025-10-26-09:30",
+    "home": "SeoulE-Land",
+    "away": "Asan"
   },
   {
     "round": "0",
@@ -25027,6 +25591,30 @@
   },
   {
     "round": "0",
+    "date": "2025-11-01-07:00",
+    "home": "Gyeongnam",
+    "away": "SeoulE-Land"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-01-07:00",
+    "home": "SuwonBluewings",
+    "away": "Cheongju"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-01-09:30",
+    "home": "BucheonFC1995",
+    "away": "AnsanGreeners"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-01-09:30",
+    "home": "GimpoFC",
+    "away": "Hwaseong"
+  },
+  {
+    "round": "0",
     "date": "2025-11-01-11:00",
     "home": "Afumati",
     "away": "FCASATg.Mures"
@@ -25726,6 +26314,84 @@
     "date": "2025-11-02-02:00",
     "home": "FlamengoRJ",
     "away": "SportRecife"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Chiba",
+    "away": "HokkaidoConsadoleSapporo"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Imabari",
+    "away": "VegaltaSendai"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Incheon",
+    "away": "Busan"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Iwaki",
+    "away": "FujiedaMYFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Iwata",
+    "away": "V-VarenNagasaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Jeonnam",
+    "away": "Seongnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Kofu",
+    "away": "Mito"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Kumamoto",
+    "away": "RenofaYamaguchi"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "OmiyaArdija",
+    "away": "Blaublitz"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "SaganTosu",
+    "away": "Tokushima"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:00",
+    "home": "Toyama",
+    "away": "Ehime"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-07:30",
+    "home": "OitaTrinita",
+    "away": "MontedioYamagata"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-02-09:30",
+    "home": "Asan",
+    "away": "CheonanCity"
   },
   {
     "round": "0",
@@ -26677,6 +27343,72 @@
   },
   {
     "round": "0",
+    "date": "2025-11-08-07:00",
+    "home": "HokkaidoConsadoleSapporo",
+    "away": "OitaTrinita"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-07:00",
+    "home": "Hwaseong",
+    "away": "Gyeongnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-07:00",
+    "home": "Jeonnam",
+    "away": "Incheon"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-07:00",
+    "home": "KashimaAntlers",
+    "away": "YokohamaFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-07:00",
+    "home": "Verdy",
+    "away": "AvispaFukuoka"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-07:30",
+    "home": "Ehime",
+    "away": "V-VarenNagasaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-08:00",
+    "home": "KawasakiFrontale",
+    "away": "Okayama"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-08:00",
+    "home": "ShonanBellmare",
+    "away": "AlbirexNiigata"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-09:00",
+    "home": "KashiwaReysol",
+    "away": "NagoyaGrampus"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-09:30",
+    "home": "Busan",
+    "away": "Asan"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-08-09:30",
+    "home": "CheonanCity",
+    "away": "Seongnam"
+  },
+  {
+    "round": "0",
     "date": "2025-11-08-11:00",
     "home": "Campulung",
     "away": "SteauaBucuresti"
@@ -27484,6 +28216,102 @@
     "date": "2025-11-09-02:00",
     "home": "SaoPaulo",
     "away": "Bragantino"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-06:00",
+    "home": "SanfrecceHiroshima",
+    "away": "UrawaReds"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-06:00",
+    "home": "Toyama",
+    "away": "SaganTosu"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-06:00",
+    "home": "VegaltaSendai",
+    "away": "Kumamoto"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "AnsanGreeners",
+    "away": "SuwonBluewings"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Blaublitz",
+    "away": "Iwaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Cheongju",
+    "away": "SeoulE-Land"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Chiba",
+    "away": "FujiedaMYFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Kyoto",
+    "away": "YokohamaF.Marinos"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Machida",
+    "away": "FCTokyo"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Mito",
+    "away": "OmiyaArdija"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "MontedioYamagata",
+    "away": "Imabari"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "RenofaYamaguchi",
+    "away": "Iwata"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-07:00",
+    "home": "Tokushima",
+    "away": "Kofu"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-08:00",
+    "home": "GambaOsaka",
+    "away": "VisselKobe"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-08:00",
+    "home": "ShimizuS-Pulse",
+    "away": "CerezoOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-09-09:30",
+    "home": "GimpoFC",
+    "away": "BucheonFC1995"
   },
   {
     "round": "0",
@@ -29113,6 +29941,108 @@
   },
   {
     "round": "0",
+    "date": "2025-11-23-06:00",
+    "home": "OitaTrinita",
+    "away": "Chiba"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-06:05",
+    "home": "V-VarenNagasaki",
+    "away": "Mito"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Asan",
+    "away": "Jeonnam"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Blaublitz",
+    "away": "VegaltaSendai"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "BucheonFC1995",
+    "away": "Hwaseong"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "FujiedaMYFC",
+    "away": "SaganTosu"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Gyeongnam",
+    "away": "CheonanCity"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Imabari",
+    "away": "HokkaidoConsadoleSapporo"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Incheon",
+    "away": "Cheongju"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Iwaki",
+    "away": "RenofaYamaguchi"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Iwata",
+    "away": "MontedioYamagata"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Kofu",
+    "away": "Toyama"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "OmiyaArdija",
+    "away": "Tokushima"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "Seongnam",
+    "away": "Busan"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "SeoulE-Land",
+    "away": "AnsanGreeners"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-07:00",
+    "home": "SuwonBluewings",
+    "away": "GimpoFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-23-09:00",
+    "home": "Ehime",
+    "away": "Kumamoto"
+  },
+  {
+    "round": "0",
     "date": "2025-11-23-12:30",
     "home": "IgdirFK",
     "away": "Erzurumspor"
@@ -29494,6 +30424,66 @@
     "date": "2025-11-28-22:15",
     "home": "VitoriaGuimaraes",
     "away": "AFS"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "Chiba",
+    "away": "Imabari"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "HokkaidoConsadoleSapporo",
+    "away": "Ehime"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "Kumamoto",
+    "away": "Kofu"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "Mito",
+    "away": "OitaTrinita"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "MontedioYamagata",
+    "away": "FujiedaMYFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "RenofaYamaguchi",
+    "away": "OmiyaArdija"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "SaganTosu",
+    "away": "Iwata"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "Tokushima",
+    "away": "V-VarenNagasaki"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "Toyama",
+    "away": "Blaublitz"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-29-07:00",
+    "home": "VegaltaSendai",
+    "away": "Iwaki"
   },
   {
     "round": "0",
@@ -30205,6 +31195,66 @@
   },
   {
     "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "AlbirexNiigata",
+    "away": "KashiwaReysol"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "AvispaFukuoka",
+    "away": "GambaOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "KawasakiFrontale",
+    "away": "SanfrecceHiroshima"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "Machida",
+    "away": "NagoyaGrampus"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "Okayama",
+    "away": "UrawaReds"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "ShonanBellmare",
+    "away": "ShimizuS-Pulse"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "Verdy",
+    "away": "KashimaAntlers"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "VisselKobe",
+    "away": "FCTokyo"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "YokohamaF.Marinos",
+    "away": "CerezoOsaka"
+  },
+  {
+    "round": "0",
+    "date": "2025-11-30-07:00",
+    "home": "YokohamaFC",
+    "away": "Kyoto"
+  },
+  {
+    "round": "0",
     "date": "2025-11-30-13:15",
     "home": "PSV",
     "away": "FCVolendam"
@@ -30826,6 +31876,66 @@
     "date": "2025-12-05-22:15",
     "home": "Benfica",
     "away": "SportingCP"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "CerezoOsaka",
+    "away": "YokohamaFC"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "FCTokyo",
+    "away": "AlbirexNiigata"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "GambaOsaka",
+    "away": "Verdy"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "KashimaAntlers",
+    "away": "YokohamaF.Marinos"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "KashiwaReysol",
+    "away": "Machida"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "Kyoto",
+    "away": "VisselKobe"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "NagoyaGrampus",
+    "away": "AvispaFukuoka"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "SanfrecceHiroshima",
+    "away": "ShonanBellmare"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "ShimizuS-Pulse",
+    "away": "Okayama"
+  },
+  {
+    "round": "0",
+    "date": "2025-12-06-07:00",
+    "home": "UrawaReds",
+    "away": "KawasakiFrontale"
   },
   {
     "round": "0",
