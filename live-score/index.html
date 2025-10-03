@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Football Scores</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-futbol"></i> Live Football Scores</h1>
+            <div class="last-update">
+                Last updated: <span id="lastUpdate">Loading...</span>
+                <button id="refreshBtn"><i class="fas fa-sync-alt"></i> Refresh</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search teams...">
+            <select id="statusFilter">
+                <option value="all">All Matches</option>
+                <option value="live">Live</option>
+                <option value="finished">Finished</option>
+                <option value="scheduled">Upcoming</option>
+            </select>
+        </div>
+
+        <div class="matches-container" id="matchesContainer">
+            <!-- Matches will be loaded here -->
+        </div>
+
+        <div class="loading" id="loading">
+            <i class="fas fa-spinner fa-spin"></i> Loading scores...
+        </div>
+
+        <footer>
+            <p>Auto-updates every 45 minutes</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

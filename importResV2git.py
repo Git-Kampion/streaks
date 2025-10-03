@@ -21,7 +21,7 @@ LEAGUES = ROOT / "leagues26Res.txt"
 
 # --- Firefox headless ---
 options = Options()
-options.headless = True
+options.headless = False
 browser = webdriver.Firefox(options=options)
 
 def dataLookUp(ScotlandA24, matchUpsCount):
