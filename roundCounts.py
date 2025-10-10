@@ -19,7 +19,11 @@ SELECT * FROM portLeag25
 UNION 
 SELECT * FROM Turk225
 UNION 
-SELECT * FROM Turk25
+SELECT * FROM belgiumJpl25
+UNION 
+SELECT * FROM Austria225
+UNION 
+SELECT * FROM BelgiumChall25
 ORDER BY Tframe ASC
 """
 df = pd.read_sql(query, conn)

@@ -35,7 +35,7 @@ def dataLookUp(ScotlandA24,matchUpsCount):
 
   return dataNum
 # Load web page
-file = open("leagues26.txt", "r")
+file = open("leagues26Res.txt", "r")
 content = file.read().split("\n")
 #conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb')
 cookiRan = False
