@@ -65,6 +65,10 @@ HomefullSecHalfFixtureOVZ = ([],[],[],[],[])
 HomefullSecHalfFixtureOV1 = ([],[],[],[],[])
 HomefullSecHalfFixtureOV2 = ([],[],[],[],[])
 
+HomeFirstHalfBTS = ([],[],[],[],[])
+HomeSecHalfBTS = ([],[],[],[],[])
+HomeFullBTS = ([],[],[],[],[])
+
 
 
 teams = []
@@ -139,6 +143,9 @@ def homeFilter(data):
      streaksOver35 = BtOr.StreaksFixHomeFirstHalfOvZ(t,rfdA,"T",6,0)
      streaksOver36 = BtOr.StreaksFixHomeFirstHalfOvZ(t,rfdA,"T",6,1)
      streaksOver37 = BtOr.StreaksFixHomeFirstHalfOvZ(t,rfdA,"T",6,2)
+     streaksOver38 = BtOr.StreaksFixHomeFirstHalfBTS(t,rfdA,"T",6,0)
+     streaksOver39 = BtOr.StreaksFixHomeSecHalfBTS(t,rfdA,"T",6,0)
+     streaksOver40 = BtOr.StreaksFixHomeFullBTS(t,rfdA,"T",6,0)
      
     
      
@@ -446,6 +453,30 @@ def homeFilter(data):
      HomefullFirstHalfFixtureOV2[2].append(t)
      HomefullFirstHalfFixtureOV2[3].append("AwayFixtureFirstHalfOver2")
      HomefullFirstHalfFixtureOV2[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away Fixture First Half BTS
+            
+     HomeFirstHalfBTS[0].append(str(streaksOver38[0])+ "/" +str(streaksOver38[1]))
+     HomeFirstHalfBTS[1].append(len(rfdA))
+     HomeFirstHalfBTS[2].append(t)
+     HomeFirstHalfBTS[3].append("AwayFixtureFirstHalvBTS")
+     HomeFirstHalfBTS[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away Fixture Second Half BTS
+            
+     HomeSecHalfBTS[0].append(str(streaksOver39[0])+ "/" +str(streaksOver39[1]))
+     HomeSecHalfBTS[1].append(len(rfdA))
+     HomeSecHalfBTS[2].append(t)
+     HomeSecHalfBTS[3].append("AwayFixtureSecHalvBTS")
+     HomeSecHalfBTS[4].append("AwayGamesPlayed")
+#=====================================================================================================#
+#Away Fixture FullTime BTS
+            
+     HomeFullBTS[0].append(str(streaksOver40[0])+ "/" +str(streaksOver40[1]))
+     HomeFullBTS[1].append(len(rfdA))
+     HomeFullBTS[2].append(t)
+     HomeFullBTS[3].append("AwayFixtureFullBTS")
+     HomeFullBTS[4].append("AwayGamesPlayed")
 homeFilter(sql_data)
-Info=(HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullConceed1,HomefullConceed2,HomefullConceed3,HomefullConceed4,HomefullFixOver0,HomefullFixOver1,HomefullFixOver2,HomefullFixOver3,HomefullFixOver4,HomefullFixWin,HomefullFixWinD,HomefullFixLoseD,HomefullHalfWin,HomefullHalfWinD,HomefullSecHalfWinD,HomefullSecHalfWin,HomefullFirstHalfOverZ,HomefullFirstHalfOver1,HomefullFirstHalfOver2,HomefullSecHalfOverZ,HomefullSecHalfOver1,HomefullSecHalfOver2,HomefullFirstHalfConceedOVZ,HomefullFirstHalfConceedOV1,HomefullFirstHalfConceedOV2,HomefullSecHalfConceedOV2,HomefullSecHalfConceedOV1,HomefullSecHalfConceedOVZ,HomefullSecHalfFixtureOVZ,HomefullSecHalfFixtureOV1,HomefullSecHalfFixtureOV2,HomefullFirstHalfFixtureOVZ,HomefullFirstHalfFixtureOV1,HomefullFirstHalfFixtureOV2)
+Info=(HomefullOver1,HomefullOver2,HomefullOver3,HomefullOver4,HomefullConceed1,HomefullConceed2,HomefullConceed3,HomefullConceed4,HomefullFixOver0,HomefullFixOver1,HomefullFixOver2,HomefullFixOver3,HomefullFixOver4,HomefullFixWin,HomefullFixWinD,HomefullFixLoseD,HomefullHalfWin,HomefullHalfWinD,HomefullSecHalfWinD,HomefullSecHalfWin,HomefullFirstHalfOverZ,HomefullFirstHalfOver1,HomefullFirstHalfOver2,HomefullSecHalfOverZ,HomefullSecHalfOver1,HomefullSecHalfOver2,HomefullFirstHalfConceedOVZ,HomefullFirstHalfConceedOV1,HomefullFirstHalfConceedOV2,HomefullSecHalfConceedOV2,HomefullSecHalfConceedOV1,HomefullSecHalfConceedOVZ,HomefullSecHalfFixtureOVZ,HomefullSecHalfFixtureOV1,HomefullSecHalfFixtureOV2,HomefullFirstHalfFixtureOVZ,HomefullFirstHalfFixtureOV1,HomefullFirstHalfFixtureOV2,HomeFirstHalfBTS,HomeSecHalfBTS,HomeFullBTS)
 createReport(Info,pd)

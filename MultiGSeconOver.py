@@ -19,7 +19,8 @@ conn = pyodbc.connect(conn_str)
 # 2️⃣ Load Table and Prepare Columns
 # -----------------------------------
 query = """
-SELECT * FROM portLeag25
+SELECT * FROM epl25
+
 ORDER BY Tframe ASC
 """
 df = pd.read_sql(query, conn)
@@ -42,13 +43,31 @@ df["SumLastTwo"] = df["HOZ"] + df["AOZ"]
 # Round column (2nd column in dataset)
 round_col = df.columns[1]
 
-# ---------------------------------
-# 3️⃣ MGSec0Z Condition (Simplified)
-# ---------------------------------
-# Condition: Sum of last two columns between 1–3 inclusive
-df['MGSec0Z'] = (
-    (df['SumLastTwo'] > 0) &
-    (df['SumLastTwo'] <= 3)
+# -----------------------------------
+# 3️⃣ NEW: SecEx/Even Column (Updated Logic)
+# -----------------------------------
+# Get column indices for columns 5, 6, 7, 8 (0-based indexing: 4,5,6,7)
+col5 = df.columns[5]  # 5th column
+col6 = df.columns[6]  # 6th column  
+col7 = df.columns[7]  # 7th column
+col8 = df.columns[8]  # 8th column
+
+# Convert these columns to numeric
+for col in [col5, col6, col7, col8]:
+    df[col] = pd.to_numeric(df[col], errors="coerce")
+
+# Calculate sums
+df['Sum5_6'] = df[col5] + df[col6]
+df['Sum7_8'] = df[col7] + df[col8]
+
+# Calculate difference
+df['Diff56_78'] = df['Sum5_6'] - df['Sum7_8']
+
+# Apply condition:
+# (Sum5_6 - Sum7_8 >= 2) AND (Sum7_8 is even)
+df['SecEx/Even'] = (
+    (df['Diff56_78'] >= 2) &
+    (df['Sum7_8'] % 2 == 0)
 ).astype(int)
 
 # -----------------------------------
@@ -88,8 +107,8 @@ aoz_sum = df.groupby(round_col)["AOZ"].sum().reset_index(name="AOZ")
 # G0U3 counts
 g0u3_counts = df[df['G0U3'] == 1].groupby(round_col).size().reset_index(name='G0U3')
 
-# MGSec0Z counts (Simplified)
-mgsec0z_counts = df[df['MGSec0Z'] == 1].groupby(round_col).size().reset_index(name='MGSec0Z')
+# SecEx/Even counts
+secex_even_counts = df[df['SecEx/Even'] == 1].groupby(round_col).size().reset_index(name='SecEx/Even')
 
 # -----------------------------------
 # 5️⃣ Merge All Results into One Table
@@ -103,9 +122,9 @@ result = (
     .merge(draw_counts, on=round_col, how="outer")
     .merge(g0_counts, on=round_col, how="outer")
     .merge(g1_counts, on=round_col, how="outer")
+    .merge(g2_counts, on=round_col, how="outer")  # Keeping G2 as requested
     .merge(g0u3_counts, on=round_col, how="outer")
-    .merge(mgsec0z_counts, on=round_col, how="outer")  # ⬅️ MGSec0Z simplified here
-    .merge(g2_counts, on=round_col, how="outer")
+    .merge(secex_even_counts, on=round_col, how="outer")  # ⬅️ SecEx/Even
     .merge(hwin_counts, on=round_col, how="outer")
     .merge(awin_counts, on=round_col, how="outer")
     .merge(btts_counts, on=round_col, how="outer")
@@ -144,7 +163,7 @@ html_report = f"""
                 <h2>Round Statistics Report</h2>
             </div>
             <div class="card-body">
-                <h6><strong>HOZ</strong>: Total Home Goals | <strong>AOZ</strong>: Total Away Goals</h6>
+                <h6><strong>HOZ</strong>: Total Home Goals | <strong>AOZ</strong>: Total Away Goals | <strong>SecEx/Even</strong>: Sum(col5+col6)≥2 AND Sum(col7+col8)=Even</h6>
                 {result.to_html(classes="table table-bordered table-hover table-sm", index=False)}
             </div>
         </div>
@@ -162,23 +181,23 @@ print("✅ Report saved as Round_Report.html and Round_Count_Extended.xlsx")
 # 7️⃣ Summary + Visualization
 # -----------------------------------
 summary_data = {
-    'Metric': ['G0U3', 'Odd', 'Even', 'MGSec0Z'],
+    'Metric': ['G0U3', 'Odd', 'Even', 'SecEx/Even'],
     'Total': [
         result['G0U3'].sum(),
         result['Odd'].sum(),
         result['Even'].sum(),
-        result['MGSec0Z'].sum()
+        result['SecEx/Even'].sum()
     ]
 }
 summary_df = pd.DataFrame(summary_data)
 
 # Line Chart (Per Round)
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(12,6))
 sns.lineplot(data=result, x=round_col, y="G0U3", label="G0U3 (1-2 Goals)", marker="o", linewidth=2)
 sns.lineplot(data=result, x=round_col, y="Odd", label="Odd", marker="o", linestyle="--")
 sns.lineplot(data=result, x=round_col, y="Even", label="Even", marker="o", linestyle=":")
-sns.lineplot(data=result, x=round_col, y="MGSec0Z", label="MGSec0Z", marker="o", linestyle="-.")
-plt.title("Round Comparison: G0U3 vs Odd vs Even vs MGSec0Z")
+sns.lineplot(data=result, x=round_col, y="SecEx/Even", label="SecEx/Even", marker="s", linewidth=2.5)
+plt.title("Round Comparison: G0U3 vs Odd vs Even vs SecEx/Even")
 plt.xlabel("Round")
 plt.ylabel("Count per Round")
 plt.legend()
@@ -197,8 +216,9 @@ insight_text = f"""
 Across all rounds, the most frequent condition was:
 <b style='color:green;'>{dominant_metric}</b>.
 This indicates that the <b>{dominant_metric}</b> pattern 
-appears more consistently across matches compared to Odd, Even, and G0U3 outcomes.
+appears more consistently across matches compared to other outcomes.
 </p>
+<p><strong>SecEx/Even Definition:</strong> Sum of columns 5 & 6 ≥ 2 AND Sum of columns 7 & 8 is Even</p>
 """
 
 html_findings = f"""
@@ -220,7 +240,7 @@ html_findings = f"""
     <div class="container">
         <div class="card shadow">
             <div class="card-header text-center bg-success text-white">
-                <h2>Round Findings: G0U3 vs Odd vs Even vs MGSec0Z</h2>
+                <h2>Round Findings: G0U3 vs Odd vs Even vs SecEx/Even</h2>
             </div>
             <div class="card-body">
                 {insight_text}
@@ -240,3 +260,4 @@ with open("Round_Findings_Report.html", "w", encoding="utf-8") as f:
     f.write(html_findings)
 
 print("✅ Findings report saved as Round_Findings_Report.html")
+

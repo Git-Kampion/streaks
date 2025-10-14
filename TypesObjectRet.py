@@ -1668,6 +1668,170 @@ class BtOr:
        if underFirst == True:
         arr = ([undersBuild,oversBuild])
        return arr
+    
+    def StreaksFixHomeFirstHalfBTS(t, data, betype, ht, half):
+      homeoverZ = 0
+      homeoverZNot = 0
+      Bts = False
+      oversBuild = []
+      undersBuild = []
+      OverFirst = False
+      UnderFirst = False
+      for r in data:
+        if betype == "k":
+            Hcon = int(r[ht + 2])
+            Acon = int(r[ht + 3])
+        else:
+            Hcon = int(r[ht + 1])
+            Acon = int(r[ht + 2])
+
+        if Hcon > 0 and Acon > 0:
+            if not Bts and homeoverZNot > 0:
+                undersBuild.append("T" + str(homeoverZNot))
+                homeoverZNot = 0
+            Bts = True
+            homeoverZ += 1
+            if UnderFirst == False:
+             OverFirst = True
+        else:
+            if Bts:
+                oversBuild.append("R" + str(homeoverZ))
+                homeoverZ = 0
+            Bts = False
+            homeoverZNot += 1
+            if OverFirst  == False:
+             UnderFirst = True
+
+      if homeoverZNot > 0:
+            undersBuild.append("T" + str(homeoverZNot))
+      if homeoverZ > 0:
+            oversBuild.append("R" + str(homeoverZ))
+
+        # Assign defaults if empty
+      if not undersBuild:
+            undersBuild = ["T0"]
+      if not oversBuild:
+            oversBuild = ["R0"]
+
+        # ✅ Join without spaces
+      unders_str = "".join(undersBuild)
+      overs_str = "".join(oversBuild)
+      if OverFirst == True:
+       arr = ( overs_str , unders_str)
+      else:
+         arr = (unders_str, overs_str)
+        # ✅ Return tuple
+      return arr
+    
+    def StreaksFixHomeSecHalfBTS(t, data, betype, ht, half):
+      homeoverZ = 0
+      homeoverZNot = 0
+      Bts = False
+      oversBuild = []
+      undersBuild = []
+      OverFirst = False
+      UnderFirst = False
+      for r in data:
+        if betype == "k":
+            Hcon = int(r[ht]) -  int(r[ht + 2])
+            Acon = int(r[ht + 1])  - int(r[ht + 3])
+        else:
+            Hcon = int(r[ht - 1]) - int(r[ht + 1])
+            Acon = int(r[ht]) - int(r[ht + 2])
+
+        if Hcon > 0 and Acon > 0:
+            if not Bts and homeoverZNot > 0:
+                undersBuild.append("T" + str(homeoverZNot))
+                homeoverZNot = 0
+            Bts = True
+            homeoverZ += 1
+            if UnderFirst == False:
+             OverFirst = True
+        else:
+            if Bts:
+                oversBuild.append("R" + str(homeoverZ))
+                homeoverZ = 0
+            Bts = False
+            homeoverZNot += 1
+            if OverFirst  == False:
+             UnderFirst = True
+      if homeoverZNot > 0:
+            undersBuild.append("T" + str(homeoverZNot))
+      if homeoverZ > 0:
+            oversBuild.append("R" + str(homeoverZ))
+
+        # Assign defaults if empty
+      if not undersBuild:
+            undersBuild = ["T0"]
+      if not oversBuild:
+            oversBuild = ["R0"]
+
+        # ✅ Join without spaces
+      unders_str = "".join(undersBuild)
+      overs_str = "".join(oversBuild)
+      if OverFirst == True:
+       arr = ( overs_str , unders_str)
+      else:
+         arr = (unders_str, overs_str)
+        # ✅ Return tuple
+      return arr
+    
+    def StreaksFixHomeFullBTS(t, data, betype, ht, half):
+      homeoverZ = 0
+      homeoverZNot = 0
+      Bts = False
+      oversBuild = []
+      undersBuild = []
+      OverFirst = False
+      UnderFirst = False
+      for r in data:
+        if betype == "k":
+            Hcon = int(r[ht]) 
+            Acon = int(r[ht + 1]) 
+        else:
+            Hcon = int(r[ht - 1]) 
+            Acon = int(r[ht]) 
+
+        if Hcon > 0 and Acon > 0:
+            if not Bts and homeoverZNot > 0:
+                undersBuild.append("T" + str(homeoverZNot))
+                homeoverZNot = 0
+            Bts = True
+            homeoverZ += 1
+            if UnderFirst == False:
+             OverFirst = True
+        else:
+            if Bts:
+                oversBuild.append("R" + str(homeoverZ))
+                homeoverZ = 0
+            Bts = False
+            homeoverZNot += 1
+            if OverFirst  == False:
+             UnderFirst = True
+
+      if homeoverZNot > 0:
+            undersBuild.append("T" + str(homeoverZNot))
+      if homeoverZ > 0:
+            oversBuild.append("R" + str(homeoverZ))
+
+        # Assign defaults if empty
+      if not undersBuild:
+            undersBuild = ["T0"]
+      if not oversBuild:
+            oversBuild = ["R0"]
+
+        # ✅ Join without spaces
+      unders_str = "".join(undersBuild)
+      overs_str = "".join(oversBuild)
+
+      if OverFirst == True:
+       arr = ( overs_str , unders_str)
+      else:
+         arr = (unders_str, overs_str)
+        # ✅ Return tuple
+      return arr
+
+
     def StreaksFixHomeSecondHalfOvZ(t,data,betype,ht,half):
        homeoverZ = 0
        homeoverZNot = 0
