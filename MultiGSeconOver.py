@@ -1,263 +1,129 @@
 import pyodbc
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 
-# ------------------------------
-# 1️⃣ Connect to Access Database
-# ------------------------------
+# ======================================================
+# 🧩 1️⃣ CONNECT TO ACCESS DATABASE
+# ======================================================
 db_path = r"C:\Users\letenok.DWA\Documents\streaks\2022-23Base.accdb"
-
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
     f'DBQ={db_path};'
 )
-
 conn = pyodbc.connect(conn_str)
 
-# -----------------------------------
-# 2️⃣ Load Table and Prepare Columns
-# -----------------------------------
-query = """
-SELECT * FROM epl25
-
-ORDER BY Tframe ASC
-"""
+# ======================================================
+# 🧮 2️⃣ LOAD DATA AND SET COLUMN REFERENCES
+# ======================================================
+query = "SELECT * FROM epl25 Union SELECT * FROM Eredevisie25 ORDER BY Tframe ASC"
 df = pd.read_sql(query, conn)
 
-# Identify last two columns (scores)
-last_two_cols = df.columns[-2:]
-score1, score2 = last_two_cols  # Home score, Away score
+# Column index map:
+# ------------------------------------------------------
+# 0: Match ID
+# 1: Round
+# 2: Tframe (timeframe)
+# 3: Home Team
+# 4: Away Team
+# 5: Full_HomeGoals (FT)
+# 6: Full_AwayGoals (FT)
+# 7: FirstHalf_HomeGoals (1H)
+# 8: FirstHalf_AwayGoals (1H)
+# ------------------------------------------------------
 
-# Convert to numeric
-for col in last_two_cols:
-    df[col] = pd.to_numeric(df[col], errors="coerce")
-
-# Create HOZ and AOZ columns
-df["HOZ"] = df[score1]
-df["AOZ"] = df[score2]
-
-# Create sum column
-df["SumLastTwo"] = df["HOZ"] + df["AOZ"]
-
-# Round column (2nd column in dataset)
 round_col = df.columns[1]
+col5, col6, col7, col8 = df.columns[5], df.columns[6], df.columns[7], df.columns[8]
 
-# -----------------------------------
-# 3️⃣ NEW: SecEx/Even Column (Updated Logic)
-# -----------------------------------
-# Get column indices for columns 5, 6, 7, 8 (0-based indexing: 4,5,6,7)
-col5 = df.columns[5]  # 5th column
-col6 = df.columns[6]  # 6th column  
-col7 = df.columns[7]  # 7th column
-col8 = df.columns[8]  # 8th column
-
-# Convert these columns to numeric
+# Convert to numeric safely
 for col in [col5, col6, col7, col8]:
     df[col] = pd.to_numeric(df[col], errors="coerce")
 
-# Calculate sums
-df['Sum5_6'] = df[col5] + df[col6]
-df['Sum7_8'] = df[col7] + df[col8]
+# ======================================================
+# ⚽ 3️⃣ FULL-TIME ANALYSIS
+# ======================================================
+df["FullSum"] = df[col5] + df[col6]
+df["FullHWin"] = (df[col5] > df[col6]).astype(int)
+df["FullDC"] = (df[col5] != df[col6]).astype(int)
+df["FullBTS"] = ((df[col5] > 0) & (df[col6] > 0)).astype(int)
 
-# Calculate difference
-df['Diff56_78'] = df['Sum5_6'] - df['Sum7_8']
+for n in range(6):
+    df[f"FullExcGols{n}"] = (df["FullSum"] == n).astype(int)
 
-# Apply condition:
-# (Sum5_6 - Sum7_8 >= 2) AND (Sum7_8 is even)
-df['SecEx/Even'] = (
-    (df['Diff56_78'] >= 2) &
-    (df['Sum7_8'] % 2 == 0)
-).astype(int)
+df["FullOverZ"] = (df["FullSum"] > 0).astype(int)
+df["FullOver1"] = (df["FullSum"] > 1).astype(int)
+df["FullOver2"] = (df["FullSum"] > 2).astype(int)
+df["FullOver3"] = (df["FullSum"] > 3).astype(int)
+df["FullOver4"] = (df["FullSum"] > 4).astype(int)
+df["FullOver5"] = (df["FullSum"] > 5).astype(int)
+df["FullOdd"] = (df["FullSum"] % 2 != 0).astype(int)
+df["FullEven"] = (df["FullSum"] % 2 == 0).astype(int)
 
-# -----------------------------------
-# 4️⃣ Standard Stats Calculations
-# -----------------------------------
-# ODD/EVEN
-df_odd = df[df["SumLastTwo"] % 2 != 0]
-df_even = df[df["SumLastTwo"] % 2 == 0]
+df["FullGolRang0-1"] = (df["FullSum"] <= 1).astype(int)
+df["FullGolRang2-3"] = ((df["FullSum"] >= 2) & (df["FullSum"] <= 3)).astype(int)
+df["FullGolRang4-5"] = ((df["FullSum"] >= 4) & (df["FullSum"] <= 5)).astype(int)
 
-odd_counts = df_odd.groupby(round_col).size().reset_index(name="Odd")
-even_counts = df_even.groupby(round_col).size().reset_index(name="Even")
+df["FullMultiScor1,2,3:0"] = ((df[col5].between(1, 3)) & (df[col6] == 0)).astype(int)
+df["FullMultiScor0:1,2,3"] = ((df[col5] == 0) & (df[col6].between(1, 3))).astype(int)
+df["FullMultiScor4,5,6:0"] = ((df[col5].between(4, 6)) & (df[col6] == 0)).astype(int)
+df["FullMultiScor0:4,5,6"] = ((df[col5] == 0) & (df[col6].between(4, 6))).astype(int)
 
-# DRAW
-df_draw = df[df["HOZ"] == df["AOZ"]]
-draw_counts = df_draw.groupby(round_col).size().reset_index(name="Draw")
+# ======================================================
+# ⏱️ 4️⃣ FIRST HALF ANALYSIS
+# ======================================================
+df["FirstSum"] = df[col7] + df[col8]
+df["FirstHWin"] = (df[col7] > df[col8]).astype(int)
+df["FirstAWin"] = (df[col7] < df[col8]).astype(int)
+df["FirstDraw"] = (df[col7] == df[col8]).astype(int)
+df["FirstBTS"] = ((df[col7] > 0) & (df[col8] > 0)).astype(int)
 
-# G0, G1, G2
-g0_counts = df[df["SumLastTwo"] > 0].groupby(round_col).size().reset_index(name="G0")
-g1_counts = df[df["SumLastTwo"] > 1].groupby(round_col).size().reset_index(name="G1")
-g2_counts = df[df["SumLastTwo"] > 2].groupby(round_col).size().reset_index(name="G2")
+for n in range(3):
+    df[f"FirstExcGols{n}"] = (df["FirstSum"] == n).astype(int)
 
-# G0U3 = total goals between 1–2 inclusive
-df['G0U3'] = ((df['SumLastTwo'] > 0) & (df['SumLastTwo'] < 3)).astype(int)
+df["FirstOver0"] = (df["FirstSum"] > 0).astype(int)
+df["FirstOver1"] = (df["FirstSum"] > 1).astype(int)
+df["FirstOver2"] = (df["FirstSum"] > 2).astype(int)
+df["FirstOdd"] = (df["FirstSum"] % 2 != 0).astype(int)
+df["FirstEven"] = (df["FirstSum"] % 2 == 0).astype(int)
+df["FirstGolRang0-1"] = (df["FirstSum"] <= 1).astype(int)
+df["FirstGolRang2-3"] = ((df["FirstSum"] >= 2) & (df["FirstSum"] <= 3)).astype(int)
 
-# Home Wins, Away Wins, BTTS
-hwin_counts = df[df["HOZ"] > df["AOZ"]].groupby(round_col).size().reset_index(name="HWin")
-awin_counts = df[df["AOZ"] > df["HOZ"]].groupby(round_col).size().reset_index(name="AWin")
-btts_counts = df[(df["HOZ"] > 0) & (df["AOZ"] > 0)].groupby(round_col).size().reset_index(name="BTTS")
+# ======================================================
+# 🔁 5️⃣ SECOND HALF (DIFFERENCE) ANALYSIS
+# ======================================================
+df["Sum5_6"] = df[col5] + df[col6]
+df["Sum7_8"] = df[col7] + df[col8]
+df["Diff56_78"] = df["Sum5_6"] - df["Sum7_8"]
 
-# Total matches per round
-total_counts = df.groupby(round_col).size().reset_index(name="Total")
+df["SecHWin"] = ((df[col5] - df[col7]) > (df[col6] - df[col8])).astype(int)
+df["SecAWin"] = ((df[col5] - df[col7]) < (df[col6] - df[col8])).astype(int)
+df["SecDraw"] = ((df[col5] - df[col7]) == (df[col6] - df[col8])).astype(int)
+df["SecBTS"] = ((df[col5] - df[col7] > 0) & (df[col6] - df[col8] > 0)).astype(int)
 
-# Total goals per round
-hoz_sum = df.groupby(round_col)["HOZ"].sum().reset_index(name="HOZ")
-aoz_sum = df.groupby(round_col)["AOZ"].sum().reset_index(name="AOZ")
+df["SecOdd"] = (df["Diff56_78"] % 2 != 0).astype(int)
+df["SecEven"] = (df["Diff56_78"] % 2 == 0).astype(int)
+df["SecHandi2:0"] = ((df[col5] - df[col7] + 2) > (df[col6] - df[col8])).astype(int)
 
-# G0U3 counts
-g0u3_counts = df[df['G0U3'] == 1].groupby(round_col).size().reset_index(name='G0U3')
+# Correct Score Patterns
+patterns = [
+    ("1:0", 1, 0), ("2:0", 2, 0), ("2:1", 2, 1), ("0:0", 0, 0),
+    ("1:1", 1, 1), ("0:1", 0, 1), ("0:2", 0, 2), ("1:2", 1, 2)
+]
+for name, a, b in patterns:
+    df[f"SecCorrScor{name}"] = (((df[col5] - df[col7]) == a) & ((df[col6] - df[col8]) == b)).astype(int)
 
-# SecEx/Even counts
-secex_even_counts = df[df['SecEx/Even'] == 1].groupby(round_col).size().reset_index(name='SecEx/Even')
+# ======================================================
+# 📊 6️⃣ ROUND SUMMARY AGGREGATION
+# ======================================================
+# Group by round and sum all numeric columns (metrics)
+round_summary = df.groupby(round_col).sum(numeric_only=True).reset_index()
 
-# -----------------------------------
-# 5️⃣ Merge All Results into One Table
-# -----------------------------------
-result = (
-    total_counts
-    .merge(hoz_sum, on=round_col, how="outer")
-    .merge(aoz_sum, on=round_col, how="outer")
-    .merge(odd_counts, on=round_col, how="outer")
-    .merge(even_counts, on=round_col, how="outer")
-    .merge(draw_counts, on=round_col, how="outer")
-    .merge(g0_counts, on=round_col, how="outer")
-    .merge(g1_counts, on=round_col, how="outer")
-    .merge(g2_counts, on=round_col, how="outer")  # Keeping G2 as requested
-    .merge(g0u3_counts, on=round_col, how="outer")
-    .merge(secex_even_counts, on=round_col, how="outer")  # ⬅️ SecEx/Even
-    .merge(hwin_counts, on=round_col, how="outer")
-    .merge(awin_counts, on=round_col, how="outer")
-    .merge(btts_counts, on=round_col, how="outer")
-    .fillna(0)
-    .astype(int)
-    .sort_values(by=round_col)
-)
+# ======================================================
+# 💾 7️⃣ EXPORT RESULTS TO EXCEL
+# ======================================================
+with pd.ExcelWriter("Full_First_Sec_Analysis_Extended20.xlsx") as writer:
+    df.to_excel(writer, sheet_name="Match_Analysis", index=False)
+    round_summary.to_excel(writer, sheet_name="Round_Summary", index=False)
 
-print(result)
-
-# Export to Excel
-result.to_excel("Round_Count_Extended.xlsx", index=False)
 conn.close()
 
-# -----------------------------------
-# 6️⃣ Create HTML Report (Table View)
-# -----------------------------------
-html_report = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Round Stats Report</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {{ background-color: #f8f9fa; }}
-        .card {{ margin: 20px auto; max-width: 95%; }}
-        table {{ text-align: center; }}
-        th {{ background-color: #007bff; color: white; }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="card shadow">
-            <div class="card-header text-center bg-primary text-white">
-                <h2>Round Statistics Report</h2>
-            </div>
-            <div class="card-body">
-                <h6><strong>HOZ</strong>: Total Home Goals | <strong>AOZ</strong>: Total Away Goals | <strong>SecEx/Even</strong>: Sum(col5+col6)≥2 AND Sum(col7+col8)=Even</h6>
-                {result.to_html(classes="table table-bordered table-hover table-sm", index=False)}
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-"""
-
-with open("Round_Report.html", "w", encoding="utf-8") as f:
-    f.write(html_report)
-
-print("✅ Report saved as Round_Report.html and Round_Count_Extended.xlsx")
-
-# -----------------------------------
-# 7️⃣ Summary + Visualization
-# -----------------------------------
-summary_data = {
-    'Metric': ['G0U3', 'Odd', 'Even', 'SecEx/Even'],
-    'Total': [
-        result['G0U3'].sum(),
-        result['Odd'].sum(),
-        result['Even'].sum(),
-        result['SecEx/Even'].sum()
-    ]
-}
-summary_df = pd.DataFrame(summary_data)
-
-# Line Chart (Per Round)
-plt.figure(figsize=(12,6))
-sns.lineplot(data=result, x=round_col, y="G0U3", label="G0U3 (1-2 Goals)", marker="o", linewidth=2)
-sns.lineplot(data=result, x=round_col, y="Odd", label="Odd", marker="o", linestyle="--")
-sns.lineplot(data=result, x=round_col, y="Even", label="Even", marker="o", linestyle=":")
-sns.lineplot(data=result, x=round_col, y="SecEx/Even", label="SecEx/Even", marker="s", linewidth=2.5)
-plt.title("Round Comparison: G0U3 vs Odd vs Even vs SecEx/Even")
-plt.xlabel("Round")
-plt.ylabel("Count per Round")
-plt.legend()
-plt.grid(True, linestyle="--", alpha=0.6)
-plt.tight_layout()
-plt.savefig("Round_Findings_Chart.png")
-plt.close()
-
-# -----------------------------------
-# 8️⃣ Findings Report
-# -----------------------------------
-dominant_metric = summary_df.loc[summary_df['Total'].idxmax(), 'Metric']
-insight_text = f"""
-<h4>🔍 Findings Summary</h4>
-<p>
-Across all rounds, the most frequent condition was:
-<b style='color:green;'>{dominant_metric}</b>.
-This indicates that the <b>{dominant_metric}</b> pattern 
-appears more consistently across matches compared to other outcomes.
-</p>
-<p><strong>SecEx/Even Definition:</strong> Sum of columns 5 & 6 ≥ 2 AND Sum of columns 7 & 8 is Even</p>
-"""
-
-html_findings = f"""
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Round Findings Report</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {{ background-color: #f8f9fa; }}
-        .card {{ margin: 20px auto; max-width: 95%; }}
-        img {{ display: block; margin: 0 auto; max-width: 90%; }}
-        table {{ text-align: center; }}
-        th {{ background-color: #007bff; color: white; }}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="card shadow">
-            <div class="card-header text-center bg-success text-white">
-                <h2>Round Findings: G0U3 vs Odd vs Even vs SecEx/Even</h2>
-            </div>
-            <div class="card-body">
-                {insight_text}
-                <h5>📊 Metric Totals</h5>
-                {summary_df.to_html(classes="table table-bordered table-hover table-sm", index=False)}
-                <br>
-                <h5>📉 Trend Chart</h5>
-                <img src="Round_Findings_Chart.png" alt="Round Comparison Chart">
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-"""
-
-with open("Round_Findings_Report.html", "w", encoding="utf-8") as f:
-    f.write(html_findings)
-
-print("✅ Findings report saved as Round_Findings_Report.html")
-
+print("✅ Full-Time, First-Half, and Second-Half analyses saved to Full_First_Sec_Analysis_Extended20.xlsx")
+print("✅ Includes both match-level and round-level summaries")
