@@ -68,13 +68,6 @@ df["FullMultiScor4,5,6:0"] = ((df[col5].between(4, 6)) & (df[col6] == 0)).astype
 df["FullMultiScor0:4,5,6"] = ((df[col5] == 0) & (df[col6].between(4, 6))).astype(int)
 
 # ======================================================
-# 🎯 FULL-TIME CORRECT SCORES (ALL 0–4)
-# ======================================================
-for h in range(5):
-    for a in range(5):
-        df[f"FulltimeCorrectScore{h}-{a}"] = ((df[col5] == h) & (df[col6] == a)).astype(int)
-
-# ======================================================
 # ⏱️ 4️⃣ FIRST HALF ANALYSIS
 # ======================================================
 df["FirstSum"] = df[col7] + df[col8]
@@ -95,16 +88,6 @@ df["FirstGolRang0-1"] = (df["FirstSum"] <= 1).astype(int)
 df["FirstGolRang2-3"] = ((df["FirstSum"] >= 2) & (df["FirstSum"] <= 3)).astype(int)
 
 # ======================================================
-# 🎯 FIRST HALF CORRECT SCORES (9 CORE)
-# ======================================================
-correct_scores_half = [
-    (1, 0), (2, 0), (0, 0), (0, 1), (1, 1),
-    (0, 2), (2, 1), (2, 2), (1, 2)
-]
-for h, a in correct_scores_half:
-    df[f"FirstHalfCorrectScore{h}-{a}"] = ((df[col7] == h) & (df[col8] == a)).astype(int)
-
-# ======================================================
 # 🔁 5️⃣ SECOND HALF ANALYSIS (DIFFERENCE)
 # ======================================================
 df["SecHome"] = df[col5] - df[col7]
@@ -119,14 +102,9 @@ df["SecOdd"] = (df["Diff56_78"] % 2 != 0).astype(int)
 df["SecEven"] = (df["Diff56_78"] % 2 == 0).astype(int)
 
 # ======================================================
-# 🎯 SECOND HALF CORRECT SCORES (9 CORE)
-# ======================================================
-for h, a in correct_scores_half:
-    df[f"SecondHalfCorrectScore{h}-{a}"] = ((df["SecHome"] == h) & (df["SecAway"] == a)).astype(int)
-
-# ======================================================
 # 🏁 FULL-TIME HANDICAPS
 # ======================================================
+# 0:1 and 0:2 handicaps
 df["FulltimeHandiHome0:1"] = (df[col6] + 1 < df[col5]).astype(int)
 df["FulltimeHandiAway0:1"] = (df[col5] < df[col6] + 1).astype(int)
 df["FulltimeHandiDraw0:1"] = (df[col5] == df[col6] + 1).astype(int)
@@ -147,7 +125,7 @@ df["FulltimeHandiHome0:5"] = (df[col6] + 5 < df[col5]).astype(int)
 df["FulltimeHandiAway0:5"] = (df[col5]  < df[col6] + 5).astype(int)
 df["FulltimeHandiDraw0:5"] = (df[col5]  == df[col6] + 5).astype(int)
 
-for h in [1, 2, 3, 4, 5]:
+for h in [1, 2, 3,4,5]:
     df[f"FulltimeHandiHome{h}:0"] = ((df[col5] + h) > df[col6]).astype(int)
     df[f"FulltimeHandiAway{h}:0"] = ((df[col6] + h) > df[col5]).astype(int)
     df[f"FulltimeHandiDraw{h}:0"] = ((df[col5] + h) == df[col6]).astype(int)
@@ -162,10 +140,6 @@ df["FirstHalfHandiDraw0:1"] = (df[col7]  == df[col8] + 1).astype(int)
 df["FirstHalfHandiHome0:2"] = (df[col8] + 2 < df[col7]).astype(int)
 df["FirstHalfHandiAway0:2"] = (df[col7]  < df[col8] + 2).astype(int)
 df["FirstHalfHandiDraw0:2"] = (df[col7]  == df[col8] + 2).astype(int)
-
-df["FirstHalfHandiHome0:3"] = (df[col8] + 3 < df[col7]).astype(int)
-df["FirstHalfHandiAway0:3"] = (df[col7]  < df[col8] + 3).astype(int)
-df["FirstHalfHandiDraw0:3"] = (df[col7]  == df[col8] + 3).astype(int)
 
 for h in [1, 2, 3]:
     df[f"FirstHalfHandiHome{h}:0"] = ((df[col7] + h) > df[col8]).astype(int)
@@ -196,9 +170,9 @@ round_summary = df.groupby(round_col).sum(numeric_only=True).reset_index()
 # ======================================================
 # 💾 7️⃣ EXPORT RESULTS TO EXCEL
 # ======================================================
-with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps_CorrectScores.xlsx") as writer:
+with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps.xlsx") as writer:
     df.to_excel(writer, sheet_name="Match_Analysis", index=False)
     round_summary.to_excel(writer, sheet_name="Round_Summary", index=False)
 
 conn.close()
-print("✅ Analysis with Full-Time (0–4 Correct Scores), 1H, 2H, and Handicaps saved to Full_First_Sec_Analysis_Handicaps_CorrectScores.xlsx")
+print("✅ Analysis with Full-Time, 1H, 2H, and Handicap metrics saved to Full_First_Sec_Analysis_Handicaps.xlsx")
