@@ -45,15 +45,15 @@ https://www.flashscore.com/football/iceland/division-1/results/ ICELAND icelandD
 https://www.flashscore.com/football/iceland/besta-deild-karla/results/ ICELAND icelandBesta25
 https://www.flashscore.com/football/estonia/meistriliiga/results/ ESTONIA EstoniaPrem25
 https://www.flashscore.com/football/estonia/esiliiga/results/ ESTONIA EstoniaPremB25
-# https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
+https://www.flashscore.com/football/brazil/serie-a/results/ BRAZIL BrazilA25
 # https://www.flashscore.com/football/argentina/torneo-betano/results/ ARGENTINA ArgentitTorneo25
-# https://www.flashscore.com/football/italy/serie-a/results/ ITALY SerieA25
+https://www.flashscore.com/football/italy/serie-a/results/ ITALY SerieA25
 # https://www.flashscore.com/football/argentina/primera-nacional/results/ ARGENTINA ArgentiNacional25
-# https://www.flashscore.com/football/azerbaijan/premier-league/results/ AZERBAIJAN AzerBaijan2025
-# https://www.flashscore.com/football/bolivia/division-profesional/results/ BOLIVIA BoliviaPrem25 
-# https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem25
-# https://www.flashscore.com/football/cyprus/cyprus-league/results/ CYPRUS CyprusA25
-# https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
+https://www.flashscore.com/football/azerbaijan/premier-league/results/ AZERBAIJAN AzerBaijan2025
+https://www.flashscore.com/football/bolivia/division-profesional/results/ BOLIVIA BoliviaPrem25 
+https://www.flashscore.com/football/colombia/primera-a/results/ COLOMBIA ColombiaPrem25
+https://www.flashscore.com/football/cyprus/cyprus-league/results/ CYPRUS CyprusA25
+https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
 # https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip25 
 # https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua125 
 # https://www.flashscore.com/football/england/league-two/results/ ENGLAND EngLeagua225
