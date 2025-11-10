@@ -6,7 +6,7 @@ cursor = conn.cursor()
 
 # List of table names
 tables = [
-    "SerieBB25"
+    "VLeague1","Singapore2","Greece2","Macedonia1","Kenya1","Tunisia2","Tunisia1"
 ]
 # Loop to create each table
 for name in tables:
