@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scoreline Viewer</title>
+<style>
+body {{ font-family: Arial; padding: 25px; background: #f2f2f2; }}
+input {{ padding: 10px; width: 250px; margin-bottom: 10px; font-size: 16px; }}
+table {{ width:100%; border-collapse: collapse; background:white; }}
+th, td {{ border:1px solid #ccc; padding:6px; text-align:center; }}
+th {{ background:#333; color:white; }}
+tr:nth-child(even) {{ background:#eee; }}
+</style>
+</head>
+<body>
+
+<h2>Search Scoreline or Team</h2>
+<input id="search" placeholder="Example: 2-1, 0-0, Arsenal, PSV..." oninput="filterTable()">
+
+<table id="table"></table>
+
+<script>
+async function load(){
+    const response = await fetch("all_fixtures_scoreview.csv");
+    const text = await response.text();
+
+    // Split rows & detect delimiter
+    let rows = text.trim().split(/?
+/);
+    const delimiter = rows[0].includes(";") ? ";" : ",";
+
+    rows = rows.map(r => r.split(delimiter).map(c => c.trim()));
+
+    window.header = rows.shift();
+    window.data = rows;
+
+    render(window.data);
+}
+
+function render(data){
+    const table = document.getElementById("table");
+    table.innerHTML = "";
+    table.innerHTML += "<tr>" + window.header.map(h=>`<th>${h}</th>`).join("") + "</tr>";
+    data.forEach(r=>{
+        table.innerHTML += "<tr>" + r.map(c=>`<td>${c}</td>`).join("") + "</tr>";
+    });
+}
+
+function filterTable(){
+    let q = document.getElementById("search").value.toLowerCase();
+    if(!q){
+        render(window.data);
+        return;
+    }
+    let filtered = window.data.filter(r => r.join(" ").toLowerCase().includes(q));
+    render(filtered);
+}
+
+load();
+</script>
+
+
+
+</body>
+</html>

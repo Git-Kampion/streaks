@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Team Stats View</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background: #f7f7f7;
+    }
+    h2 {
+        margin-top: 40px;
+        color: #333;
+        border-bottom: 2px solid #444;
+        display: inline-block;
+        padding-bottom: 4px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background: white;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px 10px;
+        text-align: center;
+    }
+    th {
+        background: #333;
+        color: white;
+        cursor: pointer;
+    }
+    tr:nth-child(even) { background: #f2f2f2; }
+    .error { color: red; font-weight: bold; }
+</style>
+</head>
+
+<body>
+
+<h2>Home Summary</h2>
+<table id="homeTable"></table>
+
+<h2>Away Summary</h2>
+<table id="awayTable"></table>
+
+<script>
+async function loadAndRender(csvFile, tableId) {
+    const table = document.getElementById(tableId);
+
+    try {
+        const response = await fetch(csvFile);
+        if (!response.ok) throw new Error(`HTTP ${response.status} - ${response.statusText}`);
+        let text = await response.text();
+
+        // Fix BOM + inconsistent line endings
+        text = text.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
+        const delimiter = text.includes(";") ? ";" : ",";
+        const rows = text.trim().split("\n").map(row => row.split(delimiter).map(c => c.trim()));
+
+        if (rows.length < 2) throw new Error("CSV has no data rows.");
+
+        const header = rows[0];
+        const dataRows = rows.slice(1);
+
+        // Determine first numeric column for sorting (skip Team column)
+        let numericCol = 1;
+        for (let i = 1; i < header.length; i++) {
+            if (!isNaN(Number(dataRows[0][i]))) { numericCol = i; break; }
+        }
+
+        dataRows.sort((a, b) => Number(b[numericCol]) - Number(a[numericCol]));
+
+        buildTable(table, [header, ...dataRows]);
+    } catch (err) {
+        table.innerHTML = `<tr><td class="error" colspan="10">Error loading "${csvFile}": ${err.message}</td></tr>`;
