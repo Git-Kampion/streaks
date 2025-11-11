@@ -375,6 +375,22 @@ df["2H_HomeOrDraw"] = ((df["SecHWin"] == 1) | (df["SecDraw"] == 1)).astype(int)
 df["2H_AwayOrDraw"] = ((df["SecAWin"] == 1) | (df["SecDraw"] == 1)).astype(int)
 df["2H_HomeOrAway"] = ((df["SecHWin"] == 1) | (df["SecAWin"] == 1)).astype(int)
 
+# ======================================================
+# 🎯 Multigoal Combination Metric (Full + 1H + 2H + DC)
+# ======================================================
+
+df["Multigoal1st2ndfullDC"] = (
+    (df["FulltimeMultiGoals3-6"] == 1) &
+    (df["1stHalfMultigoals1-3"] == 1) &
+    (df["2ndHalfMultigoals1-3"] == 1) &
+    (
+        (df["Full_HomeOrDraw"] == 1) |
+        (df["Full_AwayOrDraw"] == 1) |
+        (df["Full_HomeOrAway"] == 1)
+    )
+).astype(int)
+
+
 
 # ======================================================
 # 📊 6️⃣ ROUND SUMMARY AGGREGATION
@@ -395,7 +411,17 @@ Home_Team_Summary.to_csv("Home_Team_Summary.csv", index=False)
 Away_Team_Summary.to_csv("Away_Team_Summary.csv", index=False)
 
 # ======================================================
-# 💾 7️⃣ EXPORT RESULTS TO EXCEL
+# 🏟️ REFRESH TEAM SUMMARIES INCLUDING NEW METRIC
+# ======================================================
+Home_Team_Summary = df.groupby(home_team_col).sum(numeric_only=True).reset_index()
+Away_Team_Summary = df.groupby(away_team_col).sum(numeric_only=True).reset_index()
+
+Home_Team_Summary.to_csv("Home_Team_Summary.csv", index=False)
+Away_Team_Summary.to_csv("Away_Team_Summary.csv", index=False)
+
+
+# ======================================================
+# 💾 EXPORT TO EXCEL
 # ======================================================
 with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps_CorrectScores.xlsx") as writer:
     df.to_excel(writer, sheet_name="Match_Analysis", index=False)
@@ -403,5 +429,4 @@ with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps_CorrectScores.xlsx") as w
     Home_Team_Summary.to_excel(writer, sheet_name="Home_Team_Summary", index=False)
     Away_Team_Summary.to_excel(writer, sheet_name="Away_Team_Summary", index=False)
 
-conn.close()
-print("✅ Analysis complete: Full/Half/2nd Half + Handicaps + Correct Scores + Team Summaries exported.")
+print("✅ Done — Metric added to match data, team summaries, and round summary!")
