@@ -66,33 +66,33 @@
 # https://www.flashscore.com/football/portugal/liga-portugal-2/results/ PORTUGAL portLeag225 
 # https://www.flashscore.com/football/turkey/super-lig/results/ TURKEY Turk25 
 # https://www.flashscore.com/football/turkey/1-lig/results/ TURKEY Turk225  
-https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria125 
-https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria225 
-https://www.flashscore.com/football/israel/leumit-league/results/ ISRAEL IsraelB25 
-https://www.flashscore.com/football/israel/ligat-ha-al/results/ ISRAEL IsraelA25 
-https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA25
-https://www.flashscore.com/football/scotland/championship/results/ SCOTLAND ScotlandB25 
-https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
-https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
-https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
-https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25
-https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25
-# https://www.flashscore.com/football/south-korea/k-league-1/results/ SOUTH skleague125
-# https://www.flashscore.com/football/south-korea/k-league-2/results/ SOUTH skleague225
-# https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem25
-# https://www.flashscore.com/football/latvia/virsliga/results/ LATVIA LatviaPrem25
-# https://www.flashscore.com/football/romania/liga-2/results/ ROMANIA RomaniB25
-# https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
-# https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
-# https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
-# https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
-# https://www.flashscore.com/football/slovenia/2-snl/results/ SLOVENIA SloveniaB25
-# https://www.flashscore.com/football/vietnam/v-league-1/results/ VIETNAM Singapore2
-# https://www.flashscore.com/football/greece/super-league-2/results/ GREECE Greece2
-# https://www.flashscore.com/football/kenya/premier-league/results/ KENYA Kenya1
-# https://www.flashscore.com/football/tunisia/ligue-professionnelle-1/results/ TUNISIA Tunisia1
-# https://www.flashscore.com/football/tunisia/ligue-2/results/ TUNISIA Tunisia2
-# https://www.flashscore.com/football/indonesia/championship/results/ INDONESIA Indonesia2
+# https://www.flashscore.com/football/austria/bundesliga/results/ AUSTRIA Austria125 
+# https://www.flashscore.com/football/austria/2-liga/results/ AUSTRIA Austria225 
+# https://www.flashscore.com/football/israel/leumit-league/results/ ISRAEL IsraelB25 
+# https://www.flashscore.com/football/israel/ligat-ha-al/results/ ISRAEL IsraelA25 
+# https://www.flashscore.com/football/scotland/premiership/results/ SCOTLAND ScotlandA25
+# https://www.flashscore.com/football/scotland/championship/results/ SCOTLAND ScotlandB25 
+# https://www.flashscore.com/football/greece/super-league/results/ GREECE GreeceA25   
+# https://www.flashscore.com/football/croatia/hnl/results/ CROATIA CroatiaA25
+# https://www.flashscore.com/football/croatia/prva-nl/results/ CROATIA CroatiaB25
+# https://www.flashscore.com/football/japan/j1-league/results/ JAPAN JapanA25
+# https://www.flashscore.com/football/japan/j2-league/results/ JAPAN JapanB25
+https://www.flashscore.com/football/south-korea/k-league-1/results/ SOUTH skleague125
+https://www.flashscore.com/football/south-korea/k-league-2/results/ SOUTH skleague225
+https://www.flashscore.com/football/singapore/premier-league/results/ SINGAPORE SingPorePrem25
+https://www.flashscore.com/football/latvia/virsliga/results/ LATVIA LatviaPrem25
+https://www.flashscore.com/football/romania/liga-2/results/ ROMANIA RomaniB25
+https://www.flashscore.com/football/sweden/superettan/results/ SWEDEN SwedenB25
+https://www.flashscore.com/football/sweden/allsvenskan/results/ SWEDEN SwedenA25
+https://www.flashscore.com/football/algeria/ligue-1/results/ ALGERIA AlgeriaA25
+https://www.flashscore.com/football/slovenia/prva-liga/results/ SLOVENIA SloveniaA2025
+https://www.flashscore.com/football/slovenia/2-snl/results/ SLOVENIA SloveniaB25
+https://www.flashscore.com/football/vietnam/v-league-1/results/ VIETNAM VLeag1
+https://www.flashscore.com/football/greece/super-league-2/results/ GREECE Greece2
+https://www.flashscore.com/football/kenya/premier-league/results/ KENYA Kenya1
+https://www.flashscore.com/football/tunisia/ligue-professionnelle-1/results/ TUNISIA Tunisia1
+https://www.flashscore.com/football/tunisia/ligue-2/results/ TUNISIA Tunisia2
+https://www.flashscore.com/football/indonesia/championship/results/ INDONESIA Indonesia2
 
 
 
