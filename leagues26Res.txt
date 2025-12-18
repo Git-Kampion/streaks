@@ -5,10 +5,10 @@
 # https://www.flashscore.com/football/georgia/crystalbet-erovnuli-liga/results/ GEORGIA GEORGIAA25 https://www.flashscore.com/football/czech-republic/chnl/results/ CZECH CzechB25
 # https://www.flashscore.com/football/netherlands/tweede-divisie/results/ NETHERLANDS EredevisieTwede25
 # https://www.flashscore.com/football/netherlands/eredivisie/results/ NETHERLANDS Eredevisie25 
-https://www.flashscore.com/football/netherlands/eerste-divisie/results/ NETHERLANDS EersteEredevisie25
+# https://www.flashscore.com/football/netherlands/eerste-divisie/results/ NETHERLANDS EersteEredevisie25
 https://www.flashscore.com/football/switzerland/challenge-league/results/ SWITZERLAND SwissChalleng25
-# https://www.flashscore.com/football/switzerland/super-league/results/ SWITZERLAND SwitzerA25
-# https://www.flashscore.com/football/qatar/qsl/results/ QATAR QaterPrem25
+https://www.flashscore.com/football/switzerland/super-league/results/ SWITZERLAND SwitzerA25
+https://www.flashscore.com/football/qatar/qsl/results/ QATAR QaterPrem25
 # https://www.flashscore.com/football/ukraine/persha-liga/results/ UKRAINE UkrainePresha25
 # https://www.flashscore.com/football/ukraine/premier-league/results/ UKRAINE UkraineA25
 # https://www.flashscore.com/football/italy/serie-b/results/ ITALY SerieBB25
