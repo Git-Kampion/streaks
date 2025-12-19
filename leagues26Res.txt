@@ -21,10 +21,10 @@
 # https://www.flashscore.com/football/germany/2-bundesliga/results/ GERMANY Bundas2Liga25
 # https://www.flashscore.com/football/germany/3-liga/results/ GERMANY Bundes325
 https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga25
-https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
-https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl25
-https://www.flashscore.com/football/malaysia/super-league/results/ MALAYSIA MalaysiaPrem25
-https://www.flashscore.com/football/bulgaria/efbet-league/results/ BULGARIA BulgariaPrem25
+# https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
+# https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl25
+# https://www.flashscore.com/football/malaysia/super-league/results/ MALAYSIA MalaysiaPrem25
+# https://www.flashscore.com/football/bulgaria/efbet-league/results/ BULGARIA BulgariaPrem25
 # https://www.flashscore.com/football/iran/persian-gulf-pro-league/results/ IRAN IranPrem25
 # https://www.flashscore.com/football/saudi-arabia/saudi-professional-league/results/ SAUDI SaudiPrem25
 # https://www.flashscore.com/football/poland/ekstraklasa/results/ POLAND PolandA25  
