@@ -1,0 +1,83 @@
+   #res = BtOr.ScoredWholeSeaon(t,rfd,"k",5)    
+        #cd = BtOr.ConcededWholeSeaon(t,rfd,"k",6)   
+        #bh = BtOr.ScoredBothHalvesSeaon(t,rfd,"k",5)
+        #Abh = BtOr.ConceededBothHalvesSeaon(t,rfd,"k",6) 
+       
+        #AOvers = BtOr.OverUnderSeaon(t,rfd,"k",6)
+        #H1stOvers = BtOr.OverUnderSeaon(t,rfd,"k",7)
+        
+
+
+      if len(rfd) == Overs[1][0]:
+          
+          UnderOver0.append(Overs[1][0])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][1]:
+          UnderOver1.append(Overs[1][1])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][2]:
+          UnderOver2.append(Overs[1][2])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][3]:
+          UnderOver3.append(Overs[1][3])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][4]:
+          UnderOver4.append(Overs[1][4])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][5]:
+          UnderOver5.append(Overs[1][5])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        if len(rfd) == Overs[1][6]:
+          UnderOver6.append(Overs[1][6])
+          numOfGames.append(len(rfd))
+          team.append(t)
+        
+        
+        """"                                     
+        AwayOver0.append(AOvers[0][0]) 
+        AwayOver1.append(AOvers[0][1]) 
+        AwayOver2.append(AOvers[0][2])
+        AwayOver3.append(AOvers[0][3])                  
+        AwayOver4.append(AOvers[0][4])                  
+        AwayOver5.append(AOvers[0][5])                  
+        AwayOver6.append(AOvers[0][6])     
+
+        AwayUnder0.append(AOvers[1][0]) 
+        AwayUnder1.append(AOvers[1][1]) 
+        AwayUnder2.append(AOvers[1][2])
+        AwayUnder3.append(AOvers[1][3])                  
+        AwayUnder4.append(AOvers[1][4])                  
+        AwayUnder5.append(AOvers[1][5])                  
+        AwayUnder6.append(AOvers[1][6])  
+          
+        HHOver0.append(H1stOvers[0][0]) 
+        HHOver1.append(H1stOvers[0][1]) 
+        HHOver2.append(H1stOvers[0][2])
+        HHOver3.append(H1stOvers[0][3])                  
+        HHOver4.append(H1stOvers[0][4])                  
+        HHOver5.append(H1stOvers[0][5])                  
+        HHOver6.append(H1stOvers[0][6])    
+
+        HHunder0.append(H1stOvers[1][0]) 
+        HHunder1.append(H1stOvers[1][1]) 
+        HHunder2.append(H1stOvers[1][2])
+        HHunder3.append(H1stOvers[1][3])                  
+        HHunder4.append(H1stOvers[1][4])                  
+        HHunder5.append(H1stOvers[1][5])                  
+        HHunder6.append(H1stOvers[1][6])    
+"""
+        #BothHalvesround.append(bh)
+        #HomeConBothHalvesround.append(Abh)
+        
+        
+  
+        #print(k)
+
+
+

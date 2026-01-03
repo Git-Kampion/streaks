@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StreaksAway Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        select {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Team Statistics</h2>
+    <label for="columnSelect">Select column to display:</label>
+    <select id="columnSelect"></select>
+
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Team</th>
+                <th>GamesPlayed</th>
+                <th id="extraHeader"></th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+    <input type="file" id="upload" accept=".xlsx, .xls" />
+
+    <script>
+        const columnSelect = document.getElementById("columnSelect");
+        const tableBody = document.getElementById("tableBody");
+        const extraHeader = document.getElementById("extraHeader");
+
+        document.getElementById("upload").addEventListener("change", handleFile, false);
+
+        function handleFile(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                const sheetName = workbook.SheetNames[0];
+                const sheet = workbook.Sheets[sheetName];
+                const json = XLSX.utils.sheet_to_json(sheet);
+
+                populateDropdownAndRender(json);
+            };
+
+            reader.readAsArrayBuffer(file);
+        }
+
+        function populateDropdownAndRender(data) {
+            columnSelect.innerHTML = "";
+            const extraColumns = Object.keys(data[0]).filter(col => col !== "Team" && col !== "GamesPlayed");
+
+            extraColumns.forEach(col => {
+                const option = document.createElement("option");
+                option.value = col;
+                option.textContent = col;
+                columnSelect.appendChild(option);
+            });
+
+            columnSelect.addEventListener("change", () => renderTable(data, columnSelect.value));
+
+            const defaultColumn = extraColumns[0];
+            columnSelect.value = defaultColumn;
+            renderTable(data, defaultColumn);
+        }
+
+        function renderTable(data, selectedCol) {
+            tableBody.innerHTML = "";
+            extraHeader.textContent = selectedCol || "";
+
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `
+            <td>${row.Team || ""}</td>
+            <td>${row.GamesPlayed || ""}</td>
+            <td>${selectedCol ? row[selectedCol] || "" : ""}</td>
+          `;
+                tableBody.appendChild(tr);
+            });
+        }
+    </script>
+
+</body>
+</html>

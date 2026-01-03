@@ -1,0 +1,788 @@
+[
+  {
+    "round": "1",
+    "date": "02.08.2025",
+    "home": "Tirol",
+    "away": "Hartberg"
+  },
+  {
+    "round": "1",
+    "date": "02.08.2025",
+    "home": "WolfsbergerAC",
+    "away": "Altach"
+  },
+  {
+    "round": "1",
+    "date": "02.08.2025",
+    "home": "Ried",
+    "away": "Salzburg"
+  },
+  {
+    "round": "1",
+    "date": "03.08.2025",
+    "home": "GrazerAK",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "1",
+    "date": "03.08.2025",
+    "home": "SKRapid",
+    "away": "BWLinz"
+  },
+  {
+    "round": "2",
+    "date": "09.08.2025",
+    "home": "Altach",
+    "away": "Ried"
+  },
+  {
+    "round": "2",
+    "date": "09.08.2025",
+    "home": "BWLinz",
+    "away": "Hartberg"
+  },
+  {
+    "round": "2",
+    "date": "09.08.2025",
+    "home": "Salzburg",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "2",
+    "date": "10.08.2025",
+    "home": "AustriaVienna",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "2",
+    "date": "10.08.2025",
+    "home": "SturmGraz",
+    "away": "SKRapid"
+  },
+  {
+    "round": "2",
+    "date": "10.08.2025",
+    "home": "Tirol",
+    "away": "LASK"
+  },
+  {
+    "round": "3",
+    "date": "16.08.2025",
+    "home": "GrazerAK",
+    "away": "Tirol"
+  },
+  {
+    "round": "3",
+    "date": "16.08.2025",
+    "home": "Hartberg",
+    "away": "Salzburg"
+  },
+  {
+    "round": "3",
+    "date": "16.08.2025",
+    "home": "Ried",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "3",
+    "date": "17.08.2025",
+    "home": "LASK",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "3",
+    "date": "17.08.2025",
+    "home": "SKRapid",
+    "away": "Altach"
+  },
+  {
+    "round": "3",
+    "date": "17.08.2025",
+    "home": "WolfsbergerAC",
+    "away": "BWLinz"
+  },
+  {
+    "round": "4",
+    "date": "23.08.2025",
+    "home": "BWLinz",
+    "away": "Ried"
+  },
+  {
+    "round": "4",
+    "date": "23.08.2025",
+    "home": "Salzburg",
+    "away": "LASK"
+  },
+  {
+    "round": "4",
+    "date": "23.08.2025",
+    "home": "SturmGraz",
+    "away": "Tirol"
+  },
+  {
+    "round": "4",
+    "date": "24.08.2025",
+    "home": "Altach",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "4",
+    "date": "24.08.2025",
+    "home": "AustriaVienna",
+    "away": "Hartberg"
+  },
+  {
+    "round": "4",
+    "date": "24.08.2025",
+    "home": "WolfsbergerAC",
+    "away": "SKRapid"
+  },
+  {
+    "round": "5",
+    "date": "30.08.2025",
+    "home": "LASK",
+    "away": "Ried"
+  },
+  {
+    "round": "5",
+    "date": "30.08.2025",
+    "home": "Salzburg",
+    "away": "BWLinz"
+  },
+  {
+    "round": "5",
+    "date": "30.08.2025",
+    "home": "GrazerAK",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "5",
+    "date": "31.08.2025",
+    "home": "AustriaVienna",
+    "away": "Altach"
+  },
+  {
+    "round": "5",
+    "date": "31.08.2025",
+    "home": "Hartberg",
+    "away": "SKRapid"
+  },
+  {
+    "round": "5",
+    "date": "31.08.2025",
+    "home": "Tirol",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "Altach",
+    "away": "LASK"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "BWLinz",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "Ried",
+    "away": "Hartberg"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "SKRapid",
+    "away": "Tirol"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "SturmGraz",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "6",
+    "date": "13.09.2025",
+    "home": "WolfsbergerAC",
+    "away": "Salzburg"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "Altach",
+    "away": "Tirol"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "AustriaVienna",
+    "away": "Ried"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "GrazerAK",
+    "away": "SKRapid"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "Hartberg",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "LASK",
+    "away": "BWLinz"
+  },
+  {
+    "round": "7",
+    "date": "20.09.2025",
+    "home": "Salzburg",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "BWLinz",
+    "away": "Altach"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "Ried",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "SKRapid",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "SturmGraz",
+    "away": "Hartberg"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "Tirol",
+    "away": "Salzburg"
+  },
+  {
+    "round": "8",
+    "date": "27.09.2025",
+    "home": "WolfsbergerAC",
+    "away": "LASK"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "Altach",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "AustriaVienna",
+    "away": "BWLinz"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "GrazerAK",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "LASK",
+    "away": "Hartberg"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "Ried",
+    "away": "Tirol"
+  },
+  {
+    "round": "9",
+    "date": "04.10.2025",
+    "home": "Salzburg",
+    "away": "SKRapid"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "BWLinz",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "GrazerAK",
+    "away": "Hartberg"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "Salzburg",
+    "away": "Altach"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "SKRapid",
+    "away": "LASK"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "Tirol",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "10",
+    "date": "18.10.2025",
+    "home": "WolfsbergerAC",
+    "away": "Ried"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "Altach",
+    "away": "Hartberg"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "AustriaVienna",
+    "away": "Salzburg"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "LASK",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "Ried",
+    "away": "SKRapid"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "SturmGraz",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "11",
+    "date": "25.10.2025",
+    "home": "Tirol",
+    "away": "BWLinz"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "BWLinz",
+    "away": "LASK"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "GrazerAK",
+    "away": "Altach"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "Hartberg",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "Salzburg",
+    "away": "Ried"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "SKRapid",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "12",
+    "date": "01.11.2025",
+    "home": "WolfsbergerAC",
+    "away": "Tirol"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "AustriaVienna",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "LASK",
+    "away": "Altach"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "Ried",
+    "away": "BWLinz"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "SturmGraz",
+    "away": "Salzburg"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "Tirol",
+    "away": "SKRapid"
+  },
+  {
+    "round": "13",
+    "date": "08.11.2025",
+    "home": "WolfsbergerAC",
+    "away": "Hartberg"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "Altach",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "BWLinz",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "Hartberg",
+    "away": "Ried"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "Salzburg",
+    "away": "Tirol"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "SKRapid",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "14",
+    "date": "22.11.2025",
+    "home": "SturmGraz",
+    "away": "LASK"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "Altach",
+    "away": "Salzburg"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "AustriaVienna",
+    "away": "Tirol"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "GrazerAK",
+    "away": "BWLinz"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "Hartberg",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "LASK",
+    "away": "SKRapid"
+  },
+  {
+    "round": "15",
+    "date": "29.11.2025",
+    "home": "Ried",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "BWLinz",
+    "away": "Salzburg"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "Hartberg",
+    "away": "LASK"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "SKRapid",
+    "away": "Ried"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "SturmGraz",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "Tirol",
+    "away": "Altach"
+  },
+  {
+    "round": "16",
+    "date": "06.12.2025",
+    "home": "WolfsbergerAC",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "AustriaVienna",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "BWLinz",
+    "away": "SKRapid"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "GrazerAK",
+    "away": "LASK"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "Hartberg",
+    "away": "Tirol"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "Ried",
+    "away": "Altach"
+  },
+  {
+    "round": "17",
+    "date": "13.12.2025",
+    "home": "Salzburg",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "Altach",
+    "away": "BWLinz"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "LASK",
+    "away": "Tirol"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "Salzburg",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "SKRapid",
+    "away": "Hartberg"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "SturmGraz",
+    "away": "Ried"
+  },
+  {
+    "round": "18",
+    "date": "07.02.2026",
+    "home": "WolfsbergerAC",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "AustriaVienna",
+    "away": "SKRapid"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "BWLinz",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "GrazerAK",
+    "away": "Salzburg"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "Hartberg",
+    "away": "Altach"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "Ried",
+    "away": "LASK"
+  },
+  {
+    "round": "19",
+    "date": "14.02.2026",
+    "home": "Tirol",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "Altach",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "Hartberg",
+    "away": "GrazerAK"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "LASK",
+    "away": "Salzburg"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "SKRapid",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "SturmGraz",
+    "away": "BWLinz"
+  },
+  {
+    "round": "20",
+    "date": "21.02.2026",
+    "home": "Tirol",
+    "away": "Ried"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "Altach",
+    "away": "SKRapid"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "AustriaVienna",
+    "away": "LASK"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "BWLinz",
+    "away": "Tirol"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "GrazerAK",
+    "away": "Ried"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "Salzburg",
+    "away": "Hartberg"
+  },
+  {
+    "round": "21",
+    "date": "28.02.2026",
+    "home": "WolfsbergerAC",
+    "away": "SturmGraz"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "Hartberg",
+    "away": "BWLinz"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "LASK",
+    "away": "WolfsbergerAC"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "Ried",
+    "away": "AustriaVienna"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "SKRapid",
+    "away": "Salzburg"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "SturmGraz",
+    "away": "Altach"
+  },
+  {
+    "round": "22",
+    "date": "07.03.2026",
+    "home": "Tirol",
+    "away": "GrazerAK"
+  }
+]

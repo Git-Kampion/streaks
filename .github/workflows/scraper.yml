@@ -1,0 +1,57 @@
+name: Run Scraper on Windows
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"   # runs daily at 06:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: windows-latest
+    timeout-minutes: 360
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup Chrome and ChromeDriver
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 'stable'
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install selenium pandas webdriver-manager
+
+      - name: Run scraper
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: python importResV3git.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          git add football.sqlite
+          
+          # PowerShell compatible check for changes
+          $changes = git diff --staged --quiet
+          if ($LASTEXITCODE -eq 0) {
+            echo "No changes to commit"
+          } else {
+            git commit -m "Update football.sqlite from scraper run $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')"
+            git pull origin ${{ github.ref_name }} --rebase
+            git push origin HEAD:${{ github.ref_name }}
+          }

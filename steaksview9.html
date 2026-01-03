@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Football Stats Viewer with Strict Stat Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 250px;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+        }
+
+        .control-panel {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .search-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        input[type="date"], input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            min-width: 200px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            button:hover {
+                background-color: #45a049;
+            }
+
+        .filter-hint {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .fixture-container {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .stats-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stats-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .stats-title {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .scrollable-table {
+            max-height: 185px;
+            overflow-y: auto;
+            display: block;
+            border: 1px solid #ddd;
+            border-radius: 0 0 4px 4px;
+        }
+
+            .scrollable-table::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .scrollable-table::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+
+            .scrollable-table::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+
+                .scrollable-table::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .no-fixtures {
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #fffacd;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover {
+                color: black;
+            }
+
+        .modal-header {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .modal-stats-container {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .modal-stats-box {
+            flex: 1;
+        }
+
+        .info-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #4CAF50;
+            font-weight: bold;
+            cursor: pointer;
+            background: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        .fixture-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Time slots sidebar */
+        .time-slots-container {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .time-slot-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .time-slots-list {
+            max-height: 70vh;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+            .time-slots-list::-webkit-scrollbar {
+                width: 8px;
+            }
+
+            .time-slots-list::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 4px;
+            }
+
+            .time-slots-list::-webkit-scrollbar-thumb {
+                background: #888;
+                border-radius: 4px;
+            }
+
+                .time-slots-list::-webkit-scrollbar-thumb:hover {
+                    background: #555;
+                }
+
+        .time-slot-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+
+            .time-slot-item:hover {
+                background-color: #e9f7ef;
+            }
+
+            .time-slot-item.active {
+                background-color: #4CAF50;
+                color: white;
+            }
+
+        .time-slot-count {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        .time-slot-item.active .time-slot-count {
+            background-color: white;
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .stats-container, .modal-stats-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="time-slots-container">
+            <div class="time-slot-title">Fixture Times</div>
+            <div class="time-slots-list" id="timeSlotsList">
+                <p style="color: #666; text-align: center;">Select a date first</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Football Team Statistics</h1>
+
+        <div class="control-panel">
+            <div class="search-group">
+                <input type="date" id="datePicker">
+                <input type="text" id="teamSearch" placeholder="Search teams...">
+                <button id="searchBtn">Search</button>
+                <button id="clearSearch">Clear</button>
+            </div>
+
+            <div class="search-group">
+                <input type="text" id="statFilter" placeholder="Filter stats (e.g. /T0)">
+                <span class="filter-hint">Use /T0, /T1, /R0, /R1, T1 etc. to filter specific stats</span>
+            </div>
+        </div>
+
+        <div id="fixtureList">
+            <p class="no-fixtures">No date selected</p>
+        </div>
+
+        <!-- Modal for full fixture details -->
+        <div id="fixtureModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalFixtureTitle"></h2>
+                </div>
+                <div class="modal-stats-container">
+                    <div class="modal-stats-box">
+                        <div class="stats-title">Home Team Stats</div>
+                        <div class="scrollable-table" id="modalHomeStats"></div>
+                    </div>
+                    <div class="modal-stats-box">
+                        <div class="stats-title">Away Team Stats</div>
+                        <div class="scrollable-table" id="modalAwayStats"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data variables
+        let fixtures = [];
+        let homeStats = [];
+        let awayStats = [];
+        let currentDisplayedFixtures = [];
+        let currentSelectedTime = null;
+
+        // DOM elements
+        const modal = document.getElementById('fixtureModal');
+        const closeBtn = document.querySelector('.close');
+        const modalFixtureTitle = document.getElementById('modalFixtureTitle');
+        const modalHomeStats = document.getElementById('modalHomeStats');
+        const modalAwayStats = document.getElementById('modalAwayStats');
+        const timeSlotsList = document.getElementById('timeSlotsList');
+
+        // Load all data files
+        async function loadData() {
+            try {
+                const responses = await Promise.all([
+                    fetch('fixturesAnlytics.json'),
+                    fetch('home_stats.json'),
+                    fetch('away_stats.json')
+                ]);
+
+                fixtures = await responses[0].json();
+                homeStats = await responses[1].json();
+                awayStats = await responses[2].json();
+
+                console.log('Data loaded successfully');
+            } catch (error) {
+                console.error('Error loading data:', error);
+                showError('Error loading data. Please check console.');
+            }
+        }
+
+        // Find team stats with case-insensitive matching
+        function findTeamStats(teamName, statsArray) {
+            const lowerName = teamName.toLowerCase();
+            return statsArray.find(team => team.Team.toLowerCase() === lowerName);
+        }
+
+        function filterStatRows(rows, statFilters) {
+            if (!statFilters) return rows;
+
+            // Split multiple filters by comma and trim whitespace
+            const filters = statFilters.split(',').map(f => f.trim());
+
+            return rows.filter(row => {
+                const cellText = row.querySelector('td:nth-child(2)').textContent.trim();
+                const slashIndex = cellText.indexOf('/');
+
+                if (slashIndex === -1) return false; // No slash found
+
+                const leftSide = cellText.slice(0, slashIndex);
+                const rightSide = cellText.slice(slashIndex + 1);
+
+                // Check against all filters (OR logic)
+                return filters.some(filter => {
+                    // Right-side exact matching (format: "/T1")
+                    if (filter.startsWith('/')) {
+                        const rightFilter = filter.slice(1);
+                        return rightSide === rightFilter ||
+                            rightSide.split(/\s+/).includes(rightFilter);
+                    }
+                    // Left-side exact matching (format: "R1/")
+                    else if (filter.endsWith('/')) {
+                        const leftFilter = filter.slice(0, -1);
+                        return leftSide === leftFilter ||
+                            leftSide.split(/\s+/).includes(leftFilter);
+                    }
+                    // Left-side matching without slash (legacy format: "R1")
+                    else {
+                        return leftSide === filter ||
+                            leftSide.split(/\s+/).includes(filter);
+                    }
+                });
+            });
+        }
+
+        // Generate stats table with filtering
+        function generateStatsTable(teamStat, type, statFilter = '', includeAll = false) {
+            const table = document.createElement('table');
+            const thead = document.createElement('thead');
+            thead.innerHTML = `
+                    <tr>
+                        <th>Statistic</th>
+                        <th>Value</th>
+                    </tr>
+                `;
+            table.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+
+            // Handle case where team stats are missing
+            if (!teamStat) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                        <td colspan="2" style="color: #999; text-align: center;">No stats available for this team</td>
+                    `;
+                tbody.appendChild(row);
+                table.appendChild(tbody);
+                return table;
+            }
+
+            // Add team name row
+            const teamRow = document.createElement('tr');
+            teamRow.innerHTML = `
+                    <td>Team</td>
+                    <td><strong>${teamStat.Team}</strong></td>
+                `;
+            tbody.appendChild(teamRow);
+
+            // Add all other stats
+            Object.entries(teamStat).forEach(([key, value]) => {
+                if (key === 'Team') return;
+
+                const row = document.createElement('tr');
+                const formattedKey = key.replace(/([A-Z])/g, ' $1').trim();
+                row.innerHTML = `
+                        <td>${formattedKey}</td>
+                        <td>${value}</td>
+                    `;
+                tbody.appendChild(row);
+            });
+
+            table.appendChild(tbody);
+
+            // Apply stat filter if provided (only if we have stats) and not showing all
+            if (statFilter && teamStat && !includeAll) {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                rows.forEach(row => row.style.display = 'none');
+
+                const matchingRows = filterStatRows(rows, statFilter);
+                matchingRows.forEach(row => {
+                    row.style.display = '';
+                    row.classList.add('highlight');
+                });
+
+                // Always show team name row if we have stats
+                teamRow.style.display = '';
+                teamRow.classList.remove('highlight');
+            }
+
+            return table;
+        }
+
+        // Helper function to extract time from date string
+        function extractTimeFromDate(dateStr) {
+            const parts = dateStr.split('-');
+            return parts.slice(3).join(':');
+        }
+
+        // Helper function to extract date part from date string
+        function extractDatePart(dateStr) {
+            const parts = dateStr.split('-');
+            return parts.slice(0, 3).join('-');
+        }
+
+        // Display time slots in sidebar
+        function displayTimeSlots(filteredFixtures) {
+            timeSlotsList.innerHTML = '';
+
+            // Group fixtures by time
+            const timeGroups = {};
+            filteredFixtures.forEach(fixture => {
+                const time = extractTimeFromDate(fixture.date);
+                if (!timeGroups[time]) {
+                    timeGroups[time] = 0;
+                }
+                timeGroups[time]++;
+            });
+
+            if (Object.keys(timeGroups).length === 0) {
+                timeSlotsList.innerHTML = '<p style="color: #666; text-align: center;">No fixtures for this date</p>';
+                return;
+            }
+
+            // Sort times chronologically
+            const sortedTimes = Object.keys(timeGroups).sort((a, b) => a.localeCompare(b));
+
+            // Create time slot items
+            sortedTimes.forEach(time => {
+                const count = timeGroups[time];
+                const timeSlotItem = document.createElement('div');
+                timeSlotItem.className = 'time-slot-item' + (currentSelectedTime === time ? ' active' : '');
+                timeSlotItem.innerHTML = `
+                        <span>${time}</span>
+                        <span class="time-slot-count">${count}</span>
+                    `;
+
+                // Add click handler to filter by this time
+                timeSlotItem.addEventListener('click', () => {
+                    currentSelectedTime = time;
+                    applyFilters();
+                });
+
+                timeSlotsList.appendChild(timeSlotItem);
+            });
+        }
+
+        // Update fixture display
+        function updateFixtureDisplay(filteredFixtures, statFilter = '') {
+            const fixtureList = document.getElementById('fixtureList');
+
+            if (filteredFixtures.length === 0) {
+                fixtureList.innerHTML = '<p class="no-fixtures">No fixtures found for the selected filters</p>';
+                return;
+            }
+
+            // Generate HTML for each fixture
+            fixtureList.innerHTML = filteredFixtures.map((fixture, index) => {
+                return `
+                        <div class="fixture-container" data-fixture-index="${index}">
+                            <div class="fixture-header">
+                                <div class="team-name">${fixture.home}</div>
+                                <div class="vs">${fixture.date}</div>
+                                <div class="team-name">${fixture.away}</div>
+                            </div>
+                            <div class="info-icon" title="View all stats">i</div>
+                            <div class="stats-container">
+                                <div class="stats-box">
+                                    <div class="stats-title">Home Team Stats</div>
+                                    <div class="stats-table-container">
+                                        <div class="scrollable-table"></div>
+                                    </div>
+                                </div>
+                                <div class="stats-box">
+                                    <div class="stats-title">Away Team Stats</div>
+                                    <div class="stats-table-container">
+                                        <div class="scrollable-table"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+            }).join('');
+
+            // Add the tables after the containers exist in DOM
+            setTimeout(() => {
+                document.querySelectorAll('.fixture-container').forEach((container, index) => {
+                    const fixture = filteredFixtures[index];
+                    const homeTeam = findTeamStats(fixture.home, homeStats);
+                    const awayTeam = findTeamStats(fixture.away, awayStats);
+
+                    const homeTable = generateStatsTable(homeTeam, 'home', statFilter);
+                    const awayTable = generateStatsTable(awayTeam, 'away', statFilter);
+
+                    container.querySelector('.stats-box:first-child .scrollable-table').appendChild(homeTable);
+                    container.querySelector('.stats-box:last-child .scrollable-table').appendChild(awayTable);
+
+                    // Add click event to info icon
+                    container.querySelector('.info-icon').addEventListener('click', () => {
+                        openModal(fixture, homeTeam, awayTeam);
+                    });
+                });
+            }, 0);
+        }
+
+        // Apply all filters (date, team, time, stats)
+        function applyFilters() {
+            const date = document.getElementById('datePicker').value;
+            const teamFilter = document.getElementById('teamSearch').value.trim();
+            const statFilter = document.getElementById('statFilter').value.trim();
+
+            if (!date) {
+                alert('Please select a date first');
+                return;
+            }
+
+            // Filter by date
+            let filteredFixtures = fixtures.filter(f => extractDatePart(f.date) === date);
+
+            // Store original filtered fixtures for time grouping
+            const originalFilteredFixtures = [...filteredFixtures];
+
+            // Apply team filter if provided
+            if (teamFilter) {
+                const searchTerm = teamFilter.toLowerCase();
+                filteredFixtures = filteredFixtures.filter(f =>
+                    f.home.toLowerCase().includes(searchTerm) ||
+                    f.away.toLowerCase().includes(searchTerm) ||
+                    f.date.toLowerCase().includes(searchTerm)
+                );
+            }
+
+            currentDisplayedFixtures = filteredFixtures;
+
+            // Display time slots based on original filter (before team search)
+            displayTimeSlots(originalFilteredFixtures);
+
+            // Apply time filter if selected
+            if (currentSelectedTime) {
+                filteredFixtures = filteredFixtures.filter(fixture => {
+                    return extractTimeFromDate(fixture.date) === currentSelectedTime;
+                });
+            }
+
+            // Update the displayed fixtures
+            updateFixtureDisplay(filteredFixtures, statFilter);
+        }
+
+        // Open modal with full fixture details
+        function openModal(fixture, homeTeam, awayTeam) {
+            modalFixtureTitle.textContent = `${fixture.home} vs ${fixture.away} - ${fixture.date}`;
+
+            // Clear previous content
+            modalHomeStats.innerHTML = '';
+            modalAwayStats.innerHTML = '';
+
+            // Generate tables with all stats (no filtering)
+            const homeTable = generateStatsTable(homeTeam, 'home', '', true);
+            const awayTable = generateStatsTable(awayTeam, 'away', '', true);
+
+            modalHomeStats.appendChild(homeTable);
+            modalAwayStats.appendChild(awayTable);
+
+            modal.style.display = 'block';
+        }
+
+        // Close modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Event listeners
+        document.getElementById('datePicker').addEventListener('change', function () {
+            currentSelectedTime = null;
+            applyFilters();
+        });
+
+        document.getElementById('searchBtn').addEventListener('click', applyFilters);
+
+        document.getElementById('clearSearch').addEventListener('click', function () {
+            document.getElementById('teamSearch').value = '';
+            document.getElementById('statFilter').value = '';
+            currentSelectedTime = null;
+            const date = document.getElementById('datePicker').value;
+            if (date) applyFilters();
+        });
+
+        document.getElementById('statFilter').addEventListener('input', applyFilters);
+
+        // Modal close events
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Initialize
+        window.addEventListener('load', async () => {
+            await loadData();
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('datePicker').value = today;
+            applyFilters();
+        });
+    </script>
+</body>
+</html>

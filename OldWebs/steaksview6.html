@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fixtures with Table Stats</title>
+    <style>
+        .fixture-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+            padding-bottom: 4px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .team-box {
+            width: 45%;
+        }
+
+        .vs {
+            width: 10%;
+            text-align: center;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .section-box {
+            width: 45%;
+            background-color: #f9f9f9;
+            padding: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 8px;
+        }
+
+        th, td {
+            border: 1px solid #bbb;
+            padding: 4px 6px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select a Date</h2>
+    <input type="date" id="datePicker">
+
+    <h3>Fixtures:</h3>
+    <div id="fixtureList">No date selected.</div>
+
+    <script>
+        const fixtureList = document.getElementById('fixtureList');
+        const datePicker = document.getElementById('datePicker');
+
+        let fixtures = [];
+        let homeStatsData = [];
+        let awayStatsData = [];
+
+        Promise.all([
+            fetch('fixtures.json').then(res => res.json()),
+            fetch('home_stats.json').then(res => res.json()),
+            fetch('away_stats.json').then(res => res.json())
+        ])
+            .then(([fixturesData, homeData, awayData]) => {
+                fixtures = fixturesData;
+                homeStatsData = homeData;
+                awayStatsData = awayData;
+            })
+            .catch(error => {
+                fixtureList.textContent = 'Error loading data.';
+                console.error(error);
+            });
+
+        datePicker.addEventListener('change', () => {
+            const selectedDate = datePicker.value;
+            fixtureList.innerHTML = '';
+
+            const filteredFixtures = fixtures.filter(f => f.date === selectedDate);
+
+            if (filteredFixtures.length === 0) {
+                fixtureList.textContent = 'No fixtures for selected date.';
+            } else {
+                filteredFixtures.forEach(f => {
+                    const fixtureRow = document.createElement('div');
+                    fixtureRow.className = 'fixture-row';
+
+                    const homeDiv = document.createElement('div');
+                    homeDiv.className = 'team-box';
+                    homeDiv.innerHTML = `<strong>Home:</strong> ${f.home}`;
+
+                    const vsDiv = document.createElement('div');
+                    vsDiv.className = 'vs';
+                    vsDiv.textContent = 'vs';
+
+                    const awayDiv = document.createElement('div');
+                    awayDiv.className = 'team-box';
+                    awayDiv.innerHTML = `<strong>Away:</strong> ${f.away}`;
+
+                    fixtureRow.appendChild(homeDiv);
+                    fixtureRow.appendChild(vsDiv);
+                    fixtureRow.appendChild(awayDiv);
+
+                    const statsRow = document.createElement('div');
+                    statsRow.className = 'stats-row';
+
+                    const homeStat = homeStatsData.find(team => team.team === f.home);
+                    const awayStat = awayStatsData.find(team => team.team === f.away);
+
+                    const homeBox = document.createElement('div');
+                    homeBox.className = 'section-box';
+                    homeBox.innerHTML = `<strong>Home Section</strong>${generateStatTable(homeStat, 'Home')}`;
+
+                    const awayBox = document.createElement('div');
+                    awayBox.className = 'section-box';
+                    awayBox.innerHTML = `<strong>Away Section</strong>${generateStatTable(awayStat, 'Away')}`;
+
+                    statsRow.appendChild(homeBox);
+                    statsRow.appendChild(awayBox);
+
+                    fixtureList.appendChild(fixtureRow);
+                    fixtureList.appendChild(statsRow);
+                });
+            }
+        });
+
+        function generateStatTable(teamStat, type) {
+            if (!teamStat) {
+                return '<p>No data available.</p>';
+            }
+
+            const overZ = type === 'Home' ? teamStat.homeOverZ : teamStat.AwayOverZ;
+
+            return `
+            <table>
+              <thead>
+                <tr>
+                  <th>Team</th>
+                  <th>Games Played</th>
+                  <th>${type}OverZ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>${teamStat.team}</td>
+                  <td>${teamStat.gamesPlayed}</td>
+                  <td>${overZ}</td>
+                </tr>
+              </tbody>
+            </table>
+          `;
+        }
+    </script>
+
+</body>
+</html>

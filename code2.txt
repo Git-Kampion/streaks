@@ -1,0 +1,163 @@
+ highestMatch = 0
+  
+
+  under1 = under1 + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+
+
+             
+                case 1:
+                  if betype == "L":
+                   if con > int(r[ht + 2]):
+                    count = count + 1
+                  
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                   else:
+                    under1 = under1 + 1
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                      
+                  else:    
+                    count = count + 1                                  
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                case 2:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    
+                  
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                   else:
+                    under2 = under2 + 1
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    
+                  
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                case 3:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    
+                   
+                   
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    
+                   
+                    under3 = under3 + 1
+                    under4 = under4 + 1
+                    under5 = under5 + 1
+                    under6 = under6 + 1
+                case 4:
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                       
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                   
+                   
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                   
+                   
+                    under5 = under5 + 1
+                    under6 = under6 + 1 
+                case 5: 
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                         
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    
+                    
+                   
+                    under6 = under6 + 1 
+                 else:
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    
+                    
+                   
+                    under6 = under6 + 1 
+                case 6: 
+                 if betype == "L":
+                   if con > int(r[ht + 2]):                                       
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    countOv5 = countOv5 + 1
+                    
+                   
+                   
+                   
+                case 7:                                      
+                    count = count + 1
+                    countOv1 = countOv1 + 1
+                    countOv2 = countOv2 + 1
+                    countOv3 = countOv3 + 1
+                    countOv4 = countOv4 + 1
+                    countOv5 = countOv5 + 1
+                    countOv6 = countOv6 + 1
+
+
+ overs.append(countOv1)    
+        overs.append(countOv2)    
+        overs.append(countOv3)    
+        overs.append(countOv4)    
+        overs.append(countOv5)    
+        overs.append(countOv6) 
+        unders.append(under0)  
+        unders.append(under1)  
+        unders.append(under2)
+        unders.append(under3)  
+        unders.append(under4)
+        unders.append(under5)
+        unders.append(under6)  

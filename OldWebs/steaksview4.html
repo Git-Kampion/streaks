@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Stats</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+
+    <!-- Date Picker -->
+    <div class="text-center mb-6">
+        <label for="match-date" class="block text-2xl font-semibold text-gray-700 mb-2">Select Match Date</label>
+        <input type="date" id="match-date" class="px-5 py-3 text-lg rounded-xl border border-gray-300 shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">
+    </div>
+
+    <!-- Fixtures Section -->
+    <div class="bg-white p-4 rounded-xl shadow-md mb-8">
+        <h2 class="text-xl font-bold mb-4 text-center">Fixtures</h2>
+        <ul id="fixtures-list" class="list-disc pl-6 space-y-1"></ul>
+    </div>
+
+    <!-- Stats Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Home Section -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-4 text-center">Home</h2>
+            <table class="w-full table-auto border-collapse">
+                <thead class="bg-blue-100">
+                    <tr>
+                        <th class="p-2 text-left">Team</th>
+                        <th class="p-2 text-left">GamesPlayed</th>
+                        <th class="p-2 text-left">HomeOverZ</th>
+                    </tr>
+                </thead>
+                <tbody id="home-stats" class="text-gray-800"></tbody>
+            </table>
+        </div>
+
+        <!-- Away Section -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-semibold text-red-700 mb-4 text-center">Away</h2>
+            <table class="w-full table-auto border-collapse">
+                <thead class="bg-red-100">
+                    <tr>
+                        <th class="p-2 text-left">Team</th>
+                        <th class="p-2 text-left">GamesPlayed</th>
+                        <th class="p-2 text-left">HomeOverZ</th>
+                    </tr>
+                </thead>
+                <tbody id="away-stats" class="text-gray-800"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const fixtures = [
+            { round: 2, date: "2025-08-02", home: "Westerlo", away: "Waregem" },
+            { round: 2, date: "2025-08-02", home: "St.Liege", away: "Dender" },
+            { round: 2, date: "2025-08-02", home: "Gent", away: "RAALLaLouviere" },
+            { round: 3, date: "2025-08-08", home: "St.Truiden", away: "Dender" },
+            { round: 3, date: "2025-08-08", home: "ClubBruggeKV", away: "ercleBruggeKSV" },
+            { round: 3, date: "2025-08-08", home: "Westerlo", away: "KVMechelen" }
+        ];
+
+        const homeStatsData = {
+            Westerlo: { GamesPlayed: 15, HomeOverZ: "R13/T2" },
+            ClubBruggeKV: { GamesPlayed: 15, HomeOverZ: "R12/T3" },
+            Antwerp: { GamesPlayed: 15, HomeOverZ: "R12/T3" }
+        };
+
+        const awayStatsData = {
+            ercleBruggeKSV: { GamesPlayed: 15, HomeOverZ: "R13/T2" },
+            Charleroi: { GamesPlayed: 15, HomeOverZ: "R12/T3" },
+            Waregem: { GamesPlayed: 15, HomeOverZ: "R12/T3" }
+        };
+
+        const fixtureList = document.getElementById("fixtures-list");
+        const homeStats = document.getElementById("home-stats");
+        const awayStats = document.getElementById("away-stats");
+
+        function updatePage(date) {
+            fixtureList.innerHTML = "";
+            homeStats.innerHTML = "";
+            awayStats.innerHTML = "";
+
+            const todaysFixtures = fixtures.filter(f => f.date === date);
+            const homeTeams = new Set();
+            const awayTeams = new Set();
+
+            todaysFixtures.forEach(fix => {
+                fixtureList.innerHTML += `<li>${fix.home} vs ${fix.away}</li>`;
+                homeTeams.add(fix.home);
+                awayTeams.add(fix.away);
+            });
+
+            homeTeams.forEach(team => {
+                const stat = homeStatsData[team];
+                if (stat) {
+                    homeStats.innerHTML += `
+                <tr class="border-t">
+                  <td class="p-2">${team}</td>
+                  <td class="p-2">${stat.GamesPlayed}</td>
+                  <td class="p-2">${stat.HomeOverZ}</td>
+                </tr>`;
+                }
+            });
+
+            awayTeams.forEach(team => {
+                const stat = awayStatsData[team];
+                if (stat) {
+                    awayStats.innerHTML += `
+                <tr class="border-t">
+                  <td class="p-2">${team}</td>
+                  <td class="p-2">${stat.GamesPlayed}</td>
+                  <td class="p-2">${stat.HomeOverZ}</td>
+                </tr>`;
+                }
+            });
+        }
+
+        // Auto-select today's date
+        const dateInput = document.getElementById("match-date");
+        const todayStr = new Date().toISOString().split("T")[0];
+        dateInput.value = todayStr;
+        updatePage(todayStr);
+
+        dateInput.addEventListener("change", () => {
+            updatePage(dateInput.value);
+        });
+    </script>
+</body>
+</html>
