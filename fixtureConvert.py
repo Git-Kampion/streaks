@@ -2,7 +2,7 @@ import pyodbc
 import json
 
 # Path to Access DB
-db_path = r'C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb'
+db_path = r'C:\Users\letenok.DWA\Documents\streaks\Fixtures26.accdb'
 fixtures = []
 # Connect to Access DB
 conn = pyodbc.connect(

@@ -14,7 +14,7 @@ conn = pyodbc.connect(conn_str)
 # ======================================================  UNION SELECT * FROM Eredevisie25 ORDER BY Tframe ASC
 # 🧮 2️⃣ LOAD DATA AND SET COLUMN REFERENCES
 # ======================================================
-query = "SELECT * FROM BundasLiga25"
+query = "SELECT * FROM IndonesiaPrem25 UNION SELECT * FROM MyanmarNatLeag25 UNION SELECT * FROM SingPorePrem25 UNION SELECT * FROM IsraelA25 UNION SELECT * FROM AlgeriaA25 UNION SELECT * FROM Turk225 UNION SELECT * FROM SerieA25 ORDER BY Tframe ASC"
 df = pd.read_sql(query, conn)
 
 # Column index map:
@@ -423,7 +423,7 @@ Away_Team_Summary.to_csv("Away_Team_Summary.csv", index=False)
 # ======================================================
 # 💾 EXPORT TO EXCEL
 # ======================================================
-with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps_CorrectScores.xlsx") as writer:
+with pd.ExcelWriter("Full_First_Sec_Analysis_Handicaps_CorrectScores20260121.xlsx") as writer:
     df.to_excel(writer, sheet_name="Match_Analysis", index=False)
     round_summary.to_excel(writer, sheet_name="Round_Summary", index=False)
     Home_Team_Summary.to_excel(writer, sheet_name="Home_Team_Summary", index=False)

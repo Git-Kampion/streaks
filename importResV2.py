@@ -74,7 +74,7 @@ for lnk in content:
         _flag = True
         while _flag:
             try:
-                browser.find_element(By.LINK_TEXT, "Show more matches").click()
+                browser.find_element(By.CSS_SELECTOR, ".wcl-footer__button_OauhJ").click()
                 time.sleep(10)
                 _flag = True
             except NoSuchElementException:

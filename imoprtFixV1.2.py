@@ -16,7 +16,7 @@ browser = webdriver.Firefox(options=options)
 def dataLookUp(ScotlandA24,matchUpsCount):
  
   # Connect to database
-  conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb;')
+  conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures26.accdb;')
   cursor = conn.cursor()
 
   # Select query
@@ -42,7 +42,7 @@ cookiRan = False
 #cursor = conn.cursor()
 
 def dataLookUp2(tea,ScotlandA24):
- conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb;')
+ conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures26.accdb;')
  cursor = conn.cursor()
  insert_stmt2 = "select * from " + ScotlandA24 + " Where Home = " + tea.split(" ")[0] and " Away = " + tea.split(" ")[1]
  cursor.execute(insert_stmt2 )
@@ -151,7 +151,7 @@ for lnk in content:
       
       dttyl = round + " " + fullDate + " " + Hteam + " " + Ateam  
       if len(dttyl.split(" ")) > 0:
-          conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures25.accdb;')
+          conn = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=C:\Users\letenok.DWA\Documents\streaks\Fixtures26.accdb;')
           cursor = conn.cursor()
                 #cursor.execute("Insert Into EnglishPremData (Round,Time,Home,Away,HScore,AScore) VALUES ('38','2023-04-01','Arsenal','Watford','4','3')")
           
