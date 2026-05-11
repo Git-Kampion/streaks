@@ -3,8 +3,8 @@
 # https://www.flashscore.com/football/czech-republic/chance-liga/results/ CZECH CzechA25
 # https://www.flashscore.com/football/south-africa/betway-premiership/results/ SOUTH pslA2025
 # https://www.flashscore.com/football/georgia/crystalbet-erovnuli-liga/results/ GEORGIA GEORGIAA25 
-# https://www.flashscore.com/football/czech-republic/chnl/results/ CZECH CzechB25
-https://www.flashscore.com/football/netherlands/tweede-divisie/results/ NETHERLANDS EredevisieTwede25
+https://www.flashscore.com/football/czech-republic/chnl/results/ CZECH CzechB25
+# https://www.flashscore.com/football/netherlands/tweede-divisie/results/ NETHERLANDS EredevisieTwede25
 # https://www.flashscore.com/football/netherlands/eredivisie/results/ NETHERLANDS Eredevisie25 
 # https://www.flashscore.com/football/netherlands/eerste-divisie/results/ NETHERLANDS EersteEredevisie25
 # https://www.flashscore.com/football/switzerland/challenge-league/results/ SWITZERLAND SwissChalleng25
@@ -22,7 +22,7 @@ https://www.flashscore.com/football/netherlands/tweede-divisie/results/ NETHERLA
 # https://www.flashscore.com/football/germany/2-bundesliga/results/ GERMANY Bundas2Liga25
 # https://www.flashscore.com/football/germany/3-liga/results/ GERMANY Bundes325
 # https://www.flashscore.com/football/spain/laliga/results/ SPAIN Laliga25
-https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
+# https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
 # https://www.flashscore.com/football/england/premier-league/results/ ENGLAND Epl25
 # https://www.flashscore.com/football/malaysia/super-league/results/ MALAYSIA MalaysiaPrem25
 # https://www.flashscore.com/football/bulgaria/efbet-league/results/ BULGARIA BulgariaPrem25
@@ -35,7 +35,7 @@ https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
 # https://www.flashscore.com/football/denmark/superliga/results/ DENMARK DenmarkA25
 # https://www.flashscore.com/football/denmark/1st-division/results/ DENMARK DenmarkB25
 # # https://www.flashscore.com/football/rwanda/premier-league/results/ RWANDA RwandaPrem25
-# https://www.flashscore.com/football/indonesia/super-league/results/ INDONESIA IndonesiaPrem25
+https://www.flashscore.com/football/indonesia/super-league/results/ INDONESIA IndonesiaPrem25
 # https://www.flashscore.com/football/norway/eliteserien/results/ NORWAY NorwayA25
 # https://www.flashscore.com/football/norway/obos-ligaen/results/ NORWAY NorwayB25
 # https://www.flashscore.com/football/ireland/premier-division/results/ IRELAND irelandPrem25
@@ -54,8 +54,8 @@ https://www.flashscore.com/football/spain/laliga2/results/ SPAIN Laliga225
 # https://www.flashscore.com/football/cyprus/cyprus-league/results/ CYPRUS CyprusA25
 # https://www.flashscore.com/football/egypt/premier-league/results/ EGYPT EgyptA25
 # https://www.flashscore.com/football/england/championship/results/ ENGLAND EplChampionShip25 
-https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua125 
-https://www.flashscore.com/football/england/league-two/results/ ENGLAND EngLeagua225
+# https://www.flashscore.com/football/england/league-one/results/ ENGLAND EngLeagua125 
+# https://www.flashscore.com/football/england/league-two/results/ ENGLAND EngLeagua225
 # https://www.flashscore.com/football/romania/superliga/results/ ROMANIA RomaniA25 
 # https://www.flashscore.com/football/slovakia/nike-liga/results/ SLOVAKIA SlovakiaAA25
 # https://www.flashscore.com/football/slovakia/2-liga/results/ SLOVAKIA SlovakiaB25
