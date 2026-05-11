@@ -33,33 +33,7 @@ browser = webdriver.Firefox(options=options)
 def is_ready(browser):
     return browser.execute_script("return document.readyState === 'complete'")
 
-# --- Utility: Clean ads and overlays ---
-def remove_ads(browser):
-    js = """
-    document.querySelectorAll('iframe[id^="google_ads_iframe_"]').forEach(e => e.remove());
-    document.querySelectorAll('div[id*="overlay"], div[class*="overlay"]').forEach(e => e.remove());
-    """
-    browser.execute_script(js)
 
-# --- Utility: Safe click helper ---
-def safe_click(browser, by, selector, timeout=15):
-    try:
-        element = WebDriverWait(browser, timeout).until(
-            EC.element_to_be_clickable((by, selector))
-        )
-        remove_ads(browser)
-        browser.execute_script("arguments[0].scrollIntoView(true);", element)
-        browser.execute_script("arguments[0].click();", element)
-        return True
-    except (NoSuchElementException, TimeoutException):
-        return False
-    except ElementClickInterceptedException:
-        remove_ads(browser)
-        try:
-            browser.execute_script("arguments[0].click();", element)
-            return True
-        except Exception:
-            return False
 
 # --- Database lookup helper ---
 def dataLookUp(ScotlandA24, matchUpsCount):
